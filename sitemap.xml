@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>./digital-garden/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./thoughts-on-swift-architecture/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./optimal-swimming-slot/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./solid-comments-in-static-website/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./cursor-magic/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./development-environment-on-mac/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./sivananda-prayers/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./selecting-a-jekyll-theme/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./setting-up-jupyter-lab-on-mac/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./double-ai-chat/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./noch-ein-guter-von-cecile/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./ceciles-bester-witz/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./life-is-good-cycling-to-work/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./named-volumes-with-docker-compose/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./testing-dried-mango/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./my-notes-from-rc3-2020/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./mac-recording-screen-sound/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./setting-up-my-terminal/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./tips-for-travelling-vietnam/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./markdown-editors/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./svg-programming/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./image-encoding-in-node-js/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./my-static-website/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./playing-around-with-d3/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./ping-visualization-and-analysis/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./the-art-of-command-line/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./sociolog-your-trail-across-social-media/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./visited-countries/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./siteweightwatcher-keeps-your-website-slim/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./beautiful-websites/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./adding-search-to-a-static-site/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./playing-with-highcharts/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./zipf-mystery/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./playing-with-javascript/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./how-i-moved-to-github-jbake/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./rex-hotel-in-saigon/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./absacker-aka-nightcap/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./sugar-cane-drink/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./vietnamese-fast-food/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./friday-night-in-da-nang/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./welche-ist-die-schonste-bibliothek-munchens/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./indien-tag-2/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./indien-tag-1/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./ipad-hologram/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./a-proxy-for-offline-surfing/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./crowdsourcing-zahle-100-eur-fur-wappen/</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+
+</urlset>

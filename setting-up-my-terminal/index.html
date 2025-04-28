@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>grtnr.com</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../theme/css/styles.css"/>
+
+
+
+    <meta name="tags" contents="[tech]" />
+
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="profile">
+      <img src="../theme/img/profile.png"/>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+  <a class="sidebar-nav-item" href="../">All</a>
+
+      <a class="sidebar-nav-item" href="../category/misc.html">misc</a>
+      <a class="sidebar-nav-item" href="../category/tech.html">[tech]</a>
+
+  <a class="sidebar-nav-item" href="https://getpelican.com/">Pelican</a>
+  <a class="sidebar-nav-item" href="https://www.python.org/">Python.org</a>
+  <a class="sidebar-nav-item" href="https://palletsprojects.com/p/jinja/">Jinja2</a>
+  <a class="sidebar-nav-item" href="#">You can modify those links in your config file</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+    <a href="https://twitter.com/tillg">&copy; @tillg</a> 2017
+    </p>
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Setting up my&nbsp;terminal
+    </h1>
+    <span class="post-date">February 6, 2020</span>
+
+    <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that’s what was missing to me…</p>
+<p>So here I go with yet another article. Or rather a collection of snippets of the information that I found valuable.</p>
+<h2>Setting the scene</h2>
+<p>My target setup <span class="amp">&amp;</span> requirements are simple:</p>
+<ul>
+<li>macOS (Catalina 10.15.2 at the time of writing)</li>
+<li>iTerm2 (Build 3.3.8)</li>
+<li>zsh (as provided by Apple since a couple of macOS versions)</li>
+<li>I want proper coloring</li>
+<li>I want to see what Git branch I am in - if the current directory is within a git repo</li>
+</ul>
+<h2>The moving parts</h2>
+<p>What made me get lost, was missing overview. Therefore, here are the different bits and pices that are involved in my setup:</p>
+<ul>
+<li><strong>zsh</strong>: The shell</li>
+<li><strong>Oh My Zsh</strong>: A framework that enhances the zsh shell with functions and design.</li>
+<li><strong>powerlevel9k</strong>: A theme for Oh My Zsh</li>
+<li><strong>Fonts</strong> required by powerlevel9k to display it’s text and icons</li>
+</ul>
+<p>The dependencies in this list are from top to bottom, i.e. the fonts are required by powerlevel9k that runs on top of Oh My Zsh that uses zsh.</p>
+<h2>Directory structure</h2>
+<p>Before going thru the different components one by one, this is the directory structure we will have after installing all the bits <span class="amp">&amp;</span> pices:</p>
+<div class="highlight"><pre><span></span><code>├── $HOME
+│   └── .oh-my-zsh/
+│   │   └── custom/
+│   │   │   └── themes/
+│   │   │       └── powerlevel9k/
+│   │   └── themes/
+│   └── .zsh/
+├── .zshrc
+</code></pre></div>
+<h2>zsh</h2>
+<p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it alkso fired up with bash. So why move over to zsh?</p>
+<p>This article explains it nicely and extensively. In short:</p>
+<ul>
+<li>Apple used bash in the past as it was the de-facto standard</li>
+<li>In 2007 bash switched to <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="noopener noreferrer" target="_blank"><span class="caps">GNU</span> Public License 3.0</a>, which Apple didn’t like for some reasons. So they stayed with the pre-2007 release of bash. And that’s old - including <a href="https://www.wikiwand.com/en/Shellshock_(software_bug)" rel="noopener noreferrer" target="_blank">a vulnerabilty</a> that forced Apple to update bash for Macs.</li>
+<li>zsh over time became the emerging de-facto standard, so Apple moved.</li>
+</ul>
+<p>And of course, <a href="https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/" rel="noopener noreferrer" target="_blank">zsh offers more modern, cool features</a>.</p>
+<p>So anyways, it’s trhe new standard, it looks good - let’s use it. As it’s the new mac standard shell, you don’t need to install it. In case you got a new mac that came with Catalina pre-installed, you are using zsh already. In case you upgraded your Mac from Mojave, you need to set zsh as your terminal shell like so:</p>
+<div class="highlight"><pre><span></span><code>chsh<span class="w"> </span>-s<span class="w"> </span>/bin/zsh
+</code></pre></div>
+<p>This sets zsh as the default Shell.</p>
+<h3>Configuration</h3>
+<p>Configuring the zsh shell is done via entries in <code>.zshrc</code>, which is located in your <code>$HOME</code> directory. As described above, there are a couple of components that interact. Some of them offer configuration options, and can be configured in different locations. In order to keep an overview, I opted for installing the components in their respective default location, and trying to have all the configuration option in the <code>.zshrc</code> file.</p>
+<h2>Oh My Zsh</h2>
+<blockquote>
+<p>Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.
+— <cite><a href="https://ohmyz.sh/" rel="noopener noreferrer" target="_blank">Oh My Zsh website</a></cite></p>
+</blockquote>
+<p>Bascically Oh My Zsh makes your terminal look very nice (via <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" rel="noopener noreferrer" target="_blank">themes</a>) and offers lots of helpful plugins. An example list from their <a href="https://github.com/ohmyzsh/ohmyzsh" rel="noopener noreferrer" target="_blank">github page</a>:</p>
+<div class="highlight"><pre><span></span><code>plugins=(
+  git
+  bundler
+  dotenv
+  osx
+  rake
+  rbenv
+  ruby
+)
+</code></pre></div>
+<p>I currently use the git plugin, which offers shortcuts for often used git commands.</p>
+<h3>Configuring Oh My Zsh</h3>
+<p>As mentioned, I have all the configurations integrated in my <code>$HOME/.zshrc</code> file. The relecvant snippets from my <code>.zshrc</code>file:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Path to your oh-my-zsh installation.</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"/Users/tgartner/.oh-my-zsh"</span>
+
+<span class="c1"># Set name of the theme to load.</span>
+<span class="c1"># See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes</span>
+<span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel9k/powerlevel9k"</span>
+
+<span class="o">(</span>...<span class="o">)</span>
+
+<span class="c1"># Which plugins would you like to load?</span>
+<span class="c1"># Standard plugins can be found in ~/.oh-my-zsh/plugins/*</span>
+<span class="c1"># Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/</span>
+<span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+<span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
+<span class="nv">plugins</span><span class="o">=(</span>git<span class="w"> </span>python<span class="o">)</span>
+</code></pre></div>
+<h2>powerlevel9k</h2>
+<blockquote>
+<p>Powerlevel9k is a theme for <span class="caps">ZSH</span> which uses Powerline Fonts. It can be used with vanilla <span class="caps">ZSH</span> or <span class="caps">ZSH</span> frameworks such as Oh-My-Zsh, Prezto, Antigen, and many others.
+— <cite><a href="https://github.com/Powerlevel9k/powerlevel9k" rel="noopener noreferrer" target="_blank">powerlevel9k website</a></cite></p>
+</blockquote>
+<p><a href="https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#macos-with-homebrew" rel="noopener noreferrer" target="_blank">Installing powerlevel9k</a> is straightforward on a Mac with git:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bhilburn/powerlevel9k.git<span class="w"> </span>~/.oh-my-zsh/custom/themes/powerlevel9k
+</code></pre></div>
+<p>This clones the entire powerlevel9k repo into the right subdirectory under <code>.oh-my-zsh</code>.</p>
+<p><strong>Note</strong> You can also install powerlevel9k with homebrew, but I don’t know where it ends up. To be investigated… 😀</p>
+      <div id="giscus">
+        <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+          data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+          data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+          data-lang="en" crossorigin="anonymous" async>
+      </script>
+  </div>
+
+  </div>
+</div>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>

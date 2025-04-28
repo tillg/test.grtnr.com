@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <title>grtnr.com</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../theme/css/styles.css"/>
+
+
+
+    <meta name="tags" contents="Tech" />
+
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <div class="profile">
+      <img src="../theme/img/profile.png"/>
+    </div>
+  </div>
+
+  <nav class="sidebar-nav">
+  <a class="sidebar-nav-item" href="../">All</a>
+
+      <a class="sidebar-nav-item" href="../category/misc.html">misc</a>
+      <a class="sidebar-nav-item" href="../category/tech.html">[tech]</a>
+
+  <a class="sidebar-nav-item" href="https://getpelican.com/">Pelican</a>
+  <a class="sidebar-nav-item" href="https://www.python.org/">Python.org</a>
+  <a class="sidebar-nav-item" href="https://palletsprojects.com/p/jinja/">Jinja2</a>
+  <a class="sidebar-nav-item" href="#">You can modify those links in your config file</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+    <a href="https://twitter.com/tillg">&copy; @tillg</a> 2017
+    </p>
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      My static&nbsp;website
+    </h1>
+    <span class="post-date">August 8, 2016</span>
+
+    <p><span class="caps">OK</span>, everytbody does it, even I do it: Static websites. It’s fast, it’s safe, it does the computing where it belongs (as long as you don’t need fancy customization, why should a server think about what the page looks like at read time?). This very site is static (built with <a href="http://jbake.org/" rel="noopener noreferrer" target="_blank">JBake</a> and hosted on <a href="https://github.com/" rel="noopener noreferrer" target="_blank">Github</a>). It was fun setting it up, it works great - but I couldn’t explain my mother how to use it or how to publish some content on it. And that’s what a CMs should be about: It has to be usable in the first place.</p>
+<p>Therefore I need anotrher setup. I plan to have a look at some different static web site systems, and set up a list of criteria against which I plan to test the different generators…</p>
+<h2>Criteria</h2>
+<ul>
+<li>Themes<ul>
+<li>Many</li>
+<li>Beautiful </li>
+<li>Responsive </li>
+</ul>
+</li>
+<li>Easy to write<ul>
+<li>Editor with preview</li>
+<li>Easy handling and referencing of pics</li>
+<li>Pictures in preview</li>
+<li>Videos</li>
+<li>Tables</li>
+<li>Code with syntax highlighting</li>
+<li>Automated checking of consistency, i.e. the generated website is correct, complete, the pointers don’t point to Nirwana…</li>
+</ul>
+</li>
+<li>Being able to create an <a href="https://www.ampproject.org/" rel="noopener noreferrer" target="_blank">Accelerated Mobile Page</a> </li>
+<li>Functional features <span class="amp">&amp;</span> pages<ul>
+<li>Tags, tag pages, tag cloud (could also be an extension)</li>
+<li>Publishable on Github (it’s very fast, free and reliable)</li>
+<li>Make website private. i.e. accessible only for registered members</li>
+<li>Publish by email</li>
+<li>Comment by email</li>
+<li>Push news to registered users by email</li>
+<li>Resize pics for fast delivery</li>
+<li>Easy to create new themes, Themes should be just <span class="caps">CSS</span></li>
+<li>Based on other <span class="caps">HTML</span>, i.e. Bootstrap themes</li>
+</ul>
+</li>
+<li>Extensible architecture <ul>
+<li>Can add stuff, i.e. Picture resizing process</li>
+<li>At least a programming language I know a bit - or that I am curious to learn (that basically boils it down to Java and JavaScript)</li>
+<li>The generated <span class="caps">HTML</span> should be as simple as possible. All formatting sits in the <span class="caps">CSS</span></li>
+</ul>
+</li>
+</ul>
+<h2>Generators</h2>
+<p>When scanning the literature (and Github). this is the list of generators rthat I should probably have a look at:</p>
+<ul>
+<li>Jekyll - Done</li>
+<li>Harp <span class="caps">JS</span> - Done</li>
+<li>Hugo - Done</li>
+<li>Metalsmith - Done</li>
+<li>Nikola - Done</li>
+<li>Octopress - Done</li>
+<li>Hexo - Done</li>
+<li>Hyde - Done</li>
+<li>Pelican- Done</li>
+<li>Nanoc - Done</li>
+<li>Middleman - Done</li>
+<li>Lektor - Done</li>
+<li>Gatsby - Done</li>
+<li>Expose - Done</li>
+<li>Wintersmith - Done</li>
+<li>Doc pad - Done</li>
+<li>kirby - Done</li>
+</ul>
+<h2>Evaluation Matrix</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Generator</th>
+<th style="text-align: left;">Programming language</th>
+<th style="text-align: left;">Themes</th>
+<th style="text-align: left;">Formats</th>
+<th style="text-align: left;">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://jekyllrb.com/" rel="noopener noreferrer" target="_blank">Jekyll</a></td>
+<td style="text-align: left;">Ruby —</td>
+<td style="text-align: left;">Lots ++</td>
+<td style="text-align: left;">Markdown, Textile, Liquid ++</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em><a href="https://harpjs.com/" rel="noopener noreferrer" target="_blank">Harp <span class="caps">JS</span></a></em></td>
+<td style="text-align: left;">NodeJS  ++</td>
+<td style="text-align: left;">Some 00</td>
+<td style="text-align: left;">Markdown, <span class="caps">EJS</span>, Jade, <span class="caps">LESS</span>, Stylus… ++</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></td>
+<td style="text-align: left;"><span class="caps">GO</span> —</td>
+<td style="text-align: left;">Some 00</td>
+<td style="text-align: left;">Markdown, asciidoc, reStructure ++</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><em><a href="http://www.metalsmith.io/" rel="noopener noreferrer" target="_blank">Metalsmith</a></em></td>
+<td style="text-align: left;">Node <span class="caps">JS</span> —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Looks very flexible. Also see http://dbushell.com/2015/05/11/wordpress-to-metalsmith/</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://getnikola.com/" rel="noopener noreferrer" target="_blank">Nikola</a></td>
+<td style="text-align: left;">Python —</td>
+<td style="text-align: left;">Few —</td>
+<td style="text-align: left;">reStructuredText, Markdown,</td>
+<td style="text-align: left;">Looks just so so…</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://octopress.org/" rel="noopener noreferrer" target="_blank">Octopress</a></td>
+<td style="text-align: left;">Python —</td>
+<td style="text-align: left;">Some 00</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Is just a package around Jekyll.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em><a href="https://hexo.io/" rel="noopener noreferrer" target="_blank">Hexo</a></em></td>
+<td style="text-align: left;">Node <span class="caps">JS</span> ++</td>
+<td style="text-align: left;">Some 00</td>
+<td style="text-align: left;">Markdown, different flavors, Jekyll Plugins ++</td>
+<td style="text-align: left;">Looks very flexible, uses standard template engines (<span class="caps">EJS</span>, Jade, Swig…), allows to integrate scripts and plugins. ++</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://hyde.github.io/" rel="noopener noreferrer" target="_blank">Hyde</a></td>
+<td style="text-align: left;">Python —</td>
+<td style="text-align: left;">Little —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://blog.getpelican.com/" rel="noopener noreferrer" target="_blank">Pelican</a></td>
+<td style="text-align: left;">Python —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://nanoc.ws/" rel="noopener noreferrer" target="_blank">Nanoc</a></td>
+<td style="text-align: left;">Ruby —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://middlemanapp.com/" rel="noopener noreferrer" target="_blank">Moddleman</a></td>
+<td style="text-align: left;">Python —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://www.getlektor.com/" rel="noopener noreferrer" target="_blank">Lektor</a></td>
+<td style="text-align: left;">Python —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/gatsbyjs/gatsby" rel="noopener noreferrer" target="_blank">Gatsby</a></td>
+<td style="text-align: left;">Node <span class="caps">JS</span>, React</td>
+<td style="text-align: left;">No —</td>
+<td style="text-align: left;">Markdown 00</td>
+<td style="text-align: left;">Looks very flexible, but pretty complex…</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://github.com/Jack000/Expose" rel="noopener noreferrer" target="_blank">Expose</a></td>
+<td style="text-align: left;">Shell scripts —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Markdown and picture folders</td>
+<td style="text-align: left;">Specifically for picture sites.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em><a href="http://wintersmith.io/" rel="noopener noreferrer" target="_blank">Wintersmith</a></em></td>
+<td style="text-align: left;">Node <span class="caps">JS</span>, CoffeeScript ++</td>
+<td style="text-align: left;">Little —</td>
+<td style="text-align: left;">Markdown, Jade, …</td>
+<td style="text-align: left;">Looks very flexible, <span class="caps">LESS</span>, Sass, Stylus. Might be a bit complex…</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="http://docpad.org/" rel="noopener noreferrer" target="_blank">DocPad</a></td>
+<td style="text-align: left;">Node <span class="caps">JS</span> ++</td>
+<td style="text-align: left;">No —</td>
+<td style="text-align: left;">Markdown and others ++</td>
+<td style="text-align: left;">Looks flexible but complex</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://getkirby.com/" rel="noopener noreferrer" target="_blank">kirby</a></td>
+<td style="text-align: left;"><span class="caps">PHP</span> —</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Markdown</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>As a result I should have a closer look at <em><a href="https://harpjs.com/" rel="noopener noreferrer" target="_blank">Harp <span class="caps">JS</span></a></em>, <em><a href="http://www.metalsmith.io/" rel="noopener noreferrer" target="_blank">Metalsmith</a></em>, <em><a href="https://hexo.io/" rel="noopener noreferrer" target="_blank">Hexo</a></em> and <em><a href="http://wintersmith.io/" rel="noopener noreferrer" target="_blank">Wintersmith</a></em>.</p>
+<p>After quickly reading thru the websites of the above tools I decided to give it a try with <em><a href="http://www.metalsmith.io/" rel="noopener noreferrer" target="_blank">Metalsmith</a></em>.</p>
+<h2>Editors</h2>
+<p>When you think of a static site generation from a base of Markdown files, it quickly becomes natural to look for a good editor. What we want from our editor:</p>
+<ul>
+<li>Preview Markdown</li>
+<li>Preview including the <span class="caps">CSS</span> and other transformations that our site generator uses - to make sure we see the same result as it will be displayed in production</li>
+<li>Preview including images. This might be non trivial since the images might be located on a different path in <span class="caps">DEV</span> as in <span class="caps">PROD</span>…
+ Overa ll this means the editor must launch a compilation / composition process that produces the web view every time the Markdown source has been modified.</li>
+</ul>
+<p>Editor we look at</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Editor</th>
+<th style="text-align: left;">Markdown / <span class="caps">HTML</span> Preview</th>
+<th style="text-align: left;">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Visual Code</td>
+<td style="text-align: left;">?</td>
+<td style="text-align: left;">Might have something suitable</td>
+</tr>
+<tr>
+<td style="text-align: left;">Atom</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">Brackets</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://caret.io/" rel="noopener noreferrer" target="_blank">Caret.io</a></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://ia.net/writer" rel="noopener noreferrer" target="_blank"><span class="caps">IA</span> Writer</a></td>
+<td style="text-align: left;">Claims so…</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<p>… probably some more…</p>
+<h1>History</h1>
+<ul>
+<li>August 2016: Started this page</li>
+<li>Jan 2017: Continued while being in Thailand with the family, Tomi <span class="amp">&amp;</span> Beate</li>
+</ul>
+      <div id="giscus">
+        <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+          data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+          data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+          data-lang="en" crossorigin="anonymous" async>
+      </script>
+  </div>
+
+  </div>
+</div>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>
