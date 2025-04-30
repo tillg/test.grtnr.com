@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>Fond</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../../theme/css/styles.css"/>
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<article class="recipe">
+  <header>
+    <h1>Fond</h1>
+    
+    
+    <div class="recipe-meta">
+      
+      
+    </div>
+  </header>
+  
+  
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <p>Und noch ein Juju-Rezept, diesma zu Fonds.</p>
+<h3>Fisch-Fond</h3>
+<p><strong>Wichtig</strong>: Kiemen und Augen rausnehmen. Ca. 1 Kilo Fischgräten grob hacken. 2 Zwiebeln. 1 Stange Lauch. Schale einer Zitrone, auch ganze Zitrone möglich - Vorsicht das weiße wird bitter. 5cl Olivenöl. Wasser. Gut ist auch zusätzlich 1 Lorbeerblatt. Dies gibt aber intensiven Geschmack und kann später bei Bedarf hinzugefügt werden. </p>
+<h3>Hühner-Fond</h3>
+<p>1-2 kg Hühnerskelett (Knochenreste nach Essen)  3 Karotten. 2 Zwiebeln. 1 Stange Lauch.1/2 Sellerie. 2 Knoblauch. 1-2 Nelken. Ca 10 Pfefferkörner im Mörser gerieben. 1-2 Scheiben Ingwer ca 1/2 cm. Wasser. Ca 1 Stunde köcheln lassen. Durch ein feines Sieb aussieben. Abfüllen z.b. in Eiswürfeltaschen.</p>
+<h3>Zitronenhuhn</h3>
+<p>Um Knochen zum verarbeiten für den Hühner-Fond zu haben 😜: Olivenöl &amp; Zitrone, Pfeffer, Salz auf Huhn Zitrone in den Hintern ca. 180 später 200 grad</p>
+  </section>
+  
+  
+</article>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>Moelleux au chocolat</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../../theme/css/styles.css"/>
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<article class="recipe">
+  <header>
+    <h1>Moelleux au chocolat</h1>
+    
+    
+    <div class="recipe-meta">
+      
+      
+    </div>
+  </header>
+  
+  
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <p>La fameuse recette du Moelleux de Juju.</p>
+<ul>
+<li>200g Chocolat noir (par ex. 70%)</li>
+<li>200g beure</li>
+<li>5 œufs à température ambiante</li>
+<li>250 sucre glace</li>
+<li>1 cuillère soupe de farine</li>
+<li>
+<p>Une pincée de fleur de sel</p>
+</li>
+<li>
+<p>beurrer le moule et le fariner</p>
+</li>
+<li>préchauffer le four à 180 degrés</li>
+<li>faire fondre le chocolat et le beure au bain-marie</li>
+<li>hors du feu, ajouter les œufs un à un en battant le mélange au fouet</li>
+<li>ajouter le sucre glace et la farine</li>
+<li>ajouter la fleur de sel</li>
+<li>mettre dans le moule et enfourner pendant 20 min.</li>
+</ul>
+<h2>Les vins</h2>
+<p>Vins moelleux rouges, par exemple Banyuls, Passito.</p>
+<p>Ou bien Champagne demi sec ou Porto ou PX</p>
+<p>De Juju, Mars 2006</p>
+<h2>Remarques</h2>
+<ul>
+<li>Aug 2009: Das erste mal im neuen Ofen in der Spicherenstr. gemacht: Ober/Unterhitze oder Umluft??</li>
+<li>Nov/Dec 06: Les 3 dernières fois le bas du gâteau (qui en servant est le haut du gâteau) avait des trous: Des bulles d’air enfermées. La prochaine fois: Après avoir versé la pâte dans le moule un peu secouer le tout pour que l’air sorte.</li>
+<li>März 2006: In Prag super gelungen: mit KitchenAid &amp; gutem Ofen!</li>
+<li>Anfang März 2006 In Grenoble unter Jujus Anleitung gebacken. Leider misslungen, da sein Grenobler Ofen zu heiß war (hatten den Kuchen 19 Minuten im Ofen).</li>
+</ul>
+<p><img alt="Moelleux" src="moelleux-1.jpg"></p>
+  </section>
+  
+  
+</article>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>

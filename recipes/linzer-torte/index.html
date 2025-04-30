@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>Linzer Torte</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../../theme/css/styles.css"/>
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<article class="recipe">
+  <header>
+    <h1>Linzer Torte</h1>
+    
+    
+    <div class="recipe-meta">
+      
+      
+    </div>
+  </header>
+  
+  
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <h2>Zutaten</h2>
+<ul>
+<li>250g Butter</li>
+<li>200g Zucker</li>
+<li>300g Mehl</li>
+<li>1 Ei</li>
+<li>100g Haselnüsse, gemahlen</li>
+<li>100g Mandeln, gemahlen</li>
+<li>1 Msp. Nelken</li>
+<li>1 ½ TL Zimt</li>
+<li>1 ½ EL Kakaopulver</li>
+<li>2 cl Kirschwasser</li>
+<li>400g Pflaumenmus</li>
+</ul>
+<h2>Zubereitung</h2>
+<p>Das Ei, den Zucker und die Butter vermengen und cremig rühren. Die restlichen Zutaten, bis auf das Pflaumenmus, dazugeben und einen Teig kneten. Der Teig sollte nun ca. eine halbe Stunde im Kühlschrank ruhen.</p>
+<p>Anschließend rd. 2/3 des Teigs in eine gefettete Springerform geben und festdrücken. Jetzt das Pflaumenmus darauf verteilen. Mit dem restlichen Teig entweder Muster ausstechen und auf dem Kuchen verteilen oder mit einer Teigspritze Linien (Gitter) darüber ziehen. Anschließend bei 180 Grad ca. 45 - 50 Min backen (bei Umluft 160 Grad - 50 Min).</p>
+<p>Den Kuchen vor dem Servieren am besten ca. 4-5 Tage ziehen lassen, da schmeckt er am besten. Natürlich aber auch ganz frisch ein wahrer Genuss.</p>
+<p><strong>Januar 2020</strong> Lili &amp; Till backen die Linzer Torte für Susannes Geburtstag</p>
+<p>Quelle: <a href="https://www.chefkoch.de/rezepte/2146101344853967/Friederickes-Linzertorte.html?portionen=1">Friederickes Linzertorte</a></p>
+  </section>
+  
+  
+</article>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>

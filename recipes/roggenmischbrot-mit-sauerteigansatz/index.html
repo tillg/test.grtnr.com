@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>Roggenmischbrot – Mit Sauerteigansatz</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../../theme/css/styles.css"/>
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<article class="recipe">
+  <header>
+    <h1>Roggenmischbrot – Mit Sauerteigansatz</h1>
+    
+    
+    <div class="recipe-meta">
+      
+      
+    </div>
+  </header>
+  
+  
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <p><strong>Zutaten</strong>
+- 1000g Mehl-Mischung (Roggen + Weizen, max. 700g Roggen)
+- 150g Seitenbacher Natur-Sauerteig (oder selbstgemachter Sauerteigansatz)
+- 1 Würfel Hefe
+- 500-600 ml Wasser
+- 2 Teelöffel Salz
+- 2 Teelöffel Zucker oder Honig
+- Gewürze nach Belieben (Kümmel, Pfeffer, Knoblauch, Zwiebeln, Rosmarin, Basilikum, Wacholder etc.)</p>
+<p><strong>Zubereitung</strong></p>
+<ul>
+<li>Aus dem Sauerteigansatz, der Hefe, 5 Esslöffeln Mehl, 450 ml Wasser und 1 Teelöffel Zucker oder Honig einen Brei rühren, 20 Minuten gehen lassen.</li>
+<li>Den schaumigen Brei zu den restlichen Zutaten in eine Schüssel geben.</li>
+<li>Den Teig 10 Minuten lang kräftig durchrühren (Handrührgerät ab 300 Watt oder eine kräftige Küchenmaschine), das restliche Wasser zugeben, bis der Teig die richtige Konsistenz hat (er muss, zu einem Ball geformt, diese Form gerade so halten können), dann 60 Minuten gehen lassen.</li>
+<li>Noch mal 2-3 Minuten lang kneten. Dann in zwei Hälften teilen und auf ein Backblech mit Backpapier legen. (Man kann auch eine Form verwenden, nur wird das Brot dann nicht so knusprig überall.)</li>
+<li>Solange gehen lassen, bis sich das Volumen verdoppelt hat. Je öfter (zwischen den dazwischenliegenden Knetvorgängen) und länger man den Teig gehen lässt, desto besser wird später das Brot, d.h. es hält sich länger und ist schnittfester.</li>
+<li>Mit einer Gabel Löcher in die Oberfläche stechen oder mit dem Messer einritzen, mit Wasser bepinseln und in den Ofen bei 250°C (Elektroherd, vorgeheizt).</li>
+<li>Erst 10 Minuten bei 250°C, dann 50 Minuten bei 180°C backen, ab und zu Wasser in den Backofen auf den Boden schütten (ganz wichtig!).</li>
+</ul>
+  </section>
+  
+  
+</article>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>

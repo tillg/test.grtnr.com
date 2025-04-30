@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+    <title>Roggenmischbrot – Ohne Sauerteigansatz</title>
+
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../theme/css/poole.css"/>
+    <link rel="stylesheet" href="../../theme/css/syntax.css"/>
+    <link rel="stylesheet" href="../../theme/css/lanyon.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" href="../../theme/css/styles.css"/>
+  </head>
+
+  <body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+    <p class="tiny-note">
+      <a class="muted" href="https://github.com/thomaswilley/pelicanyan">pelicanyan v0.1</a>
+    </p>
+  </div>
+</div>
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="../../" title="Home">grtnr.com</a>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+<article class="recipe">
+  <header>
+    <h1>Roggenmischbrot – Ohne Sauerteigansatz</h1>
+    
+    
+    <div class="recipe-meta">
+      
+      
+    </div>
+  </header>
+  
+  
+  <section class="instructions">
+    <h2>Instructions</h2>
+    <p><strong>Zutaten</strong> für ein rundes Brot
+500g Roggenmehl (Typ 815) žitná mouka
+400g Weizenmehl (Typ 812) pšeničná mouka
+15g Trockensauerteig Kvas suchý
+1 Beutel Trockenhefe    Kvasnice suchý
+2 TL Salz sůl
+1 TL Zucker cukr
+Mehl zum Bearbeiten mouka</p>
+<p><strong>Zubereitung</strong></p>
+<ol>
+<li>Alle Zutaten mischen. Nach &amp; nach 650 ml lauwarmes Wasser dazugeben. Auf einer bemehlten Arbeitsfläche ca. 10 Minuten kneten. Teig in einer bemehlten Schüssel 1 Stunde abgedeckt ruhen lassen (an warmer Stelle!).</li>
+<li>Backblech mit Backpapier auslegen, Teig kneten, zu einem runden Brot formen. Auf dem Blech abgedeckt 1 Stunde ruhen lassen.</li>
+<li>Backofen auf 220° (Umluft 200°) vorheizen. Teigling mit Wasser bestreiche, mehrmals einschneiden. Im Backofen (unten) 10 Minuten backen, bei 200° (Umluft 180°) in 40-50 Minuten fertig backen.</li>
+</ol>
+<p><strong>Bemerkung</strong> Till, Feb 2006, Prag
+Habe das Ding gebacken. Hat gut geschmeckt, war allerdings sehr kompakt.
+Probleme beim Backen:</p>
+<ul>
+<li>Wie stell ich es an, dass der Teig nicht so an meinen Fingern klebt, dass ich nix mehr anfassen kann?? Ein Vorschlag aus dem Internet: Finger in Olivenöl einreiben bevor man den Teig knetet.</li>
+<li>Der Teigansatz ist kaum aufgegangen. Vielleicht war deshalb das Brot am Ende so super-kompakt…</li>
+</ul>
+  </section>
+  
+  
+</article>
+      </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var i = 0;
+          // snip empty header rows since markdown can't
+          var rows = document.querySelectorAll('tr');
+          for(i=0; i<rows.length; i++) {
+            var ths = rows[i].querySelectorAll('th');
+            var rowlen = rows[i].children.length;
+            if (ths.length > 0 && ths.length === rowlen) {
+              rows[i].remove();
+            }
+          }
+        })(document);
+      </script>
+
+      <script>
+        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          document.addEventListener('click', function(e) {
+            var target = e.target;
+            if(!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+            checkbox.checked = false;
+            }, false);
+            })(document);
+      </script>
+        <script src="/theme/js/giscus-comments.js"></script>
+
+     </div>
+  </body>
+</html>
