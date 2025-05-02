@@ -53,7 +53,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 02.05.2025 05:52:36.
+      Last built 02.05.2025 06:11:09.
   </div>
 </div>
     <div class="wrap">
@@ -75,7 +75,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
     <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that’s what was missing to me…</p>
 <p>So here I go with yet another article. Or rather a collection of snippets of the information that I found valuable.</p>
-<h2>Setting the scene</h2>
+<h2 id="setting-the-scene">Setting the scene</h2>
 <p>My target setup <span class="amp">&amp;</span> requirements are simple:</p>
 <ul>
 <li>macOS (Catalina 10.15.2 at the time of writing)</li>
@@ -84,7 +84,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>I want proper coloring</li>
 <li>I want to see what Git branch I am in - if the current directory is within a git repo</li>
 </ul>
-<h2>The moving parts</h2>
+<h2 id="the-moving-parts">The moving parts</h2>
 <p>What made me get lost, was missing overview. Therefore, here are the different bits and pices that are involved in my setup:</p>
 <ul>
 <li><strong>zsh</strong>: The shell</li>
@@ -93,7 +93,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li><strong>Fonts</strong> required by powerlevel9k to display it’s text and icons</li>
 </ul>
 <p>The dependencies in this list are from top to bottom, i.e. the fonts are required by powerlevel9k that runs on top of Oh My Zsh that uses zsh.</p>
-<h2>Directory structure</h2>
+<h2 id="directory-structure">Directory structure</h2>
 <p>Before going thru the different components one by one, this is the directory structure we will have after installing all the bits <span class="amp">&amp;</span> pices:</p>
 <div class="highlight"><pre><span></span><code>├── $HOME
 │   └── .oh-my-zsh/
@@ -104,7 +104,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 │   └── .zsh/
 ├── .zshrc
 </code></pre></div>
-<h2>zsh</h2>
+<h2 id="zsh">zsh</h2>
 <p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it alkso fired up with bash. So why move over to zsh?</p>
 <p>This article explains it nicely and extensively. In short:</p>
 <ul>
@@ -117,9 +117,9 @@ styles, `#sidebar-checkbox` for behavior. -->
 <div class="highlight"><pre><span></span><code>chsh<span class="w"> </span>-s<span class="w"> </span>/bin/zsh
 </code></pre></div>
 <p>This sets zsh as the default Shell.</p>
-<h3>Configuration</h3>
+<h3 id="configuration">Configuration</h3>
 <p>Configuring the zsh shell is done via entries in <code>.zshrc</code>, which is located in your <code>$HOME</code> directory. As described above, there are a couple of components that interact. Some of them offer configuration options, and can be configured in different locations. In order to keep an overview, I opted for installing the components in their respective default location, and trying to have all the configuration option in the <code>.zshrc</code> file.</p>
-<h2>Oh My Zsh</h2>
+<h2 id="oh-my-zsh">Oh My Zsh</h2>
 <blockquote>
 <p>Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.
 — <cite><a href="https://ohmyz.sh/" rel="noopener noreferrer" target="_blank">Oh My Zsh website</a></cite></p>
@@ -136,7 +136,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 )
 </code></pre></div>
 <p>I currently use the git plugin, which offers shortcuts for often used git commands.</p>
-<h3>Configuring Oh My Zsh</h3>
+<h3 id="configuring-oh-my-zsh">Configuring Oh My Zsh</h3>
 <p>As mentioned, I have all the configurations integrated in my <code>$HOME/.zshrc</code> file. The relecvant snippets from my <code>.zshrc</code>file:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Path to your oh-my-zsh installation.</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"/Users/tgartner/.oh-my-zsh"</span>
@@ -154,7 +154,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
 <span class="nv">plugins</span><span class="o">=(</span>git<span class="w"> </span>python<span class="o">)</span>
 </code></pre></div>
-<h2>powerlevel9k</h2>
+<h2 id="powerlevel9k">powerlevel9k</h2>
 <blockquote>
 <p>Powerlevel9k is a theme for <span class="caps">ZSH</span> which uses Powerline Fonts. It can be used with vanilla <span class="caps">ZSH</span> or <span class="caps">ZSH</span> frameworks such as Oh-My-Zsh, Prezto, Antigen, and many others.
 — <cite><a href="https://github.com/Powerlevel9k/powerlevel9k" rel="noopener noreferrer" target="_blank">powerlevel9k website</a></cite></p>

@@ -52,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 02.05.2025 05:52:36.
+      Last built 02.05.2025 06:11:09.
   </div>
 </div>
     <div class="wrap">
@@ -73,7 +73,7 @@ styles, `#sidebar-checkbox` for behavior. -->
     <span class="post-date">February 11, 2025</span>
 
     <p><strong><span class="caps">TL</span>;<span class="caps">DR</span>:</strong> I added comments to my static website. Here’s how I did it - including some technical details. I researched amongst different possible solutions for the most solid one, integrated it for all posts and added a counter of the number of comments in the post overview page.</p>
-<h2>Selecting a solution</h2>
+<h2 id="selecting-a-solution">Selecting a solution</h2>
 <p>As i planned to play around with the new <a href="https://openai.com/index/introducing-deep-research/" rel="noopener noreferrer" target="_blank">Deep Research Model from OpenAI</a> I gave it a spin with this topic: <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">feel free to read here</a>. Overall the research was helpful and I ended up using <a href="https://giscus.app/" rel="noopener noreferrer" target="_blank">Giscus</a> for the comments. Partly because it felt the most robust and reliable, partly because I had really bad expoerience with disqus some years ago.</p>
 <p>The choice was based on the set of criteria I gave to the model. Here are the most important ones:</p>
 <ul>
@@ -93,7 +93,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>Disqus</li>
 <li>Some <em>self made</em> solutions</li>
 </ul>
-<h2>Integrating Giscus</h2>
+<h2 id="integrating-giscus">Integrating Giscus</h2>
 <p>In the follow up to it’s research I asked the model to give me a step by step guide on how to integrate the solution. This was far less reliable than the first research, but still helpful. </p>
 <p>Here is the executive summary (the details are in the <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">chat I had with the <span class="caps">AI</span></a>):</p>
 <ul>
@@ -106,7 +106,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>Step 6: Commit and Push Changes - Duh…</li>
 <li>Step 7: Test Your Setup</li>
 </ul>
-<h2>Adding the comment counter</h2>
+<h2 id="adding-the-comment-counter">Adding the comment counter</h2>
 <p>After fiddling around a bit and smoothing the edges everything worked fine. But there was one feature I miussed: I wanted to see the number of comments a blog post has in the post overview page.</p>
 <p><img alt="Comment counter" src="screenshot_comment_counter.jpg" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"/></p>
 <p>So I spun up ChatGPT again and got another <a href="https://chatgpt.com/share/67ab5f69-4ddc-8009-8471-a35e00cb6a43" rel="noopener noreferrer" target="_blank">research result</a>. The rough steps are:</p>

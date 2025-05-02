@@ -53,7 +53,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 02.05.2025 05:52:36.
+      Last built 02.05.2025 06:11:09.
   </div>
 </div>
     <div class="wrap">
@@ -134,13 +134,13 @@ styles, `#sidebar-checkbox` for behavior. -->
 <div class="highlight"><pre><span></span><code><span class="s2">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/lib/docker/volumes/docker-playground_content/_data"</span>
 </code></pre></div>
 <p>But it turns out my data is <strong>not</strong> in this docker-managed directory, but where I wanted it. In my case that’s in<strong> ./data/content</strong>. Also the relative path works fine.</p>
-<h3>Sources</h3>
+<h3 id="sources">Sources</h3>
 <p>Here are the original sources that helped me most</p>
 <ul>
 <li>Docker documentation - strange enough, it dodn’t help at all…</li>
 <li>This was the most helpful <a href="https://stackoverflow.com/questions/35841241/docker-compose-named-mounted-volume" rel="noopener noreferrer" target="_blank">Stackoverflow article</a>.</li>
 </ul>
-<h3>Versions</h3>
+<h3 id="versions">Versions</h3>
 <p>Since these kind of setups might be version sensitive, here is my setup:</p>
 <div class="highlight"><pre><span></span><code>docker-compose version 1.29.2, build 5becea4c
 docker-py version: 5.0.0

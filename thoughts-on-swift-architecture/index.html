@@ -52,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 02.05.2025 05:52:36.
+      Last built 02.05.2025 06:11:09.
   </div>
 </div>
     <div class="wrap">
@@ -81,9 +81,9 @@ styles, `#sidebar-checkbox` for behavior. -->
 <p>I heard this really nice podcast yesterday on how to structure different model types in Swift: Domain models that are my internal representation, Data Models (or DTOs) that are the external representation, and View Models that are the representation for my <span class="caps">UI</span>:</p>
 <p><a href="https://podcasts.apple.com/de/podcast/developer-podcast/id1467065787?i=1000698509743" rel="noopener noreferrer" target="_blank"><img alt="Developer Podcast" src="https://img.transistor.fm/8oNIHMVZfJuWvHxD2UmRV8s-zz2ZDfXC-Sud2dJRo24/rs:fill:400:400:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lMjg4/Y2UwYzYzMjlmN2My/Y2U4MWE3ZmYwNDJk/YTZhZC5wbmc.webp"/></a></p>
 <p>This post basically is a question that I added to the <a href="https://discord.com/invite/j57uchzUa9" rel="noopener noreferrer" target="_blank">Discord that goes with the Podcast</a>.</p>
-<h1>Question</h1>
+<h1 id="question">Question</h1>
 <p>I’m a Swift Rookie, and many aspects are still unclear to me. Based on the example you guys used in the podcast, I will try to fill out the gaps in my understanding.</p>
-<h2>Domain Models, Data Models, and Mappers</h2>
+<h2 id="domain-models-data-models-and-mappers">Domain Models, Data Models, and Mappers</h2>
 <p>The example is a ToDo app and so the main entity is the <strong>Task</strong>. So I would have a Domain model <code>Task</code> that looks like this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">Task</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">id</span><span class="p">:</span> <span class="n">UUID</span>
@@ -119,7 +119,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li><strong>Where</strong> do I put the mapping functions? Are they part on the Domain Model or the Data Model? I guess they rather belong to the the Data Model.</li>
 <li><strong>Errors</strong>: How to deal with errors? For example, if the <code>CKRecord</code> does not contain a value for <code>id</code>, I would get a crash. Should I use optionals or throw an error?</li>
 </ul>
-<h2>Repository</h2>
+<h2 id="repository">Repository</h2>
 <p>Then you mention the repository. Based on the earlier discussion on Discord, I would assume the repository only deals with Domain models. So it might look like this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">getAllTasks</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span>
@@ -136,7 +136,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li><strong>Repository functions</strong>: Typically I would build functions from a repository that are beyond <span class="caps">CRUD</span>. For example a <code>getTasksDateRange</code> that returns the oldest and most recent due date. Where would I build this? I don’t want to put it in <code>TaskRepositoryCloudKit</code> as it would be the same logic when using a different storage (i.e. load all the tasks in memory, sort them, and return the first and last). As I can’t have functions in a protocol, wher do I put it?</li>
 <li><strong>Naming</strong>: Is the naming I suggested reasonable? Is it how you would do it in Swift? I chose <code>TaskRepositoryCloudKit</code> so it is listed next to the <code>TaskRepository</code> in the Xcode file browser. If I would need other Data Models to interface a system Xyz I would call them <code>TaskRawXyz</code> - is that reasonable?</li>
 </ul>
-<h1>Answer</h1>
+<h1 id="answer">Answer</h1>
 <p>I got a great <a href="https://discord.com/channels/1028834407374655518/1028846930182291526/1353860001411760228" rel="noopener noreferrer" target="_blank">answer</a> from <a href="https://pado.name" rel="noopener noreferrer" target="_blank">Cocoatype</a> on discord. And I am very grateful that he took the time to read and type the answer.</p>
 <p>Here is Cocoatype’s answer for reference:</p>
 <blockquote>

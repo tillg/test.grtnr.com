@@ -52,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 02.05.2025 05:52:36.
+      Last built 02.05.2025 06:11:09.
   </div>
 </div>
     <div class="wrap">
@@ -86,7 +86,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 </ul>
 <p>Last week end I discovered this video from David Ondrej: <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. The title is not super attractive, but the content was very helpful for me. So here are my notes so I can use all his tips and have the different prompts and snippets at hand to use them when coding.</p>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gYLNxUxVomY?si=xQAMyMvQCsSwWztk" title="YouTube video player" width="560"></iframe>
-<h2>Prompt Structure</h2>
+<h2 id="prompt-structure">Prompt Structure</h2>
 <p>The overall prompt structure that Deavid suggests:</p>
 <ol>
 <li>what we are doing</li>
@@ -96,7 +96,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>repeat core instruction</li>
 <li>output format</li>
 </ol>
-<h2>Cursorrules</h2>
+<h2 id="cursorrules">Cursorrules</h2>
 <p><code>.cursorrules.md</code> is a file you put in your project top level directory that gives the <span class="caps">AI</span> more context about your project. Here is the structure of the file that David suggests:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># PROJECT OVERVIEW</span>
 <span class="gh"># PERSONALITY</span>
@@ -118,7 +118,7 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 <span class="k">-</span><span class="w"> </span>Repeat the most important instructions.
 </code></pre></div>
 <p>He also strongly suggests to have a <code>.cursorignore</code> in which you list your <code>.env</code> files. This hinders chat and Composer to write in those files accidentally. </p>
-<h2><span class="caps">AI</span> Rules in Cursor Settings</h2>
+<h2 id="ai-rules-in-cursor-settings"><span class="caps">AI</span> Rules in Cursor Settings</h2>
 <p><span class="caps">AI</span> Rules are to be set in the cursor settings. They should not contain anything project specific, just coding principles that you would always want to apply. That’s the difference to the <code>.cursorrules</code> that also contain project specific details.</p>
 <p>An example:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># Fundamental Principles</span>
@@ -150,7 +150,7 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 <span class="k">-</span><span class="w"> </span>Document all changes and their reasoning IN THE COMMENTS YOU WRITE
 <span class="k">-</span><span class="w"> </span>when writing comments, use clear and easy-to-understand language. write short sentences.
 </code></pre></div>
-<h2>Helpful small prompts</h2>
+<h2 id="helpful-small-prompts">Helpful small prompts</h2>
 <p>David provides a list of helpful small prompts or prompt snippets. I copied some of them here for copy&amp;paste usage:</p>
 <div class="highlight"><pre><span></span><code><span class="k">Proc</span><span class="nv">eed</span><span class="w"> </span><span class="nv">like</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">Senior</span><span class="w"> </span><span class="nv">Developer</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">focus</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">clear</span><span class="w"> </span><span class="nv">architecture.</span>
 
@@ -166,8 +166,8 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 
 <span class="nf">You</span><span class="w"> </span><span class="nv">should</span><span class="w"> </span><span class="nv">start</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">reasoning</span><span class="w"> </span><span class="nv">paragraph</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">lots</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">uncertainty</span><span class="p">,</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">slowly</span><span class="w"> </span><span class="nv">gain</span><span class="w"> </span><span class="nv">confidence</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">think</span><span class="w"> </span><span class="nv">about</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nv">more.</span>
 </code></pre></div>
-<h2>Larger prompts</h2>
-<h3>Summary of current state</h3>
+<h2 id="larger-prompts">Larger prompts</h2>
+<h3 id="summary-of-current-state">Summary of current state</h3>
 <p>Used to summarize a compose flow and move over to a fresh compose dialoge.</p>
 <div class="highlight"><pre><span></span><code><span class="nv">Before</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">proceed</span>,<span class="w"> </span><span class="nv">I</span><span class="w"> </span><span class="nv">need</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">give</span><span class="w"> </span><span class="nv">me</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">summary</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">project</span>.
 
@@ -177,22 +177,22 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 
 <span class="nv">I</span><span class="w"> </span><span class="nv">expect</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="nv">three</span><span class="w"> </span><span class="nv">concise</span><span class="w"> </span><span class="nv">paragraphs</span>,<span class="w"> </span><span class="nv">written</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">were</span><span class="w"> </span><span class="nv">giving</span><span class="w"> </span><span class="nv">instructions</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">another</span><span class="w"> </span><span class="nv">programmer</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">was</span><span class="w"> </span><span class="nv">ALL</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">could</span><span class="w"> </span><span class="nv">tell</span><span class="w"> </span><span class="nv">him</span>.
 </code></pre></div>
-<h3>Unbiased 50/50</h3>
+<h3 id="unbiased-5050">Unbiased 50/50</h3>
 <div class="highlight"><pre><span></span><code><span class="nv">BEFORE</span><span class="w"> </span><span class="nv">YOU</span><span class="w"> </span><span class="nv">ANSWER</span>,<span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">want</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">write</span><span class="w"> </span><span class="nv">two</span><span class="w"> </span><span class="nv">detailed</span><span class="w"> </span><span class="nv">paragraphs</span>,<span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">arguing</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">these</span><span class="w"> </span><span class="nv">solutions</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">jump</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">conclusions</span>,<span class="w"> </span><span class="nv">seriously</span><span class="w"> </span><span class="nv">consider</span><span class="w"> </span><span class="nv">both</span><span class="w"> </span><span class="nv">approaches</span>
 
 <span class="k">then</span>,<span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">finish</span>,<span class="w"> </span><span class="nv">tell</span><span class="w"> </span><span class="nv">me</span><span class="w"> </span><span class="nv">whether</span><span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">these</span><span class="w"> </span><span class="nv">solutions</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">obviously</span><span class="w"> </span><span class="nv">better</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">other</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">why</span>.
 </code></pre></div>
-<h3>one-paragraph search query</h3>
+<h3 id="one-paragraph-search-query">one-paragraph search query</h3>
 <div class="highlight"><pre><span></span><code><span class="nv">let</span><span class="s1">'s perform a web search. your task is to write a one-paragraph search query, as if you were telling a human researcher that to find, including all the relevant context. format the paragraph as clear instructions, commanding a researcher to find what we'</span><span class="nv">re</span><span class="w"> </span><span class="nv">looking</span><span class="w"> </span><span class="k">for</span>.<span class="w"> </span><span class="nv">ask</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">snippets</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">details</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">relevant</span><span class="w"> </span>
 </code></pre></div>
-<h2>Instructions</h2>
+<h2 id="instructions">Instructions</h2>
 <p>David suggests to have a directory <code>instructions</code> that contains md files with tips for the <span class="caps">AI</span>. This way you can reference these files from the Composer prompt. He also preferers this kind of instrauction files over refreencing @Docs in cursor, which seems not to work too good yet.</p>
 <p>Instruction files that he mentioned:</p>
 <ul>
 <li><code>supabase.md</code>: A file that describes the structure of his database, so cursor knows about tables, fields, mandatoryness etc.</li>
 <li><code>roadmap.md</code>: An explanation of the roadmap of your project.</li>
 </ul>
-<h2>Other tools</h2>
+<h2 id="other-tools">Other tools</h2>
 <p>Besides Cursor David uses many other tools. Some of what he mentioned:</p>
 <ul>
 <li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a> </li>
