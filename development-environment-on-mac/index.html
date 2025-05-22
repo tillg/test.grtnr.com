@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <title>grtnr.com</title>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../theme/css/poole.css"/>
-    <link rel="stylesheet" href="../theme/css/syntax.css"/>
-    <link rel="stylesheet" href="../theme/css/lanyon.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-    <link rel="stylesheet" href="../theme/css/styles.css"/>
+  <title>test.grtnr.com</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../theme/css/poole.css" />
+  <link rel="stylesheet" href="../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../theme/css/styles.css" />
 
-      gtag('config', 'G-H8M7YDCSD4');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
 
 
 
 
+    <meta name="tags" contents="Mac" />
 
-  </head>
+</head>
 
-  <body>
+<body>
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
 styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -52,30 +55,45 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 03.05.2025 09:02:28.
+      Last built 22.05.2025 15:24:37.
   </div>
 </div>
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="../" title="Home">grtnr.com</a>
-          </h3>
-        </div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
       </div>
+    </div>
 
-      <div class="container content">
+    <div class="container content">
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
       Development Environment On&nbsp;Mac
     </h1>
-    <span class="post-date">January 15, 2025</span>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">January 15, 2025</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/mac/"
+  class="tag-pill ">Mac</a>
 
-    <p><img alt="Funny pic from AI" src="dev_tools.png"/></p>
+</div>
+
+    </div>
+
+    <p><img alt="Funny pic from AI" src="/development-environment-on-mac/dev_tools.png"/></p>
 <p>I am not a professional developer, I do it for fun. And I like to play around, discover new technologies,. development all kinds of little things. So sometimes I need Python, sometimes React/Typescript, Java and more. For every development tool or langugae there are multiple options on how to install them and manage their versions. Since I tend to forget things like “How did I install Python oin this machine?”, this is a note to future me, telling me how I installed every development tool. </p>
 <p>As the way how certain packages are installed might change over time, I will add dates to my installation choices.</p>
+<div class="toc">
 <ul>
+<li><a href="#xcode">Xcode</a></li>
+<li><a href="#terminal">Terminal</a></li>
+<li><a href="#zsh-shell">zsh shell</a></li>
+<li><a href="#vscode">VSCode</a></li>
 <li><a href="#docker">Docker</a></li>
 <li><a href="#java">Java</a></li>
 <li><a href="#maven">Maven</a></li>
@@ -84,10 +102,26 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li><a href="#python">Python</a></li>
 <li><a href="#ruby">Ruby</a></li>
 </ul>
+</div>
+<h2 id="xcode">Xcode</h2>
+<p>Xcode is the basic dev tooling on Mac. It contains git and other basic tools and compilers.</p>
+<p>I install it from the Apple App Store.</p>
+<h2 id="terminal">Terminal</h2>
+<p>My Terminal of choice is <a href="https://iterm2.com" rel="noopener noreferrer" target="_blank">iTerm2</a>, and I simply install it from it’s website. See <a href="/setting-up-my-terminal/">here</a> for how I configure it.</p>
+<h2 id="zsh-shell">zsh shell</h2>
+<p>On a new Mac, here is what I do:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check what Shell I have</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$SHELL</span><span class="s2">"</span>
+
+<span class="c1"># In case it's not zsh, set it as default</span>
+chsh<span class="w"> </span>-s<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>which<span class="w"> </span>zsh<span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+<h2 id="vscode">VSCode</h2>
+<p>… or VSCode-insiders</p>
 <h2 id="docker">Docker</h2>
 <p><strong>January 2025:</strong> I switched away from <a href="https://www.docker.com/products/docker-desktop/" rel="noopener noreferrer" target="_blank">Docker Desktop</a> to <a href="https://rancherdesktop.io" rel="noopener noreferrer" target="_blank">Rancher Desktop</a>.</p>
 <p>Installation note: Downloaded the Apple Silicon version, opened the <span class="caps">DMG</span> and copied it into my Applications directory. The only detail I needed to do, is tick the “Administrative Access” checkbox in the setting.
-<img alt="alt text" src="rancher_prefs.png"/></p>
+<img alt="alt text" src="/development-environment-on-mac/rancher_prefs.png"/></p>
 <p><em>Registry</em>: I use different registries when working on different projects. </p>
 <p><em>Question</em>: How do I configure docker so that it pulls images from a specific registry?</p>
 <h2 id="java">Java</h2>
@@ -132,58 +166,59 @@ To set a java version as default inside a directory, see the <a href="https://sd
 </ul>
 <p><strong>Mini-Cheatsheet</strong></p>
 <p>Select a Pyenv-installed Python as the version to use, run one of the following commands:</p>
-<div class="highlight"><pre><span></span><code>pyenv<span class="w"> </span>shell<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span><span class="k">select</span><span class="w"> </span>just<span class="w"> </span><span class="k">for</span><span class="w"> </span>current<span class="w"> </span>shell<span class="w"> </span>session
+<div class="highlight"><pre><span></span><code>pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.12
+pyenv<span class="w"> </span>shell<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span><span class="k">select</span><span class="w"> </span>just<span class="w"> </span><span class="k">for</span><span class="w"> </span>current<span class="w"> </span>shell<span class="w"> </span>session
 pyenv<span class="w"> </span><span class="nb">local</span><span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>automatically<span class="w"> </span><span class="k">select</span><span class="w"> </span>whenever<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>directory<span class="w"> </span><span class="o">(</span>or<span class="w"> </span>its<span class="w"> </span>subdirectories<span class="o">)</span>
 pyenv<span class="w"> </span>global<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span><span class="k">select</span><span class="w"> </span>globally<span class="w"> </span><span class="k">for</span><span class="w"> </span>your<span class="w"> </span>user<span class="w"> </span>account
 </code></pre></div>
 <h2 id="ruby">Ruby</h2>
-<p><span class="caps">TBD</span></p>
-      <div id="giscus">
-        <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
-          data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
-          data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
-          data-lang="en" crossorigin="anonymous" async>
+<p>Not thought yet. Avoid Ruby in general… 😉</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+        data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+        data-lang="en" crossorigin="anonymous" async>
       </script>
-  </div>
-
-  </div>
+    </div>
 </div>
-      </div>
+</div>
+    </div>
 
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-      <script>
-        (function(document) {
-          var i = 0;
-          // snip empty header rows since markdown can't
-          var rows = document.querySelectorAll('tr');
-          for(i=0; i<rows.length; i++) {
-            var ths = rows[i].querySelectorAll('th');
-            var rowlen = rows[i].children.length;
-            if (ths.length > 0 && ths.length === rowlen) {
-              rows[i].remove();
-            }
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
           }
-        })(document);
-      </script>
+        }
+      })(document);
+    </script>
 
-      <script>
-        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
-        (function(document) {
-          var toggle = document.querySelector('.sidebar-toggle');
-          var sidebar = document.querySelector('#sidebar');
-          var checkbox = document.querySelector('#sidebar-checkbox');
-          document.addEventListener('click', function(e) {
-            var target = e.target;
-            if(!checkbox.checked ||
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
             sidebar.contains(target) ||
             (target === checkbox || target === toggle)) return;
-            checkbox.checked = false;
-            }, false);
-            })(document);
-      </script>
-        <script src="/theme/js/giscus-comments.js"></script>
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
 
-     </div>
-  </body>
+  </div>
+</body>
+
 </html>

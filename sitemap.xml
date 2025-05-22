@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
+    <loc>./designing-filmz/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./mcp-playground/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./setting-up-a-mac/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./autocompleting-my-blog/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
     <loc>./digital-garden/</loc>
     <priority>0.8</priority>
   </url>
@@ -231,6 +251,16 @@
     <priority>0.8</priority>
   </url>
 
+
+  <url>
+    <loc>./about/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>./impressum/</loc>
+    <priority>1.0</priority>
+  </url>
 
 
 </urlset>

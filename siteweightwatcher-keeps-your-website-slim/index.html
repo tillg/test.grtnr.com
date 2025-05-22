@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <title>grtnr.com</title>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../theme/css/poole.css"/>
-    <link rel="stylesheet" href="../theme/css/syntax.css"/>
-    <link rel="stylesheet" href="../theme/css/lanyon.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-    <link rel="stylesheet" href="../theme/css/styles.css"/>
+  <title>test.grtnr.com</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../theme/css/poole.css" />
+  <link rel="stylesheet" href="../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../theme/css/styles.css" />
 
-      gtag('config', 'G-H8M7YDCSD4');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
 
 
 
 
     <meta name="tags" contents="Tech" />
 
-  </head>
+</head>
 
-  <body>
+<body>
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
 styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -53,28 +55,38 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 03.05.2025 09:02:28.
+      Last built 22.05.2025 15:24:37.
   </div>
 </div>
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="../" title="Home">grtnr.com</a>
-          </h3>
-        </div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
       </div>
+    </div>
 
-      <div class="container content">
+    <div class="container content">
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
       SiteWeightWatcher - keeps your website&nbsp;slim
     </h1>
-    <span class="post-date">December 27, 2015</span>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">December 27, 2015</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">Tech</a>
+
+</div>
+
+    </div>
 
     <p>Good software developers test their stuff. And the <a href="https://www.wikiwand.com/en/Test-driven_development" rel="noopener noreferrer" target="_blank"><span class="caps">TDD</span> (Test Driven Development)</a> addicts are maniacs when it comes to testing. Those guys usually think in code, be it Java, Python, nodeJS, you name it. <span class="caps">TDD</span> means you write tests first, then you code just as much as it takes to let the tests become green. Then you rework your code and only then you start writing tests for new requirements. 
-<img alt="TDD Process" src="tdd.png"/></p>
+<img alt="TDD Process" src="/siteweightwatcher-keeps-your-website-slim/tdd.png"/></p>
 <p>This is <strong>very</strong> testy. My opinion is that if you do it the way it’s written and described in the books you become awfully slow and it turns into nonsense. But that’s another discussion, and not one I want to sort out here…</p>
 <p>What’s missing with most of the test approaches I have seen in the past are the following two things:</p>
 <ol>
@@ -95,7 +107,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>How well connected is the site for users in Germany, <span class="caps">UK</span>, <span class="caps">US</span> or Asia? Over time, because those things change without us having done anything.</li>
 </ul>
 <p>I could imagine a dashboard for an online shop like <a href="https://www.kickz.com/de" rel="noopener noreferrer" target="_blank"><span class="caps">KICKZ</span>.com</a> to look may this way:
-<img alt="Deshboard scribble" src="kickz_dashboard.png"/>A Dashboard that shows how page sizes evolve</p>
+<img alt="Deshboard scribble" src="/siteweightwatcher-keeps-your-website-slim/kickz_dashboard.png"/>A Dashboard that shows how page sizes evolve</p>
 <p>And just as the normal test teams do, these tests should also evolve and become more and more adapted to the site, it’s functionality and its users. Whenever we have a real problem or bug out there, we have to make sure that our WeightWatcher will find it in case it should appear or happen again. </p>
 <p>How could we start to build such a tool? Some thoughts:</p>
 <ul>
@@ -115,52 +127,52 @@ styles, `#sidebar-checkbox` for behavior. -->
 <p>From there we we extend the data we collect as well as the reports. </p>
 <p>Such a tool would be great to monitor sites that I am in charge of (I.e. websites that we have developed at mgm) but could also give valuable information about other market players. It could be used both by technical people as well as the marketing guys - since they also <em>sometimes</em> break performance. I would be curious to see this kind of stats for Zalando 😜</p>
 <p>Does anyone know about such a monitoring system? Please let me know.</p>
-      <div id="giscus">
-        <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
-          data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
-          data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
-          data-lang="en" crossorigin="anonymous" async>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+        data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+        data-lang="en" crossorigin="anonymous" async>
       </script>
-  </div>
-
-  </div>
+    </div>
 </div>
-      </div>
+</div>
+    </div>
 
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-      <script>
-        (function(document) {
-          var i = 0;
-          // snip empty header rows since markdown can't
-          var rows = document.querySelectorAll('tr');
-          for(i=0; i<rows.length; i++) {
-            var ths = rows[i].querySelectorAll('th');
-            var rowlen = rows[i].children.length;
-            if (ths.length > 0 && ths.length === rowlen) {
-              rows[i].remove();
-            }
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
           }
-        })(document);
-      </script>
+        }
+      })(document);
+    </script>
 
-      <script>
-        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
-        (function(document) {
-          var toggle = document.querySelector('.sidebar-toggle');
-          var sidebar = document.querySelector('#sidebar');
-          var checkbox = document.querySelector('#sidebar-checkbox');
-          document.addEventListener('click', function(e) {
-            var target = e.target;
-            if(!checkbox.checked ||
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
             sidebar.contains(target) ||
             (target === checkbox || target === toggle)) return;
-            checkbox.checked = false;
-            }, false);
-            })(document);
-      </script>
-        <script src="/theme/js/giscus-comments.js"></script>
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
 
-     </div>
-  </body>
+  </div>
+</body>
+
 </html>

@@ -32,3 +32,22 @@ td img {
 .muted {
   color: #9a9a9a !important;
 }
+
+.post {
+  margin-bottom: 2.5rem;
+}
+
+.post-title {
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  margin-top: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.comment-count {
+  margin-top: 0.5rem;
+  display: block;
+}

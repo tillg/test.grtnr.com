@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <title>Chutney - Relish aus grünen Tomaten</title>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../theme/css/poole.css"/>
-    <link rel="stylesheet" href="../../theme/css/syntax.css"/>
-    <link rel="stylesheet" href="../../theme/css/lanyon.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-    <link rel="stylesheet" href="../../theme/css/styles.css"/>
+  <title>Chutney - Relish aus grünen Tomaten</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../../theme/css/poole.css" />
+  <link rel="stylesheet" href="../../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../../theme/css/styles.css" />
 
-      gtag('config', 'G-H8M7YDCSD4');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  </head>
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
 
-  <body>
+</head>
+
+<body>
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
 styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -48,19 +50,20 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 03.05.2025 09:02:28.
+      Last built 22.05.2025 15:24:37.
   </div>
 </div>
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="../../" title="Home">grtnr.com</a>
-          </h3>
-        </div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
       </div>
+    </div>
 
-      <div class="container content">
+    <div class="container content">
 <article class="recipe">
   <header>
     <h1>Chutney - Relish aus grünen Tomaten</h1>
@@ -98,42 +101,43 @@ Die gesamten Zutaten in einen Topf geben und ca. 30 - 45 Min. langsam einkochen 
   
   
 </article>
-      </div>
+    </div>
 
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-      <script>
-        (function(document) {
-          var i = 0;
-          // snip empty header rows since markdown can't
-          var rows = document.querySelectorAll('tr');
-          for(i=0; i<rows.length; i++) {
-            var ths = rows[i].querySelectorAll('th');
-            var rowlen = rows[i].children.length;
-            if (ths.length > 0 && ths.length === rowlen) {
-              rows[i].remove();
-            }
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
           }
-        })(document);
-      </script>
+        }
+      })(document);
+    </script>
 
-      <script>
-        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
-        (function(document) {
-          var toggle = document.querySelector('.sidebar-toggle');
-          var sidebar = document.querySelector('#sidebar');
-          var checkbox = document.querySelector('#sidebar-checkbox');
-          document.addEventListener('click', function(e) {
-            var target = e.target;
-            if(!checkbox.checked ||
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
             sidebar.contains(target) ||
             (target === checkbox || target === toggle)) return;
-            checkbox.checked = false;
-            }, false);
-            })(document);
-      </script>
-        <script src="/theme/js/giscus-comments.js"></script>
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
 
-     </div>
-  </body>
+  </div>
+</body>
+
 </html>

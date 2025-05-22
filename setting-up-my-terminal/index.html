@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <title>grtnr.com</title>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
 
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="../theme/css/poole.css"/>
-    <link rel="stylesheet" href="../theme/css/syntax.css"/>
-    <link rel="stylesheet" href="../theme/css/lanyon.css"/>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-    <link rel="stylesheet" href="../theme/css/styles.css"/>
+  <title>test.grtnr.com</title>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../theme/css/poole.css" />
+  <link rel="stylesheet" href="../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../theme/css/styles.css" />
 
-      gtag('config', 'G-H8M7YDCSD4');
-    </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
 
 
 
 
     <meta name="tags" contents="tech" />
+    <meta name="tags" contents="Mac" />
 
-  </head>
+</head>
 
-  <body>
+<body>
 <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
 styles, `#sidebar-checkbox` for behavior. -->
 <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
@@ -53,25 +56,38 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 03.05.2025 09:02:28.
+      Last built 22.05.2025 15:24:37.
   </div>
 </div>
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="../" title="Home">grtnr.com</a>
-          </h3>
-        </div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
       </div>
+    </div>
 
-      <div class="container content">
+    <div class="container content">
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
       Setting up my&nbsp;terminal
     </h1>
-    <span class="post-date">February 6, 2020</span>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 6, 2020</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">tech</a>
+
+  <a href="/tag/mac/"
+  class="tag-pill ">Mac</a>
+
+</div>
+
+    </div>
 
     <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that’s what was missing to me…</p>
 <p>So here I go with yet another article. Or rather a collection of snippets of the information that I found valuable.</p>
@@ -105,7 +121,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 ├── .zshrc
 </code></pre></div>
 <h2 id="zsh">zsh</h2>
-<p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it alkso fired up with bash. So why move over to zsh?</p>
+<p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it also fired up with bash. So why move over to zsh?</p>
 <p>This article explains it nicely and extensively. In short:</p>
 <ul>
 <li>Apple used bash in the past as it was the de-facto standard</li>
@@ -137,7 +153,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 </code></pre></div>
 <p>I currently use the git plugin, which offers shortcuts for often used git commands.</p>
 <h3 id="configuring-oh-my-zsh">Configuring Oh My Zsh</h3>
-<p>As mentioned, I have all the configurations integrated in my <code>$HOME/.zshrc</code> file. The relecvant snippets from my <code>.zshrc</code>file:</p>
+<p>As mentioned, I have all the configurations integrated in my <code>$HOME/.zshrc</code> file. The relevant snippets from my <code>.zshrc</code>file:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Path to your oh-my-zsh installation.</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"/Users/tgartner/.oh-my-zsh"</span>
 
@@ -154,62 +170,55 @@ styles, `#sidebar-checkbox` for behavior. -->
 <span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
 <span class="nv">plugins</span><span class="o">=(</span>git<span class="w"> </span>python<span class="o">)</span>
 </code></pre></div>
-<h2 id="powerlevel9k">powerlevel9k</h2>
-<blockquote>
-<p>Powerlevel9k is a theme for <span class="caps">ZSH</span> which uses Powerline Fonts. It can be used with vanilla <span class="caps">ZSH</span> or <span class="caps">ZSH</span> frameworks such as Oh-My-Zsh, Prezto, Antigen, and many others.
-— <cite><a href="https://github.com/Powerlevel9k/powerlevel9k" rel="noopener noreferrer" target="_blank">powerlevel9k website</a></cite></p>
-</blockquote>
-<p><a href="https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#macos-with-homebrew" rel="noopener noreferrer" target="_blank">Installing powerlevel9k</a> is straightforward on a Mac with git:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/bhilburn/powerlevel9k.git<span class="w"> </span>~/.oh-my-zsh/custom/themes/powerlevel9k
-</code></pre></div>
-<p>This clones the entire powerlevel9k repo into the right subdirectory under <code>.oh-my-zsh</code>.</p>
-<p><strong>Note</strong> You can also install powerlevel9k with homebrew, but I don’t know where it ends up. To be investigated… 😀</p>
-      <div id="giscus">
-        <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
-          data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
-          data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
-          data-lang="en" crossorigin="anonymous" async>
+<h2 id="powerlevel10k">powerlevel10k</h2>
+<p>Note: I used to use <a href="https://github.com/Powerlevel9k/powerlevel9k" rel="noopener noreferrer" target="_blank">powerlevel9k</a>, but when installing my Mac in May 2025, 9k was outdated and pointed to <a href="https://github.com/romkatv/powerlevel10k" rel="noopener noreferrer" target="_blank">powerlevel10k</a>.</p>
+<p>Install powerlevel10k following their <a href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh" rel="noopener noreferrer" target="_blank">installation guide for zsh</a>.</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+        data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+        data-lang="en" crossorigin="anonymous" async>
       </script>
-  </div>
-
-  </div>
+    </div>
 </div>
-      </div>
+</div>
+    </div>
 
-      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
 
-      <script>
-        (function(document) {
-          var i = 0;
-          // snip empty header rows since markdown can't
-          var rows = document.querySelectorAll('tr');
-          for(i=0; i<rows.length; i++) {
-            var ths = rows[i].querySelectorAll('th');
-            var rowlen = rows[i].children.length;
-            if (ths.length > 0 && ths.length === rowlen) {
-              rows[i].remove();
-            }
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
           }
-        })(document);
-      </script>
+        }
+      })(document);
+    </script>
 
-      <script>
-        /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
-        (function(document) {
-          var toggle = document.querySelector('.sidebar-toggle');
-          var sidebar = document.querySelector('#sidebar');
-          var checkbox = document.querySelector('#sidebar-checkbox');
-          document.addEventListener('click', function(e) {
-            var target = e.target;
-            if(!checkbox.checked ||
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
             sidebar.contains(target) ||
             (target === checkbox || target === toggle)) return;
-            checkbox.checked = false;
-            }, false);
-            })(document);
-      </script>
-        <script src="/theme/js/giscus-comments.js"></script>
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
 
-     </div>
-  </body>
+  </div>
+</body>
+
 </html>

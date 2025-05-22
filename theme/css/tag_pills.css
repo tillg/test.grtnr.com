@@ -1,0 +1,72 @@
+/* Tag Pills Styling */
+/* Tag Pills Styling */
+.tag-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  align-items: center; /* Center vertically */
+}
+
+.tag-pill {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #505050;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  /* Use the same font as titles in the Lanyon theme */
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -.025rem;
+  margin-bottom: 0; /* Remove bottom margin to align with date */
+}
+
+.tag-pill:hover {
+  background-color: #e0e0e0;
+  color: #303030;
+  text-decoration: none;
+}
+
+/* Size variations */
+.tag-pill-small {
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+.tag-pill-large {
+  font-size: 16px;
+  padding: 6px 16px;
+}
+
+/* Optional: Add a subtle shadow on hover for more interactive feel */
+.tag-pill:hover {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Styling for inline tag display in headings */
+.tag-heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-inline .tag-pills {
+  margin: 0;
+  display: inline-flex;
+}
+
+/* Match heading font size for tag pills inside headings */
+h1 .tag-inline .tag-pill {
+  /* Match the font size of h1 */
+  font-size: inherit;
+  /* Adjust padding to look proportional */
+  padding: 0.2em 0.6em;
+  /* Slight vertical adjustment */
+  position: relative;
+  top: -0.05em;
+}

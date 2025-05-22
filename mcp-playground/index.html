@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../theme/css/poole.css" />
+  <link rel="stylesheet" href="../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="Tech" />
+    <meta name="tags" contents="AI" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+      Last built 22.05.2025 15:24:37.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      <span class="caps">MCP</span>&nbsp;Playground
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">May 18, 2025</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">Tech</a>
+
+  <a href="/tag/ai/"
+  class="tag-pill ">AI</a>
+
+</div>
+
+    </div>
+
+    <p>Notes about findings and <em>understandings</em> around <a href="https://modelcontextprotocol.io/introduction" rel="noopener noreferrer" target="_blank">Model Context Protocol aka _MCP</a>.</p>
+<div class="toc">
+<ul>
+<li><a href="#questions">Questions</a></li>
+<li><a href="#accessing-a-mcp-server">Accessing a <span class="caps">MCP</span> server</a></li>
+<li><a href="#mcp-servers"><span class="caps">MCP</span> Servers</a><ul>
+<li><a href="#filesystem-mcp-server">Filesystem <span class="caps">MCP</span> Server</a></li>
+</ul>
+</li>
+<li><a href="#mcp-servers_1"><span class="caps">MCP</span> Servers</a><ul>
+<li><a href="#filesystem-access">FileSystem Access</a></li>
+<li><a href="#xcode-build">Xcode Build</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="questions">Questions</h2>
+<p>Open questions that I have.</p>
+<ul>
+<li>Can I run Claude with different <span class="caps">MCP</span> Server configurations? I.e. I have one configuration per project, say one for my Python project (including access only to my Python project directory), one for my Swift/Xcode project (with a different dir and different tools).</li>
+<li>Test: Play around with <span class="caps">MCP</span> Inspector and <a href="https://github.com/cameroncooke/XcodeBuildMCP" rel="noopener noreferrer" target="_blank">Xcode Build <span class="caps">MCP</span> Server</a>.</li>
+</ul>
+<h2 id="accessing-a-mcp-server">Accessing a <span class="caps">MCP</span> server</h2>
+<p>When searching and eventually finding an <span class="caps">MCP</span> server for my use case, I find it helpful to play around with them, in order to <em>understand</em> what tooling the <span class="caps">LLM</span> gets. The easiest way to do this is with the <a href="https://github.com/modelcontextprotocol/inspector" rel="noopener noreferrer" target="_blank"><span class="caps">MCP</span> Inspector</a>.</p>
+<p>Get going:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Make sure you have installed a recent version of nodeJs (in my case with nvm)</span>
+nvm<span class="w"> </span>use<span class="w"> </span><span class="m">24</span>
+npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </span>node<span class="w"> </span>build/index.js
+
+<span class="c1"># It downloads &amp; starts the MCP UI Client and serves it locally.</span>
+</code></pre></div>
+<p><strong>Configuration</strong></p>
+<p>The Inspector keeps whatever you type in the sidebar in localStorage, but for repeatable setups you can save a tiny <span class="caps">JSON</span> file and point the <span class="caps">CLI</span> to it:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// mcp.json</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filesystem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"-y"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"@modelcontextprotocol/server-filesystem"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"/Users/yourname/Projects"</span><span class="p">,</span><span class="w">      </span><span class="c1">// read/write</span>
+<span class="w">        </span><span class="s2">"/Users/yourname/Notes"</span><span class="p">,</span><span class="w">         </span><span class="c1">// read/write</span>
+<span class="w">        </span><span class="s2">"/Users/yourname/Code"</span><span class="p">,</span><span class="w">          </span><span class="c1">// read-only? add ',ro' if you use Docker</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Then run <code>npx @modelcontextprotocol/inspector --config ./mcp.json --server filesystem</code></p>
+<h2 id="mcp-servers"><span class="caps">MCP</span> Servers</h2>
+<p><span class="caps">MCP</span> Servers I used or looked at:</p>
+<h3 id="filesystem-mcp-server">Filesystem <span class="caps">MCP</span> Server</h3>
+<ul>
+<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" rel="noopener noreferrer" target="_blank">Filesystem <span class="caps">MCP</span> Server</a></li>
+<li>One of the <a href="https://github.com/modelcontextprotocol/servers?tab=readme-ov-file#-reference-servers" rel="noopener noreferrer" target="_blank">Reference Servers</a> </li>
+</ul>
+<p>Main config: </p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"filesystem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"npx"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">"-y"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"@modelcontextprotocol/server-filesystem"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"/Users/username/Desktop"</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">"/path/to/other/allowed/dir"</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="mcp-servers_1"><span class="caps">MCP</span> Servers</h2>
+<p><span class="caps">MCP</span> Servers I tested or plan to test.</p>
+<h3 id="filesystem-access">FileSystem Access</h3>
+<h3 id="xcode-build">Xcode Build</h3>
+<p><img alt="Xcode Build" src="/mcp-playground/xcode_build.png"/></p>
+<ul>
+<li>Enables Xcode build actions.</li>
+<li>https://github.com/cameroncooke/XcodeBuildMCP</li>
+</ul>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+        data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+        data-lang="en" crossorigin="anonymous" async>
+      </script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

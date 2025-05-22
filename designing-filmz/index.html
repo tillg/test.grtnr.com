@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../theme/css/poole.css" />
+  <link rel="stylesheet" href="../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="tech" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <div class="sidebar-item">
+      Last built 22.05.2025 15:24:37.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Designing&nbsp;Filmz
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">May 21, 2025</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">tech</a>
+
+</div>
+
+    </div>
+
+    <p>Some time ago I built a little iOS App called Filmz: keep track of films and shows you want to see or you have seen. Keep personal additional information like “how did I like it?” (I.e. my personal rating), “For what audience would I recommend it?” (Adults, kids, family) “When and where did I see it” etc. And then comes sharing: passing on film recommendations to friends, either one film at a time or lists. </p>
+<p>As I didn’t know any Swift back then, I built it in a <em>vibe coding</em> style, fully supported by <span class="caps">AI</span> (back then mainly Cursor.ai). This gave me a fast start, but I was lost once I wanted to add more complex features that required a well structured code base. And since I didn’t know much about Swift, I couldn’t do it either. Vibe debugging doesn’t work - yet…</p>
+<p>So here I start again, and with a different approach: I first want to sketch the structure I would like to have, lay out my design principles, the SDKs I want to use (or the ones I don’t want to use) and then start coding. I also plan to use <span class="caps">AI</span> support (my Swift know how is still mediocre), but I hope that this way I can create a code base that is more structured, and that will be able to evolve while staying structured. </p>
+<h2 id="main-entities">Main entities</h2>
+<p>These are the main entities I’m dealing with. </p>
+<h3 id="imdbfilm">ImdbFilm</h3>
+<p>A film from <a href="https://www.imdb.com" rel="noopener noreferrer" target="_blank"><span class="caps">IMDB</span></a> - even though I don’t use the real <span class="caps">IMDB</span> (<span class="caps">API</span> usage is really expensive) but <a href="https://www.omdbapi.com" rel="noopener noreferrer" target="_blank"><span class="caps">OMDB</span>, the Open Movie DataBase</a> that can be queried via a much cheaper <span class="caps">API</span>. I use ImdbFilm objects and references throughout my code base to reference a “Film”. </p>
+<p>ImdbFilms are also what I get back from my search (as <span class="caps">JSON</span>). And example:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="err">“Ti</span><span class="kc">tle</span><span class="err">”</span><span class="p">:</span><span class="err">”Harry</span><span class="w"> </span><span class="err">Po</span><span class="kc">tter</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">Sorcerer’s</span><span class="w"> </span><span class="err">S</span><span class="kc">t</span><span class="err">o</span><span class="kc">ne</span><span class="err">”</span><span class="p">,</span>
+<span class="err">”Year”</span><span class="p">:</span><span class="err">”</span><span class="mi">2001</span><span class="err">”</span><span class="p">,</span>
+<span class="err">”Ra</span><span class="kc">te</span><span class="err">d”</span><span class="p">:</span><span class="err">”PG”</span><span class="p">,</span><span class="err">”Released”</span><span class="p">:</span><span class="err">”</span><span class="mi">16</span><span class="w"> </span><span class="err">Nov</span><span class="w"> </span><span class="mi">2001</span><span class="err">”</span><span class="p">,</span><span class="err">”Ru</span><span class="kc">nt</span><span class="err">ime”</span><span class="p">:</span><span class="err">”</span><span class="mi">152</span><span class="w"> </span><span class="err">mi</span><span class="kc">n</span><span class="err">”</span><span class="p">,</span>
+<span class="err">”Ge</span><span class="kc">nre</span><span class="err">”</span><span class="p">:</span><span class="err">”Adve</span><span class="kc">nture</span><span class="p">,</span><span class="w"> </span><span class="err">Family</span><span class="p">,</span><span class="w"> </span><span class="err">Fa</span><span class="kc">ntas</span><span class="err">y”</span><span class="p">,</span><span class="err">”Direc</span><span class="kc">t</span><span class="err">or”</span><span class="p">:</span><span class="err">”Chris</span><span class="w"> </span><span class="err">Columbus”</span><span class="p">,</span>
+<span class="err">”Wri</span><span class="kc">ter</span><span class="err">”</span><span class="p">:</span><span class="err">”J.K.</span><span class="w"> </span><span class="err">Rowli</span><span class="kc">n</span><span class="err">g</span><span class="p">,</span><span class="w"> </span><span class="err">S</span><span class="kc">te</span><span class="err">ve</span><span class="w"> </span><span class="err">Kloves”</span><span class="p">,</span>
+<span class="err">”Ac</span><span class="kc">t</span><span class="err">ors”</span><span class="p">:</span><span class="err">”Da</span><span class="kc">n</span><span class="err">iel</span><span class="w"> </span><span class="err">Radcli</span><span class="kc">ffe</span><span class="p">,</span><span class="w"> </span><span class="err">Ruper</span><span class="kc">t</span><span class="w"> </span><span class="err">Gri</span><span class="kc">nt</span><span class="p">,</span><span class="w"> </span><span class="err">Emma</span><span class="w"> </span><span class="err">Wa</span><span class="kc">ts</span><span class="err">o</span><span class="kc">n</span><span class="err">”</span><span class="p">,</span>
+<span class="err">”Plo</span><span class="kc">t</span><span class="err">”</span><span class="p">:</span><span class="err">”A</span><span class="kc">n</span><span class="w"> </span><span class="err">orpha</span><span class="kc">ne</span><span class="err">d</span><span class="w"> </span><span class="err">boy</span><span class="w"> </span><span class="err">e</span><span class="kc">nr</span><span class="err">olls</span><span class="w"> </span><span class="err">i</span><span class="kc">n</span><span class="w"> </span><span class="err">a</span><span class="w"> </span><span class="err">school</span><span class="w"> </span><span class="err">o</span><span class="kc">f</span><span class="w"> </span><span class="err">wizardry</span><span class="p">,</span><span class="w"> </span><span class="err">where</span><span class="w"> </span><span class="err">he</span><span class="w"> </span><span class="err">lear</span><span class="kc">ns</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">trut</span><span class="err">h</span><span class="w"> </span><span class="err">abou</span><span class="kc">t</span><span class="w"> </span><span class="err">himsel</span><span class="kc">f</span><span class="p">,</span><span class="w"> </span><span class="err">his</span><span class="w"> </span><span class="kc">fa</span><span class="err">mily</span><span class="w"> </span><span class="err">a</span><span class="kc">n</span><span class="err">d</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="kc">terr</span><span class="err">ible</span><span class="w"> </span><span class="err">evil</span><span class="w"> </span><span class="kc">t</span><span class="err">ha</span><span class="kc">t</span><span class="w"> </span><span class="err">hau</span><span class="kc">nts</span><span class="w"> </span><span class="kc">t</span><span class="err">he</span><span class="w"> </span><span class="err">magical</span><span class="w"> </span><span class="err">world.”</span><span class="p">,</span><span class="err">”La</span><span class="kc">n</span><span class="err">guage”</span><span class="p">:</span><span class="err">”E</span><span class="kc">n</span><span class="err">glish</span><span class="p">,</span><span class="w"> </span><span class="err">La</span><span class="kc">t</span><span class="err">i</span><span class="kc">n</span><span class="err">”</span><span class="p">,</span><span class="err">”Cou</span><span class="kc">ntr</span><span class="err">y”</span><span class="p">:</span><span class="err">”U</span><span class="kc">n</span><span class="err">i</span><span class="kc">te</span><span class="err">d</span><span class="w"> </span><span class="err">Ki</span><span class="kc">n</span><span class="err">gdom</span><span class="p">,</span><span class="w"> </span><span class="err">U</span><span class="kc">n</span><span class="err">i</span><span class="kc">te</span><span class="err">d</span><span class="w"> </span><span class="err">S</span><span class="kc">tates</span><span class="err">”</span><span class="p">,</span>
+<span class="err">”Awards”</span><span class="p">:</span><span class="err">”Nomi</span><span class="kc">nate</span><span class="err">d</span><span class="w"> </span><span class="kc">f</span><span class="err">or</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="err">Oscars.</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="err">wi</span><span class="kc">ns</span><span class="w"> </span><span class="err">&amp;</span><span class="w"> </span><span class="mi">74</span><span class="w"> </span><span class="kc">n</span><span class="err">omi</span><span class="kc">nat</span><span class="err">io</span><span class="kc">ns</span><span class="w"> </span><span class="kc">t</span><span class="err">o</span><span class="kc">tal</span><span class="err">”</span><span class="p">,</span>
+<span class="err">”Pos</span><span class="kc">ter</span><span class="err">”</span><span class="p">:</span><span class="err">”h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//m.media-amazon.com/images/M/MV5BNTU1MzgyMDMtMzBlZS00YzczLThmYWEtMjU3YmFlOWEyMjE1XkEyXkFqcGc@._V1_SX300.jpg”,</span>
+<span class="err">”Ra</span><span class="kc">t</span><span class="err">i</span><span class="kc">n</span><span class="err">gs”</span><span class="p">:[{</span><span class="err">“Source”</span><span class="p">:</span><span class="err">”I</span><span class="kc">nternet</span><span class="w"> </span><span class="err">Movie</span><span class="w"> </span><span class="err">Da</span><span class="kc">ta</span><span class="err">base”</span><span class="p">,</span><span class="err">”Value”</span><span class="p">:</span><span class="err">”</span><span class="mf">7.7</span><span class="err">/</span><span class="mi">10</span><span class="err">”</span><span class="p">},{</span><span class="err">“Source”</span><span class="p">:</span><span class="err">”Ro</span><span class="kc">tten</span><span class="w"> </span><span class="err">Toma</span><span class="kc">t</span><span class="err">oes”</span><span class="p">,</span><span class="err">”Value”</span><span class="p">:</span><span class="err">”</span><span class="mi">80</span><span class="err">%”</span><span class="p">},{</span><span class="err">“Source”</span><span class="p">:</span><span class="err">”Me</span><span class="kc">ta</span><span class="err">cri</span><span class="kc">t</span><span class="err">ic”</span><span class="p">,</span><span class="err">”Value”</span><span class="p">:</span><span class="err">”</span><span class="mi">65</span><span class="err">/</span><span class="mi">100</span><span class="err">”</span><span class="p">}],</span>
+<span class="err">”Me</span><span class="kc">tas</span><span class="err">core”</span><span class="p">:</span><span class="err">”</span><span class="mi">65</span><span class="err">”</span><span class="p">,</span><span class="err">”imdbRa</span><span class="kc">t</span><span class="err">i</span><span class="kc">n</span><span class="err">g”</span><span class="p">:</span><span class="err">”</span><span class="mf">7.7</span><span class="err">”</span><span class="p">,</span><span class="err">”imdbVo</span><span class="kc">tes</span><span class="err">”</span><span class="p">:</span><span class="err">”</span><span class="mi">904</span><span class="p">,</span><span class="mi">094</span><span class="err">”</span><span class="p">,</span><span class="err">”imdbID”</span><span class="p">:</span><span class="err">”</span><span class="kc">tt</span><span class="mi">0241527</span><span class="err">”</span><span class="p">,</span><span class="err">”Type”</span><span class="p">:</span><span class="err">”movie”</span><span class="p">,</span><span class="err">”DVD”</span><span class="p">:</span><span class="err">”N/A”</span><span class="p">,</span><span class="err">”BoxO</span><span class="kc">ff</span><span class="err">ice”</span><span class="p">:</span><span class="err">”$</span><span class="mi">318</span><span class="p">,</span><span class="mi">886</span><span class="p">,</span><span class="mi">962</span><span class="err">”</span><span class="p">,</span><span class="err">”Produc</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">”</span><span class="p">:</span><span class="err">”N/A”</span><span class="p">,</span><span class="err">”Websi</span><span class="kc">te</span><span class="err">”</span><span class="p">:</span><span class="err">”N/A”</span><span class="p">,</span><span class="err">”Respo</span><span class="kc">nse</span><span class="err">”</span><span class="p">:</span><span class="err">”True”</span><span class="p">}</span>
+</code></pre></div>
+<p>Fields of ImdbFilm:</p>
+<ul>
+<li><span class="caps">ID</span> - my internal <span class="caps">ID</span></li>
+<li>Title</li>
+<li>year</li>
+<li>genre - an array of strings</li>
+<li>plot</li>
+<li>Actors - an array of strings</li>
+<li>poster - the url of a poster image</li>
+<li>imdbRating </li>
+<li>rottenTomatoeRating</li>
+</ul>
+<p>Some of the fields are optional, <span class="caps">ID</span> and Title are mandatory. At later stages we could think of keeping track of real actor objects and more, but for a start we are good. </p>
+<h3 id="myfilm">MyFilm</h3>
+<p>A film that is on my list. Either one I have seen, or one I plan to see. </p>
+<p>Fields of MyFilm:</p>
+<ul>
+<li><span class="caps">ID</span></li>
+<li>ImdbId - the film that we talk about</li>
+<li>seen - Boolean </li>
+<li>seenDate </li>
+<li>myRating </li>
+<li>myComments </li>
+<li>recommendedAudience - kids, adults, family, bodyCountSavvy</li>
+</ul>
+<h2 id="services">Services</h2>
+<h2 id="ui-objects"><span class="caps">UI</span> Objects</h2>
+<h2 id="principles">Principles</h2>
+<h3 id="system-boundaries">System boundaries</h3>
+<h3 id="use-structs">Use structs</h3>
+<h3 id="pass-on-ids-and-services">Pass on IDs and services</h3>
+<ul>
+<li>Passing on IDs and services in my app. Every logic or <span class="caps">UI</span> component that needs the entire object gets it from the service</li>
+<li>Take care of caching later</li>
+</ul>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js" data-repo="tillg/grtnr.com_2024" data-repo-id="R_kgDONYRp_Q"
+        data-category="Q&A" data-category-id="DIC_kwDONYRp_c4Cm0cH" data-mapping="pathname" data-strict="0"
+        data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="preferred_color_scheme"
+        data-lang="en" crossorigin="anonymous" async>
+      </script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>
