@@ -54,7 +54,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 26.05.2025 14:37:59.
+      Last built 27.05.2025 09:01:13.
   </div>
 </div>
   <div class="wrap">
@@ -85,7 +85,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <p><img alt="Google CSE administration" src="/adding-search-to-a-static-site/Custom_Search_-_Basic.jpg"/></p>
 <p>The one thing we need from here is the code in order to embed the search. You get this code by clicking the bitton “<strong>Get Code</strong>“.</p>
 <h2 id="add-the-search-field">Add the search field</h2>
-<p>Next we need a search box on our pages. I want a search box on the top right of every page on the entire website. So I add it to the freemarker template that creates the menu. </p>
+<p>Next we need a search box on our pages. I want a search box on the top right of every page on the entire website. So I add it to the freemarker template that creates the menu.</p>
 <p>In my case the <code>menu.ftl</code> looks something like this:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">Fixed</span><span class="w"> </span><span class="nx">navbar</span><span class="w"> </span><span class="o">--&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="nx">nav</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar navbar-default navbar-fixed-top"</span><span class="w"> </span><span class="nx">role</span><span class="o">=</span><span class="s2">"navigation"</span><span class="o">&gt;</span>
@@ -127,7 +127,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <p>The result is a neat little serach box on the top right corner:</p>
 <p><img alt="Search box" src="/adding-search-to-a-static-site/search_box.jpg"/></p>
 <h2 id="search-result-page">Search result page</h2>
-<p>Last but not least we need the search result page. This page will be called (i.e. linked to) from the search form we just made. It’s <span class="caps">URL</span> will be something like </p>
+<p>Last but not least we need the search result page. This page will be called (i.e. linked to) from the search form we just made. It’s <span class="caps">URL</span> will be something like</p>
 <div class="highlight"><pre><span></span><code>http://tillgartner.com/search.html?q=huhu
 </code></pre></div>
 <p>In my case the search result page will hold <strong>only</strong> the search result. In case the user wants to modify his search, he still has the ubiquitous search box on the top right corner.

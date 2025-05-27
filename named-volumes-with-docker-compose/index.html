@@ -55,7 +55,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 26.05.2025 14:37:59.
+      Last built 27.05.2025 09:01:13.
   </div>
 </div>
   <div class="wrap">
@@ -115,14 +115,14 @@ styles, `#sidebar-checkbox` for behavior. -->
 <span class="w">  </span><span class="nx">content</span><span class="p">:</span>
 <span class="w">     </span><span class="nx">driver_opts</span><span class="p">:</span>
 <span class="w">           </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">none</span>
-<span class="w">           </span><span class="nx">device</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">content</span><span class="w"> </span>
+<span class="w">           </span><span class="nx">device</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">content</span>
 <span class="w">           </span><span class="nx">o</span><span class="p">:</span><span class="w"> </span><span class="nx">bind</span>
 </code></pre></div>
 <p>That’s what’s going on:</p>
 <ul>
 <li>We have 2 services of the same type: plain nginx containers for demo purposes.</li>
 <li>They both expose their (internal) port 80 to port 81 resp. 82 to the outside world.</li>
-<li>They both use a volume called <strong>content</strong> that is defined in the volumes section. </li>
+<li>They both use a volume called <strong>content</strong> that is defined in the volumes section.</li>
 </ul>
 <p>The detail that I missed for so long was the <strong>volumes</strong> section with the <strong>driver_opts</strong>. And while I ran a couple of tests and everything behaved exactly the way I hoped, I couldn’t find any proper documentation. Here’s what the <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts" rel="noopener noreferrer" target="_blank">docker documentation</a> says about <strong>driver_opts</strong>:</p>
 <blockquote>

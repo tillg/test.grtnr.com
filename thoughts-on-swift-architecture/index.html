@@ -54,7 +54,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 26.05.2025 14:37:59.
+      Last built 27.05.2025 09:01:13.
   </div>
 </div>
   <div class="wrap">
@@ -207,14 +207,14 @@ I would put these in the repository or in a helper type for the repository. For 
 <p><strong>Repository functions</strong>: Typically I would build functions from a repository that are beyond <span class="caps">CRUD</span>. For example a getTasksDateRange that returns the oldest and most recent due date. Where would I build this? I don’t want to put it in TaskRepositoryCloudKit as it would be the same logic when using a different storage (i.e. load all the tasks in memory, sort them, and return the first and last). As I can’t have functions in a protocol, wher do I put it?</p>
 </blockquote>
 <p>If you want to have something across multiple implementations, use a protocol extension. For instance:</p>
-<p><span class="dquo">“</span>`swift
-extension TaskRepository {
-    func getTasks(dateRange: Range<date>) -&gt; [Task] {
-        return getAllTasks().filter { task in
-            dateRange.contains(task.dueDate)
-        }
-    }
-} ““</date></p>
+<div class="highlight"><pre><span></span><code><span class="kd">extension</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">getTasks</span><span class="p">(</span><span class="n">dateRange</span><span class="p">:</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="n">Date</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">getAllTasks</span><span class="p">().</span><span class="bp">filter</span> <span class="p">{</span> <span class="n">task</span> <span class="k">in</span>
+            <span class="n">dateRange</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">dueDate</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 <p>Because you know all TaskRepository implementations have a <code>getAllTasks()</code>, you can use it in the extension like that.</p>
 <blockquote>
 <p><strong>Naming</strong>: Is the naming I suggested reasonable? Is it how you would do it in Swift? I chose TaskRepositoryCloudKit so it is listed next to the TaskRepository in the Xcode file browser. If I would need other Data Models to interface a system Xyz I would call them TaskRawXyz - is that reasonable</p>

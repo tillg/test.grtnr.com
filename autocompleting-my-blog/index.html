@@ -57,7 +57,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 26.05.2025 14:37:59.
+      Last built 27.05.2025 09:01:13.
   </div>
 </div>
   <div class="wrap">
@@ -119,15 +119,15 @@ styles, `#sidebar-checkbox` for behavior. -->
 <h3 id="link-checker">Link checker</h3>
 <p>I have many links pointing to external locations. And sometimes webpages disappear, so my links might point into Nirwana. It would be nice if</p>
 <ul>
-<li>my user wouldn’t have to click on broken links </li>
+<li>my user wouldn’t have to click on broken links</li>
 <li>I would get a tip that I need to fix one or the other link</li>
 <li>I could maybe prevent the situation by keeping a copy of the page I link to in my own blog. Or is that evil scraping and content stealing?</li>
 </ul>
 <h3 id="extract-generator-ai">Extract Generator (<span class="caps">AI</span>)</h3>
-<p>I often write articles without specifying the summary / excerpt that is shown in the article list. By default Pelican (and other static generators) take the first paragraph or the first 30 words and use it as excerpt. </p>
+<p>I often write articles without specifying the summary / excerpt that is shown in the article list. By default Pelican (and other static generators) take the first paragraph or the first 30 words and use it as excerpt.</p>
 <p>Wouldn’t it be much nicer to ask an <span class="caps">LLM</span> to generate a reasonable 3 lines summary?</p>
 <h3 id="translator-aiish">Translator (<span class="caps">AI</span>’ish)</h3>
-<p>In my blog I sometimes write English, sometimes German articles. Maybe there is even a French article here and there. Wouldn’t it be nice to have every article in every language? It feels as if nowadays that should be a standard, given the good quality of today’s translation tools. </p>
+<p>In my blog I sometimes write English, sometimes German articles. Maybe there is even a French article here and there. Wouldn’t it be nice to have every article in every language? It feels as if nowadays that should be a standard, given the good quality of today’s translation tools.</p>
 <p>So I write my articles in whatever language just comes out of my little brain, and the system should generate the missing languages.</p>
 <h3 id="article-illustration-ai">Article illustration (<span class="caps">AI</span>)</h3>
 <p>I try to have pictures for most of my articles, as it’s just a nicer reading experiance and pleasant for the eye. I often find something in the internet, but not always - also because I sometimes don’t even bother searching an image. But the <span class="caps">AI</span> could search, or even generate a nice picture for my <em>naked</em> articles.</p>
@@ -140,7 +140,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 <p>What Pelican does, is to take the source of the articles, together with the configuration and generate the web pages. It does so by it’s standard processing and by potential plugins. Plugins can be third-party or delf-developed. In my case I have both.</p>
 <p>Many of the tools I envisage create additional data, and often times the creation is expensive and time consuming. Think of creating an excerpt of an article: The entire text needs top be sent to an <span class="caps">AI</span> and processed. This takes multiple seconds and costs real money. Therefore it’s certainly not something we wnt to run on every build. So we will have to keep the data between the different build runs.</p>
 <h3 id="integrity-of-authored-content">Integrity of authored content</h3>
-<p>One way we could think of solving this, is to simply add the <span class="caps">AI</span> generated excerpt to the original markdown (in this case it would go in the front matter as <code>summary</code> field). </p>
+<p>One way we could think of solving this, is to simply add the <span class="caps">AI</span> generated excerpt to the original markdown (in this case it would go in the front matter as <code>summary</code> field).</p>
 <p>But I don’t like this at all: I don’t want the <span class="caps">AI</span> to mess around in the text and content I have been crafting personally. Therefore I want to define the following rule for my system:</p>
 <p><strong>My authored Markdown files should never be modified by automated tools.</strong></p>
 <h3 id="where-to-keep-data">Where to keep data</h3>

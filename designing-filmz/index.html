@@ -55,7 +55,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 26.05.2025 14:37:59.
+      Last built 27.05.2025 09:01:13.
   </div>
 </div>
   <div class="wrap">
@@ -86,40 +86,44 @@ styles, `#sidebar-checkbox` for behavior. -->
     </div>
 
     <p><img alt="Filmz" src="/designing-filmz/filmz.png" width="300"/></p>
-<p>Some time ago I built a little iOS App called Filmz: keep track of films and shows you want to see or you have seen. Keep personal additional information like “how did I like it?” (I.e. my personal rating), “For what audience would I recommend it?” (Adults, kids, family) “When and where did I see it” etc. And then comes sharing: passing on film recommendations to friends, either one film at a time or lists. </p>
+<p>Some time ago I built a little iOS App called Filmz: keep track of films and shows you want to see or you have seen. Keep personal additional information like “how did I like it?” (I.e. my personal rating), “For what audience would I recommend it?” (Adults, kids, family) “When and where did I see it” etc. And then comes sharing: passing on film recommendations to friends, either one film at a time or lists.</p>
 <p>As I didn’t know any Swift back then, I built it in a <em>vibe coding</em> style, fully supported by <span class="caps">AI</span> (back then mainly Cursor.ai). This gave me a fast start, but I was lost once I wanted to add more complex features that required a well structured code base. And since I didn’t know much about Swift, I couldn’t do it either. Vibe debugging doesn’t work - yet…</p>
-<p>So here I start again, and with a different approach: I first want to sketch the structure I would like to have, lay out my design principles, the SDKs I want to use (or the ones I don’t want to use) and then start coding. I also plan to use <span class="caps">AI</span> support (my Swift know how is still mediocre), but I hope that this way I can create a code base that is more structured, and that will be able to evolve while staying structured. </p>
+<p>So here I start again, and with a different approach: I first want to sketch the structure I would like to have, lay out my design principles, the SDKs I want to use (or the ones I don’t want to use) and then start coding. I also plan to use <span class="caps">AI</span> support (my Swift know how is still mediocre), but I hope that this way I can create a code base that is more structured, and that will be able to evolve while staying structured.</p>
 <h2 id="main-entities">Main entities</h2>
-<p>These are the main entities I’m dealing with. </p>
+<p>These are the main entities I’m dealing with.</p>
 <h3 id="imdbfilm">ImdbFilm</h3>
-<p>A film from <a href="https://www.imdb.com" rel="noopener noreferrer" target="_blank"><span class="caps">IMDB</span></a> - even though I don’t use the real <span class="caps">IMDB</span> (<span class="caps">API</span> usage is really expensive) but <a href="https://www.omdbapi.com" rel="noopener noreferrer" target="_blank"><span class="caps">OMDB</span>, the Open Movie DataBase</a> that can be queried via a much cheaper <span class="caps">API</span>. I use ImdbFilm objects and references throughout my code base to reference a “Film”. </p>
+<p>A film from <a href="https://www.imdb.com" rel="noopener noreferrer" target="_blank"><span class="caps">IMDB</span></a> - even though I don’t use the real <span class="caps">IMDB</span> (<span class="caps">API</span> usage is really expensive) but <a href="https://www.omdbapi.com" rel="noopener noreferrer" target="_blank"><span class="caps">OMDB</span>, the Open Movie DataBase</a> that can be queried via a much cheaper <span class="caps">API</span>. I use ImdbFilm objects and references throughout my code base to reference a “Film”.</p>
 <p>ImdbFilms are also what I get back from my search (as <span class="caps">JSON</span>). And example:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">"Title"</span><span class="p">:</span><span class="s2">"Harry Potter and the Sorcerer’s Stone"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Year"</span><span class="p">:</span><span class="s2">"2001"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Rated"</span><span class="p">:</span><span class="s2">"PG"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Released"</span><span class="p">:</span><span class="s2">"16 Nov 2001"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Runtime"</span><span class="p">:</span><span class="s2">"152 min"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Genre"</span><span class="p">:</span><span class="s2">"Adventure, Family, Fantasy"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Director"</span><span class="p">:</span><span class="s2">"Chris Columbus"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Writer"</span><span class="p">:</span><span class="s2">"J.K. Rowling, Steve Kloves"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Actors"</span><span class="p">:</span><span class="s2">"Daniel Radcliffe, Rupert Grint, Emma Watson"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Plot"</span><span class="p">:</span><span class="s2">"An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."</span><span class="p">,</span><span class="nt">"Language"</span><span class="p">:</span><span class="s2">"English, Latin"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Country"</span><span class="p">:</span><span class="s2">"United Kingdom, United States"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Awards"</span><span class="p">:</span><span class="s2">"Nominated for 3 Oscars. 20 wins &amp; 74 nominations total"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Poster"</span><span class="p">:</span><span class="s2">"https://m.media-amazon.com/images/M/MV5BNTU1MzgyMDMtMzBlZS00YzczLThmYWEtMjU3YmFlOWEyMjE1XkEyXkFqcGc@._V1_SX300.jpg"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Ratings"</span><span class="p">:[</span>
-<span class="w">        </span><span class="p">{</span><span class="nt">"Source"</span><span class="p">:</span><span class="s2">"Internet Movie Database"</span><span class="p">,</span><span class="w"> </span><span class="nt">"Value"</span><span class="p">:</span><span class="s2">"7.7/10"</span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="nt">"Source"</span><span class="p">:</span><span class="s2">"Rotten Tomatoes"</span><span class="p">,</span><span class="nt">"Value"</span><span class="p">:</span><span class="s2">"80%"</span><span class="p">},</span>
-<span class="w">        </span><span class="p">{</span><span class="nt">"Source"</span><span class="p">:</span><span class="s2">"Metacritic"</span><span class="p">,</span><span class="nt">"Value"</span><span class="p">:</span><span class="s2">"65/100"</span><span class="p">}</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">    </span><span class="nt">"Metascore"</span><span class="p">:</span><span class="s2">"65"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"imdbRating"</span><span class="p">:</span><span class="s2">"7.7"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"imdbVotes"</span><span class="p">:</span><span class="s2">"904,094"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"imdbID"</span><span class="p">:</span><span class="s2">"tt0241527"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"Type"</span><span class="p">:</span><span class="s2">"movie"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"DVD"</span><span class="p">:</span><span class="s2">"N/A"</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"BoxOffice"</span><span class="p">:</span><span class="s2">"$318,886,962"</span><span class="p">,</span><span class="nt">"Production"</span><span class="p">:</span><span class="s2">"N/A"</span><span class="p">,</span><span class="nt">"Website"</span><span class="p">:</span><span class="s2">"N/A"</span><span class="p">,</span><span class="nt">"Response"</span><span class="p">:</span><span class="s2">"True"</span>
+<span class="w">  </span><span class="nt">"Title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harry Potter and the Sorcerer’s Stone"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Year"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2001"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Rated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PG"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Released"</span><span class="p">:</span><span class="w"> </span><span class="s2">"16 Nov 2001"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Runtime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"152 min"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adventure, Family, Fantasy"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Director"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chris Columbus"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Writer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J.K. Rowling, Steve Kloves"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Actors"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Daniel Radcliffe, Rupert Grint, Emma Watson"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Plot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"An orphaned boy enrolls in a school of wizardry, where he learns the truth about himself, his family and the terrible evil that haunts the magical world."</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Language"</span><span class="p">:</span><span class="w"> </span><span class="s2">"English, Latin"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United Kingdom, United States"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Awards"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nominated for 3 Oscars. 20 wins &amp; 74 nominations total"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Poster"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://m.media-amazon.com/images/M/MV5BNTU1MzgyMDMtMzBlZS00YzczLThmYWEtMjU3YmFlOWEyMjE1XkEyXkFqcGc@._V1_SX300.jpg"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Ratings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Internet Movie Database"</span><span class="p">,</span><span class="w"> </span><span class="nt">"Value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.7/10"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rotten Tomatoes"</span><span class="p">,</span><span class="w"> </span><span class="nt">"Value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80%"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Metacritic"</span><span class="p">,</span><span class="w"> </span><span class="nt">"Value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"65/100"</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"Metascore"</span><span class="p">:</span><span class="w"> </span><span class="s2">"65"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"imdbRating"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7.7"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"imdbVotes"</span><span class="p">:</span><span class="w"> </span><span class="s2">"904,094"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"imdbID"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tt0241527"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"movie"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"DVD"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N/A"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"BoxOffice"</span><span class="p">:</span><span class="w"> </span><span class="s2">"$318,886,962"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Production"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N/A"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Website"</span><span class="p">:</span><span class="w"> </span><span class="s2">"N/A"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"Response"</span><span class="p">:</span><span class="w"> </span><span class="s2">"True"</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Fields of ImdbFilm:</p>
@@ -131,20 +135,20 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>plot</li>
 <li>Actors - an array of strings</li>
 <li>poster - the url of a poster image</li>
-<li>imdbRating </li>
+<li>imdbRating</li>
 <li>rottenTomatoeRating</li>
 </ul>
-<p>Some of the fields are optional, <span class="caps">ID</span> and Title are mandatory. At later stages we could think of keeping track of real actor objects and more, but for a start we are good. </p>
+<p>Some of the fields are optional, <span class="caps">ID</span> and Title are mandatory. At later stages we could think of keeping track of real actor objects and more, but for a start we are good.</p>
 <h3 id="myfilm">MyFilm</h3>
-<p>A film that is on my list. Either one I have seen, or one I plan to see. </p>
+<p>A film that is on my list. Either one I have seen, or one I plan to see.</p>
 <p>Fields of MyFilm:</p>
 <ul>
 <li><span class="caps">ID</span></li>
 <li>ImdbId - the film that we talk about</li>
-<li>seen - Boolean </li>
-<li>seenDate </li>
-<li>myRating </li>
-<li>myComments </li>
+<li>seen - Boolean</li>
+<li>seenDate</li>
+<li>myRating</li>
+<li>myComments</li>
 <li>recommendedAudience - kids, adults, family, bodyCountSavvy</li>
 </ul>
 <h2 id="services">Services</h2>

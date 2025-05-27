@@ -54,7 +54,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </nav>
 
   <div class="sidebar-item">
-      Last built 26.05.2025 14:37:59.
+      Last built 27.05.2025 09:01:13.
   </div>
 </div>
   <div class="wrap">
@@ -109,29 +109,43 @@ styles, `#sidebar-checkbox` for behavior. -->
 <h2 id="cursorrules">Cursorrules</h2>
 <p><code>.cursorrules.md</code> is a file you put in your project top level directory that gives the <span class="caps">AI</span> more context about your project. Here is the structure of the file that David suggests:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># PROJECT OVERVIEW</span>
+
 <span class="gh"># PERSONALITY</span>
+
 <span class="gh"># TECH STACK</span>
+
 <span class="k">-</span><span class="w"> </span>choose a tech stack with super popular languages
+
 <span class="gh"># ERROR FIXING PROCESS</span>
+
 step 1: explain the error in simple terms
-step 2: explain the solution in simple terms 
+step 2: explain the solution in simple terms
 step 3: show how to fix the error
+
 <span class="gh"># BUILDING PROCESS</span>
+
 <span class="gh"># Our - env variables</span>
-backend/.env 
+
+backend/.env
 frontend/. env
+
 <span class="gh"># CURRENT FILE STRUCTURE</span>
+
 Here you past the content of this command, so that Cursor knows about your project structure:
-tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
+tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
+
 <span class="gh"># GITHUB PUSH PROCESS</span>
+
 <span class="gh"># IMPORTANT</span>
+
 <span class="k">-</span><span class="w"> </span>Repeat the most important instructions.
 </code></pre></div>
-<p>He also strongly suggests to have a <code>.cursorignore</code> in which you list your <code>.env</code> files. This hinders chat and Composer to write in those files accidentally. </p>
+<p>He also strongly suggests to have a <code>.cursorignore</code> in which you list your <code>.env</code> files. This hinders chat and Composer to write in those files accidentally.</p>
 <h2 id="ai-rules-in-cursor-settings"><span class="caps">AI</span> Rules in Cursor Settings</h2>
 <p><span class="caps">AI</span> Rules are to be set in the cursor settings. They should not contain anything project specific, just coding principles that you would always want to apply. That’s the difference to the <code>.cursorrules</code> that also contain project specific details.</p>
 <p>An example:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># Fundamental Principles</span>
+
 <span class="k">-</span><span class="w"> </span>Write clean, simple, readable code
 <span class="k">-</span><span class="w"> </span>Implement features in the simplest possible way
 <span class="k">-</span><span class="w"> </span>Keep files small and focused (&lt;200 lines)
@@ -143,19 +157,22 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 <span class="k">-</span><span class="w"> </span>use clear and easy-to-understand language. write in short sentences.
 
 <span class="gh"># Error Fixing</span>
+
 <span class="k">-</span><span class="w"> </span>DO NOT JUMP TO CONCLUSIONS! Consider multiple possible causes before deciding.
 <span class="k">-</span><span class="w"> </span>Explain the problem in plain English
 <span class="k">-</span><span class="w"> </span>Make minimal necessary changes, changing as few lines of code as possible
 <span class="k">-</span><span class="w"> </span>in case of strange errors, ask the user to perform a Perplexity web search in order to get the latest up-to-date information
 
 <span class="gh"># Building Process</span>
+
 <span class="k">-</span><span class="w"> </span>﻿﻿Verify each new feature works by telling the user how to test it
 <span class="k">-</span><span class="w"> </span>﻿﻿DO NOT write complicated and confusing code. Opt for the simple &amp; modular approach.
 <span class="k">-</span><span class="w"> </span>﻿﻿when not sure what to do, tell the user to perform a web search
 
 <span class="gh"># Comments</span>
+
 <span class="k">-</span><span class="w"> </span>ALWAYS try to add more helpful and explanatory comments into our code.
-<span class="k">-</span><span class="w"> </span>NEVER delete old comments - unless they are obviously wrong / obsolete. 
+<span class="k">-</span><span class="w"> </span>NEVER delete old comments - unless they are obviously wrong / obsolete.
 <span class="k">-</span><span class="w"> </span>Include LOTS of explanatory comments in your code. ALWAYS write well documented code.
 <span class="k">-</span><span class="w"> </span>Document all changes and their reasoning IN THE COMMENTS YOU WRITE
 <span class="k">-</span><span class="w"> </span>when writing comments, use clear and easy-to-understand language. write short sentences.
@@ -166,7 +183,7 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 
 <span class="nf">The</span><span class="w"> </span><span class="nv">fewer</span><span class="w"> </span><span class="nv">lines</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">better.</span>
 
-<span class="nf">Start</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">writing</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nv">reasoning</span><span class="w"> </span><span class="nv">paragraphs</span><span class="w"> </span><span class="nv">analyzing</span><span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="nv">might</span><span class="w"> </span><span class="nv">be.</span><span class="w"> </span><span class="nv">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">JUMP</span><span class="w"> </span><span class="nv">TO</span><span class="w"> </span><span class="nv">CONCLUSIONS.</span><span class="w"> </span>
+<span class="nf">Start</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">writing</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nv">reasoning</span><span class="w"> </span><span class="nv">paragraphs</span><span class="w"> </span><span class="nv">analyzing</span><span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="nv">might</span><span class="w"> </span><span class="nv">be.</span><span class="w"> </span><span class="nv">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">JUMP</span><span class="w"> </span><span class="nv">TO</span><span class="w"> </span><span class="nv">CONCLUSIONS.</span>
 
 <span class="nf">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">STOP</span><span class="w"> </span><span class="nv">WORKING</span><span class="w"> </span><span class="nv">until</span><span class="err">…</span>
 
@@ -193,7 +210,7 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 <span class="k">then</span>,<span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">finish</span>,<span class="w"> </span><span class="nv">tell</span><span class="w"> </span><span class="nv">me</span><span class="w"> </span><span class="nv">whether</span><span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">these</span><span class="w"> </span><span class="nv">solutions</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">obviously</span><span class="w"> </span><span class="nv">better</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">other</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">why</span>.
 </code></pre></div>
 <h3 id="one-paragraph-search-query">one-paragraph search query</h3>
-<div class="highlight"><pre><span></span><code><span class="nv">let</span><span class="s1">'s perform a web search. your task is to write a one-paragraph search query, as if you were telling a human researcher that to find, including all the relevant context. format the paragraph as clear instructions, commanding a researcher to find what we'</span><span class="nv">re</span><span class="w"> </span><span class="nv">looking</span><span class="w"> </span><span class="k">for</span>.<span class="w"> </span><span class="nv">ask</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">snippets</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">details</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">relevant</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="nv">let</span><span class="s1">'s perform a web search. your task is to write a one-paragraph search query, as if you were telling a human researcher that to find, including all the relevant context. format the paragraph as clear instructions, commanding a researcher to find what we'</span><span class="nv">re</span><span class="w"> </span><span class="nv">looking</span><span class="w"> </span><span class="k">for</span>.<span class="w"> </span><span class="nv">ask</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">snippets</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">details</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">relevant</span>
 </code></pre></div>
 <h2 id="instructions">Instructions</h2>
 <p>David suggests to have a directory <code>instructions</code> that contains md files with tips for the <span class="caps">AI</span>. This way you can reference these files from the Composer prompt. He also preferers this kind of instrauction files over refreencing @Docs in cursor, which seems not to work too good yet.</p>
@@ -205,7 +222,7 @@ tree -L 4 -a -I 'node_modules | -git|_pycache_|.DS_$
 <h2 id="other-tools">Other tools</h2>
 <p>Besides Cursor David uses many other tools. Some of what he mentioned:</p>
 <ul>
-<li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a> </li>
+<li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a></li>
 <li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> for side discussions with an advanced <span class="caps">AI</span>.</li>
 <li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> for smart web searches.</li>
 <li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> to speak rather than typing</li>
