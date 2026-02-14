@@ -69,7 +69,7 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 22:39:37.
+      Last built 14.02.2026 22:44:49.
   </div>
 </div>
   <div class="wrap">
@@ -202,11 +202,8 @@ Français
           contentPath = pathParts.slice(1).join('/');
         }
         
-        // Build new path
-        var newPath = '/';
-        if (targetLang !== 'en') {
-          newPath += targetLang + '/';
-        }
+        // Build new path — all languages get a prefix
+        var newPath = '/' + targetLang + '/';
         if (contentPath) {
           newPath += contentPath;
           if (!newPath.endsWith('/')) {
@@ -222,9 +219,8 @@ Français
         var storedLang = getStoredLanguage();
         var currentPath = window.location.pathname;
         
-        // Check if we need to redirect to the stored language
-        // Only redirect if on root page and user prefers a different language
-        if (currentPath === '/' && storedLang !== 'en') {
+        // Redirect root page to stored language (all languages have a prefix)
+        if (currentPath === '/') {
           window.location.href = '/' + storedLang + '/';
         }
       });
