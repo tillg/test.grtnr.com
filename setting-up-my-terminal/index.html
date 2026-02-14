@@ -10,6 +10,8 @@
   <title>test.grtnr.com</title>
 
   <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
   <link rel="stylesheet" href="../theme/css/poole.css" />
   <link rel="stylesheet" href="../theme/css/syntax.css" />
   <link rel="stylesheet" href="../theme/css/lanyon.css" />
@@ -55,8 +57,17 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   </nav>
 
+  <!-- Language Switcher -->
   <div class="sidebar-item">
-      Last built 27.05.2025 09:01:13.
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/setting-up-my-terminal/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/setting-up-my-terminal/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
   </div>
 </div>
   <div class="wrap">
@@ -66,6 +77,23 @@ styles, `#sidebar-checkbox` for behavior. -->
           <a href="../" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -88,6 +116,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 </div>
 
     </div>
+
 
     <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that’s what was missing to me…</p>
 <p>So here I go with yet another article. Or rather a collection of snippets of the information that I found valuable.</p>
@@ -141,15 +170,15 @@ styles, `#sidebar-checkbox` for behavior. -->
 — <cite><a href="https://ohmyz.sh/" rel="noopener noreferrer" target="_blank">Oh My Zsh website</a></cite></p>
 </blockquote>
 <p>Bascically Oh My Zsh makes your terminal look very nice (via <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" rel="noopener noreferrer" target="_blank">themes</a>) and offers lots of helpful plugins. An example list from their <a href="https://github.com/ohmyzsh/ohmyzsh" rel="noopener noreferrer" target="_blank">github page</a>:</p>
-<div class="highlight"><pre><span></span><code>plugins=(
-  git
-  bundler
-  dotenv
-  osx
-  rake
-  rbenv
-  ruby
-)
+<div class="highlight"><pre><span></span><code><span class="nv">plugins</span><span class="o">=(</span>
+<span class="w">  </span>git
+<span class="w">  </span>bundler
+<span class="w">  </span>dotenv
+<span class="w">  </span>osx
+<span class="w">  </span>rake
+<span class="w">  </span>rbenv
+<span class="w">  </span>ruby
+<span class="o">)</span>
 </code></pre></div>
 <p>I currently use the git plugin, which offers shortcuts for often used git commands.</p>
 <h3 id="configuring-oh-my-zsh">Configuring Oh My Zsh</h3>
@@ -210,6 +239,83 @@ styles, `#sidebar-checkbox` for behavior. -->
           }
         }
       })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
     </script>
 
     <script>

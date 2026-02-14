@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/de/">Home</a>
+
+  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/de/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Hinzufügen von Suchfunktionen zu einer statischen Website
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">Sa 19. Dez 2015</span>
+      
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/adding-search-to-a-static-site/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <p>Jetzt habe ich also eine statische Website, die von jBake generiert wird. Bis jetzt, so gut. Aber was ist eine Website ohne Suche? Eine Suche ist ein Muss. Wie fügen wir also einer statischen Website eine Suchfunktion hinzu? Ganz einfach: Wir nutzen die Custom Search-Funktionalität der Suchgiganten ;)</p>
+<p>Dies sind die Schritte, die ich unternommen habe, um dorthin zu gelangen:</p>
+<h2 id="erstellen-der-benutzerdefinierten-suchmaschine">Erstellen der benutzerdefinierten Suchmaschine</h2>
+<p>Nichts leichter als das: Gehen Sie einfach zur <a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Google CSE-Seite</a> und erstellen Sie sie. Der Prozess ist selbsterklärend: Sie benötigen einen Namen für Ihre Suchmaschine und geben an, welche Inhalte verfügbar gemacht werden sollen. In meinem Fall wäre dies alles von <a href="https://tillgartner.com" rel="noopener noreferrer" target="_blank">tillgartner.com</a> und das war's im Wesentlichen. Am Ende kehren wir zu dieser Seite zurück, um das Aussehen und das Gefühl der Ergebnisse zu optimieren.</p>
+<p><img alt="Google CSE-Verwaltung" src="Custom_Search_-_Basic.jpg"/></p>
+<p>Das Einzige, was wir von hier benötigen, ist der Code, um die Suche einzubetten. Sie erhalten diesen Code, indem Sie auf den Button "<strong>Code abrufen</strong>" klicken.</p>
+<h2 id="hinzufugen-des-suchfeldes">Hinzufügen des Suchfeldes</h2>
+<p>Als nächstes benötigen wir ein Suchfeld auf unseren Seiten. Ich möchte ein Suchfeld oben rechts auf jeder Seite der gesamten Website. Also füge ich es zur Freemarker-Vorlage hinzu, die das Menü erstellt.</p>
+<p>In meinem Fall sieht das <code>menu.ftl</code> ungefähr so aus:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">Feste</span><span class="w"> </span><span class="nx">Navigationsleiste</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">nav</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar navbar-default navbar-fixed-top"</span><span class="w"> </span><span class="nx">role</span><span class="o">=</span><span class="s2">"navigation"</span><span class="o">&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"container-fluid"</span><span class="o">&gt;</span>
+<span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar-header"</span><span class="o">&gt;</span>
+<span class="w">            </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"button"</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar-toggle"</span><span class="w"> </span><span class="nx">data</span><span class="o">-</span><span class="nx">toggle</span><span class="o">=</span><span class="s2">"collapse"</span><span class="w"> </span><span class="nx">data</span><span class="o">-</span><span class="nx">target</span><span class="o">=</span><span class="s2">".navbar-collapse"</span><span class="o">&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"sr-only"</span><span class="o">&gt;</span><span class="nx">Navigation</span><span class="w"> </span><span class="nx">umschalten</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"icon-bar"</span><span class="o">&gt;&lt;</span><span class="err">/span&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"icon-bar"</span><span class="o">&gt;&lt;</span><span class="err">/span&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="nx">span</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"icon-bar"</span><span class="o">&gt;&lt;</span><span class="err">/span&gt;</span>
+<span class="w">            </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<span class="w">          </span><span class="o">&lt;</span><span class="nx">a</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar-brand"</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">"/"</span><span class="o">&gt;</span><span class="nx">tillgartner</span><span class="p">.</span><span class="nx">com</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+<span class="w">        </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">        </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar-collapse collapse"</span><span class="o">&gt;</span>
+<span class="w">          </span><span class="o">&lt;</span><span class="nx">ul</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"nav navbar-nav"</span><span class="o">&gt;</span>
+<span class="w">            </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">"/recipe/recipe.html"</span><span class="o">&gt;</span><span class="nx">Rezepte</span><span class="o">&lt;</span><span class="err">/a&gt;&lt;/li&gt;</span>
+<span class="w">            </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">a</span><span class="w"> </span><span class="nx">href</span><span class="o">=</span><span class="s2">"/about.html"</span><span class="o">&gt;</span><span class="nx">Über</span><span class="o">&lt;</span><span class="err">/a&gt;&lt;/li&gt;</span>
+<span class="w">          </span><span class="o">&lt;</span><span class="err">/ul&gt;</span>
+<span class="w">          </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"col-sm-3 col-md-3 pull-right"</span><span class="o">&gt;</span>
+<span class="w">              </span><span class="o">&lt;</span><span class="nx">form</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar-form"</span><span class="w"> </span><span class="nx">role</span><span class="o">=</span><span class="s2">"search"</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="s2">"/search.html"</span><span class="o">&gt;</span>
+<span class="w">            </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"input-group"</span><span class="o">&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="nx">input</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"text"</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"form-control"</span><span class="w"> </span><span class="nx">placeholder</span><span class="o">=</span><span class="s2">"Suche"</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"q"</span><span class="o">&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"input-group-btn"</span><span class="o">&gt;</span>
+<span class="w">                    </span><span class="o">&lt;</span><span class="nx">button</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"btn btn-default"</span><span class="w"> </span><span class="nx">type</span><span class="o">=</span><span class="s2">"submit"</span><span class="o">&gt;</span>
+<span class="w">                        </span><span class="o">&lt;</span><span class="nx">i</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"glyphicon glyphicon-search"</span><span class="o">&gt;&lt;</span><span class="err">/i&gt;</span>
+<span class="w">                    </span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+<span class="w">                </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">            </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">         </span><span class="o">&lt;</span><span class="err">/form&gt;</span>
+<span class="w">         </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">        </span><span class="o">&lt;</span><span class="sr">/div&gt;&lt;!--/</span><span class="p">.</span><span class="nx">nav</span><span class="o">-</span><span class="nx">collapse</span><span class="w"> </span><span class="o">--&gt;</span>
+<span class="w">      </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="err">/nav&gt;</span>
+<span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"container"</span><span class="o">&gt;</span>
+</code></pre></div>
+<p><em>Hinweis:</em> Ich habe den Code auf meiner Website und im obigen Code am 29.12.2015 korrigiert. Der Code für den Button, der erscheint, wenn die Breite des Bildschirms das Menü zusammenklappen lässt, fehlte. Nur für den Fall, dass Sie dies früher gelesen haben und sich fragen, warum es jetzt anders ist...</p>
+<p>Ich fand, dass der Teil des Menüs und wie es zusammenklappt, nicht trivial war. Die beste Erklärung, die ich fand, war <a href="https://bootstrapbay.com/blog/bootstrap-tutorial-navbar/" rel="noopener noreferrer" target="_blank">dieses Video</a>.</p>
+<p>Es ist das Standard-Bootstrap-Menü-Gewackel. Was in unserem Fall besonders ist, ist das <code>action</code>-Attribut im Formular, das auf die Suchergebnisseite verweist (in meinem Fall <code>search.html</code> genannt).</p>
+<p>Das Ergebnis ist ein kleines, ordentliches Suchfeld in der oberen rechten Ecke:</p>
+<p><img alt="Suchfeld" src="search_box.jpg"/></p>
+<h2 id="suchergebnisseite">Suchergebnisseite</h2>
+<p>Zu guter Letzt benötigen wir die Suchergebnisseite. Diese Seite wird vom Suchformular, das wir gerade erstellt haben, aufgerufen (d.h. verlinkt). Ihre URL wird etwa so aussehen:</p>
+<div class="highlight"><pre><span></span><code>http://tillgartner.com/search.html?q=huhu
+</code></pre></div>
+<p>In meinem Fall wird die Suchergebnisseite <strong>nur</strong> das Suchergebnis enthalten. Falls der Benutzer seine Suche ändern möchte, hat er immer noch das allgegenwärtige Suchfeld in der oberen rechten Ecke.
+Die Suchergebnisseite wird den Code enthalten, den wir beim Konfigurieren der benutzerdefinierten Suchmaschine kopiert haben. In meinem Fall sieht die gesamte Markdown-Datei so aus:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">title</span><span class="o">=</span><span class="nx">Suche</span>
+<span class="nx">type</span><span class="o">=</span><span class="nx">page</span>
+<span class="nx">date</span><span class="o">=</span><span class="mf">2015</span><span class="o">-</span><span class="mf">12</span><span class="o">-</span><span class="mf">17</span>
+<span class="nx">status</span><span class="o">=</span><span class="nx">published</span>
+<span class="o">~~~~~~</span>
+
+<span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="w">  </span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'XXX_Your_code:goes_here_XXX'</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">gcse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">'script'</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">gcse</span><span class="p">.</span><span class="nx">type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'text/javascript'</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">gcse</span><span class="p">.</span><span class="k">async</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">gcse</span><span class="p">.</span><span class="nx">src</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">protocol</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">'https:'</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">'https:'</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">'http:'</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">        </span><span class="s1">'//www.google.com/cse/cse.js?cx='</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">cx</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">'script'</span><span class="p">)[</span><span class="mf">0</span><span class="p">];</span>
+<span class="w">    </span><span class="nx">s</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">.</span><span class="nx">insertBefore</span><span class="p">(</span><span class="nx">gcse</span><span class="p">,</span><span class="w"> </span><span class="nx">s</span><span class="p">);</span>
+<span class="w">  </span><span class="p">})();</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+<span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">markdown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0"</span><span class="o">&gt;&lt;</span><span class="nx">gcse</span><span class="o">:</span><span class="nx">searchresults</span><span class="o">-</span><span class="nx">only</span><span class="o">&gt;</span><span class="nx">Suchergebnisse</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/gcse:searchresults-only&gt;&lt;/div&gt;</span>
+</code></pre></div>
+<p>Es hat eine Weile gedauert, bis ich herausgefunden habe, wie man Markdown mitteilt, dass dies reines HTML ist und es als solches ohne Transformation oder Zitierung akzeptieren sollte. Die Lösung war das <code>&lt;div markdown="0"&gt;</code>-Tag.</p>
+<h2 id="ressourcen">Ressourcen</h2>
+<p>Einige Lektüren, die mir geholfen haben, meinen Weg zu finden:</p>
+<ul>
+<li><a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Erstellen Sie Ihre eigene Suchmaschine</a></li>
+<li><a href="http://www.cambiaresearch.com/articles/84/how-to-integrate-a-google-custom-search-popup-in-a-bootstrap-navbar" rel="noopener noreferrer" target="_blank">Wie man ein Google Custom Search Popup in eine Bootstrap-Navigationsleiste integriert</a></li>
+<li><a href="https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox" rel="noopener noreferrer" target="_blank">Implementierung des Suchfeldes, von Google</a></li>
+</ul>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

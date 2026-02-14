@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/fr/">Home</a>
+
+  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/fr/about">About</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/fr/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Cursor&nbsp;Magic
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">mercredi 5 février 2025</span>
+      
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/cursor-magic/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <div class="toc">
+<ul>
+<li><a href="#structure-du-prompt">Structure du Prompt</a></li>
+<li><a href="#cursorrules">Cursorrules</a></li>
+<li><a href="#regles-ia-dans-les-parametres-de-cursor">Règles IA dans les Paramètres de Cursor</a></li>
+<li><a href="#petits-prompts-utiles">Petits Prompts Utiles</a></li>
+<li><a href="#prompts-plus-grands">Prompts Plus Grands</a><ul>
+<li><a href="#resume-de-letat-actuel">Résumé de l'état actuel</a></li>
+<li><a href="#impartial-5050">Impartial 50/50</a></li>
+<li><a href="#requete-de-recherche-en-un-paragraphe">Requête de recherche en un paragraphe</a></li>
+</ul>
+</li>
+<li><a href="#instructions">Instructions</a></li>
+<li><a href="#autres-outils">Autres Outils</a></li>
+</ul>
+</div>
+<p>Le week-end dernier, j'ai découvert cette vidéo de David Ondrej : <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. Le titre n'est pas très accrocheur, mais le contenu m'a été très utile. Voici donc mes notes pour que je puisse utiliser tous ses conseils et avoir les différents prompts et extraits à portée de main pour les utiliser lors du codage.</p>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gYLNxUxVomY?si=xQAMyMvQCsSwWztk" title="YouTube video player" width="560"></iframe>
+<h2 id="structure-du-prompt">Structure du Prompt</h2>
+<p>La structure générale du prompt que David suggère :</p>
+<ol>
+<li>ce que nous faisons</li>
+<li>taguer les fichiers pertinents</li>
+<li>comment exécuter // ce qu'il ne faut pas faire</li>
+<li>décharge de contexte</li>
+<li>répéter l'instruction principale</li>
+<li>format de sortie</li>
+</ol>
+<h2 id="cursorrules">Cursorrules</h2>
+<p><code>.cursorrules.md</code> est un fichier que vous placez dans le répertoire racine de votre projet pour donner à l'IA plus de contexte sur votre projet. Voici la structure du fichier que David suggère :</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># APERÇU DU PROJET</span>
+
+<span class="gh"># PERSONNALITÉ</span>
+
+<span class="gh"># PILE TECHNIQUE</span>
+
+<span class="k">-</span><span class="w"> </span>choisir une pile technique avec des langages très populaires
+
+<span class="gh"># PROCESSUS DE CORRECTION D'ERREURS</span>
+
+étape 1 : expliquer l'erreur en termes simples
+étape 2 : expliquer la solution en termes simples
+étape 3 : montrer comment corriger l'erreur
+
+<span class="gh"># PROCESSUS DE CONSTRUCTION</span>
+
+<span class="gh"># Nos - variables d'environnement</span>
+
+backend/.env
+frontend/. env
+
+<span class="gh"># STRUCTURE ACTUELLE DES FICHIERS</span>
+
+Ici, vous collez le contenu de cette commande, afin que Cursor connaisse la structure de votre projet :
+tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
+
+<span class="gh"># PROCESSUS DE PUSH GITHUB</span>
+
+<span class="gh"># IMPORTANT</span>
+
+<span class="k">-</span><span class="w"> </span>Répétez les instructions les plus importantes.
+</code></pre></div>
+<p>Il suggère également fortement d'avoir un <code>.cursorignore</code> dans lequel vous listez vos fichiers <code>.env</code>. Cela empêche le chat et Composer d'écrire accidentellement dans ces fichiers.</p>
+<h2 id="regles-ia-dans-les-parametres-de-cursor">Règles IA dans les Paramètres de Cursor</h2>
+<p>Les règles IA doivent être définies dans les paramètres de cursor. Elles ne doivent contenir rien de spécifique au projet, juste des principes de codage que vous voudriez toujours appliquer. C'est la différence avec les <code>.cursorrules</code> qui contiennent également des détails spécifiques au projet.</p>
+<p>Un exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Principes Fondamentaux</span>
+
+<span class="k">-</span><span class="w"> </span>Écrire du code propre, simple et lisible
+<span class="k">-</span><span class="w"> </span>Implémenter les fonctionnalités de la manière la plus simple possible
+<span class="k">-</span><span class="w"> </span>Garder les fichiers petits et ciblés (&lt;200 lignes)
+<span class="k">-</span><span class="w"> </span>Tester après chaque changement significatif
+<span class="k">-</span><span class="w"> </span>Se concentrer sur la fonctionnalité principale avant l'optimisation
+<span class="k">-</span><span class="w"> </span>Utiliser une nomenclature claire et cohérente
+<span class="k">-</span><span class="w"> </span>Réfléchir soigneusement avant de coder. Écrire 2-3 paragraphes de raisonnement.
+<span class="k">-</span><span class="w"> </span>TOUJOURS écrire du code simple, propre et modulaire.
+<span class="k">-</span><span class="w"> </span>utiliser un langage clair et facile à comprendre. écrire des phrases courtes.
+
+<span class="gh"># Correction d'Erreurs</span>
+
+<span class="k">-</span><span class="w"> </span>NE PAS TIRER DE CONCLUSIONS HÂTIVES ! Considérer plusieurs causes possibles avant de décider.
+<span class="k">-</span><span class="w"> </span>Expliquer le problème en anglais simple
+<span class="k">-</span><span class="w"> </span>Apporter les changements minimaux nécessaires, en modifiant le moins de lignes de code possible
+<span class="k">-</span><span class="w"> </span>en cas d'erreurs étranges, demander à l'utilisateur d'effectuer une recherche web Perplexity pour obtenir les informations les plus récentes
+
+<span class="gh"># Processus de Construction</span>
+
+<span class="k">-</span><span class="w"> </span>﻿﻿Vérifier que chaque nouvelle fonctionnalité fonctionne en indiquant à l'utilisateur comment la tester
+<span class="k">-</span><span class="w"> </span>﻿﻿NE PAS écrire de code compliqué et déroutant. Opter pour une approche simple et modulaire.
+<span class="k">-</span><span class="w"> </span>﻿﻿en cas de doute, dire à l'utilisateur d'effectuer une recherche web
+
+<span class="gh"># Commentaires</span>
+
+<span class="k">-</span><span class="w"> </span>TOUJOURS essayer d'ajouter des commentaires plus utiles et explicatifs dans notre code.
+<span class="k">-</span><span class="w"> </span>NE JAMAIS supprimer d'anciens commentaires - sauf s'ils sont manifestement faux / obsolètes.
+<span class="k">-</span><span class="w"> </span>Inclure BEAUCOUP de commentaires explicatifs dans votre code. TOUJOURS écrire un code bien documenté.
+<span class="k">-</span><span class="w"> </span>Documenter tous les changements et leur raisonnement DANS LES COMMENTAIRES QUE VOUS ÉCRIVEZ
+<span class="k">-</span><span class="w"> </span>lors de l'écriture de commentaires, utiliser un langage clair et facile à comprendre. écrire des phrases courtes.
+</code></pre></div>
+<h2 id="petits-prompts-utiles">Petits Prompts Utiles</h2>
+<p>David fournit une liste de petits prompts utiles ou d'extraits de prompts. J'en ai copié certains ici pour une utilisation copier-coller :</p>
+<div class="highlight"><pre><span></span><code>Procédez comme un développeur senior avec un accent sur une architecture claire.
+
+Moins il y a de lignes de code, mieux c'est.
+
+Commencez par écrire 3 paragraphes de raisonnement analysant ce que l'erreur pourrait être. NE PAS TIRER DE CONCLUSIONS HÂTIVES.
+
+NE PAS ARRÊTER DE TRAVAILLER jusqu'à ce que…
+
+Répondez brièvement
+
+NE PAS SUPPRIMER LES COMMENTAIRES
+
+Vous devriez commencer le paragraphe de raisonnement avec beaucoup d'incertitude, et gagner lentement en confiance à mesure que vous réfléchissez davantage à l'élément.
+</code></pre></div>
+<h2 id="prompts-plus-grands">Prompts Plus Grands</h2>
+<h3 id="resume-de-letat-actuel">Résumé de l'état actuel</h3>
+<p>Utilisé pour résumer un flux de composition et passer à un nouveau dialogue de composition.</p>
+<div class="highlight"><pre><span></span><code>Avant de continuer, j'ai besoin que vous me donniez un résumé de l'état actuel du projet.
+
+Formatez cela en 3 paragraphes concis, où vous décrivez ce que nous venons de faire, ce qui n'a pas fonctionné, quels fichiers ont été mis à jour/créés, quelles erreurs éviter, les idées clés/leçons que nous avons apprises, les problèmes/erreurs auxquels nous faisons face,… et tout autre élément dont un programmeur pourrait avoir besoin pour travailler efficacement sur ce projet.
+
+Écrivez dans un ton conversationnel mais informatif, comme un fichier README sur GitHub qui est très dense en informations et sans fioritures ni bruit. NE PAS inclure d'hypothèses ou de théories, juste les faits.
+
+Je m'attends à voir trois paragraphes concis, écrits comme si vous donniez des instructions à un autre programmeur et que c'était TOUT ce que vous pouviez lui dire.
+</code></pre></div>
+<h3 id="impartial-5050">Impartial 50/50</h3>
+<div class="highlight"><pre><span></span><code>AVANT DE RÉPONDRE, je veux que vous écriviez deux paragraphes détaillés, l'un argumentant pour chacune de ces solutions - ne tirez pas de conclusions hâtives, considérez sérieusement les deux approches
+
+ensuite, après avoir terminé, dites-moi si l'une de ces solutions est évidemment meilleure que l'autre, et pourquoi.
+</code></pre></div>
+<h3 id="requete-de-recherche-en-un-paragraphe">Requête de recherche en un paragraphe</h3>
+<div class="highlight"><pre><span></span><code>effectuons une recherche web. votre tâche est d'écrire une requête de recherche en un paragraphe, comme si vous disiez à un chercheur humain ce qu'il faut trouver, en incluant tout le contexte pertinent. formatez le paragraphe comme des instructions claires, commandant à un chercheur de trouver ce que nous cherchons. demandez des extraits de code ou des détails techniques lorsque c'est pertinent
+</code></pre></div>
+<h2 id="instructions">Instructions</h2>
+<p>David suggère d'avoir un répertoire <code>instructions</code> qui contient des fichiers md avec des conseils pour l'IA. De cette façon, vous pouvez référencer ces fichiers depuis le prompt de Composer. Il préfère ce type de fichiers d'instructions plutôt que de référencer @Docs dans cursor, ce qui semble ne pas encore bien fonctionner.</p>
+<p>Fichiers d'instructions qu'il a mentionnés :</p>
+<ul>
+<li><code>supabase.md</code> : Un fichier qui décrit la structure de sa base de données, afin que cursor connaisse les tables, champs, mandatorité, etc.</li>
+<li><code>roadmap.md</code> : Une explication de la feuille de route de votre projet.</li>
+</ul>
+<h2 id="autres-outils">Autres Outils</h2>
+<p>En plus de Cursor, David utilise de nombreux autres outils. Certains de ceux qu'il a mentionnés :</p>
+<ul>
+<li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a></li>
+<li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> pour des discussions parallèles avec une IA avancée.</li>
+<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> pour des recherches web intelligentes.</li>
+<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> pour parler plutôt que taper</li>
+<li><a href="https://v0.dev" rel="noopener noreferrer" target="_blank">v0</a> un outil pour créer des applications Web dans le navigateur en discutant avec une IA.</li>
+<li><a href="https://lovable.dev" rel="noopener noreferrer" target="_blank">Lovable</a> pour construire des backends, notamment avec <a href="https://supabase.com" rel="noopener noreferrer" target="_blank">Supabase</a></li>
+<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> pour construire des sites web.</li>
+</ul>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

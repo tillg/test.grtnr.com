@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/de/">Home</a>
+
+  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/de/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Solide Kommentare in statischer&nbsp;Website
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">Di 11. Feb 2025</span>
+      
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/solid-comments-in-static-website/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <p><strong>TL;DR:</strong> Ich habe Kommentare zu meiner statischen Website hinzugefügt. So habe ich es gemacht - einschließlich einiger technischer Details. Ich habe verschiedene mögliche Lösungen recherchiert, um die solideste zu finden, sie für alle Beiträge integriert und einen Zähler für die Anzahl der Kommentare auf der Beitragsübersichtsseite hinzugefügt.</p>
+<p><strong>2025-05-23 Update</strong> Seit ich von Jekyll zu <a href="https://getpelican.com" rel="noopener noreferrer" target="_blank">Pelican</a> gewechselt bin, habe ich einige Details aktualisiert.</p>
+<h2 id="auswahl-einer-losung">Auswahl einer Lösung</h2>
+<p>Da ich vorhatte, mit dem neuen <a href="https://openai.com/index/introducing-deep-research/" rel="noopener noreferrer" target="_blank">Deep Research Model von OpenAI</a> zu experimentieren, habe ich es mit diesem Thema ausprobiert: <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">lesen Sie hier gerne weiter</a>. Insgesamt war die Recherche hilfreich und ich habe mich letztendlich für <a href="https://giscus.app/" rel="noopener noreferrer" target="_blank">Giscus</a> für die Kommentare entschieden. Teilweise, weil es sich am robustesten und zuverlässigsten anfühlte, teilweise, weil ich vor einigen Jahren wirklich schlechte Erfahrungen mit Disqus gemacht habe.</p>
+<p>Die Wahl basierte auf den Kriterien, die ich dem Modell gegeben habe. Hier sind die wichtigsten:</p>
+<ul>
+<li>Kein selbstgehosteter Server – Ich möchte keinen Server verwalten (und bezahlen 😉).</li>
+<li>Datenportabilität – die Kommentare können exportiert werden.</li>
+<li>Datenschutzfreundlich – keine zusätzlichen Tracker oder Anzeigen über das hinaus, was ich bereits verwende (z.B. Google Analytics).</li>
+<li>Markdown-Unterstützung – ermöglicht reichhaltige Formatierung (Codeblöcke usw.) für technische Diskussionen.</li>
+<li>Spam-Schutz – verfügt über Maßnahmen zur Reduzierung von Spam, insbesondere wenn anonyme oder nicht authentifizierte Kommentare zugelassen werden.</li>
+</ul>
+<p>Die Werkzeuge, die Deep Research <em>analysiert</em> hat, waren:</p>
+<ul>
+<li>Giscus</li>
+<li>Utterances</li>
+<li>Staticman</li>
+<li>Commento</li>
+<li>Hyvor Talk</li>
+<li>Disqus</li>
+<li>Einige <em>selbstgemachte</em> Lösungen</li>
+</ul>
+<h2 id="integration-von-giscus">Integration von Giscus</h2>
+<p>Im Anschluss an die Recherche habe ich das Modell gebeten, mir eine Schritt-für-Schritt-Anleitung zur Integration der Lösung zu geben. Diese war weit weniger zuverlässig als die erste Recherche, aber dennoch hilfreich.</p>
+<p>Hier ist die Zusammenfassung (die Details finden Sie im <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">Chat, den ich mit der KI hatte</a>):</p>
+<ul>
+<li>Schritt 1: Aktivieren Sie GitHub Discussions für Ihr Repository. Das bedeutet das Repo, in das die statische Seite generiert wird (was manchmal nicht dasselbe ist wie die Quelle).</li>
+<li>Gehen Sie zu Ihrem GitHub-Repository</li>
+<li>Navigieren Sie zu Einstellungen &gt; Allgemein.</li>
+<li>Scrollen Sie nach unten zum Abschnitt Diskussionen und aktivieren Sie ihn.</li>
+<li>Zwischenschritt, den die KI nicht erwähnt hat: Installieren Sie Giscus für alle oder einige Ihrer Repos. <a href="https://github.com/apps/giscus/installations/select_target" rel="noopener noreferrer" target="_blank">Hier</a>
+<img alt="alt text" src="image.png"/></li>
+<li>Schritt 2: Installieren und Konfigurieren Sie Giscus</li>
+<li>Besuchen Sie die Giscus-Setup-Seite: https://giscus.app/.</li>
+<li>Geben Sie unter "Repository" Ihren Repo-Namen ein. Sie sollten nun das grüne Häkchen sehen, dass Ihr Repo alle Kriterien für die Nutzung von Giscus erfüllt.</li>
+<li>Die Option „Page discussion mapping“ legt eine Beziehung zwischen Ihren Seiten, z.B. einem Artikel, und einer GitHub-Diskussion fest. Ich habe den Pfadnamen ausgewählt.</li>
+<li>Für die Diskussionskategorie habe ich „allgemein“ ausgewählt.
+    Setzen Sie das Thema auf "Match OS" oder definieren Sie manuell den Hell- und Dunkelmodus.
+    Klicken Sie auf "Code kopieren", sobald Sie das <script>-Tag generiert haben.</li>
+</ul>
+<p><img alt="Giscus Features" src="giscus-features.png"></p>
+<ul>
+<li>Schritt 3: Fügen Sie Giscus zu Ihrer Jekyll-Post-Vorlage hinzu (oder Pelican 😀). - - Schritt 4: Stylen Sie Giscus, um zum Lanyon-Theme zu passen. Diesen Schritt habe ich übersprungen, da das Styling für mich <em>nackt</em> ziemlich gut aussah.</li>
+<li>Schritt 5: Anzeigen der Kommentaranzahl in Beitragszusammenfassungen (siehe unten)</li>
+<li>Schritt 6: Änderungen committen und pushen - Duh...</li>
+<li>Schritt 7: Testen Sie Ihre Einrichtung</li>
+</ul>
+<h2 id="hinzufugen-des-kommentarzahlers">Hinzufügen des Kommentarzählers</h2>
+<p>Nach einigem Herumprobieren und Glätten der Kanten funktionierte alles einwandfrei. Aber es gab eine Funktion, die ich vermisste: Ich wollte die Anzahl der Kommentare, die ein Blogbeitrag hat, auf der Beitragsübersichtsseite sehen.</p>
+<p><img alt="Kommentarzähler" src="screenshot_comment_counter.jpg" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></p>
+<p>Also habe ich ChatGPT erneut gestartet und ein weiteres <a href="https://chatgpt.com/share/67ab5f69-4ddc-8009-8471-a35e00cb6a43">Rechercheergebnis</a> erhalten. Die groben Schritte sind:</p>
+<ul>
+<li>Schritt 1: Fügen Sie einen Platzhalter für die Kommentaranzahl hinzu. In meinem <a href="https://github.com/tillg/grtnr.com_2024/blob/main/_includes/post_preview.html"><code>post_preview.html</code></a> habe ich ein <code>&lt;span&gt;</code> hinzugefügt, das tatsächlich etwas anders sein musste als das, was die KI vorgeschlagen hat:</li>
+</ul>
+<p><code>html
+  &lt;span class="comment-count" data-giscus-comments="{{ post.url }}"&gt;
+    &lt;span class="comment-num"&gt;Kommentare zählen...&lt;/span&gt;
+  &lt;/span&gt;</code></p>
+<ul>
+<li>Schritt 2: Fügen Sie JavaScript hinzu, um die Kommentaranzahl abzurufen. Ich habe ein Skript hinzugefügt, das die Kommentaranzahl von der GitHub Discussions API abruft und die Kommentaranzahl aktualisiert. Das vorgeschlagene Skript benötigte einige Korrekturen und endete in diesem <a href="https://github.com/tillg/grtnr.com_2024/blob/main/assets/js/giscus-comments.js">Event Listener</a>. Seien Sie nicht überrascht von den beiden Zeilen mit Bindestrichen (---) oben, ich werde sie unten erklären... Bemerkenswert hier sind</li>
+<li>Umgang mit dem <code>accessToken</code> (unten erklärt)</li>
+<li>Dieses Argument der grahQL-Abfrage: <code>categoryId: "DIC_kwDONYRp_c4Cm0cH"</code>. Dies ist die ID der Kategorie, die die Diskussionen des Repositories enthält.</li>
+<li>Hinweis: Was mir beim Debuggen &amp; Beheben dieser Funktion geholfen hat, ist der <a href="https://docs.github.com/en/graphql/overview/explorer">Github GraphQL Explorer</a>.</li>
+<li>Schritt 3: Integrieren Sie das JavaScript in Ihre Jekyll-Site. In meinem Fall habe ich diesen Skriptverweis am Ende der <a href="https://github.com/tillg/grtnr.com_2024/blob/main/_layouts/default.html"><code>default.html</code> Layout-Datei</a> hinzugefügt.</li>
+<li>Schritt 4: Testen Sie die Kommentaranzahl. Nach einigen Tests und Korrekturen funktionierte es schließlich lokal.</li>
+</ul>
+<p>Die folgenden Aspekte hielten mich ein oder zwei Stunden beschäftigt:</p>
+<ul>
+<li>Das <code>accessToken</code>, wo und wie man es bekommt</li>
+<li>Wie man das Zugriffstoken auf Github veröffentlicht, ohne dass der Token-Scanner und -Schutz eingreift</li>
+</ul></script></li></ul>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

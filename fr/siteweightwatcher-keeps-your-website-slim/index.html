@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="Tech" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/fr/">Home</a>
+
+  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/fr/about">About</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/fr/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      SiteWeightWatcher - garde votre site web léger
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">dimanche 27 décembre 2015</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">Tech</a>
+
+</div>
+
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/siteweightwatcher-keeps-your-website-slim/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <p>Les bons développeurs logiciels testent leurs créations. Et les accros du <a href="https://www.wikiwand.com/en/Test-driven_development" rel="noopener noreferrer" target="_blank">TDD (Test Driven Development)</a> sont des maniaques en matière de tests. Ces personnes pensent généralement en code, que ce soit Java, Python, nodeJS, peu importe. Le TDD signifie que vous écrivez d'abord les tests, puis vous codez juste assez pour que les tests deviennent verts. Ensuite, vous retravaillez votre code et seulement alors vous commencez à écrire des tests pour de nouvelles exigences.
+<img alt="Processus TDD" src="tdd.png"/></p>
+<p>C'est <strong>très</strong> axé sur les tests. Mon opinion est que si vous le faites comme c'est écrit et décrit dans les livres, vous devenez terriblement lent et cela tourne au non-sens. Mais c'est une autre discussion, et ce n'est pas celle que je veux aborder ici...</p>
+<p>Ce qui manque dans la plupart des approches de test que j'ai vues dans le passé, ce sont les deux éléments suivants :</p>
+<ol>
+<li>Les testeurs et les outils de test cessent de surveiller le logiciel ou le site web une fois qu'il est en production. D'une manière ou d'une autre, ils estiment que leur responsabilité s'arrête avec la mise en ligne...</li>
+<li>Ils testent le logiciel. Pas le reste, c'est-à-dire le design, le HTML, le CSS, etc. Et l'expérience utilisateur, le ressenti de savoir si ce que je vois, touche, navigue est de bonne qualité, est très influencé par cet emballage de la logique logicielle.</li>
+</ol>
+<p>Je cherche donc un outil pour tester le logiciel (basé sur le web) une fois qu'il est en ligne et tout au long de l'expérience utilisateur. Imaginez un site web, un simple blog. Il pourrait être parfait lors de son lancement, mais avec le temps, il se dégrade : les designers ont ajouté tant de cloches et de sifflets, le volume du contenu a augmenté, il a été ajusté pour être plus utilisable sur mobiles... Et finalement, le site est gonflé, lourd et lent. Pourquoi dois-je attendre que mes utilisateurs me le disent (ce qui signifie se plaindre) ?</p>
+<p>Chez <a href="https://mgm-tp.com" rel="noopener noreferrer" target="_blank">mgm technology partners</a>, nous avons des suites de tests automatisés qui s'exécutent chaque nuit. Ainsi, les développeurs qui ont intégré du code ralentissant le logiciel reçoivent un rapport qui leur est envoyé chaque matin dans leur boîte de réception.</p>
+<p>Voici donc ce que mon SiteWeightWatcher devrait faire :</p>
+<ul>
+<li>Exécuter des tests toutes les 5 à 30 minutes sur le site de production</li>
+<li>Vérifier toutes les pages, pas seulement index.html</li>
+<li>Signaler immédiatement lorsque les pages deviennent lentes (c'est-à-dire plus lentes qu'elles ne l'étaient auparavant)</li>
+<li>Suivre les indicateurs clés et leur évolution dans le temps :</li>
+<li>Quelle quantité de données est transférée pour chaque page ?</li>
+<li>Combien de requêtes sont échangées ?</li>
+<li>Combien de temps faut-il pour rechercher des produits ? Au fil du temps...</li>
+<li>Quelle est la connectivité du site pour les utilisateurs en Allemagne, au Royaume-Uni, aux États-Unis ou en Asie ? Au fil du temps, car ces choses changent sans que nous ayons fait quoi que ce soit.</li>
+</ul>
+<p>Je pourrais imaginer un tableau de bord pour une boutique en ligne comme <a href="https://www.kickz.com/de" rel="noopener noreferrer" target="_blank">KICKZ.com</a> ressemblant à ceci :
+<img alt="Esquisse du tableau de bord" src="kickz_dashboard.png"/>Un tableau de bord qui montre comment les tailles de page évoluent</p>
+<p>Et tout comme les équipes de test normales le font, ces tests devraient également évoluer et devenir de plus en plus adaptés au site, à sa fonctionnalité et à ses utilisateurs. Chaque fois que nous avons un vrai problème ou un bug, nous devons nous assurer que notre WeightWatcher le détectera s'il devait réapparaître ou se reproduire.</p>
+<p>Comment pourrions-nous commencer à construire un tel outil ? Quelques réflexions :</p>
+<ul>
+<li>Nous avons des agents et un serveur central. Les agents sont situés partout dans le monde ou dans différents réseaux (pensez à de petites images Docker qui s'exécutent sur différents clouds). Ils rapportent toutes leurs données capturées au serveur central. C'est là que les rapports sont générés et où une explication interactive des données est fournie.</li>
+<li>Les agents commencent à collecter des métriques simples :</li>
+<li>Nombre de requêtes HTTP par page</li>
+<li>Données transférées par page</li>
+<li>Nombre de lignes de JavaScript par page</li>
+<li>Temps de chargement des données</li>
+<li>Temps d'exécution du JavaScript</li>
+<li>Sur cette base, nous commençons par des rapports simples :</li>
+<li>Quelle est la taille moyenne des pages ?</li>
+<li>Quel est le nombre moyen de requêtes par page ?</li>
+<li>Quelles sont mes pages les <em>plus lourdes</em> ?</li>
+<li>Un graphique qui montre la disponibilité de mon site ainsi que le temps de chargement sur une échelle de 24h, une semaine, un mois. Peut-être que mes utilisateurs ne rencontrent des temps de chargement lents que le soir.</li>
+</ul>
+<p>À partir de là, nous étendons les données que nous collectons ainsi que les rapports.</p>
+<p>Un tel outil serait idéal pour surveiller les sites dont je suis responsable (c'est-à-dire les sites web que nous avons développés chez mgm) mais pourrait également fournir des informations précieuses sur d'autres acteurs du marché. Il pourrait être utilisé à la fois par des personnes techniques ainsi que par les équipes marketing - car elles aussi <em>parfois</em> compromettent la performance. Je serais curieux de voir ce genre de statistiques pour Zalando 😜</p>
+<p>Quelqu'un connaît-il un tel système de surveillance ? Merci de me le faire savoir.</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/fr/">Home</a>
+
+  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/fr/about">About</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/fr/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Réflexions sur l'Architecture&nbsp;Swift
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">lundi 24 mars 2025</span>
+      
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/thoughts-on-swift-architecture/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <div class="toc">
+<ul>
+<li><a href="#question">Question</a><ul>
+<li><a href="#modeles-de-domaine-modeles-de-donnees-et-mappers">Modèles de Domaine, Modèles de Données et Mappers</a></li>
+<li><a href="#referentiel">Référentiel</a></li>
+</ul>
+</li>
+<li><a href="#reponse">Réponse</a></li>
+</ul>
+</div>
+<p>J'ai entendu ce très bon podcast hier sur la façon de structurer différents types de modèles en Swift : les modèles de domaine qui sont ma représentation interne, les modèles de données (ou DTO) qui sont la représentation externe, et les modèles de vue qui sont la représentation pour mon interface utilisateur :</p>
+<p><a href="https://podcasts.apple.com/de/podcast/developer-podcast/id1467065787?i=1000698509743" rel="noopener noreferrer" target="_blank"><img alt="Podcast Développeur" src="developer_podcast.jpg"/></a></p>
+<p>Ce post est essentiellement une question que j'ai ajoutée au <a href="https://discord.com/invite/j57uchzUa9" rel="noopener noreferrer" target="_blank">Discord associé au Podcast</a>.</p>
+<h1 id="question">Question</h1>
+<p>Je suis un débutant en Swift, et de nombreux aspects restent encore flous pour moi. Basé sur l'exemple que vous avez utilisé dans le podcast, je vais essayer de combler les lacunes de ma compréhension.</p>
+<h2 id="modeles-de-domaine-modeles-de-donnees-et-mappers">Modèles de Domaine, Modèles de Données et Mappers</h2>
+<p>L'exemple est une application de tâches et donc l'entité principale est la <strong>Tâche</strong>. J'aurais donc un modèle de domaine <code>Task</code> qui ressemble à ceci :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">Task</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">id</span><span class="p">:</span> <span class="n">UUID</span>
+    <span class="kd">let</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">let</span> <span class="nv">description</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">let</span> <span class="nv">dueDate</span><span class="p">:</span> <span class="n">Date</span>
+    <span class="kd">let</span> <span class="nv">isCompleted</span><span class="p">:</span> <span class="nb">Bool</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Comme je veux stocker mes tâches dans CloudKit, j'ai besoin d'un modèle de données compatible avec CloudKit. J'ai donc besoin d'objets <code>CKRecord</code> qui représentent les tâches. Selon ma compréhension, ils sont construits comme ceci :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapTaskToCKRecord</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">CKRecord</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">record</span> <span class="p">=</span> <span class="bp">CKRecord</span><span class="p">(</span><span class="n">recordType</span><span class="p">:</span> <span class="s">"task"</span><span class="p">)</span>
+    <span class="n">record</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
+    <span class="n">record</span><span class="p">[</span><span class="s">"title"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">title</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
+    <span class="n">record</span><span class="p">[</span><span class="s">"description"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">description</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
+    <span class="n">record</span><span class="p">[</span><span class="s">"dueDate"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">dueDate</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
+    <span class="n">record</span><span class="p">[</span><span class="s">"isCompleted"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">isCompleted</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
+    <span class="k">return</span> <span class="n">record</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Et j'aurais la fonction correspondante pour mapper un <code>CKRecord</code> de retour à une <code>Task</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapCKRecordToTask</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="bp">CKRecord</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Task</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">id</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="n">UUID</span>
+    <span class="kd">let</span> <span class="nv">title</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"title"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
+    <span class="kd">let</span> <span class="nv">description</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"description"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
+    <span class="kd">let</span> <span class="nv">dueDate</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"dueDate"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="n">Date</span>
+    <span class="kd">let</span> <span class="nv">isCompleted</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"isCompleted"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">Bool</span>
+    <span class="k">return</span> <span class="n">Task</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">id</span><span class="p">,</span> <span class="n">title</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="n">description</span><span class="p">:</span> <span class="n">description</span><span class="p">,</span> <span class="n">dueDate</span><span class="p">:</span> <span class="n">dueDate</span><span class="p">,</span> <span class="n">isCompleted</span><span class="p">:</span> <span class="n">isCompleted</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Questions :</p>
+<ul>
+<li><strong>Où</strong> dois-je placer les fonctions de mappage ? Font-elles partie du modèle de domaine ou du modèle de données ? Je suppose qu'elles appartiennent plutôt au modèle de données.</li>
+<li><strong>Erreurs</strong> : Comment gérer les erreurs ? Par exemple, si le <code>CKRecord</code> ne contient pas de valeur pour <code>id</code>, cela provoquerait un crash. Devrais-je utiliser des optionnels ou lancer une erreur ?</li>
+</ul>
+<h2 id="referentiel">Référentiel</h2>
+<p>Ensuite, vous mentionnez le référentiel. Basé sur la discussion précédente sur Discord, je supposerais que le référentiel ne traite que des modèles de domaine. Il pourrait donc ressembler à ceci :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">getAllTasks</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span>
+    <span class="kd">func</span> <span class="nf">getTaskById</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Task</span><span class="p">?</span>
+    <span class="kd">func</span> <span class="nf">getTasksByCompletionStatus</span><span class="p">(</span><span class="n">isCompleted</span><span class="p">:</span> <span class="nb">Bool</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span>
+    <span class="kd">func</span> <span class="nf">addTask</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">)</span>
+    <span class="kd">func</span> <span class="nf">updateTask</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">)</span>
+    <span class="kd">func</span> <span class="nf">deleteTask</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Et basé sur ce protocole, je pourrais implémenter un <code>TaskRepositoryCloudKit</code> qui utilise les fonctions de mappage pour convertir entre les modèles de domaine et de données et reflète toutes les opérations CRUD effectuées sur le référentiel de tâches (en mémoire) à la base de données CloudKit.</p>
+<p>Prochaine question :</p>
+<ul>
+<li><strong>Fonctions du référentiel</strong> : Typiquement, je construirais des fonctions à partir d'un référentiel qui vont au-delà du CRUD. Par exemple, un <code>getTasksDateRange</code> qui retourne la date d'échéance la plus ancienne et la plus récente. Où devrais-je construire cela ? Je ne veux pas le mettre dans <code>TaskRepositoryCloudKit</code> car ce serait la même logique en utilisant un autre stockage (c'est-à-dire charger toutes les tâches en mémoire, les trier et retourner la première et la dernière). Comme je ne peux pas avoir de fonctions dans un protocole, où dois-je le mettre ?</li>
+<li><strong>Nommage</strong> : Le nommage que j'ai suggéré est-il raisonnable ? Est-ce ainsi que vous le feriez en Swift ? J'ai choisi <code>TaskRepositoryCloudKit</code> pour qu'il soit listé à côté du <code>TaskRepository</code> dans le navigateur de fichiers Xcode. Si j'avais besoin d'autres modèles de données pour interfacer un système Xyz, je les appellerais <code>TaskRawXyz</code> - est-ce raisonnable ?</li>
+</ul>
+<h1 id="reponse">Réponse</h1>
+<p>J'ai reçu une excellente <a href="https://discord.com/channels/1028834407374655518/1028846930182291526/1353860001411760228" rel="noopener noreferrer" target="_blank">réponse</a> de <a href="https://pado.name" rel="noopener noreferrer" target="_blank">Cocoatype</a> sur Discord. Et je suis très reconnaissant qu'il ait pris le temps de lire et de taper la réponse.</p>
+<p>Voici la réponse de Cocoatype pour référence :</p>
+<blockquote>
+<p><strong>Où</strong> dois-je placer les fonctions de mappage ? Font-elles partie du modèle de domaine ou du modèle de données ? Je suppose qu'elles appartiennent plutôt au modèle de données.
+Je mettrais celles-ci dans le référentiel ou dans un type d'assistant pour le référentiel. Par exemple, dans mon application Barc, j'ai un protocole <code>BarcodeRepository</code>, et un <code>FileBarcodeRepository</code> qui utilise SwiftData. Voici un petit aperçu de ce à quoi cela ressemble :</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="nc">BarcodeRepository</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">codes</span><span class="p">:</span> <span class="p">[</span><span class="n">Code</span><span class="p">]</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">throws</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">FileBarcodeRepository</span><span class="p">:</span> <span class="n">BarcodeRepository</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">models</span><span class="p">:</span> <span class="p">[</span><span class="n">BarcodeModel</span><span class="p">]</span> <span class="p">{</span>
+        <span class="kr">get</span> <span class="kr">throws</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="nv">sort</span> <span class="p">=</span> <span class="n">SortDescriptor</span><span class="p">(</span><span class="err">\</span><span class="n">BarcodeModel</span><span class="p">.</span><span class="n">createdDate</span><span class="p">,</span> <span class="n">order</span><span class="p">:</span> <span class="p">.</span><span class="bp">reverse</span><span class="p">)</span>
+            <span class="kd">let</span> <span class="nv">descriptor</span> <span class="p">=</span> <span class="n">FetchDescriptor</span><span class="p">(</span><span class="n">sortBy</span><span class="p">:</span> <span class="p">[</span><span class="bp">sort</span><span class="p">])</span>
+            <span class="k">return</span> <span class="k">try</span> <span class="n">modelContainer</span><span class="p">.</span><span class="n">mainContext</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">descriptor</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">mapper</span> <span class="p">=</span> <span class="n">BarcodeModelMapper</span><span class="p">()</span>
+    <span class="kd">var</span> <span class="nv">codes</span><span class="p">:</span> <span class="p">[</span><span class="n">Code</span><span class="p">]</span> <span class="p">{</span>
+        <span class="kr">get</span> <span class="kr">throws</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">try</span> <span class="n">models</span><span class="p">.</span><span class="n">compactMap</span> <span class="p">{</span>
+                <span class="k">do</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="k">try</span> <span class="n">mapper</span><span class="p">.</span><span class="n">code</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="nv">$0</span><span class="p">)</span>
+                <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+                    <span class="n">errorHandler</span><span class="p">.</span><span class="n">log</span><span class="p">(</span><span class="n">error</span><span class="p">,</span> <span class="n">module</span><span class="p">:</span> <span class="s">"Persistence"</span><span class="p">,</span> <span class="n">type</span><span class="p">:</span> <span class="s">"FileBarcodeRepository"</span><span class="p">)</span>
+                    <span class="k">return</span> <span class="kc">nil</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="nc">BarcodeModelMapper</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">code</span><span class="p">(</span><span class="n">from</span> <span class="n">model</span><span class="p">:</span> <span class="n">BarcodeModel</span><span class="p">)</span> <span class="kr">throws</span> <span class="p">-&gt;</span> <span class="n">Code</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">value</span> <span class="p">=</span> <span class="k">switch</span> <span class="n">model</span><span class="p">.</span><span class="n">type</span> <span class="p">{</span>
+            <span class="c1">// omis pour la longueur ; juste un tas de cas</span>
+        <span class="p">}</span>
+
+        <span class="k">guard</span> <span class="kd">let</span> <span class="nv">modelName</span> <span class="p">=</span> <span class="n">model</span><span class="p">.</span><span class="n">name</span> <span class="k">else</span> <span class="p">{</span> <span class="k">throw</span> <span class="n">BarcodeModelMapperError</span><span class="p">.</span><span class="n">noNameSet</span> <span class="p">}</span>
+        <span class="kd">let</span> <span class="nv">name</span> <span class="p">=</span> <span class="k">if</span> <span class="n">modelName</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">{</span> <span class="n">Strings</span><span class="p">.</span><span class="n">BarcodeModelMapper</span><span class="p">.</span><span class="n">untitledCodeName</span> <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="n">modelName</span> <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">Code</span><span class="p">(</span>
+            <span class="n">name</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+            <span class="n">value</span><span class="p">:</span> <span class="n">value</span><span class="p">,</span>
+            <span class="n">location</span><span class="p">:</span> <span class="n">model</span><span class="p">.</span><span class="n">location</span><span class="p">.</span><span class="bp">map</span><span class="p">(</span><span class="n">locationMapper</span><span class="p">.</span><span class="n">location</span><span class="p">(</span><span class="n">from</span><span class="p">:)),</span>
+            <span class="n">date</span><span class="p">:</span> <span class="n">model</span><span class="p">.</span><span class="n">date</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Erreurs</strong> : Comment gérer les erreurs ? Par exemple, si le CKRecord ne contient pas de valeur pour id, cela provoquerait un crash. Devrais-je utiliser des optionnels ou lancer une erreur ?</p>
+</blockquote>
+<p>Personnellement, je lance des erreurs et je les gère au niveau où il est raisonnable de les gérer. Les optionnels sont bien si quelque chose est réellement optionnel, mais rappelez-vous que ce que vous essayez de faire ici est d'éviter d'avoir à gérer les contraintes de l'API dans votre code de vue. Donc, je ne rendrais pas quelque chose optionnel juste pour éviter les erreurs.</p>
+<blockquote>
+<p><strong>Fonctions du référentiel</strong> : Typiquement, je construirais des fonctions à partir d'un référentiel qui vont au-delà du CRUD. Par exemple, un getTasksDateRange qui retourne la date d'échéance la plus ancienne et la plus récente. Où devrais-je construire cela ? Je ne veux pas le mettre dans TaskRepositoryCloudKit car ce serait la même logique en utilisant un autre stockage (c'est-à-dire charger toutes les tâches en mémoire, les trier et retourner la première et la dernière). Comme je ne peux pas avoir de fonctions dans un protocole, où dois-je le mettre ?</p>
+</blockquote>
+<p>Si vous voulez avoir quelque chose à travers plusieurs implémentations, utilisez une extension de protocole. Par exemple :</p>
+<div class="highlight"><pre><span></span><code><span class="kd">extension</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">getTasks</span><span class="p">(</span><span class="n">dateRange</span><span class="p">:</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="n">Date</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">getAllTasks</span><span class="p">().</span><span class="bp">filter</span> <span class="p">{</span> <span class="n">task</span> <span class="k">in</span>
+            <span class="n">dateRange</span><span class="p">.</span><span class="bp">contains</span><span class="p">(</span><span class="n">task</span><span class="p">.</span><span class="n">dueDate</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Parce que vous savez que toutes les implémentations de TaskRepository ont un <code>getAllTasks()</code>, vous pouvez l'utiliser dans l'extension comme ça.</p>
+<blockquote>
+<p><strong>Nommage</strong> : Le nommage que j'ai suggéré est-il raisonnable ? Est-ce ainsi que vous le feriez en Swift ? J'ai choisi TaskRepositoryCloudKit pour qu'il soit listé à côté du TaskRepository dans le navigateur de fichiers Xcode. Si j'avais besoin d'autres modèles de données pour interfacer un système Xyz, je les appellerais TaskRawXyz - est-ce raisonnable</p>
+</blockquote>
+<p>Personnellement, je mets la partie la plus spécifique en premier (BarcodeRepository devient FileBarcodeRepository et PreviewBarcodeRepository et StubBarcodeRepository), mais à la fin, c'est bien aussi. Rien d'étrange de toute façon.</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

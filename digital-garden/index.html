@@ -10,6 +10,8 @@
   <title>test.grtnr.com</title>
 
   <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
   <link rel="stylesheet" href="../theme/css/poole.css" />
   <link rel="stylesheet" href="../theme/css/syntax.css" />
   <link rel="stylesheet" href="../theme/css/lanyon.css" />
@@ -53,8 +55,17 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   </nav>
 
+  <!-- Language Switcher -->
   <div class="sidebar-item">
-      Last built 27.05.2025 09:01:13.
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/digital-garden/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/digital-garden/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
   </div>
 </div>
   <div class="wrap">
@@ -64,6 +75,23 @@ styles, `#sidebar-checkbox` for behavior. -->
           <a href="../" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -77,6 +105,7 @@ styles, `#sidebar-checkbox` for behavior. -->
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">April 18, 2025</span>
       
     </div>
+
 
     <p><img alt="Digital garden" src="/digital-garden/digital-garden.jpg"/></p>
 <div class="toc">
@@ -163,7 +192,7 @@ Status: published
 </code></pre></div>
 <p><strong>Local Preview:</strong> To enable per-article preview while editing, use Pelican’s built-in development server. Pelican’s <span class="caps">CLI</span>/Makefile supports an auto-reload server (e.g. <code>make devserver</code> or <code>pelican --autoreload --listen</code>) that watches for file changes and rebuilds as you write. This way, you can navigate to <code>http://localhost:8000/tech/dev/data_science/my-article/</code> and see the rendered <span class="caps">HTML</span> update on each save. Because Pelican does selective output writing and caching, rebuilds are fast even for large sites (<a href="https://github.com/getpelican/pelican#:~:text=,rich%20plugin%20ecosystem%3A%20Pelican%20Plugins" rel="noopener noreferrer" target="_blank">GitHub - getpelican/pelican: Static site generator that supports Markdown and reST syntax. Powered by Python.</a>). This gives a near real-time preview of the article in the context of the actual theme/template. For quick iteration on a single page, Pelican’s incremental build will detect only <em>my-article</em> has changed and regenerate just that page, making the feedback loop quick. <span class="caps">VS</span> Code can also preview Markdown, but using Pelican’s server ensures the content is seen with the final site’s styling and layout.</p>
 <h2 id="wiki-style-internal-linking-backlinks">Wiki-Style Internal Linking <span class="amp">&amp;</span> Backlinks</h2>
-<p>To interconnect notes in wiki fashion, we enable <strong><a href="/wiki-style/">Wiki-Style</a> linking</strong> in Markdown. Pelican has a community plugin called <strong>Wikilinks</strong> that automatically converts <code>[Page Name](/page-name/)</code> syntax into proper hyperlinks between pages (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Usage%20Notes" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>). For example, writing <code>We build on ideas from [My Data Science Journey](/my-data-science-journey/)</code> in another article will link to the “My Data Science Journey” page (resolving to its slug or filename). The Wikilinks plugin supports optional display text (e.g. <code>[custom text](/page-name/)</code>) (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Usage%20Notes" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>). Under the hood, it scans for <code>[...](//)</code> patterns after markdown processing and replaces them with <code>&lt;a&gt;</code> links to the target page’s <span class="caps">URL</span> (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=In%20basic%20usage%2C%20this%20allow,is%20finished" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>). This makes cross-referencing content as easy as in tools like Obsidian or Roam. (We will enforce unique filenames for notes to avoid ambiguous links (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Known%20Issues" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>).)</p>
+<p>To interconnect notes in wiki fashion, we enable <strong>wiki-style linking</strong> in Markdown. Pelican has a community plugin called <strong>Wikilinks</strong> that automatically converts <code>[Page Name](/page-name/)</code> syntax into proper hyperlinks between pages (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Usage%20Notes" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>). For example, writing <code>We build on ideas from [My Data Science Journey](/my-data-science-journey/)</code> in another article will link to the “My Data Science Journey” page (resolving to its slug or filename). The Wikilinks plugin supports optional display text (e.g. <code>[custom text](/page-name/)</code>) (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Usage%20Notes" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>). Under the hood, it scans for <code>[...](//)</code> patterns after markdown processing and replaces them with <code>&lt;a&gt;</code> links to the target page’s <span class="caps">URL</span> (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=In%20basic%20usage%2C%20this%20allow,is%20finished" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>). This makes cross-referencing content as easy as in tools like Obsidian or Roam. (We will enforce unique filenames for notes to avoid ambiguous links (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Known%20Issues" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>).)</p>
 <p><strong>Backlinks:</strong> To achieve bi-directional linking (seeing what links back to a page), we can create a custom Pelican plugin or utilize the site’s metadata. During the build, we can collect all the wiki link references: e.g. maintain a dictionary mapping each target page to a list of pages that mentioned it. Then extend Pelican’s article context to include a “backlinks” list for each article. Finally, in the article template, if backlinks exist, render a section “<strong>Linked from:</strong> …” listing those referring pages. This requires a custom plugin that hooks into Pelican’s generation phase (using signals like <code>article_generator_finalized</code>) to gather links and inject the data. The effort is manageable given Pelican’s plugin <span class="caps">API</span> (Python hooks), and ensures every page ends with a list of other notes that link to it, reinforcing the wiki-like navigation. If writing a plugin from scratch, we’d parse each article’s <span class="caps">HTML</span> (or use the internal link map from the Wikilinks plugin) to identify outgoing <code>href</code>s pointing inside the site, then invert that mapping.</p>
 <p>Pelican’s standard linking syntax (<code>{filename}target.md</code>) could also be used for internal links (<a href="https://docs.getpelican.com/en/latest/content.html#:~:text=the%20other%20content%20will%20be,placed%20after%20site%20generation" rel="noopener noreferrer" target="_blank">Writing content - <span class="caps">PELICAN</span> 4.11.0</a>) (<a href="https://docs.getpelican.com/en/latest/content.html#:~:text=,filename%7D%2Farticle2.md" rel="noopener noreferrer" target="_blank">Writing content - <span class="caps">PELICAN</span> 4.11.0</a>), but the wiki-style is more intuitive for a digital garden workflow. With the Wikilinks plugin and a backlinks plugin, the site will have <strong>fully connected pages</strong> with automatic references.</p>
 <h2 id="custom-content-types-templates">Custom Content Types <span class="amp">&amp;</span> Templates</h2>
@@ -257,7 +286,7 @@ Ingredients:
 <li><strong>Pelican (Python Static Site Generator)</strong> – Core engine for markdown-to-<span class="caps">HTML</span>, multi-language output, theming, and plugin (<a href="https://github.com/getpelican/pelican#:~:text=,rich%20plugin%20ecosystem%3A%20Pelican%20Plugins" rel="noopener noreferrer" target="_blank">GitHub - getpelican/pelican: Static site generator that supports Markdown and reST syntax. Powered by Python.</a>)】.</li>
 <li><strong>Content Structure:</strong> Markdown files in a nested directory hierarchy, one article per folder with associated images/docs, using Pelican’s attach mechanism for bundling asset (<a href="https://docs.getpelican.com/en/latest/content.html#:~:text=Starting%20with%20Pelican%203,sibling%20of%20the%20linking%20document" rel="noopener noreferrer" target="_blank">Writing content - <span class="caps">PELICAN</span> 4.11.0</a>) (<a href="https://docs.getpelican.com/en/latest/content.html#:~:text=%21%5BIcon%5D%28" rel="noopener noreferrer" target="_blank">Writing content - <span class="caps">PELICAN</span> 4.11.0</a>)】.</li>
 <li><strong>Pelican Plugins:</strong></li>
-<li><em>Wikilinks</em> for <code>[wiki-style](/wiki-style/)</code> link syntax between page (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Usage%20Notes" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>)】.</li>
+<li><em>Wikilinks</em> for wiki-style link syntax between page (<a href="https://github.com/MinchinWeb/minchin.pelican.plugins.wikilinks/#:~:text=Usage%20Notes" rel="noopener noreferrer" target="_blank">GitHub - minchinweb/minchin.pelican.plugins.wikilinks: Support Wikilinks when generating Pelican sites</a>)】.</li>
 <li><em>i18n_subsites</em> for multi-language site generation (creating language-specific versions of the site (<a href="https://siongui.github.io/2017/01/07/pelican-translate-string-according-to-default-language-in-theme/#:~:text=Pelican%20static%20site%20generator%20and,macro%20to%20achieve%20this%20goal" rel="noopener noreferrer" target="_blank">[Pelican] Translate String According to Default Language in Theme</a>)】.</li>
 <li><em>Neighbors</em> (if using a theme that requires it) to get next/previous article links easil (<a href="https://github.com/abr4xas/Casper2Pelican#:~:text=Abr4xas%2C%20amendments%20by%20Colin%20Wren" rel="noopener noreferrer" target="_blank">GitHub - abr4xas/Casper2Pelican: The default personal blogging theme for pelican</a>)】.</li>
 <li><em>Tipue Search or similar</em> (optional) for client-side search functionalit (<a href="https://blog.stanleysolutionsnw.com/adding-search-to-my-pelican-blog-site.html#:~:text=Adding%20Search%20to%20my%20Pelican,based%20system" rel="noopener noreferrer" target="_blank">Adding Search to my Pelican Blog Site | Stanley Solutions Blog</a>)】.</li>
@@ -324,6 +353,83 @@ The idea behind “pages” is that they are usually not temporal in nature and 
           }
         }
       })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
     </script>
 
     <script>

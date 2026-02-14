@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de" data-lang="de">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="Mac" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/de/">Home</a>
+
+  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/de/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Entwicklungsumgebung auf&nbsp;Mac
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">Mi 15. Jan 2025</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/mac/"
+  class="tag-pill ">Mac</a>
+
+</div>
+
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/development-environment-on-mac/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <p><img alt="Lustiges Bild von KI" src="dev_tools.png"/></p>
+<p>Ich bin kein professioneller Entwickler, ich mache es zum Spaß. Und ich spiele gerne herum, entdecke neue Technologien und entwickle alle möglichen kleinen Dinge. Manchmal brauche ich Python, manchmal React/Typescript, Java und mehr. Für jedes Entwicklungswerkzeug oder jede Sprache gibt es mehrere Möglichkeiten, wie man sie installieren und ihre Versionen verwalten kann. Da ich dazu neige, Dinge zu vergessen wie "Wie habe ich Python auf diesem Rechner installiert?", ist dies eine Notiz an mein zukünftiges Ich, die mir sagt, wie ich jedes Entwicklungswerkzeug installiert habe.</p>
+<p>Da sich die Art und Weise, wie bestimmte Pakete installiert werden, im Laufe der Zeit ändern kann, werde ich meinen Installationsentscheidungen Daten hinzufügen.</p>
+<div class="toc">
+<ul>
+<li><a href="#xcode">Xcode</a></li>
+<li><a href="#terminal">Terminal</a></li>
+<li><a href="#zsh-shell">zsh Shell</a></li>
+<li><a href="#vscode">VSCode</a></li>
+<li><a href="#docker">Docker</a></li>
+<li><a href="#java">Java</a></li>
+<li><a href="#maven">Maven</a></li>
+<li><a href="#gradle">Gradle</a></li>
+<li><a href="#node-und-npm">Node und npm</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#markdown-linting">Markdown Linting</a></li>
+<li><a href="#ruby">Ruby</a></li>
+</ul>
+</div>
+<h2 id="xcode">Xcode</h2>
+<p>Xcode ist das grundlegende Entwicklerwerkzeug auf dem Mac. Es enthält git und andere grundlegende Werkzeuge und Compiler.</p>
+<p>Ich installiere es aus dem Apple App Store.</p>
+<h2 id="terminal">Terminal</h2>
+<p>Mein bevorzugtes Terminal ist <a href="https://iterm2.com" rel="noopener noreferrer" target="_blank">iTerm2</a>, und ich installiere es einfach von der Website. Sehen Sie <a href="/de/setting-up-my-terminal/">hier</a>, wie ich es konfiguriere.</p>
+<h2 id="zsh-shell">zsh Shell</h2>
+<p>Auf einem neuen Mac mache ich Folgendes:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Überprüfen, welche Shell ich habe</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$SHELL</span><span class="s2">"</span>
+
+<span class="c1"># Falls es nicht zsh ist, als Standard festlegen</span>
+chsh<span class="w"> </span>-s<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>which<span class="w"> </span>zsh<span class="k">)</span><span class="s2">"</span>
+</code></pre></div>
+<h2 id="vscode">VSCode</h2>
+<p>... oder VSCode-insiders</p>
+<p><strong>Erweiterungen:</strong></p>
+<ul>
+<li>
+<p><strong>markdownlint</strong> von David Anson (<code>davidanson.vscode-markdownlint</code>) - Der De-facto-Standard für Markdown-Linting mit über 10 Millionen Downloads. Unterstreicht Probleme inline und kann beim Speichern automatisch korrigieren.
+  <code>code --install-extension davidanson.vscode-markdownlint</code>
+  Konfigurationsdateien werden in folgender Reihenfolge gesucht: <code>.markdownlint.jsonc</code>, <code>.markdownlint.json</code>, <code>.markdownlint.yaml</code>/<code>.yml</code> oder <code>.markdownlintrc</code>. (Hinzugefügt im Januar 2026)</p>
+</li>
+<li>
+<p><strong>Prettier</strong> (<code>esbenp.prettier-vscode</code>) - Code-Formatter.
+  <code>code --install-extension esbenp.prettier-vscode</code>
+  Aktivieren Sie das Formatieren beim Speichern in den VS Code-Einstellungen:</p>
+</li>
+</ul>
+<p><code>json
+  {
+    "[markdown]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    }
+  }</code></p>
+<p>(Hinzugefügt im Januar 2026)</p>
+<h2 id="docker">Docker</h2>
+<p><strong>Januar 2025:</strong> Ich bin von <a href="https://www.docker.com/products/docker-desktop/" rel="noopener noreferrer" target="_blank">Docker Desktop</a> zu <a href="https://rancherdesktop.io" rel="noopener noreferrer" target="_blank">Rancher Desktop</a> gewechselt.</p>
+<p>Installationshinweis: Ich habe die Apple Silicon-Version heruntergeladen, das DMG geöffnet und in mein Anwendungsverzeichnis kopiert. Das einzige Detail, das ich tun musste, war das Ankreuzen des "Administrative Access"-Kästchens in den Einstellungen.
+<img alt="alt text" src="rancher_prefs.png"/></p>
+<p><em>Registry</em>: Ich verwende verschiedene Registries, wenn ich an verschiedenen Projekten arbeite.</p>
+<p><em>Frage</em>: Wie konfiguriere ich Docker so, dass es Images aus einem bestimmten Registry zieht?</p>
+<h2 id="java">Java</h2>
+<p>Dies sind die Optionen, die ich gesehen habe:</p>
+<ul>
+<li><a href="https://github.com/jenv/jenv" rel="noopener noreferrer" target="_blank">jenv</a></li>
+<li><a href="https://sdkman.io" rel="noopener noreferrer" target="_blank">SDK man</a></li>
+</ul>
+<p><strong>Januar 2025</strong>: Ich habe mich entschieden, SDK Man zu verwenden, da es auch Maven abdeckt.</p>
+<p><strong>Mini-Cheatsheet</strong></p>
+<ul>
+<li><code>sdk install java 17.0.12-jbr</code> installiert diese spezifische Java-Version</li>
+<li><code>sdk list java</code> zeigt alle verfügbaren Java-Versionen (zum Installieren) an</li>
+<li>Um die installierten Java-Versionen aufzulisten:</li>
+<li><code>sdk offline enable</code>, damit werden nur lokal installierte Versionen aufgelistet</li>
+<li><code>sdk list java</code></li>
+<li><code>sdk offline disable</code></li>
+<li><code>sdk default java 21.0.6-amzn</code> setzt diese Version als Standard
+  Um eine Java-Version als Standard innerhalb eines Verzeichnisses festzulegen, siehe den <a href="https://sdkman.io/usage/#env-command" rel="noopener noreferrer" target="_blank">Env-Befehl</a></li>
+</ul>
+<h2 id="maven">Maven</h2>
+<p>Ich verwende einfach <code>brew install maven</code>. Für ältere Versionen installiert <code>brew install maven30</code> Maven 3.0.</p>
+<h2 id="gradle">Gradle</h2>
+<p><strong>Januar 2025</strong>: Ich habe mich entschieden, SDK Man auch für Gradle zu verwenden.</p>
+<p>Grund: <code>brew install gradle</code> installierte Gradle Version 8.12.1, aber für das aktuelle Projekt benötigte ich 8.5.</p>
+<ul>
+<li><code>sdk install gradle 8.5</code>: Installiert die spezifische Gradle-Version</li>
+<li><code>sdk use gradle 8.5</code></li>
+</ul>
+<h2 id="node-und-npm">Node und npm</h2>
+<p><strong>Januar 2025</strong> Ich habe mich entschieden, <a href="https://github.com/nvm-sh/nvm" rel="noopener noreferrer" target="_blank">nvm</a> zu verwenden.</p>
+<p><strong>Mini-Cheatsheet</strong></p>
+<ul>
+<li><code>nvm use 16</code></li>
+<li><code>node -v</code> zeigt die aktuell verwendete Version an</li>
+<li><code>nvm install 12</code> installiert Node 12 und verwendet es</li>
+</ul>
+<h2 id="python">Python</h2>
+<ul>
+<li><strong>Sommer 2024</strong>: Ich verwende <a href="https://github.com/pyenv/pyenv" rel="noopener noreferrer" target="_blank">pyenv</a></li>
+<li>Um pyenv zu installieren: <code>brew install pyenv</code></li>
+</ul>
+<p><strong>Mini-Cheatsheet</strong></p>
+<p>Um eine mit Pyenv installierte Python-Version auszuwählen, führen Sie einen der folgenden Befehle aus:</p>
+<div class="highlight"><pre><span></span><code>pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.12
+pyenv<span class="w"> </span>shell<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>nur<span class="w"> </span>für<span class="w"> </span>die<span class="w"> </span>aktuelle<span class="w"> </span>Shell-Sitzung<span class="w"> </span>auswählen
+pyenv<span class="w"> </span><span class="nb">local</span><span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>automatisch<span class="w"> </span>auswählen,<span class="w"> </span>wann<span class="w"> </span>immer<span class="w"> </span>Sie<span class="w"> </span>sich<span class="w"> </span>im<span class="w"> </span>aktuellen<span class="w"> </span>Verzeichnis<span class="w"> </span><span class="o">(</span>oder<span class="w"> </span>dessen<span class="w"> </span>Unterverzeichnissen<span class="o">)</span><span class="w"> </span>befinden
+pyenv<span class="w"> </span>global<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>global<span class="w"> </span>für<span class="w"> </span>Ihr<span class="w"> </span>Benutzerkonto<span class="w"> </span>auswählen
+</code></pre></div>
+<h2 id="markdown-linting">Markdown Linting</h2>
+<p><code>brew install markdownlint-cli2</code></p>
+<h2 id="ruby">Ruby</h2>
+<p>Noch nicht durchdacht. Vermeiden Sie Ruby im Allgemeinen... 😉</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

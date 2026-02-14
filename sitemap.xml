@@ -2,7 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>./designing-filmz/</loc>
+    <loc>./how-i-code-with-claude/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./learning-sketchup/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./interior-architectural-design-resources/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./swiftdata-on-icloud/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./embeddings-in-swift-on-apple-silicon/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./swiftui-cheatsheet/</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>./beyond-vibe-coding-redesigning-filmz/</loc>
     <priority>0.8</priority>
   </url>
 

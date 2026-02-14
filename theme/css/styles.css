@@ -51,3 +51,120 @@ td img {
   margin-top: 0.5rem;
   display: block;
 }
+
+/* Language Switcher Styles */
+.language-switcher {
+  margin-top: 0.5rem;
+}
+
+.language-link {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem;
+  background-color: #f5f5f5;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.language-link:hover {
+  background-color: #268bd2;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar .language-switcher .language-link {
+  display: block;
+  margin: 0.2rem 0;
+  text-align: center;
+}
+
+/* Language selection page specific styles */
+.language-selection-page h1 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.language-selection-page p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+/* Top-right language switcher styles */
+.language-switcher-top {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.language-globe-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-globe-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.globe-icon {
+  fill: #333;
+  transition: fill 0.2s ease;
+}
+
+.language-globe-btn:hover .globe-icon {
+  fill: #268bd2;
+}
+
+.language-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 120px;
+  z-index: 1001;
+}
+
+.language-option {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.language-option:last-child {
+  border-bottom: none;
+}
+
+.language-option:hover {
+  background-color: #f5f5f5;
+  text-decoration: none;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .language-switcher-top {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  
+  .language-menu {
+    min-width: 100px;
+  }
+}

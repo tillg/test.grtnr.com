@@ -10,6 +10,8 @@
   <title>test.grtnr.com</title>
 
   <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
   <link rel="stylesheet" href="../theme/css/poole.css" />
   <link rel="stylesheet" href="../theme/css/syntax.css" />
   <link rel="stylesheet" href="../theme/css/lanyon.css" />
@@ -53,8 +55,17 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   </nav>
 
+  <!-- Language Switcher -->
   <div class="sidebar-item">
-      Last built 27.05.2025 09:01:13.
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/mac-recording-screen-sound/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/mac-recording-screen-sound/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
   </div>
 </div>
   <div class="wrap">
@@ -64,6 +75,23 @@ styles, `#sidebar-checkbox` for behavior. -->
           <a href="../" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -78,6 +106,7 @@ styles, `#sidebar-checkbox` for behavior. -->
       
     </div>
 
+
     <p><strong><span class="caps">TL</span>;<span class="caps">DR</span></strong> In order to record the screen of your Mac together with the sound (i.e. a Zoom session) you can use Soundflower.</p>
 <p>Here is what I wanted to achieve: Make a (video) recording of what is happening on the screen of my Mac <strong>including the sound</strong>. All this, while still hearing what is happening at the same time. In my case I wanted to record a Zoom-Class, but I guess this is a setup that might be useful in many situations.</p>
 <p>macOS comes with a great built-in screen recording tool:<a href="https://support.apple.com/en-us/HT208721" rel="noopener noreferrer" target="_blank">QuickTime Player</a> (yes, it records, even though the name says <em>player</em> 😀).</p>
@@ -86,9 +115,9 @@ styles, `#sidebar-checkbox` for behavior. -->
 <p>What it does in our case: It creates a new, virtual sound channel that splits the sound stream into 2 other streams. In my case it means that in my Zoom session I select a virtual output instead of the speaker of my Mac. I called this output <em>MacSpkr_SndFlwr</em>. And this virtual stream splits the output to the Speaker of the Mac and the (logical) SoundFlower channel. Then I select the SoundFlower channel as input to my QuickTime Player Recording and that’s it.</p>
 <p><img alt="Flow" src="/mac-recording-screen-sound/MacSoundFlower.svg"/>The Sound Streams</p>
 <h2 id="setting-it-all-up">Setting it all up</h2>
-<p><strong>Installing Soundflower </strong>is well described on it’s <a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" rel="noopener noreferrer" target="_blank">download page on Github</a>. The process might seem a bit clumsy but works well if you follow it step by step. Note that it took me a while to figure out what they meant by “<em>Once there, there should be an “Allow” button (**) that you will need to click on to give permission to use Soundflower (developer: <span class="caps">MATT</span> <span class="caps">INGALLS</span>).</em>” I was expecting a popup dialog with the Allow-button, but it’s simply a button within the window.</p>
+<p><strong>Installing Soundflower</strong> is well described on it’s <a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" rel="noopener noreferrer" target="_blank">download page on Github</a>. The process might seem a bit clumsy but works well if you follow it step by step. Note that it took me a while to figure out what they meant by “<em>Once there, there should be an “Allow” button (**) that you will need to click on to give permission to use Soundflower (developer: <span class="caps">MATT</span> <span class="caps">INGALLS</span>).</em>” I was expecting a popup dialog with the Allow-button, but it’s simply a button within the window.</p>
 <p>Also note that you need to reboot your Mac after installing Soundflower.</p>
-<p>Once you have Soundflower installed you can create a logical Audio Device that will be slipping the sound stream. To do so, open<em> Audio <span class="caps">MIDI</span> Setup</em>. It is a macOS utility program located in /Applications/Utilities. You can also start it via Spotlight (hit Cmd + Space) and enter “<em>Audio Midi”</em></p>
+<p>Once you have Soundflower installed you can create a logical Audio Device that will be slipping the sound stream. To do so, open <em>Audio <span class="caps">MIDI</span> Setup</em>. It is a macOS utility program located in /Applications/Utilities. You can also start it via Spotlight (hit Cmd + Space) and enter “<em>Audio Midi”</em></p>
 <p><img alt="Midi app launch" src="/mac-recording-screen-sound/Screenshot-2020-06-11-at-11.47.25.png"/></p>
 <p><em>Starting the Audio <span class="caps">MIDI</span> Setup via Spotlight</em></p>
 <p>Once you are in the Audio <span class="caps">MIDI</span> Setup program, create a new (logical) Audio Device: hit the “<strong>+</strong>” button in the bottom left corner and select “<em>Create Multi Output Device</em>“. In the the panel that appears on the right, select “<em>MacBook Speaker</em>” <span class="caps">AND</span> “<em>Soundflower (2ch)</em>“.</p>
@@ -142,6 +171,83 @@ styles, `#sidebar-checkbox` for behavior. -->
           }
         }
       })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
     </script>
 
     <script>

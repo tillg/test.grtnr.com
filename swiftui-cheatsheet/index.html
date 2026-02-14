@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="../theme/css/poole.css" />
+  <link rel="stylesheet" href="../theme/css/syntax.css" />
+  <link rel="stylesheet" href="../theme/css/lanyon.css" />
+  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="../theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="tech" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="../">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/swiftui-cheatsheet/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/swiftui-cheatsheet/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="../" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      SwiftUI&nbsp;Cheatsheet
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">August 3, 2025</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">tech</a>
+
+</div>
+
+    </div>
+
+
+    <p>In June 2025 I started working thru <a href="https://www.hackingwithswift.com/100/swiftui/" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a>. It’s a great course, and I am truly impressed how much quality content <span class="amp">&amp;</span> courses Paul Hudson is providing - and maintaining!! Paul, thank you sooo much for this! 🙏🏼</p>
+<p>But it’s a lot of content, so here are my notes - hopefully in a easy-to-navigate cheatsheet format. I have a rough structure in mind, but I will only fill in the content when I need it. So don’t expect a complete overview!</p>
+<div class="toc">
+<ul>
+<li><a href="#swift">Swift</a><ul>
+<li><a href="#struct-computed-properties">struct <span class="amp">&amp;</span> computed properties</a></li>
+<li><a href="#optionals">Optionals</a></li>
+<li><a href="#protocols-and-extensions">Protocols and Extensions</a></li>
+<li><a href="#arrays-sorting">Arrays <span class="amp">&amp;</span> sorting</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#dates">Dates</a></li>
+<li><a href="#enum">enum</a></li>
+</ul>
+</li>
+<li><a href="#swiftui">SwiftUI</a><ul>
+<li><a href="#views">Views</a></li>
+<li><a href="#data-entry">Data Entry</a></li>
+<li><a href="#alerts-confirmation-dialogs">Alerts <span class="amp">&amp;</span> Confirmation Dialogs</a></li>
+<li><a href="#text">Text</a></li>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#images">Images</a></li>
+<li><a href="#toolbar">Toolbar</a></li>
+<li><a href="#bundle">Bundle</a></li>
+<li><a href="#animations">Animations</a></li>
+<li><a href="#loading-data">Loading Data</a></li>
+<li><a href="#passing-returning-values-tofrom-views">Passing <span class="amp">&amp;</span> returning values to/from views</a></li>
+<li><a href="#sheets-navigationstacks">Sheets <span class="amp">&amp;</span> NavigationStacks</a></li>
+</ul>
+</li>
+<li><a href="#networking">Networking</a></li>
+<li><a href="#saving-data">Saving Data</a><ul>
+<li><a href="#writing-reading-to-userdefaults">Writing <span class="amp">&amp;</span> reading to UserDefaults</a></li>
+<li><a href="#writing-reading-to-the-documents-directory">Writing <span class="amp">&amp;</span> reading to the documents directory</a></li>
+<li><a href="#swiftdata">SwiftData</a></li>
+</ul>
+</li>
+<li><a href="#core-image-image-filters">Core Image (Image Filters)</a><ul>
+<li><a href="#todo"><span class="caps">TODO</span></a></li>
+</ul>
+</li>
+<li><a href="#mapkit">MapKit</a></li>
+<li><a href="#other-topics">Other topics</a></li>
+<li><a href="#questions-todos">Questions <span class="amp">&amp;</span> Todos</a></li>
+</ul>
+</div>
+<h2 id="swift">Swift</h2>
+<p>For an all in overview, see <a href="https://www.hackingwithswift.com/articles/242/learn-essential-swift-in-one-hour" rel="noopener noreferrer" target="_blank">Learn essential Swift in one hour</a>.</p>
+<p>In the following chapter I have just added the parts I needed to check on at least once.</p>
+<h3 id="struct-computed-properties"><code>struct</code> <span class="amp">&amp;</span> computed properties</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">Employee</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">vacationAllocated</span> <span class="p">=</span> <span class="mi">14</span>
+    <span class="kd">var</span> <span class="nv">vacationTaken</span> <span class="p">=</span> <span class="mi">0</span>
+
+    <span class="kd">var</span> <span class="nv">vacationRemaining</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">{</span>
+        <span class="n">vacationAllocated</span> <span class="o">-</span> <span class="n">vacationTaken</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="optionals">Optionals</h3>
+<ul>
+<li>Optionals let us represent the absence of data, which means we’re able to say “this integer has no value” – that’s different from a fixed number such as 0.</li>
+<li>Example: <code>var str:String?</code> can hold a String or nil</li>
+<li>As a result, everything that isn’t optional definitely has a value inside, even if that’s just an empty string.</li>
+<li>Unwrapping an optional is the process of looking inside a box to see what it contains: if there’s a value inside it’s sent back for use, otherwise there will be nil inside.</li>
+<li>We can use <code>if let</code> to run some code if the optional has a value, or guard let to run some code if the optional doesn’t have a value – but with guard we must always exit the function afterwards.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">printSquare</span><span class="p">(</span><span class="n">of</span> <span class="n">number</span><span class="p">:</span> <span class="nb">Int</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">guard</span> <span class="kd">let</span> <span class="nv">number</span> <span class="p">=</span> <span class="n">number</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="bp">print</span><span class="p">(</span><span class="s">"Missing input"</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="p">}</span>
+
+    <span class="bp">print</span><span class="p">(</span><span class="s">"</span><span class="si">\(</span><span class="n">number</span><span class="si">)</span><span class="s"> x </span><span class="si">\(</span><span class="n">number</span><span class="si">)</span><span class="s"> is </span><span class="si">\(</span><span class="n">number</span> <span class="o">*</span> <span class="n">number</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>The nil coalescing operator, ??, unwraps and returns an optional’s value, or uses a default value instead.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">new</span> <span class="p">=</span> <span class="n">captains</span><span class="p">[</span><span class="s">"Serenity"</span><span class="p">]</span> <span class="p">??</span> <span class="s">"N/A"</span>
+</code></pre></div>
+<ul>
+<li>Optional chaining lets us read an optional inside another optional with a convenient syntax.</li>
+<li>If a function might throw errors, you can convert it into an optional using try? – you’ll either get back the function’s return value, or nil if an error is thrown.</li>
+</ul>
+<h3 id="protocols-and-extensions">Protocols and Extensions</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">Vehicle</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">estimateTime</span><span class="p">(</span><span class="k">for</span> <span class="bp">distance</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span>
+    <span class="kd">func</span> <span class="nf">travel</span><span class="p">(</span><span class="bp">distance</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kd">extension</span> <span class="nc">String</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">trimmed</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">trimmingCharacters</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="p">.</span><span class="n">whitespacesAndNewlines</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="arrays-sorting">Arrays <span class="amp">&amp;</span> sorting</h3>
+<p>All arrays have built-in <code>sort()</code> and <code>sorted()</code> methods that can be used to sort the array.</p>
+<ul>
+<li><code>sort()</code> sorts the array in-place</li>
+<li><code>sorted()</code> returns a new, sorted array.</li>
+</ul>
+<p>If the array is simple you can just call <code>sort()</code> directly, like this, to sort an array in place:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nv">names</span> <span class="p">=</span> <span class="p">[</span><span class="s">"Jemima"</span><span class="p">,</span> <span class="s">"Peter"</span><span class="p">,</span> <span class="s">"David"</span><span class="p">,</span> <span class="s">"Kelly"</span><span class="p">,</span> <span class="s">"Isabella"</span><span class="p">]</span>
+<span class="n">names</span><span class="p">.</span><span class="bp">sort</span><span class="p">()</span>
+</code></pre></div>
+<p>If you have more complex structs, you need to pass along the comparison:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">User</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">firstName</span><span class="p">:</span> <span class="nb">String</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nv">users</span> <span class="p">=</span> <span class="p">[</span>
+    <span class="n">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="s">"Jemima"</span><span class="p">),</span>
+    <span class="n">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="s">"Peter"</span><span class="p">),</span>
+    <span class="n">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="s">"David"</span><span class="p">),</span>
+    <span class="n">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="s">"Kelly"</span><span class="p">),</span>
+    <span class="n">User</span><span class="p">(</span><span class="n">firstName</span><span class="p">:</span> <span class="s">"Isabella"</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="n">users</span><span class="p">.</span><span class="bp">sort</span> <span class="p">{</span>
+    <span class="nv">$0</span><span class="p">.</span><span class="n">firstName</span> <span class="o">&lt;</span> <span class="nv">$1</span><span class="p">.</span><span class="n">firstName</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>We can make our own types conform to <code>Comparable</code>, and when we do so we also get a <code>sorted()</code> method with no parameters. This takes two steps:</p>
+<ol>
+<li>Add the <code>Comparable</code> conformance to the definition of User.</li>
+<li>Add a method called <code>&lt;</code> that takes two users and returns true if the first should be sorted before the second.</li>
+</ol>
+<p>Here’s how that looks in code:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">User</span><span class="p">:</span> <span class="n">Identifiable</span><span class="p">,</span> <span class="nb">Comparable</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">id</span> <span class="p">=</span> <span class="n">UUID</span><span class="p">()</span>
+    <span class="kd">var</span> <span class="nv">firstName</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">lastName</span><span class="p">:</span> <span class="nb">String</span>
+
+    <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span><span class="p">(</span><span class="n">lhs</span><span class="p">:</span> <span class="n">User</span><span class="p">,</span> <span class="n">rhs</span><span class="p">:</span> <span class="n">User</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+        <span class="n">lhs</span><span class="p">.</span><span class="n">lastName</span> <span class="o">&lt;</span> <span class="n">rhs</span><span class="p">.</span><span class="n">lastName</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="strings">Strings</h3>
+<ul>
+<li>They are special, and there is a lot to know…</li>
+<li>This doesn’t work:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">name</span> <span class="p">=</span> <span class="s">"Paul"</span>
+<span class="kd">let</span> <span class="nv">firstLetter</span> <span class="p">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+<h3 id="dates">Dates</h3>
+<p><code>Date</code>, <code>DateComponents</code>, and <code>DateFormatter</code></p>
+<h3 id="enum"><code>enum</code></h3>
+<p><code>enum</code> are created like so:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">enum</span> <span class="nc">Weekday</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">monday</span><span class="p">,</span> <span class="n">tuesday</span><span class="p">,</span> <span class="n">wednesday</span><span class="p">,</span> <span class="n">thursday</span><span class="p">,</span> <span class="n">friday</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>A <code>switch</code> statement with <code>enum</code> looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="k">switch</span> <span class="n">loadingState</span> <span class="p">{</span>
+<span class="k">case</span> <span class="p">.</span><span class="n">loading</span><span class="p">:</span>
+    <span class="n">LoadingView</span><span class="p">()</span>
+<span class="k">case</span> <span class="p">.</span><span class="n">success</span><span class="p">:</span>
+    <span class="n">SuccessView</span><span class="p">()</span>
+<span class="k">case</span> <span class="p">.</span><span class="n">failed</span><span class="p">:</span>
+    <span class="n">FailedView</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="swiftui">SwiftUI</h2>
+<ul>
+<li><a href="https://apps.apple.com/de/app/interactful/id1528095640?l=en-GB" rel="noopener noreferrer" target="_blank">Interactful</a> is a nice tool to navigate and play around the different Views <span class="amp">&amp;</span> components.</li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/components" rel="noopener noreferrer" target="_blank">Human Interfaces Guideline</a></li>
+</ul>
+<h3 id="views">Views</h3>
+<ul>
+<li>Everything is a view in SwiftUI 😜</li>
+<li>Running code when a view is shown, using <code>onAppear()</code>.</li>
+</ul>
+<p>Even <code>ForEach</code> is a view, that’s why we can write</p>
+<div class="highlight"><pre><span></span><code><span class="n">ForEach</span><span class="p">(</span><span class="mf">0.</span><span class="p">.&lt;</span><span class="mi">5</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Text</span><span class="p">(</span><span class="s">"Row </span><span class="si">\(</span><span class="nv">$0</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Note: We can’t write <code>ForEach(0..&lt;5)</code>, because <code>ForEach</code>expects a <code>Range&lt;Int&gt;</code>, not a <code>ClosedRange&lt;Int&gt;</code>!</p>
+<h4 id="foreach-view"><code>ForEach</code> View</h4>
+<p><code>ForEach</code> is a view, that is made up the sub-views created in every loop instance.</p>
+<p>We typically use it to create sub-views based on a counter or an array.</p>
+<p><code>ForEach</code> with an array:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nv">items</span> <span class="p">=</span> <span class="p">[</span><span class="s">"Apple"</span><span class="p">,</span> <span class="s">"Banana"</span><span class="p">,</span> <span class="s">"Cherry"</span><span class="p">]</span>
+
+  <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="n">List</span> <span class="p">{</span>
+      <span class="n">ForEach</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="err">\</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+        <span class="n">Text</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="data-entry">Data Entry</h3>
+<h4 id="textfield"><code>TextField</code></h4>
+<h4 id="picker"><code>Picker</code></h4>
+<p><code>Picker</code> is used to pick one out of many possible selections.</p>
+<p>A regular picker looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Picker</span><span class="p">(</span><span class="s">"Number of people"</span><span class="p">,</span> <span class="n">selection</span><span class="p">:</span> <span class="err">$</span><span class="n">numberOfPeople</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ForEach</span><span class="p">(</span><span class="mi">2</span> <span class="p">..</span><span class="o">&lt;</span> <span class="mi">100</span> <span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="err">\</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="s">"</span><span class="si">\(</span><span class="nv">$0</span><span class="si">)</span><span class="s"> people"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="alt text" src="/swiftui-cheatsheet/image-7.png"/></p>
+<p>A <code>Picker</code> can be modified with the <code>PickerStyle</code> modifier:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Picker</span><span class="p">(</span><span class="s">"Tip percentage"</span><span class="p">,</span> <span class="n">selection</span><span class="p">:</span> <span class="err">$</span><span class="n">tipPercentage</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ForEach</span><span class="p">(</span><span class="n">tipPercentages</span><span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="err">\</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="nv">$0</span><span class="p">,</span> <span class="n">format</span><span class="p">:</span> <span class="p">.</span><span class="n">percent</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="n">pickerStyle</span><span class="p">(.</span><span class="n">segmented</span><span class="p">)</span>
+</code></pre></div>
+<p><img alt="alt text" src="/swiftui-cheatsheet/image-8.png"/></p>
+<h4 id="stepper"><code>Stepper</code></h4>
+<p><img alt="Stepper" src="/swiftui-cheatsheet/stepper.png"/>
+A stepper is a two-segment control that people use to increase or decrease an incremental value.</p>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">count</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">0</span>
+
+<span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="n">Stepper</span><span class="p">(</span><span class="s">"</span><span class="si">\(</span><span class="bp">count</span><span class="si">)</span><span class="s">"</span><span class="p">,</span>
+        <span class="n">value</span><span class="p">:</span> <span class="err">$</span><span class="bp">count</span><span class="p">,</span>
+        <span class="k">in</span><span class="p">:</span> <span class="mf">0.</span><span class="p">..</span><span class="mi">100</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li><code>DatePicker</code> for Dates. Using the <code>displayedComponents</code> parameter to control dates or times.</li>
+<li><code>Form</code></li>
+<li><code>Picker</code></li>
+<li>Navigation Bar</li>
+</ul>
+<h3 id="alerts-confirmation-dialogs">Alerts <span class="amp">&amp;</span> Confirmation Dialogs</h3>
+<h4 id="alerts">Alerts</h4>
+<p>Alerts are an extension to a View with a Bool variable that decides on wether they are shown or not.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">showingAlert</span> <span class="p">=</span> <span class="kc">false</span>
+
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">Button</span><span class="p">(</span><span class="s">"Show Alert"</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">showingAlert</span> <span class="p">=</span> <span class="kc">true</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="n">alert</span><span class="p">(</span><span class="s">"Important message"</span><span class="p">,</span> <span class="n">isPresented</span><span class="p">:</span> <span class="err">$</span><span class="n">showingAlert</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Button</span><span class="p">(</span><span class="s">"OK"</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="confirmation-dialogues">Confirmation Dialogues</h4>
+<p>Use them when many buttons / options are available. For example code check ou <a href="https://github.com/tillg/100DaysOfSwiftUI/blob/main/16.5-AlertAndConfirmation/AlertAndConfirmation/AlertAndConfirmation/ContentView.swift" rel="noopener noreferrer" target="_blank">this repo</a>.</p>
+<p><strong>Note</strong>: Pre-iOS 26 they slid in from the bottom, in iOS 26 they show up inside the screen.</p>
+<p>Confirmation Dialog in iOS 18.5:
+<img alt="alt text" src="/swiftui-cheatsheet/image-6.png"/></p>
+<p>Confirmation Dialog in iOS 26:
+<img alt="alt text" src="/swiftui-cheatsheet/image-5.png"/></p>
+<h3 id="text">Text</h3>
+<p><code>Text</code> is a Text field that describes text.</p>
+<p>Note: Text fields with different styling can be <em>plused</em> together to form one large text field with parts with different styling inside:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Text</span><span class="p">(</span><span class="n">page</span><span class="p">.</span><span class="n">title</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">font</span><span class="p">(.</span><span class="n">headline</span><span class="p">)</span>
+<span class="o">+</span> <span class="n">Text</span><span class="p">(</span><span class="s">": "</span><span class="p">)</span> <span class="o">+</span>
+<span class="n">Text</span><span class="p">(</span><span class="s">"Page description here"</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">italic</span><span class="p">()</span>
+</code></pre></div>
+<p>And you get a text with different stylings combined:</p>
+<p><img alt="alt text" src="/swiftui-cheatsheet/image-4.png"/></p>
+<h3 id="lists">Lists</h3>
+<p>Building scrolling tables of data using <code>List</code>, in particular how it can create rows directly from arrays of data.</p>
+<div class="highlight"><pre><span></span><code><span class="n">List</span> <span class="p">{</span>
+    <span class="n">Section</span> <span class="p">{</span>
+        <span class="n">Label</span><span class="p">(</span><span class="s">"Sun"</span><span class="p">,</span> <span class="n">systemImage</span><span class="p">:</span> <span class="s">"sun.max"</span><span class="p">)</span>
+        <span class="n">Label</span><span class="p">(</span><span class="s">"Cloud"</span><span class="p">,</span> <span class="n">systemImage</span><span class="p">:</span> <span class="s">"cloud"</span><span class="p">)</span>
+        <span class="n">Label</span><span class="p">(</span><span class="s">"Rain"</span><span class="p">,</span> <span class="n">systemImage</span><span class="p">:</span> <span class="s">"cloud.rain"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Buttons in Lists: When you place a button in a list, the <span class="caps">ENTIRE</span> list element become clickable! If there are more than one button in a list, wherever you click on the list element, it clicks <span class="caps">ALL</span> the buttons one after the other!</p>
+<p>To fix that and get the behaviour we want, use <code>.buttonStyle(.plain)</code></p>
+<p>Same is true for HStack:</p>
+<div class="highlight"><pre><span></span><code><span class="n">HStack</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">label</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="p">==</span> <span class="kc">false</span> <span class="p">{</span>
+        <span class="n">Text</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="n">ForEach</span><span class="p">(</span><span class="mf">1.</span><span class="p">.&lt;</span><span class="n">maximumRating</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">id</span><span class="p">:</span> <span class="err">\</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">number</span> <span class="k">in</span>
+        <span class="n">Button</span> <span class="p">{</span>
+            <span class="n">rating</span> <span class="p">=</span> <span class="n">number</span>
+        <span class="p">}</span> <span class="n">label</span><span class="p">:</span> <span class="p">{</span>
+            <span class="n">image</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">number</span><span class="p">)</span>
+                <span class="p">.</span><span class="n">foregroundStyle</span><span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="n">rating</span> <span class="p">?</span> <span class="n">offColor</span> <span class="p">:</span> <span class="n">onColor</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="n">buttonStyle</span><span class="p">(.</span><span class="n">plain</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="images">Images</h3>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span>
+<span class="p">{</span>
+<span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+<span class="n">Image</span> <span class="p">(</span><span class="n">example</span><span class="p">)</span>
+    <span class="p">.</span><span class="n">resizable</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">scaledToFit</span> <span class="p">()</span>
+    <span class="p">.</span><span class="n">frame</span><span class="p">(</span><span class="n">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="alt text" src="/swiftui-cheatsheet/image.png"/></p>
+<p>Replace <code>ScaledToFit</code> by <code>ScaledToFill</code> and get</p>
+<p><img alt="alt text" src="/swiftui-cheatsheet/image-1.png"/></p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">Image</span> <span class="p">(</span><span class="err">•</span><span class="n">example</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">resizable</span> <span class="p">()</span>
+            <span class="p">.</span><span class="n">scaledToFit</span><span class="p">()</span>
+            <span class="p">.</span><span class="n">containerRelativeFrame</span><span class="p">(</span><span class="n">horizontal</span><span class="p">)</span> <span class="p">{</span> <span class="n">size</span><span class="p">,</span> <span class="n">axis</span> <span class="k">in</span>
+            <span class="n">size</span> <span class="o">*</span> <span class="mf">0.8</span>
+            <span class="err">｝</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><img alt="alt text" src="/swiftui-cheatsheet/image-2.png"/></p>
+<h3 id="toolbar">Toolbar</h3>
+<h3 id="bundle">Bundle</h3>
+<p>Reading files from our app bundle by looking up their path using the <code>Bundle</code> class, including loading strings from there.</p>
+<h3 id="animations">Animations</h3>
+<p>Covered in <a href="https://www.hackingwithswift.com/100/swiftui/32" rel="noopener noreferrer" target="_blank">Day 32-34</a>. <span class="caps">TODO</span> I need to watch the clips again to extract my notes/cheatsheet.</p>
+<ul>
+<li>Creating animations implicitly using the <code>animation()</code> modifier.</li>
+<li>Customizing animations with delays and repeats, and choosing between ease-in-ease-out vs spring animations.</li>
+<li>Attaching the animation() modifier to bindings, so we can animate changes directly from <span class="caps">UI</span> controls.</li>
+<li>Using <code>withAnimation()</code> to create explicit animations.</li>
+<li>Attaching multiple <code>animation()</code> modifiers to a single view so that we can control the animation stack.</li>
+</ul>
+<h3 id="loading-data">Loading Data</h3>
+<p>If it’s synchronous:</p>
+<div class="highlight"><pre><span></span><code><span class="n">View</span><span class="p">...</span>
+    <span class="p">.</span><span class="n">onAppear</span><span class="p">(</span><span class="n">loadIt</span><span class="p">)</span>
+</code></pre></div>
+<p>?? How is it done, when <code>loadIt</code> is async??</p>
+<h3 id="passing-returning-values-tofrom-views">Passing <span class="amp">&amp;</span> returning values to/from views</h3>
+<p>As seen in <a href="https://www.hackingwithswift.com/books/ios-swiftui/selecting-and-editing-map-annotations" rel="noopener noreferrer" target="_blank">Selecting and editing map annotations</a></p>
+<p>Imagine I have a View that is opened as Sheet and gets in a <code>Location</code> (being a self defined <code>struct</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">EditView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">dismiss</span><span class="p">)</span> <span class="kd">var</span> <span class="nv">dismiss</span>
+    <span class="kd">var</span> <span class="nv">location</span><span class="p">:</span> <span class="n">Location</span>
+
+    <span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">name</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">description</span><span class="p">:</span> <span class="nb">String</span>
+
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">NavigationStack</span> <span class="p">{</span>
+            <span class="n">Form</span> <span class="p">{</span>
+                <span class="n">Section</span> <span class="p">{</span>
+                    <span class="n">TextField</span><span class="p">(</span><span class="s">"Place name"</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="err">$</span><span class="n">name</span><span class="p">)</span>
+                    <span class="n">TextField</span><span class="p">(</span><span class="s">"Description"</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="err">$</span><span class="n">description</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">"Place details"</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">toolbar</span> <span class="p">{</span>
+                <span class="n">Button</span><span class="p">(</span><span class="s">"Save"</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">dismiss</span><span class="p">()</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To pass in the <code>Location</code> I make an extra initializer:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">init</span><span class="p">(</span><span class="n">location</span><span class="p">:</span> <span class="n">Location</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">location</span> <span class="p">=</span> <span class="n">location</span>
+
+    <span class="n">_name</span> <span class="p">=</span> <span class="n">State</span><span class="p">(</span><span class="n">initialValue</span><span class="p">:</span> <span class="n">location</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">_description</span> <span class="p">=</span> <span class="n">State</span><span class="p">(</span><span class="n">initialValue</span><span class="p">:</span> <span class="n">location</span><span class="p">.</span><span class="n">description</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Tu <em>return</em> data to the calling code, I pass in a method <code>onSave</code>. First create an additional var in my View struct:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nv">onSave</span><span class="p">:</span> <span class="p">(</span><span class="n">Location</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span>
+</code></pre></div>
+<p>and then extend the initializer like so:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">init</span><span class="p">(</span><span class="n">location</span><span class="p">:</span> <span class="n">Location</span><span class="p">,</span> <span class="n">onSave</span><span class="p">:</span> <span class="p">@</span><span class="n">escaping</span> <span class="p">(</span><span class="n">Location</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">location</span> <span class="p">=</span> <span class="n">location</span>
+    <span class="kc">self</span><span class="p">.</span><span class="n">onSave</span> <span class="p">=</span> <span class="n">onSave</span>
+
+    <span class="n">_name</span> <span class="p">=</span> <span class="n">State</span><span class="p">(</span><span class="n">initialValue</span><span class="p">:</span> <span class="n">location</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">_description</span> <span class="p">=</span> <span class="n">State</span><span class="p">(</span><span class="n">initialValue</span><span class="p">:</span> <span class="n">location</span><span class="p">.</span><span class="n">description</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>That <code>@escaping</code> part is important, and means the function is being stashed away for user later on, rather than being called immediately, and it’s needed here because the <code>onSave</code> function will get called only when the user presses Save.</p>
+<h3 id="sheets-navigationstacks"><code>Sheet</code>s <span class="amp">&amp;</span> <code>NavigationStack</code>s</h3>
+<p>To open a view as sheet:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">State</span> <span class="kd">private</span> <span class="kd">var</span> <span class="nv">showingAddExpense</span> <span class="p">=</span> <span class="kc">false</span>
+
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">NavigationStack</span> <span class="p">{</span>
+            <span class="n">VStack</span> <span class="p">{</span>
+                <span class="c1">// Some code here</span>
+            <span class="p">}</span>
+            <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">"iExpense"</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">toolbar</span> <span class="p">{</span>
+                <span class="n">Button</span><span class="p">(</span><span class="s">"Add Expense"</span><span class="p">,</span> <span class="n">systemImage</span><span class="p">:</span> <span class="s">"plus"</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">showingAddExpense</span> <span class="p">=</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="p">.</span><span class="n">sheet</span><span class="p">(</span><span class="n">isPresented</span><span class="p">:</span> <span class="err">$</span><span class="n">showingAddExpense</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">AddView</span><span class="p">(</span><span class="n">expenses</span><span class="p">:</span> <span class="n">expenses</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="networking">Networking</h2>
+<p>This is how you send something to an <span class="caps">HTTPS</span> Endpoint:</p>
+<div class="highlight"><pre><span></span><code> <span class="kd">func</span> <span class="nf">placeOrder</span><span class="p">()</span> <span class="k">async</span> <span class="p">{</span>
+        <span class="k">guard</span> <span class="kd">let</span> <span class="nv">encoded</span> <span class="p">=</span> <span class="k">try</span><span class="p">?</span> <span class="n">JSONEncoder</span><span class="p">().</span><span class="n">encode</span><span class="p">(</span><span class="n">order</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">"Failed to encode order"</span><span class="p">)</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+
+        <span class="kd">let</span> <span class="nv">url</span> <span class="p">=</span> <span class="n">URL</span><span class="p">(</span><span class="n">string</span><span class="p">:</span> <span class="s">"https://reqres.in/api/cupcakes"</span><span class="p">)</span><span class="o">!</span>
+        <span class="kd">var</span> <span class="nv">request</span> <span class="p">=</span> <span class="n">URLRequest</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">setValue</span><span class="p">(</span><span class="s">"application/json"</span><span class="p">,</span> <span class="n">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Content-Type"</span><span class="p">)</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">httpMethod</span> <span class="p">=</span> <span class="s">"POST"</span>
+
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="kd">let</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="p">=</span> <span class="k">try</span> <span class="k">await</span> <span class="n">URLSession</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">upload</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">request</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="n">encoded</span><span class="p">)</span>
+
+            <span class="kd">let</span> <span class="nv">decodedOrder</span> <span class="p">=</span> <span class="k">try</span> <span class="n">JSONDecoder</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="n">Order</span><span class="p">.</span><span class="kc">self</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+            <span class="n">confirmationMessage</span> <span class="p">=</span> <span class="s">"Your order for </span><span class="si">\(</span><span class="n">decodedOrder</span><span class="p">.</span><span class="n">quantity</span><span class="si">)</span><span class="s">x </span><span class="si">\(</span><span class="n">Order</span><span class="p">.</span><span class="n">types</span><span class="p">[</span><span class="n">decodedOrder</span><span class="p">.</span><span class="n">type</span><span class="p">].</span><span class="n">lowercased</span><span class="si">())</span><span class="s"> cupcakes is on its way!"</span>
+            <span class="n">showingConfirmation</span> <span class="p">=</span> <span class="kc">true</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+            <span class="bp">print</span><span class="p">(</span><span class="s">"Check out failed: </span><span class="si">\(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="saving-data">Saving Data</h2>
+<p>I know 3 ways to save data in Swift/<span class="caps">UI</span>:</p>
+<ul>
+<li>UserDefaults: Best used to save small data quantities. For example App Settings.</li>
+<li>Writing it to the documents directory</li>
+<li>SwiftData</li>
+</ul>
+<h3 id="writing-reading-to-userdefaults">Writing <span class="amp">&amp;</span> reading to UserDefaults</h3>
+<p>We need a couple of things:</p>
+<ol>
+<li>Our data has to be <code>Codable</code>, so that later we can create <code>JSONEncoder</code></li>
+<li>UserDefaults to save and load our data</li>
+<li>A custom initializer for the data class, so it automatically loads</li>
+<li>A <code>didSet</code> to the data, so whenever data is added or changed it gets automagically saved.</li>
+</ol>
+<p>Making the data <code>Codable</code> most often is not too hard: As long as the components are <code>Codable</code>, the entire class is also.</p>
+<p>This is what saving the data in a <code>didSet</code> can look like:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nv">items</span> <span class="p">=</span> <span class="p">[</span><span class="n">ExpenseItem</span><span class="p">]()</span> <span class="p">{</span>
+    <span class="kr">didSet</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">encoded</span> <span class="p">=</span> <span class="k">try</span><span class="p">?</span> <span class="n">JSONEncoder</span><span class="p">().</span><span class="n">encode</span><span class="p">(</span><span class="n">items</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">UserDefaults</span><span class="p">.</span><span class="n">standard</span><span class="p">.</span><span class="kr">set</span><span class="p">(</span><span class="n">encoded</span><span class="p">,</span> <span class="n">forKey</span><span class="p">:</span> <span class="s">"Items"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>And this is how a initializer that loads the data could look like:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">init</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="kd">let</span> <span class="nv">savedItems</span> <span class="p">=</span> <span class="n">UserDefaults</span><span class="p">.</span><span class="n">standard</span><span class="p">.</span><span class="n">data</span><span class="p">(</span><span class="n">forKey</span><span class="p">:</span> <span class="s">"Items"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="kd">let</span> <span class="nv">decodedItems</span> <span class="p">=</span> <span class="k">try</span><span class="p">?</span> <span class="n">JSONDecoder</span><span class="p">().</span><span class="n">decode</span><span class="p">([</span><span class="n">ExpenseItem</span><span class="p">].</span><span class="kc">self</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="n">savedItems</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">items</span> <span class="p">=</span> <span class="n">decodedItems</span>
+            <span class="k">return</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">items</span> <span class="p">=</span> <span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="writing-reading-to-the-documents-directory">Writing <span class="amp">&amp;</span> reading to the documents directory</h3>
+<p>This is how we write:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">data</span> <span class="p">=</span> <span class="n">Data</span><span class="p">(</span><span class="s">"Test Message"</span><span class="p">.</span><span class="n">utf8</span><span class="p">)</span>
+<span class="kd">let</span> <span class="nv">url</span> <span class="p">=</span> <span class="n">URL</span><span class="p">.</span><span class="n">documentsDirectory</span><span class="p">.</span><span class="n">appending</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="s">"message.txt"</span><span class="p">)</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="n">data</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">to</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="n">options</span><span class="p">:</span> <span class="p">[.</span><span class="n">atomic</span><span class="p">,</span> <span class="p">.</span><span class="n">completeFileProtection</span><span class="p">])</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>..and this is how we read:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">url</span> <span class="p">=</span> <span class="n">URL</span><span class="p">.</span><span class="n">documentsDirectory</span><span class="p">.</span><span class="n">appending</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="s">"message.txt"</span><span class="p">)</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nv">input</span> <span class="p">=</span> <span class="k">try</span> <span class="nb">String</span><span class="p">(</span><span class="n">contentsOf</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="bp">print</span><span class="p">(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="swiftdata">SwiftData</h3>
+<p>The moving parts we have are</p>
+<ul>
+<li>The <code>Model</code>: This is the data structure. The object(s) and it’s fields</li>
+<li>The <code>ModelContainer</code>: This is the persistent storage. Think of it like the file in which the data is written on the server.</li>
+<li>The <code>ModelContext</code>: That’s the in-memory kept version of your data and where the data modifications are held before being saved to the <code>ModelContainer</code>.</li>
+</ul>
+<p>To enable your software to use SwiftData, make a model first:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Foundation</span>
+<span class="kd">import</span> <span class="nc">SwiftData</span>
+
+<span class="p">@</span><span class="n">Model</span>
+<span class="kd">class</span> <span class="nc">Book</span> <span class="p">{</span>  <span class="c1">// Models HAVE TO BE Classes!</span>
+    <span class="kd">var</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">author</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">genre</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">review</span><span class="p">:</span> <span class="nb">String</span>
+    <span class="kd">var</span> <span class="nv">rating</span><span class="p">:</span> <span class="nb">Int</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Add the <code>modelContainer</code> at App level</p>
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">SwiftData</span>
+<span class="kd">import</span> <span class="nc">SwiftUI</span>
+
+<span class="p">@</span><span class="n">main</span>
+<span class="kd">struct</span> <span class="nc">BookwormApp</span><span class="p">:</span> <span class="n">App</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">Scene</span> <span class="p">{</span>
+        <span class="n">WindowGroup</span> <span class="p">{</span>
+            <span class="n">ContentView</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="p">.</span><span class="n">modelContainer</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">Book</span><span class="p">.</span><span class="kc">self</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Use the data in your view:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">ContentView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">modelContext</span><span class="p">)</span> <span class="kd">var</span> <span class="nv">modelContext</span>
+    <span class="p">@</span><span class="n">Query</span><span class="p">(</span><span class="bp">sort</span><span class="p">:</span> <span class="p">[</span>
+        <span class="n">SortDescriptor</span><span class="p">(</span><span class="err">\</span><span class="n">Book</span><span class="p">.</span><span class="n">title</span><span class="p">),</span>
+        <span class="n">SortDescriptor</span><span class="p">(</span><span class="err">\</span><span class="n">Book</span><span class="p">.</span><span class="n">author</span><span class="p">)</span>
+    <span class="p">])</span> <span class="kd">var</span> <span class="nv">books</span><span class="p">:</span> <span class="p">[</span><span class="n">Book</span><span class="p">]</span>
+    <span class="p">...</span>
+</code></pre></div>
+<p>Pass a SwiftData object to a down stream View:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">DetailView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">modelContext</span><span class="p">)</span> <span class="kd">var</span> <span class="nv">modelContext</span>
+
+    <span class="kd">let</span> <span class="nv">book</span><span class="p">:</span> <span class="n">Book</span>
+    <span class="p">...</span>
+</code></pre></div>
+<p>Add a SwiftData object:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">AddBookView</span><span class="p">:</span> <span class="n">View</span> <span class="p">{</span>
+    <span class="p">@</span><span class="n">Environment</span><span class="p">(</span><span class="err">\</span><span class="p">.</span><span class="n">modelContext</span><span class="p">)</span> <span class="kd">var</span> <span class="nv">modelContext</span>
+    <span class="kd">var</span> <span class="nv">body</span><span class="p">:</span> <span class="n">some</span> <span class="n">View</span> <span class="p">{</span>
+        <span class="n">NavigationStack</span> <span class="p">{</span>
+            <span class="n">Form</span> <span class="p">{</span>
+                <span class="c1">// Data entry here</span>
+                <span class="n">Section</span> <span class="p">{</span>
+                    <span class="n">Button</span><span class="p">(</span><span class="s">"Save"</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="kd">let</span> <span class="nv">newBook</span> <span class="p">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="n">author</span><span class="p">,</span> <span class="n">genre</span><span class="p">:</span> <span class="n">genre</span><span class="p">,</span> <span class="n">review</span><span class="p">:</span> <span class="n">review</span><span class="p">,</span> <span class="n">rating</span><span class="p">:</span> <span class="n">rating</span><span class="p">)</span>
+                        <span class="n">modelContext</span><span class="p">.</span><span class="bp">insert</span><span class="p">(</span><span class="n">newBook</span><span class="p">)</span>
+                        <span class="n">dismiss</span><span class="p">()</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="p">.</span><span class="n">navigationTitle</span><span class="p">(</span><span class="s">"Add Book"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Delete a SwiftData object:</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">func</span> <span class="nf">deleteBook</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">modelContext</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="n">book</span><span class="p">)</span>
+        <span class="n">dismiss</span><span class="p">()</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>Adding a context and sample data for <code>#Preview</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">#</span><span class="n">Preview</span> <span class="p">{</span>
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nv">config</span> <span class="p">=</span> <span class="n">ModelConfiguration</span><span class="p">(</span><span class="n">isStoredInMemoryOnly</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+        <span class="kd">let</span> <span class="nv">container</span> <span class="p">=</span> <span class="k">try</span> <span class="n">ModelContainer</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">Book</span><span class="p">.</span><span class="kc">self</span><span class="p">,</span> <span class="n">configurations</span><span class="p">:</span> <span class="n">config</span><span class="p">)</span>
+        <span class="kd">let</span> <span class="nv">example</span> <span class="p">=</span> <span class="n">Book</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="s">"Test Book"</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="s">"Test Author"</span><span class="p">,</span> <span class="n">genre</span><span class="p">:</span> <span class="s">"Fantasy"</span><span class="p">,</span> <span class="n">review</span><span class="p">:</span> <span class="s">"This was a great book; I really enjoyed it."</span><span class="p">,</span> <span class="n">rating</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">DetailView</span><span class="p">(</span><span class="n">book</span><span class="p">:</span> <span class="n">example</span><span class="p">)</span>
+            <span class="p">.</span><span class="n">modelContainer</span><span class="p">(</span><span class="n">container</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Text</span><span class="p">(</span><span class="s">"Failed to create preview: </span><span class="si">\(</span><span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="core-image-image-filters">Core Image (Image Filters)</h2>
+<p>It’s tricky… Look at the class explaining it <a href="https://www.hackingwithswift.com/books/ios-swiftui/basic-image-filtering-using-core-image" rel="noopener noreferrer" target="_blank">here</a></p>
+<h3 id="todo"><span class="caps">TODO</span></h3>
+<ul>
+<li>Explain the different classes / objects there are, what functionality is provided by which one, and how to transistion from one to the other: SwiftUI.Image - CGImage - CIImage</li>
+<li>Explain the context <span class="amp">&amp;</span> filter concept.</li>
+<li>Give example</li>
+</ul>
+<h2 id="mapkit">MapKit</h2>
+<ul>
+<li><a href="https://www.hackingwithswift.com/books/ios-swiftui/integrating-mapkit-with-swiftui" rel="noopener noreferrer" target="_blank">Maps Video</a></li>
+<li><code>import MapKit</code></li>
+<li><code>Map()</code> shows a map ;)</li>
+<li><code>.mapStyle(.imagery)</code> or <code>.hybrid</code> or <code>.mapStyle(.hybrid(elevation: .realistic))</code></li>
+<li><em>Entering</em> locations as <code>MapCameraPosition</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">startPosition</span> <span class="p">=</span> <span class="n">MapCameraPosition</span><span class="p">.</span><span class="n">region</span><span class="p">(</span>
+    <span class="n">MKCoordinateRegion</span><span class="p">(</span>
+        <span class="n">center</span><span class="p">:</span> <span class="bp">CLLocationCoordinate2D</span><span class="p">(</span><span class="n">latitude</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span> <span class="n">longitude</span><span class="p">:</span> <span class="o">-</span><span class="mi">3</span><span class="p">),</span>
+        <span class="n">span</span><span class="p">:</span> <span class="n">MKCoordinateSpan</span><span class="p">(</span><span class="n">latitudeDelta</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="n">longitudeDelta</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<ul>
+<li>Getting Map taps as coordinates with <code>MapReader</code>, i.e. calculation from Screen Coordinates —&gt; Long/Lat</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">MapReader</span> <span class="p">{</span> <span class="n">proxy</span> <span class="k">in</span>
+    <span class="n">Map</span><span class="p">(</span><span class="n">initialPosition</span><span class="p">:</span> <span class="n">startPosition</span><span class="p">)</span>
+        <span class="p">.</span><span class="n">onTapGesture</span> <span class="p">{</span> <span class="n">position</span> <span class="k">in</span>
+            <span class="k">if</span> <span class="kd">let</span> <span class="nv">coordinate</span> <span class="p">=</span> <span class="n">proxy</span><span class="p">.</span><span class="n">convert</span><span class="p">(</span><span class="n">position</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="p">.</span><span class="n">local</span><span class="p">)</span> <span class="p">{</span>
+                <span class="bp">print</span><span class="p">(</span><span class="s">"Tapped at </span><span class="si">\(</span><span class="n">coordinate</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Have <code>Marker</code> on maps</li>
+</ul>
+<h2 id="other-topics">Other topics</h2>
+<ul>
+<li>Machine Learning</li>
+<li>Crashing your code with <code>fatalError()</code>, and why that might actually be a good thing.</li>
+<li>How to check whether a string is spelled correctly, using <code>UITextChecker</code> (it’s a messy beast).</li>
+<li>Using <code>DragGesture()</code> to let the user move views around, then snapping them back to their original location.</li>
+<li>Bundles: How to put a file <code>whatever.txt</code> in your bundle, how to access (i.e. read it). File names need to be unique throughout a bundle.</li>
+</ul>
+<h2 id="questions-todos">Questions <span class="amp">&amp;</span> Todos</h2>
+<ul>
+<li>What are the differences between a <code>Form</code> and a <code>VStack</code> ?</li>
+<li>Multi screen setups: <code>Sheet</code> and <code>NavigationStack</code>, and how to move around</li>
+<li><code>NavigationStack(path)</code></li>
+<li>Binding: <code>@State</code>, <code>@Bindable</code>, <code>@Binding</code></li>
+<li>How to pass data around multi screen setups</li>
+<li><span class="caps">TODO</span>: Understand differnece in behaviour and look of Alert and Confirmation Dialogue.</li>
+</ul>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

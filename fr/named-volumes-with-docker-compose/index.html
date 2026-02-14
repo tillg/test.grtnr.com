@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="Tech" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/fr/">Home</a>
+
+  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/fr/about">About</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/fr/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Volumes nommés avec docker-compose
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">samedi 4 septembre 2021</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">Tech</a>
+
+</div>
+
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/named-volumes-with-docker-compose/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <p>En travaillant sur un projet annexe utilisant <strong>docker-compose</strong>, je suis tombé sur un problème. Un problème que j'avais déjà rencontré mais que je n'avais jamais vraiment étudié ou résolu.</p>
+<p>Voici ce que je veux faire :</p>
+<ul>
+<li>Avoir un ensemble de services fonctionnant dans une configuration docker-compose</li>
+<li>Faire en sorte que ces services utilisent des partages montés - un partage, utilisé par plus d'un conteneur.</li>
+<li>Le problème : je veux que <strong>plusieurs conteneurs</strong> utilisent le <strong>même volume</strong> !</li>
+</ul>
+<p>Pour faire court, voici comment cela fonctionne parfaitement :</p>
+<div class="highlight"><pre><span></span><code><span class="nx">version</span><span class="p">:</span><span class="w"> </span><span class="sc">'3'</span>
+<span class="nx">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nx">service1</span><span class="p">:</span>
+<span class="w">    </span><span class="nx">image</span><span class="p">:</span><span class="w"> </span><span class="nx">nginx</span>
+<span class="w">    </span><span class="nx">container_name</span><span class="p">:</span><span class="w"> </span><span class="nx">service1</span>
+<span class="w">    </span><span class="nx">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="err">'</span><span class="mi">81</span><span class="p">:</span><span class="mi">80</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="nx">content</span><span class="p">:</span><span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">share</span><span class="o">/</span><span class="nx">nginx</span><span class="o">/</span><span class="nx">html</span>
+
+<span class="w">  </span><span class="nx">service2</span><span class="p">:</span>
+<span class="w">    </span><span class="nx">image</span><span class="p">:</span><span class="w"> </span><span class="nx">nginx</span>
+<span class="w">    </span><span class="nx">container_name</span><span class="p">:</span><span class="w"> </span><span class="nx">service2</span>
+<span class="w">    </span><span class="nx">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="err">'</span><span class="mi">82</span><span class="p">:</span><span class="mi">80</span><span class="err">'</span>
+<span class="w">    </span><span class="nx">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="o">-</span><span class="w"> </span><span class="nx">content</span><span class="p">:</span><span class="o">/</span><span class="nx">usr</span><span class="o">/</span><span class="nx">share</span><span class="o">/</span><span class="nx">nginx</span><span class="o">/</span><span class="nx">html</span>
+
+<span class="nx">volumes</span><span class="p">:</span>
+<span class="w">  </span><span class="nx">content</span><span class="p">:</span>
+<span class="w">     </span><span class="nx">driver_opts</span><span class="p">:</span>
+<span class="w">           </span><span class="k">type</span><span class="p">:</span><span class="w"> </span><span class="nx">none</span>
+<span class="w">           </span><span class="nx">device</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">content</span>
+<span class="w">           </span><span class="nx">o</span><span class="p">:</span><span class="w"> </span><span class="nx">bind</span>
+</code></pre></div>
+<p>Voici ce qui se passe :</p>
+<ul>
+<li>Nous avons 2 services du même type : des conteneurs nginx simples à des fins de démonstration.</li>
+<li>Ils exposent tous deux leur port interne 80 vers le port 81 respectivement 82 vers l'extérieur.</li>
+<li>Ils utilisent tous deux un volume appelé <strong>content</strong> qui est défini dans la section volumes.</li>
+</ul>
+<p>Le détail que j'ai manqué pendant si longtemps était la section <strong>volumes</strong> avec les <strong>driver_opts</strong>. Et bien que j'aie effectué quelques tests et que tout se soit comporté exactement comme je l'espérais, je n'ai pas pu trouver de documentation appropriée. Voici ce que dit la <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts" rel="noopener noreferrer" target="_blank">documentation de docker</a> à propos des <strong>driver_opts</strong> :</p>
+<blockquote>
+<p>Spécifiez une liste d'options sous forme de paires clé-valeur à transmettre au pilote pour ce volume. Ces options dépendent du pilote - consultez la documentation du pilote pour plus d'informations.</p>
+</blockquote>
+<p>En examinant comment les choses fonctionnent, les outils d'inspection de docker donnent quelques aperçus : voici la partie <strong>Mounts</strong> de <strong>docker inspect service1</strong></p>
+<div class="highlight"><pre><span></span><code><span class="w"> </span><span class="s2">"Mounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span>
+<span class="w">                </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"volume"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"Name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"docker-playground_content"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/lib/docker/volumes/docker-playground_content/_data"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"Destination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/usr/share/nginx/html"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"Driver"</span><span class="p">:</span><span class="w"> </span><span class="s2">"local"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"Mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rw"</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"RW"</span><span class="p">:</span><span class="w"> </span><span class="bp">true</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">"Propagation"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">]</span>
+</code></pre></div>
+<p>Au début, j'étais sceptique à cause de cette ligne :</p>
+<div class="highlight"><pre><span></span><code><span class="s2">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/lib/docker/volumes/docker-playground_content/_data"</span>
+</code></pre></div>
+<p>Mais il s'avère que mes données ne sont <strong>pas</strong> dans ce répertoire géré par docker, mais là où je le voulais. Dans mon cas, c'est dans <strong>./data/content</strong>. De plus, le chemin relatif fonctionne bien.</p>
+<h3 id="sources">Sources</h3>
+<p>Voici les sources originales qui m'ont le plus aidé</p>
+<ul>
+<li>Documentation Docker - assez étrange, elle ne m'a pas aidé du tout...</li>
+<li>Voici l'article <a href="https://stackoverflow.com/questions/35841241/docker-compose-named-mounted-volume" rel="noopener noreferrer" target="_blank">Stackoverflow</a> le plus utile.</li>
+</ul>
+<h3 id="versions">Versions</h3>
+<p>Étant donné que ce type de configurations peut être sensible aux versions, voici ma configuration :</p>
+<div class="highlight"><pre><span></span><code>docker-compose version 1.29.2, build 5becea4c
+docker-py version: 5.0.0
+CPython version: 3.9.0
+OpenSSL version: OpenSSL 1.1.1h  22 Sep 2020
+</code></pre></div>
+<p>Et cela fonctionne sur mon Mac avec Big Sur Version 11.5.2 (avec CPU Intel 😜).</p>
+<p>Le code peut être trouvé <a href="https://github.com/tillg/docker-compose-volumes-playground/" rel="noopener noreferrer" target="_blank">sur Github</a>.</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="code" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/fr/">Home</a>
+
+  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/fr/about">About</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/fr/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="en" onclick="switchLanguage('en')">
+English
+                </a>
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Comment je code avec&nbsp;Claude
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">samedi 14 février 2026</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/code/"
+  class="tag-pill ">code</a>
+
+</div>
+
+    </div>
+
+    <div style="margin-bottom: 1rem; font-size: 0.9em; color: #666;">
+      Translated by: gpt-4o-2024-08-06
+      | <a href="/how-i-code-with-claude/" style="color: #0066cc;">Original version</a>
+    </div>
+
+    <p>Puisque je l'ai présenté plusieurs fois, et que l'on me l'a demandé encore plus souvent, voici un bref aperçu de ma méthode de travail lorsque je code avec Claude Code. C'est un flux de travail simple, rien de sophistiqué. Il se concentre d'abord sur la spécification, en l'itérant avant de lancer le codage proprement dit.</p>
+<p>Voici comment cela fonctionne :</p>
+<ul>
+<li>Je commence par noter une brève spécification (par exemple dans <code>spec.md</code>). Souvent juste une seule ligne de texte, suivie d'une liste à puces avec mes réflexions. Tout cela sous forme de fichier markdown.</li>
+<li>Ensuite, je lance ma commande <code>/spec-build-out</code> : <code>/spec-build-out spec.md</code> (Remarque : je travaille souvent dans le terminal intégré de VScode, et là, vous pouvez glisser-déposer le fichier md dans le terminal et il collera le nom complet du fichier).</li>
+<li>Cela développe et affine mon <code>spec.md</code>. Je le lis, le révise et l'annote. Je marque mes notes avec <code>-&gt;</code>.</li>
+<li>Ensuite, je lance la commande <code>/spec-iterate</code> : Cela intègre mes annotations et nettoie à nouveau <code>spec.md</code>.</li>
+<li>Puis j'annote à nouveau, lance <code>/spec-iterate</code> à nouveau, et ainsi de suite.</li>
+<li>Quand je sens que tout est en ordre, je démarre une conversation <code>/new</code> et lance <code>/spec-ready-or-not spec.md</code>.</li>
+<li>Cela ajoute toutes les questions ouvertes qu'il a trouvées à la fin de <code>spec.md</code>.</li>
+<li>Même jeu : annoter <code>spec.md</code>, puis <code>/spec-iterate</code>.</li>
+<li>À un moment donné, je suis satisfait. Ensuite, je valide les spécifications et laisse Claude les implémenter. Parfois, je commence par un <code>/new</code> d'abord, pour commencer avec un contexte propre et frais.</li>
+</ul>
+<p>Mes commandes <code>/</code> :</p>
+<ul>
+<li><a href="spec-build-out.md">/spec-build-out</a></li>
+<li><a href="spec-iterate.md">/spec-iterate</a></li>
+<li><a href="spec-ready-or-not.md">/spec-ready-or-not</a></li>
+<li><a href="spec-finish.md">/spec-finish</a></li>
+</ul>
+<h3 id="commentaires-notes-et-reflexions">Commentaires, notes et réflexions</h3>
+<p>Quand j'ai exécuté le Claude <code>/insights</code>, j'ai été complimenté pour le <strong>Cycle de Développement Disciplinaire Axé sur les Spécifications</strong> 😉</p>
+<p>J'ai un peu joué avec l'explication à Claude sur la longueur que devrait avoir le <code>spec.md</code>. Sans aucune directive, il devenait énorme, contenant presque tout le code qu'il prévoyait d'insérer dans la base de code. Une fois que j'ai ajouté un <code>Veuillez garder le document court ! Ajoutez des extraits de code uniquement s'ils sont VRAIMENT essentiels !!</code>, il est devenu plus court - parfois trop court.</p>
+<p><code>/insights</code> a également suggéré l'ajout suivant à mon <code>claude.md</code> :</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Flux de Travail des Spécifications</span>
+
+Lors de l'itération sur les documents de spécification :
+
+<span class="k">1.</span> Recherchez toujours les annotations de l'utilisateur (par exemple, les flèches '-&gt;', les balises comme [ACCEPTED], [REJECTED]) lors du PREMIER passage — ne nécessitez pas de relance.
+<span class="k">2.</span> Lors de la consolidation d'une spécification, supprimez entièrement les options rejetées et gardez le document concis.
+<span class="k">3.</span> Après la finalisation de la spécification, confirmez que toutes les questions ouvertes sont résolues avant de passer à l'implémentation.
+</code></pre></div>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

@@ -10,6 +10,8 @@
   <title>test.grtnr.com</title>
 
   <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
   <link rel="stylesheet" href="../theme/css/poole.css" />
   <link rel="stylesheet" href="../theme/css/syntax.css" />
   <link rel="stylesheet" href="../theme/css/lanyon.css" />
@@ -53,8 +55,17 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   </nav>
 
+  <!-- Language Switcher -->
   <div class="sidebar-item">
-      Last built 27.05.2025 09:01:13.
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/solid-comments-in-static-website/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/solid-comments-in-static-website/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
   </div>
 </div>
   <div class="wrap">
@@ -64,6 +75,23 @@ styles, `#sidebar-checkbox` for behavior. -->
           <a href="../" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -77,6 +105,7 @@ styles, `#sidebar-checkbox` for behavior. -->
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 11, 2025</span>
       
     </div>
+
 
     <p><strong><span class="caps">TL</span>;<span class="caps">DR</span>:</strong> I added comments to my static website. Here’s how I did it - including some technical details. I researched amongst different possible solutions for the most solid one, integrated it for all posts and added a counter of the number of comments in the post overview page.</p>
 <p><strong>2025-05-23 Update</strong> Since I moved from Jekyll to <a href="https://getpelican.com" rel="noopener noreferrer" target="_blank">Pelican</a>, I updated some details.</p>
@@ -116,7 +145,39 @@ styles, `#sidebar-checkbox` for behavior. -->
 <li>The “Page discussion mapping” option dictates a relationship between your pages, e.g an article, and a GitHub discussion. I selected, the pathname</li>
 <li>For the discussions category I selected “general”.
     Set the Theme to “Match <span class="caps">OS</span>” or manually define light and dark mode.
-    Click “Copy Code” once you’ve generated the <script></script></li></ul>
+    Click “Copy Code” once you’ve generated the <script> tag.</li>
+</ul>
+<p><img alt="Giscus Features" src="/solid-comments-in-static-website/giscus-features.png"></p>
+<ul>
+<li>Step 3: Add Giscus to Your Jekyll Post Template (or Pelican 😀). - - Step 4: Style Giscus to Match Lanyon Theme. I skipped this one, as the styling looked pretty good <em>naked</em> to&nbsp;me.</li>
+<li>Step 5: Display Comment Count in Post Summaries (see&nbsp;below)</li>
+<li>Step 6: Commit and Push Changes -&nbsp;Duh...</li>
+<li>Step 7: Test Your&nbsp;Setup</li>
+</ul>
+<h2 id="adding-the-comment-counter">Adding the comment&nbsp;counter</h2>
+<p>After fiddling around a bit and smoothing the edges everything worked fine. But there was one feature I miussed: I wanted to see the number of comments a blog post has in the post overview&nbsp;page.</p>
+<p><img alt="Comment counter" src="/solid-comments-in-static-website/screenshot_comment_counter.jpg" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></p>
+<p>So I spun up ChatGPT again and got another <a href="https://chatgpt.com/share/67ab5f69-4ddc-8009-8471-a35e00cb6a43">research result</a>. The rough steps&nbsp;are:</p>
+<ul>
+<li>Step 1: Add a Placeholder for Comment Count. In my <a href="https://github.com/tillg/grtnr.com_2024/blob/main/_includes/post_preview.html"><code>post_preview.html</code></a> I added&nbsp;a <code>&lt;span&gt;</code> that actually needed to be a bit different from what the <span class="caps">AI</span>&nbsp;suggested:</li>
+</ul>
+<p><code>html
+  &lt;span class="comment-count" data-giscus-comments="{{ post.url }}"&gt;
+    &lt;span class="comment-num"&gt;Counting comments...&lt;/span&gt;
+  &lt;/span&gt;</code></p>
+<ul>
+<li>Step 2: Add JavaScript to Fetch the Comment Count. I added a script that fetches the comment count from the GitHub Discussions <span class="caps">API</span> and updates the comment count. The script suggested needed some fixes and ended up in this <a href="https://github.com/tillg/grtnr.com_2024/blob/main/assets/js/giscus-comments.js">Event Listener</a>. Don&#8217;t be surprised by the two lines with dashes (&#8212;-) at the top, I&#8217;ll explain them below&#8230; Noteworthy here&nbsp;are</li>
+<li>Dealing with&nbsp;the <code>accessToken</code> (explained&nbsp;below)</li>
+<li>This argument of the grahQL&nbsp;query: <code>categoryId: "DIC_kwDONYRp_c4Cm0cH"</code>. This is the <span class="caps">ID</span> of the category that contains the discussions of the&nbsp;repository.</li>
+<li>Note: What helped me for debugging <span class="amp">&amp;</span> fixing this function is the <a href="https://docs.github.com/en/graphql/overview/explorer">Github GraphQL Explorer</a>.</li>
+<li>Step 3: Include the JavaScript in Your Jekyll Site. In my case I added this script reference at the bottom of the <a href="https://github.com/tillg/grtnr.com_2024/blob/main/_layouts/default.html"><code>default.html</code> layout file</a>.</li>
+<li>Step 4: Test the Comment Count. After some testing and fixing, it worked eventually&nbsp;locally.</li>
+</ul>
+<p>The following aspects kept me busy an hour or&nbsp;two:</p>
+<ul>
+<li>The <code>accessToken</code>, where and how to get&nbsp;it</li>
+<li>How to get the access token published to Github w/o the token-scanner and protector kicking&nbsp;in</li>
+</ul></script></li></ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"
@@ -154,6 +215,83 @@ styles, `#sidebar-checkbox` for behavior. -->
           }
         }
       })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
     </script>
 
     <script>

@@ -10,6 +10,8 @@
   <title>test.grtnr.com</title>
 
   <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
   <link rel="stylesheet" href="../theme/css/poole.css" />
   <link rel="stylesheet" href="../theme/css/syntax.css" />
   <link rel="stylesheet" href="../theme/css/lanyon.css" />
@@ -53,8 +55,17 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   </nav>
 
+  <!-- Language Switcher -->
   <div class="sidebar-item">
-      Last built 27.05.2025 09:01:13.
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/cursor-magic/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/cursor-magic/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 14:37:44.
   </div>
 </div>
   <div class="wrap">
@@ -64,6 +75,23 @@ styles, `#sidebar-checkbox` for behavior. -->
           <a href="../" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -77,6 +105,7 @@ styles, `#sidebar-checkbox` for behavior. -->
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 5, 2025</span>
       
     </div>
+
 
     <div class="toc">
 <ul>
@@ -179,38 +208,38 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 </code></pre></div>
 <h2 id="helpful-small-prompts">Helpful small prompts</h2>
 <p>David provides a list of helpful small prompts or prompt snippets. I copied some of them here for copy&amp;paste usage:</p>
-<div class="highlight"><pre><span></span><code><span class="k">Proc</span><span class="nv">eed</span><span class="w"> </span><span class="nv">like</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">Senior</span><span class="w"> </span><span class="nv">Developer</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">focus</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">clear</span><span class="w"> </span><span class="nv">architecture.</span>
+<div class="highlight"><pre><span></span><code>Proceed like a Senior Developer with a focus on clear architecture.
 
-<span class="nf">The</span><span class="w"> </span><span class="nv">fewer</span><span class="w"> </span><span class="nv">lines</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">better.</span>
+The fewer lines of code the better.
 
-<span class="nf">Start</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">writing</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nv">reasoning</span><span class="w"> </span><span class="nv">paragraphs</span><span class="w"> </span><span class="nv">analyzing</span><span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="nv">might</span><span class="w"> </span><span class="nv">be.</span><span class="w"> </span><span class="nv">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">JUMP</span><span class="w"> </span><span class="nv">TO</span><span class="w"> </span><span class="nv">CONCLUSIONS.</span>
+Start by writing 3 reasoning paragraphs analyzing what the error might be. DO NOT JUMP TO CONCLUSIONS.
 
-<span class="nf">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="nv">STOP</span><span class="w"> </span><span class="nv">WORKING</span><span class="w"> </span><span class="nv">until</span><span class="err">…</span>
+DO NOT STOP WORKING until…
 
-<span class="nf">Answer</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">short</span>
+Answer in short
 
-<span class="nf">DO</span><span class="w"> </span><span class="nv">NET</span><span class="w"> </span><span class="nv">DELETE</span><span class="w"> </span><span class="nv">COMMENTS</span>
+DO NET DELETE COMMENTS
 
-<span class="nf">You</span><span class="w"> </span><span class="nv">should</span><span class="w"> </span><span class="nv">start</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">reasoning</span><span class="w"> </span><span class="nv">paragraph</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">lots</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">uncertainty</span><span class="p">,</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">slowly</span><span class="w"> </span><span class="nv">gain</span><span class="w"> </span><span class="nv">confidence</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">think</span><span class="w"> </span><span class="nv">about</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">item</span><span class="w"> </span><span class="nv">more.</span>
+You should start the reasoning paragraph with lots of uncertainty, and slowly gain confidence as you think about the item more.
 </code></pre></div>
 <h2 id="larger-prompts">Larger prompts</h2>
 <h3 id="summary-of-current-state">Summary of current state</h3>
 <p>Used to summarize a compose flow and move over to a fresh compose dialoge.</p>
-<div class="highlight"><pre><span></span><code><span class="nv">Before</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">proceed</span>,<span class="w"> </span><span class="nv">I</span><span class="w"> </span><span class="nv">need</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">give</span><span class="w"> </span><span class="nv">me</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">summary</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">state</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">project</span>.
+<div class="highlight"><pre><span></span><code>Before we proceed, I need you to give me a summary of the current state of the project.
 
-<span class="nv">Format</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="nv">concise</span><span class="w"> </span><span class="nv">paragraphs</span>,<span class="w"> </span><span class="nv">where</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">describe</span><span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">just</span><span class="w"> </span><span class="nv">did</span>,<span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">did</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">work</span>,<span class="w"> </span><span class="nv">which</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">were</span><span class="w"> </span><span class="nv">updated</span><span class="o">/</span><span class="nv">created</span>,<span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">mistakes</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">avoid</span>,<span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="nv">key</span><span class="w"> </span><span class="nv">insights</span><span class="o">/</span><span class="nv">lessons</span><span class="w"> </span><span class="nv">we</span>’<span class="nv">ve</span><span class="w"> </span><span class="nv">learned</span>,<span class="w"> </span><span class="nv">what</span><span class="w"> </span><span class="nv">problems</span><span class="o">/</span><span class="nv">errors</span><span class="w"> </span><span class="nv">we</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">facing</span>,…<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">anything</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">programmer</span><span class="w"> </span><span class="nv">might</span><span class="w"> </span><span class="nv">need</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">work</span><span class="w"> </span><span class="nv">productively</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">project</span>.
+Format this as 3 concise paragraphs, where you describe what we just did, what did not work, which files were updated/created, what mistakes to avoid, any key insights/lessons we’ve learned, what problems/errors we are facing,… and anything else a programmer might need to work productively on this project.
 
-<span class="nv">Write</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">conversational</span><span class="w"> </span><span class="nv">yet</span><span class="w"> </span><span class="nv">informative</span><span class="w"> </span><span class="nv">tone</span>,<span class="w"> </span><span class="nv">something</span><span class="w"> </span><span class="nv">like</span><span class="w"> </span><span class="nv">README</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">GitHub</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">super</span><span class="w"> </span><span class="nv">information</span><span class="w"> </span><span class="nv">dense</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">without</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="nv">fluff</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">noise</span>.<span class="w"> </span><span class="k">DO</span><span class="w"> </span><span class="nv">NOT</span><span class="w"> </span><span class="k">include</span><span class="w"> </span><span class="nv">any</span><span class="w"> </span><span class="nv">assumptions</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">theories</span>,<span class="w"> </span><span class="nv">just</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">facts</span>.
+Write in a conversational yet informative tone, something like README file on GitHub that is super information dense and without any fluff or noise. DO NOT include any assumptions or theories, just the facts.
 
-<span class="nv">I</span><span class="w"> </span><span class="nv">expect</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="nv">three</span><span class="w"> </span><span class="nv">concise</span><span class="w"> </span><span class="nv">paragraphs</span>,<span class="w"> </span><span class="nv">written</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">were</span><span class="w"> </span><span class="nv">giving</span><span class="w"> </span><span class="nv">instructions</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">another</span><span class="w"> </span><span class="nv">programmer</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">was</span><span class="w"> </span><span class="nv">ALL</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">could</span><span class="w"> </span><span class="nv">tell</span><span class="w"> </span><span class="nv">him</span>.
+I expect to see three concise paragraphs, written as if you were giving instructions to another programmer and this was ALL you could tell him.
 </code></pre></div>
 <h3 id="unbiased-5050">Unbiased 50/50</h3>
-<div class="highlight"><pre><span></span><code><span class="nv">BEFORE</span><span class="w"> </span><span class="nv">YOU</span><span class="w"> </span><span class="nv">ANSWER</span>,<span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="nv">want</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">write</span><span class="w"> </span><span class="nv">two</span><span class="w"> </span><span class="nv">detailed</span><span class="w"> </span><span class="nv">paragraphs</span>,<span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">arguing</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">these</span><span class="w"> </span><span class="nv">solutions</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">jump</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">conclusions</span>,<span class="w"> </span><span class="nv">seriously</span><span class="w"> </span><span class="nv">consider</span><span class="w"> </span><span class="nv">both</span><span class="w"> </span><span class="nv">approaches</span>
+<div class="highlight"><pre><span></span><code>BEFORE YOU ANSWER, i want you to write two detailed paragraphs, one arguing for each of these solutions - do not jump to conclusions, seriously consider both approaches
 
-<span class="k">then</span>,<span class="w"> </span><span class="nv">after</span><span class="w"> </span><span class="nv">you</span><span class="w"> </span><span class="nv">finish</span>,<span class="w"> </span><span class="nv">tell</span><span class="w"> </span><span class="nv">me</span><span class="w"> </span><span class="nv">whether</span><span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">these</span><span class="w"> </span><span class="nv">solutions</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">obviously</span><span class="w"> </span><span class="nv">better</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">other</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">why</span>.
+then, after you finish, tell me whether one of these solutions is obviously better than the other, and why.
 </code></pre></div>
 <h3 id="one-paragraph-search-query">one-paragraph search query</h3>
-<div class="highlight"><pre><span></span><code><span class="nv">let</span><span class="s1">'s perform a web search. your task is to write a one-paragraph search query, as if you were telling a human researcher that to find, including all the relevant context. format the paragraph as clear instructions, commanding a researcher to find what we'</span><span class="nv">re</span><span class="w"> </span><span class="nv">looking</span><span class="w"> </span><span class="k">for</span>.<span class="w"> </span><span class="nv">ask</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">code</span><span class="w"> </span><span class="nv">snippets</span><span class="w"> </span><span class="nv">or</span><span class="w"> </span><span class="nv">technical</span><span class="w"> </span><span class="nv">details</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">relevant</span>
+<div class="highlight"><pre><span></span><code>let's perform a web search. your task is to write a one-paragraph search query, as if you were telling a human researcher that to find, including all the relevant context. format the paragraph as clear instructions, commanding a researcher to find what we're looking for. ask for code snippets or technical details when relevant
 </code></pre></div>
 <h2 id="instructions">Instructions</h2>
 <p>David suggests to have a directory <code>instructions</code> that contains md files with tips for the <span class="caps">AI</span>. This way you can reference these files from the Composer prompt. He also preferers this kind of instrauction files over refreencing @Docs in cursor, which seems not to work too good yet.</p>
@@ -267,6 +296,83 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
           }
         }
       })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
     </script>
 
     <script>
