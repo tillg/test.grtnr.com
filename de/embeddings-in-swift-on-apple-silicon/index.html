@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/embeddings-in-swift-on-apple-silicon/" />
+    <link rel="alternate" hreflang="de" href="/de/embeddings-in-swift-on-apple-silicon/" />
+    <link rel="alternate" hreflang="fr" href="/fr/embeddings-in-swift-on-apple-silicon/" />
+    <link rel="canonical" href="/de/embeddings-in-swift-on-apple-silicon/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -49,17 +53,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/embeddings-in-swift-on-apple-silicon/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/embeddings-in-swift-on-apple-silicon/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -111,51 +122,51 @@ Français
       | <a href="/embeddings-in-swift-on-apple-silicon/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p><strong>In Arbeit!!</strong></p>
-<p>Ich bin dabei, die Programmiersprache Swift zu lernen. Ich mache das, indem ich dem fantastischen Kurs <a href="https://www.hackingwithswift.com/100/swiftui/" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> von Paul Hudson folge. Es ist ein fantastischer Kurs, der zunächst grundlegendes Swift und dann SwiftUI abdeckt.</p>
-<p>Wenn ich versuche, mein Lernen auf kleine Projekte anzuwenden, habe ich immer viele Fragen, und die zuverlässigste Quelle, um Antworten zu finden, ist der Kurs, d. h. seine Seiten. Also muss ich auf Paul Hudsons Seite suchen, genauer gesagt auf den Seiten seines Kurses.</p>
-<p>Da ich auch mit Machine Learning experimentiere, habe ich geplant, eine App zu entwickeln, die ich <strong>AskPaul</strong> nennen würde: Geben Sie Ihre Frage ein und erhalten Sie Antworten, die von einem (lokalen!) RAG-System erstellt wurden: Ein System, das alle Seiten des Kurses in Markdown enthält, aufgeteilt und mit seinen Einbettungen indexiert. Dann suchen Sie nach den relevanten Teilen für die gestellte Frage und geben diese zusammen mit der Frage an das LLM weiter. Und wenn ich LLM sage, meine ich das lokale LLM auf Ihrem Apple-Gerät 😜</p>
-<p>Um mit den Swift-Einbettungen zu experimentieren, habe ich ein Repository <a href="https://github.com/tillg/SwiftEmbeddings" rel="noopener noreferrer" target="_blank">SwiftEmbeddings</a> eingerichtet. Es enthält meinen Code &amp; <a href="https://github.com/tillg/SwiftEmbeddings/tree/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds" rel="noopener noreferrer" target="_blank">Playgrounds</a>.</p>
-<h2 id="was-zu-tun-ist">Was zu tun ist</h2>
-<p>Hier ist, was ich erreichen möchte:</p>
-<p>Angenommen, es gibt eine Reihe von Webseiten, die als Markdown verfügbar sind, zerteilen Sie sie in handliche Portionen und erstellen Sie ihre Einbettungen: Ein Vektor (d. h. eine Reihe von 512 Double-Werten), der <em>ihren Inhalt</em> auf mathematische Weise darstellt.</p>
-<p>Angenommen, es gibt eine Frage (denken Sie an etwas wie <code>In Swift, wie kann ich ein Protokoll erweitern?</code>), sollte das System die Teile mit relevantem Inhalt finden, indem es den Einbettungsvektor dieser Frage berechnet und dann mit allen Vektoren der Teile vergleicht, um den nächsten zu finden. Diese Teile werden dann zusammen mit der Frage an das LLM übergeben.</p>
-<p>Im <em>alten</em> Apple-Einbettungssystem, das sich im <a href="https://developer.apple.com/documentation/NaturalLanguage" rel="noopener noreferrer" target="_blank">Natural Language Framework</a> befindet, sind die Funktionen, um dies zu erreichen, leicht zugänglich und sehr gut im Artikel <a href="https://developer.apple.com/documentation/naturallanguage/finding-similarities-between-pieces-of-text" rel="noopener noreferrer" target="_blank">Ähnlichkeiten zwischen Textstücken finden</a> erklärt.</p>
-<h2 id="das-problem">Das Problem</h2>
-<p>Aber es gibt einen neuen Akteur: <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembedding" rel="noopener noreferrer" target="_blank">NLContextualEmbedding</a>. Es wurde in iOS 17/macOS 14 eingeführt und in iOS 18/macOS 15 erweitert.</p>
-<p>Hier ist, warum ich das neue <code>NLContextualEmbedding</code> verwenden möchte:</p>
+    <p><strong>In&nbsp;Arbeit!!</strong></p>
+<p>Ich bin dabei, die Programmiersprache Swift zu lernen. Ich mache das, indem ich dem fantastischen Kurs <a href="https://www.hackingwithswift.com/100/swiftui/" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> von Paul Hudson folge. Es ist ein fantastischer Kurs, der zunächst grundlegendes Swift und dann SwiftUI&nbsp;abdeckt.</p>
+<p>Wenn ich versuche, mein Lernen auf kleine Projekte anzuwenden, habe ich immer viele Fragen, und die zuverlässigste Quelle, um Antworten zu finden, ist der Kurs, d. h. seine Seiten. Also muss ich auf Paul Hudsons Seite suchen, genauer gesagt auf den Seiten seines&nbsp;Kurses.</p>
+<p>Da ich auch mit Machine Learning experimentiere, habe ich geplant, eine App zu entwickeln, die ich <strong>AskPaul</strong> nennen würde: Geben Sie Ihre Frage ein und erhalten Sie Antworten, die von einem (lokalen!) <span class="caps">RAG</span>-System erstellt wurden: Ein System, das alle Seiten des Kurses in Markdown enthält, aufgeteilt und mit seinen Einbettungen indexiert. Dann suchen Sie nach den relevanten Teilen für die gestellte Frage und geben diese zusammen mit der Frage an das <span class="caps">LLM</span> weiter. Und wenn ich <span class="caps">LLM</span> sage, meine ich das lokale <span class="caps">LLM</span> auf Ihrem Apple-Gerät&nbsp;😜</p>
+<p>Um mit den Swift-Einbettungen zu experimentieren, habe ich ein Repository <a href="https://github.com/tillg/SwiftEmbeddings" rel="noopener noreferrer" target="_blank">SwiftEmbeddings</a> eingerichtet. Es enthält meinen Code <span class="amp">&amp;</span> <a href="https://github.com/tillg/SwiftEmbeddings/tree/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds" rel="noopener noreferrer" target="_blank">Playgrounds</a>.</p>
+<h2 id="was-zu-tun-ist">Was zu tun&nbsp;ist</h2>
+<p>Hier ist, was ich erreichen&nbsp;möchte:</p>
+<p>Angenommen, es gibt eine Reihe von Webseiten, die als Markdown verfügbar sind, zerteilen Sie sie in handliche Portionen und erstellen Sie ihre Einbettungen: Ein Vektor (d. h. eine Reihe von 512 Double-Werten), der <em>ihren Inhalt</em> auf mathematische Weise&nbsp;darstellt.</p>
+<p>Angenommen, es gibt eine Frage (denken Sie an etwas&nbsp;wie <code>In Swift, wie kann ich ein Protokoll erweitern?</code>), sollte das System die Teile mit relevantem Inhalt finden, indem es den Einbettungsvektor dieser Frage berechnet und dann mit allen Vektoren der Teile vergleicht, um den nächsten zu finden. Diese Teile werden dann zusammen mit der Frage an das <span class="caps">LLM</span>&nbsp;übergeben.</p>
+<p>Im <em>alten</em> Apple-Einbettungssystem, das sich im <a href="https://developer.apple.com/documentation/NaturalLanguage" rel="noopener noreferrer" target="_blank">Natural Language Framework</a> befindet, sind die Funktionen, um dies zu erreichen, leicht zugänglich und sehr gut im Artikel <a href="https://developer.apple.com/documentation/naturallanguage/finding-similarities-between-pieces-of-text" rel="noopener noreferrer" target="_blank">Ähnlichkeiten zwischen Textstücken finden</a>&nbsp;erklärt.</p>
+<h2 id="das-problem">Das&nbsp;Problem</h2>
+<p>Aber es gibt einen neuen Akteur: <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembedding" rel="noopener noreferrer" target="_blank">NLContextualEmbedding</a>. Es wurde in iOS 17/macOS 14 eingeführt und in iOS 18/macOS 15&nbsp;erweitert.</p>
+<p>Hier ist, warum ich das&nbsp;neue <code>NLContextualEmbedding</code> verwenden&nbsp;möchte:</p>
 <ul>
-<li>Erfasst Kontext: Es würde den Unterschied zwischen „Flussufer“ und „Investmentbank“ machen. Das ältere <code>NLEmbedding</code> machte diesen Unterschied nicht.</li>
-<li>Ist mehrsprachig und sprachübergreifend: Durch das gleichzeitige Training in mehreren Sprachen richtet das Modell semantische Räume über Sprachen hinweg aus, sodass „chien“ und „dog“ in der Nähe eingebettet sind.</li>
-<li>Unterstützt mehr Sprachen</li>
-<li>Läuft vollständig auf dem Gerät: Das Modell respektiert die Privatsphäre der Benutzer und funktioniert offline. Nur kleine Modellausgaben werden bei Bedarf heruntergeladen und systemweit zwischengespeichert.</li>
-<li>Bietet robuste API-Kontrollen: Entwickler können Modelleigenschaften inspizieren, Assets verwalten und Einbettungen in ihre eigenen ML-Pipelines integrieren.</li>
+<li>Erfasst Kontext: Es würde den Unterschied zwischen „Flussufer“ und „Investmentbank“ machen. Das&nbsp;ältere <code>NLEmbedding</code> machte diesen Unterschied&nbsp;nicht.</li>
+<li>Ist mehrsprachig und sprachübergreifend: Durch das gleichzeitige Training in mehreren Sprachen richtet das Modell semantische Räume über Sprachen hinweg aus, sodass „chien“ und „dog“ in der Nähe eingebettet&nbsp;sind.</li>
+<li>Unterstützt mehr&nbsp;Sprachen</li>
+<li>Läuft vollständig auf dem Gerät: Das Modell respektiert die Privatsphäre der Benutzer und funktioniert offline. Nur kleine Modellausgaben werden bei Bedarf heruntergeladen und systemweit&nbsp;zwischengespeichert.</li>
+<li>Bietet robuste <span class="caps">API</span>-Kontrollen: Entwickler können Modelleigenschaften inspizieren, Assets verwalten und Einbettungen in ihre eigenen <span class="caps">ML</span>-Pipelines&nbsp;integrieren.</li>
 </ul>
-<p>Was fehlt, sind</p>
+<p>Was fehlt,&nbsp;sind</p>
 <ul>
-<li>das Äquivalent von <code>NLEmbedding</code>'s <code>vector(for:)</code>: Einen Vektor für einen Satz oder ein Stück erhalten</li>
-<li>das Äquivalent von <code>distanceBetweenString:andString:distanceType:</code>: Eine Maßnahme für die Distanz zwischen 2 Sätzen erhalten.</li>
+<li>das Äquivalent&nbsp;von <code>NLEmbedding</code><span class="quo">&#8216;</span>s <code>vector(for:)</code>: Einen Vektor für einen Satz oder ein Stück&nbsp;erhalten</li>
+<li>das Äquivalent&nbsp;von <code>distanceBetweenString:andString:distanceType:</code>: Eine Maßnahme für die Distanz zwischen 2 Sätzen&nbsp;erhalten.</li>
 </ul>
-<p>Was <code>NLContextualEmbedding</code> bietet, ist eine Funktion <code>embeddingResult(for: String, language: NLLanguage?) throws -&gt; NLContextualEmbeddingResult</code>. Aber wenn Sie sich die Struktur des <code>NLContextualEmbeddingResult</code> ansehen, sehen Sie, dass es einen Vektor für jedes Token erstellt, also einen Vektor von Vektoren. Außerdem werden diese Vektoren mit einem Iterator abgerufen: <code>enumerateTokenVectors(in: Range&lt;String.Index&gt;, using: ([Double], Range&lt;String.Index&gt;) -&gt; Bool)</code> - was für mich einiges an Nachdenken und Lernen erforderte...</p>
-<p>Also habe ich versucht, ein einfach zu bedienendes Werkzeug zu entwickeln, das auf dem neuen <code>NLContextualEmbedding</code> basiert, ähnlich wie wir es in <code>NLEmbedding</code> haben.</p>
-<p>Beachten Sie, dass ein entscheidender Aspekt die Leistung ist, da es viele Vergleiche erfordert, um die am besten passenden Teile/Vektoren in einem größeren Satz zu finden - und meine ersten Versuche dauerten viele Minuten, um zu suchen...</p>
+<p>Was <code>NLContextualEmbedding</code> bietet, ist eine&nbsp;Funktion <code>embeddingResult(for: String, language: NLLanguage?) throws -&gt; NLContextualEmbeddingResult</code>. Aber wenn Sie sich die Struktur&nbsp;des <code>NLContextualEmbeddingResult</code> ansehen, sehen Sie, dass es einen Vektor für jedes Token erstellt, also einen Vektor von Vektoren. Außerdem werden diese Vektoren mit einem Iterator&nbsp;abgerufen: <code>enumerateTokenVectors(in: Range&lt;String.Index&gt;, using: ([Double], Range&lt;String.Index&gt;) -&gt; Bool)</code> - was für mich einiges an Nachdenken und Lernen&nbsp;erforderte&#8230;</p>
+<p>Also habe ich versucht, ein einfach zu bedienendes Werkzeug zu entwickeln, das auf dem&nbsp;neuen <code>NLContextualEmbedding</code> basiert, ähnlich wie wir es&nbsp;in <code>NLEmbedding</code> haben.</p>
+<p>Beachten Sie, dass ein entscheidender Aspekt die Leistung ist, da es viele Vergleiche erfordert, um die am besten passenden Teile/Vektoren in einem größeren Satz zu finden - und meine ersten Versuche dauerten viele Minuten, um zu&nbsp;suchen&#8230;</p>
 <h2 id="testdaten">Testdaten</h2>
-<p>Da ich mit der Idee begann, ein On-Device-RAG-System für Paul Hudsons SwiftUI-Kurs zu erstellen, habe ich Folgendes getan:</p>
+<p>Da ich mit der Idee begann, ein On-Device-<span class="caps">RAG</span>-System für Paul Hudsons SwiftUI-Kurs zu erstellen, habe ich Folgendes&nbsp;getan:</p>
 <ul>
-<li>Die Hauptseiten des SwiftUI-Kurses in Markdown scrapen</li>
-<li>Sie zerteilen</li>
-<li>Sie alle in eine JSON-Datei schreiben, die ich in mein Swift-Projekt kopieren kann</li>
+<li>Die Hauptseiten des SwiftUI-Kurses in Markdown&nbsp;scrapen</li>
+<li>Sie&nbsp;zerteilen</li>
+<li>Sie alle in eine <span class="caps">JSON</span>-Datei schreiben, die ich in mein Swift-Projekt kopieren&nbsp;kann</li>
 </ul>
-<p>Um dies zu erreichen, habe ich einige Skripte in <a href="https://github.com/tillg/site2chunks" rel="noopener noreferrer" target="_blank">site2chunks</a> zusammengesteckt. Ein Beispiel-JSON befindet sich in meinem AskPaul-Projekt: <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/merged_chunks.json" rel="noopener noreferrer" target="_blank">merged_chunks</a></p>
-<p>Basierend darauf habe ich in meinem Swift-Code</p>
+<p>Um dies zu erreichen, habe ich einige Skripte in <a href="https://github.com/tillg/site2chunks" rel="noopener noreferrer" target="_blank">site2chunks</a> zusammengesteckt. Ein Beispiel-<span class="caps">JSON</span> befindet sich in meinem AskPaul-Projekt: <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/merged_chunks.json" rel="noopener noreferrer" target="_blank">merged_chunks</a></p>
+<p>Basierend darauf habe ich in meinem&nbsp;Swift-Code</p>
 <ul>
-<li>Eine <code>struct Chunk</code>. Wenn Sie neugierig sind, sehen Sie sich den <a href="https://github.com/tillg/AskPaul/blob/main/AskPaul/AskPaul/Chunk.swift" rel="noopener noreferrer" target="_blank">Code</a> an, der ein Stück darstellt</li>
-<li>Eine <code>Bundle Extension</code>, die die Teile aus der JSON-Datei liest (<a href="">Code</a>). Hinweis: Dies ist natürlich inspiriert von <a href="https://www.hackingwithswift.com/example-code/system/how-to-decode-json-from-your-app-bundle-the-easy-way" rel="noopener noreferrer" target="_blank">Paul Hudsons Kurs</a> 😜</li>
+<li>Eine <code>struct Chunk</code>. Wenn Sie neugierig sind, sehen Sie sich den <a href="https://github.com/tillg/AskPaul/blob/main/AskPaul/AskPaul/Chunk.swift" rel="noopener noreferrer" target="_blank">Code</a> an, der ein Stück&nbsp;darstellt</li>
+<li>Eine <code>Bundle Extension</code>, die die Teile aus der <span class="caps">JSON</span>-Datei liest (<a href="">Code</a>). Hinweis: Dies ist natürlich inspiriert von <a href="https://www.hackingwithswift.com/example-code/system/how-to-decode-json-from-your-app-bundle-the-easy-way" rel="noopener noreferrer" target="_blank">Paul Hudsons Kurs</a>&nbsp;😜</li>
 </ul>
-<p><strong>Hinweis</strong>: Ich beginne nur mit den <em>Hauptseiten</em>: der Einstiegsseite jeder der 100 Lektionen. Ich mache dies, damit der Datensatz leicht zu handhaben ist und meine Experimente schnell durchzuführen sind. Diese 100 Seiten werden in 722 Teile zerteilt. Sobald ich mit den Experimenten fertig bin, werde ich den Datensatz auf alle Seiten von hackingwithswift.com erweitern.</p>
-<h2 id="der-ausgangspunkt-nlembedding">Der Ausgangspunkt: <code>NLEmbedding</code></h2>
-<p>Mit diesen Testdaten an Ort und Stelle, lassen Sie uns mit dem <em>alten</em> <code>NLEmbedding</code> herumspielen. Sie können den Code in <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds/01-NLEmbedding.swift" rel="noopener noreferrer" target="_blank">Playgrounds/01-NLEmbedding.swift</a> nachschlagen.</p>
-<p>Die grobe Struktur des Codes sieht so aus:</p>
+<p><strong>Hinweis</strong>: Ich beginne nur mit den <em>Hauptseiten</em>: der Einstiegsseite jeder der 100 Lektionen. Ich mache dies, damit der Datensatz leicht zu handhaben ist und meine Experimente schnell durchzuführen sind. Diese 100 Seiten werden in 722 Teile zerteilt. Sobald ich mit den Experimenten fertig bin, werde ich den Datensatz auf alle Seiten von hackingwithswift.com&nbsp;erweitern.</p>
+<h2 id="der-ausgangspunkt-nlembedding">Der&nbsp;Ausgangspunkt: <code>NLEmbedding</code></h2>
+<p>Mit diesen Testdaten an Ort und Stelle, lassen Sie uns mit dem <em>alten</em> <code>NLEmbedding</code> herumspielen. Sie können den Code in <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds/01-NLEmbedding.swift" rel="noopener noreferrer" target="_blank">Playgrounds/01-NLEmbedding.swift</a>&nbsp;nachschlagen.</p>
+<p>Die grobe Struktur des Codes sieht so&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><code><span class="p">#</span><span class="n">Playground</span><span class="p">(</span><span class="s">"Basic embedding &amp; distance"</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">question</span> <span class="p">=</span> <span class="s">"What is a protocol?"</span>
@@ -172,24 +183,24 @@ Français
     <span class="bp">print</span><span class="p">(</span><span class="s">"Distance: </span><span class="si">\(</span><span class="bp">distance</span><span class="p">.</span><span class="n">description</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Hierum geht es in diesem Code:</p>
+<p>Hierum geht es in diesem&nbsp;Code:</p>
 <ul>
-<li>Wir initialisieren unsere Variablen <code>question</code> und <code>potentialAnswer</code></li>
-<li>Wir erstellen unser <code>NLEmbedding</code>-Objekt - das theoretisch fehlschlagen könnte. Wenn es das tut, können wir nichts anderes tun, als alles zu beenden.</li>
-<li>Dann berechnen wir die <a href="https://developer.apple.com/documentation/naturallanguage/nlembedding/distance(between:and:distancetype:)" rel="noopener noreferrer" target="_blank">Distanz</a> zwischen der Frage und drucken sie aus.</li>
+<li>Wir initialisieren unsere&nbsp;Variablen <code>question</code> und <code>potentialAnswer</code></li>
+<li>Wir erstellen&nbsp;unser <code>NLEmbedding</code>-Objekt - das theoretisch fehlschlagen könnte. Wenn es das tut, können wir nichts anderes tun, als alles zu&nbsp;beenden.</li>
+<li>Dann berechnen wir die <a href="https://developer.apple.com/documentation/naturallanguage/nlembedding/distance(between:and:distancetype:)" rel="noopener noreferrer" target="_blank">Distanz</a> zwischen der Frage und drucken sie&nbsp;aus.</li>
 </ul>
-<p>Als nächstes sehen wir, wie lange es dauert, die Einbettungsvektoren für alle 722 Teile aus unseren Testdaten zu berechnen. Auf meinem MacBook Pro dauert es 35'966 ms ~ 35 Sekunden oder ~ 49 ms / Vektor.</p>
-<p>Der andere Test ist die Berechnung der Distanzen zwischen Satzpaaren:</p>
+<p>Als nächstes sehen wir, wie lange es dauert, die Einbettungsvektoren für alle 722 Teile aus unseren Testdaten zu berechnen. Auf meinem MacBook Pro dauert es 35&#8216;966 ms ~ 35 Sekunden oder ~ 49 ms /&nbsp;Vektor.</p>
+<p>Der andere Test ist die Berechnung der Distanzen zwischen&nbsp;Satzpaaren:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">distance</span> <span class="p">=</span> <span class="n">sentenceEmbedding</span><span class="p">.</span><span class="bp">distance</span><span class="p">(</span><span class="n">between</span><span class="p">:</span> <span class="n">chunk1</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="n">and</span><span class="p">:</span> <span class="n">chunk2</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
 </code></pre></div>
-<p>Wie erwartet dauert dies etwa doppelt so lange, da für jede Distanzberechnung 2 Einbettungsvektoren berechnet werden müssen: <code>⏱️ [Berechnung von Distanzen mit NLEmbedding] count=1  total=72.558420s  avg=72.558420s</code></p>
-<p>Beachten Sie, dass, wenn ich die Schleife ausführe, die die Distanz immer zum gleichen Text berechnet, es fast genau so lange dauert wie nur die Berechnung eines Vektors. Mit anderen Worten, diese Schleife:</p>
+<p>Wie erwartet dauert dies etwa doppelt so lange, da für jede Distanzberechnung 2 Einbettungsvektoren berechnet werden&nbsp;müssen: <code>⏱️ [Berechnung von Distanzen mit NLEmbedding] count=1  total=72.558420s  avg=72.558420s</code></p>
+<p>Beachten Sie, dass, wenn ich die Schleife ausführe, die die Distanz immer zum gleichen Text berechnet, es fast genau so lange dauert wie nur die Berechnung eines Vektors. Mit anderen Worten, diese&nbsp;Schleife:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">chunk</span> <span class="k">in</span> <span class="n">chunks</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">distance</span> <span class="p">=</span> <span class="n">sentenceEmbedding</span><span class="p">.</span><span class="bp">distance</span><span class="p">(</span><span class="n">between</span><span class="p">:</span> <span class="n">chunk</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="n">and</span><span class="p">:</span> <span class="s">"This is a simple text"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>dauert etwa 36 Sekunden. Dies würde darauf hindeuten, dass die Berechnung der Distanz zwischen 2 Vektoren sehr wenig Zeit in Anspruch nimmt...</p>
-<p>Das letzte, was ich tun möchte, ist, die <code>k</code> nächsten Teile zu einer gegebenen Frage zu finden. Meine Methode, dies zu tun, besteht darin, das Array der Teile nach ihrer Distanz zu unserer Frage zu sortieren:</p>
+<p>dauert etwa 36 Sekunden. Dies würde darauf hindeuten, dass die Berechnung der Distanz zwischen 2 Vektoren sehr wenig Zeit in Anspruch&nbsp;nimmt&#8230;</p>
+<p>Das letzte, was ich tun möchte, ist,&nbsp;die <code>k</code> nächsten Teile zu einer gegebenen Frage zu finden. Meine Methode, dies zu tun, besteht darin, das Array der Teile nach ihrer Distanz zu unserer Frage zu&nbsp;sortieren:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">findClosest</span><span class="p">&lt;</span><span class="n">T</span><span class="p">:</span> <span class="n">Embeddable</span><span class="p">&gt;(</span><span class="n">to</span> <span class="n">question</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">in</span> <span class="n">chunks</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="p">{</span>
         <span class="k">guard</span> <span class="kd">let</span> <span class="nv">sentenceEmbedding</span> <span class="p">=</span> <span class="bp">NLEmbedding</span><span class="p">.</span><span class="n">sentenceEmbedding</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="p">.</span><span class="n">english</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
             <span class="c1">// Fallback if embedding is unavailable</span>
@@ -203,9 +214,9 @@ Français
         <span class="k">return</span> <span class="nb">Array</span><span class="p">(</span><span class="bp">sorted</span><span class="p">.</span><span class="kr">prefix</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
     <span class="p">}</span>
 </code></pre></div>
-<p>Das Finden der nächsten Teile zu einer gegebenen Frage (was dem Sortieren des Arrays entspricht) dauert ziemlich lange: 1'554'280 ms ~ 1'554 Sekunden ~ 25 MINUTEN</p>
-<p>Beachten Sie, dass wir 11'290 Vergleiche benötigen. Da ich annehme, dass Apple den Vektor des einen Satzes, der in jedem Vergleich verwendet wird, zwischenspeichert, bedeutet das, dass es die Zeit für 11'290 x (Vektor berechnen + Distanz der Vektoren berechnen) verwendet hat. Seltsamerweise macht das ~ 137 ms / (Vektor berechnen + Distanz berechnen)...</p>
-<p>Ein Versuch, unsere Ergebnisse in einer Übersicht darzustellen:</p>
+<p>Das Finden der nächsten Teile zu einer gegebenen Frage (was dem Sortieren des Arrays entspricht) dauert ziemlich lange: 1&#8216;554&#8216;280 ms ~ 1&#8216;554 Sekunden ~ 25 <span class="caps">MINUTEN</span></p>
+<p>Beachten Sie, dass wir 11&#8216;290 Vergleiche benötigen. Da ich annehme, dass Apple den Vektor des einen Satzes, der in jedem Vergleich verwendet wird, zwischenspeichert, bedeutet das, dass es die Zeit für 11&#8216;290 x (Vektor berechnen + Distanz der Vektoren berechnen) verwendet hat. Seltsamerweise macht das ~ 137 ms / (Vektor berechnen + Distanz&nbsp;berechnen)&#8230;</p>
+<p>Ein Versuch, unsere Ergebnisse in einer Übersicht&nbsp;darzustellen:</p>
 <table>
 <thead>
 <tr>
@@ -221,46 +232,46 @@ Français
 <td>NLEmbedding</td>
 <td>35 sec</td>
 <td>70 sec</td>
-<td>1'554 sec</td>
+<td>1&#8216;554 sec</td>
 <td>49 ms</td>
 </tr>
 </tbody>
 </table>
-<h2 id="zeit-messen">Zeit messen</h2>
-<p>Da wir viel Rechenzeit messen werden, die von unseren Berechnungen verbraucht wird, habe ich ein kleines Zeitverfolgungssystem gebaut. So wird es aufgerufen:</p>
+<h2 id="zeit-messen">Zeit&nbsp;messen</h2>
+<p>Da wir viel Rechenzeit messen werden, die von unseren Berechnungen verbraucht wird, habe ich ein kleines Zeitverfolgungssystem gebaut. So wird es&nbsp;aufgerufen:</p>
 <div class="highlight"><pre><span></span><code><span class="n">timerTrack</span><span class="p">(</span><span class="s">"Timer name"</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Some code that I want to time here</span>
 <span class="p">}</span>
 <span class="n">timerReport</span><span class="p">(</span><span class="s">"Timer name"</span><span class="p">)</span> <span class="c1">// Prints out my timer stats</span>
 </code></pre></div>
-<p>Mein <code>timerTrack</code> gibt auch das Ergebnis seines Blocks zurück und funktioniert asynchron. So können wir Dinge wie dieses tun:</p>
+<p>Mein <code>timerTrack</code> gibt auch das Ergebnis seines Blocks zurück und funktioniert asynchron. So können wir Dinge wie dieses&nbsp;tun:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">result</span> <span class="p">=</span> <span class="k">try</span> <span class="n">timerTrack</span><span class="p">(</span><span class="s">"Embedding"</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">try</span> <span class="n">embeddingResult</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">sentence</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="n">language</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="einbettungsvektor-basierend-auf-nlcontextualembedding-auf-naive-weise-berechnen">Einbettungsvektor basierend auf <code>NLContextualEmbedding</code> auf naive Weise berechnen</h2>
-<p>Wenn wir nun versuchen, etwas Ähnliches mit <code>NLContextualEmbedding</code> zu tun, müssen wir zuerst einige grundlegende Codierungen durchführen: Apples Contextual Embedding generiert eine Liste von Vektoren, speziell einen pro Token.</p>
-<p>Also müssen wir sie zu nur einem Vektor zusammenstellen. Eine Standardmethode, dies zu erreichen, ist das Vektorpooling:</p>
-<p><a href="https://milvus.io/ai-quick-reference/how-do-sentence-transformers-create-fixedlength-sentence-embeddings-from-transformer-models-like-bert-or-roberta" rel="noopener noreferrer" target="_blank">Die häufigste Methode ist das Mittelwert-Pooling, bei dem die Einbettungen aller Tokens (ohne Padding) gemittelt werden.</a></p>
-<p>Stellen Sie sich vor, Sie haben 2 3-dimensionale Vektoren <code>v1</code> und <code>v2</code> und möchten ihren Mittelwertvektor <code>v3</code> berechnen:</p>
+<h2 id="einbettungsvektor-basierend-auf-nlcontextualembedding-auf-naive-weise-berechnen">Einbettungsvektor basierend&nbsp;auf <code>NLContextualEmbedding</code> auf naive Weise&nbsp;berechnen</h2>
+<p>Wenn wir nun versuchen, etwas Ähnliches&nbsp;mit <code>NLContextualEmbedding</code> zu tun, müssen wir zuerst einige grundlegende Codierungen durchführen: Apples Contextual Embedding generiert eine Liste von Vektoren, speziell einen pro&nbsp;Token.</p>
+<p>Also müssen wir sie zu nur einem Vektor zusammenstellen. Eine Standardmethode, dies zu erreichen, ist das&nbsp;Vektorpooling:</p>
+<p><a href="https://milvus.io/ai-quick-reference/how-do-sentence-transformers-create-fixedlength-sentence-embeddings-from-transformer-models-like-bert-or-roberta" rel="noopener noreferrer" target="_blank">Die häufigste Methode ist das Mittelwert-Pooling, bei dem die Einbettungen aller Tokens (ohne Padding) gemittelt&nbsp;werden.</a></p>
+<p>Stellen Sie sich vor, Sie haben 2 3-dimensionale&nbsp;Vektoren <code>v1</code> und <code>v2</code> und möchten ihren&nbsp;Mittelwertvektor <code>v3</code> berechnen:</p>
 <div class="highlight"><pre><span></span><code><span class="n">v3</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">v3</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">v3</span><span class="p">.</span><span class="n">z</span> <span class="p">=</span> <span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 </code></pre></div>
-<p>Es wäre eine einfache Schleife durch die Dimensionen, und für jede Dimension berechnen Sie den Durchschnitt aller Komponenten der Vektoren. Nun stehen wir vor einer kleinen technischen Herausforderung: <code>NLContextualEmbedding</code> liefert uns die Vektoren, eingepackt in ein <code>NLContextualEmbeddingResult</code>. Wenn Sie die <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembeddingresult" rel="noopener noreferrer" target="_blank">Dokumentation</a> nachschlagen, hier ist, was sie sagen:</p>
+<p>Es wäre eine einfache Schleife durch die Dimensionen, und für jede Dimension berechnen Sie den Durchschnitt aller Komponenten der Vektoren. Nun stehen wir vor einer kleinen technischen&nbsp;Herausforderung: <code>NLContextualEmbedding</code> liefert uns die Vektoren, eingepackt in&nbsp;ein <code>NLContextualEmbeddingResult</code>. Wenn Sie die <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembeddingresult" rel="noopener noreferrer" target="_blank">Dokumentation</a> nachschlagen, hier ist, was sie&nbsp;sagen:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">enumerateTokenVectors</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">.</span><span class="n">Index</span><span class="p">&gt;,</span> <span class="n">using</span><span class="p">:</span> <span class="p">([</span><span class="nb">Double</span><span class="p">],</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">.</span><span class="n">Index</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span><span class="p">)</span>
 <span class="p">#</span> <span class="n">Iterates</span> <span class="n">over</span> <span class="n">the</span> <span class="n">embedding</span> <span class="n">vectors</span> <span class="k">for</span> <span class="n">the</span> <span class="n">range</span> <span class="n">you</span> <span class="n">specify</span><span class="p">.</span>
 </code></pre></div>
-<p>Es hat einige Zeit gedauert, dies zu verdauen, aber das ist, worauf es hinausläuft:</p>
-<p>Sie geben ihm einen <code>Range&lt;String.Index&gt;</code>, um anzugeben, von wo bis wo Sie die Vektoren auflisten möchten. Warum haben sie nicht einfach so etwas wie <code>0...10</code> verwendet? Das Geheimnis ist, dass der <code>Range&lt;String.Index&gt;</code> nicht einfach durch den Text geht wie <code>T</code>, <code>h</code>, <code>ì</code>, <code>s</code>, <code>_</code>, <code>i</code>, <code>s</code>... sondern durch die <strong>Tokens</strong>.</p>
-<p>Lassen Sie uns untersuchen, wie die Tokens tatsächlich aussehen:</p>
+<p>Es hat einige Zeit gedauert, dies zu verdauen, aber das ist, worauf es&nbsp;hinausläuft:</p>
+<p>Sie geben ihm&nbsp;einen <code>Range&lt;String.Index&gt;</code>, um anzugeben, von wo bis wo Sie die Vektoren auflisten möchten. Warum haben sie nicht einfach so etwas&nbsp;wie <code>0...10</code> verwendet? Das Geheimnis ist, dass&nbsp;der <code>Range&lt;String.Index&gt;</code> nicht einfach durch den Text geht&nbsp;wie <code>T</code>, <code>h</code>, <code>ì</code>, <code>s</code>, <code>_</code>, <code>i</code>, <code>s</code>&#8230; sondern durch die <strong>Tokens</strong>.</p>
+<p>Lassen Sie uns untersuchen, wie die Tokens tatsächlich&nbsp;aussehen:</p>
 <div class="highlight"><pre><span></span><code><span class="n">result</span><span class="p">.</span><span class="n">enumerateTokenVectors</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">startIndex</span><span class="p">..&lt;</span><span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">endIndex</span><span class="p">)</span> <span class="p">{</span> <span class="n">vector</span><span class="p">,</span> <span class="n">range</span> <span class="k">in</span>
     <span class="kd">let</span> <span class="nv">token</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">[</span><span class="n">range</span><span class="p">]</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">"Vector for token [</span><span class="si">\(</span><span class="n">token</span><span class="si">)</span><span class="s">]"</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">true</span> <span class="c1">// Return true to keep enumerating, false to stop early</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Das ist, was wir bekommen:</p>
+<p>Das ist, was wir&nbsp;bekommen:</p>
 <div class="highlight"><pre><span></span><code>Vector for token []
 Vector for token []
 Vector for token [This]
@@ -270,9 +281,9 @@ Vector for token [sentenc]
 Vector for token [e]
 Vector for token [.]
 </code></pre></div>
-<p>Wenn man das sieht, macht es Sinn, dass der Index nicht einfach von 1 bis zur <code>string.count</code> zählt, sondern ein etwas komplexeres Biest ist.</p>
-<p>Sie haben bereits gesehen, wie man das zweite Argument unserer <code>enumerateTokenVectors</code>-Funktion verwendet: Die <code>using</code>-Closure mit einer Signatur von <code>([Double], Range&lt;String.Index&gt;) -&gt; Bool</code>. Das bedeutet im Grunde, dass Sie ihm ein Array von <code>Double</code> geben (ja, das ist endlich unser Vektor 😜) und einen String-Index und einen <code>Bool</code> zurückgeben: <code>true</code>, wenn Sie möchten, dass es fortfährt, <code>false</code>, wenn Sie möchten, dass es frühzeitig stoppt.</p>
-<p>Mit diesem Wissen, lassen Sie uns eine Funktion schreiben, die den Durchschnitt unserer Vektoren berechnet, die sich in einem <code>NLContextualResult</code> befinden:</p>
+<p>Wenn man das sieht, macht es Sinn, dass der Index nicht einfach von 1 bis&nbsp;zur <code>string.count</code> zählt, sondern ein etwas komplexeres Biest&nbsp;ist.</p>
+<p>Sie haben bereits gesehen, wie man das zweite Argument&nbsp;unserer <code>enumerateTokenVectors</code>-Funktion verwendet:&nbsp;Die <code>using</code>-Closure mit einer Signatur&nbsp;von <code>([Double], Range&lt;String.Index&gt;) -&gt; Bool</code>. Das bedeutet im Grunde, dass Sie ihm ein Array&nbsp;von <code>Double</code> geben (ja, das ist endlich unser Vektor 😜) und einen String-Index und&nbsp;einen <code>Bool</code> zurückgeben: <code>true</code>, wenn Sie möchten, dass es&nbsp;fortfährt, <code>false</code>, wenn Sie möchten, dass es frühzeitig&nbsp;stoppt.</p>
+<p>Mit diesem Wissen, lassen Sie uns eine Funktion schreiben, die den Durchschnitt unserer Vektoren berechnet, die sich in&nbsp;einem <code>NLContextualResult</code> befinden:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">meanVectorNaive</span><span class="p">(</span><span class="n">result</span><span class="p">:</span> <span class="n">NLContextualEmbeddingResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="nb">Double</span><span class="p">]?</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">sumVector</span><span class="p">:</span> <span class="p">[</span><span class="nb">Double</span><span class="p">]?</span> <span class="p">=</span> <span class="kc">nil</span>
     <span class="kd">var</span> <span class="nv">count</span> <span class="p">=</span> <span class="mi">0</span>
@@ -302,18 +313,18 @@ Vector for token [.]
     <span class="k">return</span> <span class="n">sumVector</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Hier ist, was im Code passiert:</p>
+<p>Hier ist, was im Code&nbsp;passiert:</p>
 <ul>
-<li>Wir setzen unseren <code>sumVector</code> und <code>count</code> (dies wird die Anzahl der Vektoren sein, die wir summiert haben).</li>
-<li>Dann rufen wir die <code>enumerateTokenVectors</code> mit einer Closure auf, die den Wert jedes Vektors zum <code>sumVector</code> hinzufügt und <code>count</code> um +1 für jeden Vektor erhöht. Wir starten die Schleife mit einem <code>sumVector</code>, der <code>nil</code> ist, und setzen ihn auf den Wert des ersten Vektors, der hereinkommt.</li>
-<li>Dann teilen wir jede Komponente des <code>sumVector</code> durch die Anzahl der Vektoren, die wir ursprünglich hatten,</li>
-<li>...und wir umgeben dies mit einigen Wachen, um eine Division durch Null zu vermeiden.</li>
+<li>Wir setzen&nbsp;unseren <code>sumVector</code> und <code>count</code> (dies wird die Anzahl der Vektoren sein, die wir summiert&nbsp;haben).</li>
+<li>Dann rufen wir&nbsp;die <code>enumerateTokenVectors</code> mit einer Closure auf, die den Wert jedes Vektors&nbsp;zum <code>sumVector</code> hinzufügt&nbsp;und <code>count</code> um +1 für jeden Vektor erhöht. Wir starten die Schleife mit&nbsp;einem <code>sumVector</code>,&nbsp;der <code>nil</code> ist, und setzen ihn auf den Wert des ersten Vektors, der&nbsp;hereinkommt.</li>
+<li>Dann teilen wir jede Komponente&nbsp;des <code>sumVector</code> durch die Anzahl der Vektoren, die wir ursprünglich&nbsp;hatten,</li>
+<li>&#8230;und wir umgeben dies mit einigen Wachen, um eine Division durch Null zu&nbsp;vermeiden.</li>
 </ul>
-<p>Beachten Sie, dass ich dies in meiner Codebasis als <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/NLContextualEmbeddingExtension.swift" rel="noopener noreferrer" target="_blank">Erweiterungen zu <code>NLContextualEmbeddingResult</code></a> verpackt habe.</p>
-<p>Bevor wir die Zeitmessung unserer naiven Mittelwert-Pooling durchführen, lassen Sie uns sehen, wie lange es dauert, die Einbettungsvektoren mit <code>NLContextualEmbedding</code> zu berechnen:</p>
-<p>Die Berechnung von 722 Einbettungen mit <code>NLContextualEmbedding</code> (ohne sie zu ihrem Mittelwert zu kompilieren) dauert 5245 ms ~ 5,2 Sekunden.</p>
-<p>Um es in Relation zu setzen, fügen wir dies zu unserer Übersichtstabelle hinzu:</p>
-<p>| Datensatz:</p>
+<p>Beachten Sie, dass ich dies in meiner Codebasis als <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/NLContextualEmbeddingExtension.swift" rel="noopener noreferrer" target="_blank">Erweiterungen&nbsp;zu <code>NLContextualEmbeddingResult</code></a> verpackt&nbsp;habe.</p>
+<p>Bevor wir die Zeitmessung unserer naiven Mittelwert-Pooling durchführen, lassen Sie uns sehen, wie lange es dauert, die Einbettungsvektoren&nbsp;mit <code>NLContextualEmbedding</code> zu&nbsp;berechnen:</p>
+<p>Die Berechnung von 722 Einbettungen&nbsp;mit <code>NLContextualEmbedding</code> (ohne sie zu ihrem Mittelwert zu kompilieren) dauert 5245 ms ~ 5,2&nbsp;Sekunden.</p>
+<p>Um es in Relation zu setzen, fügen wir dies zu unserer Übersichtstabelle&nbsp;hinzu:</p>
+<p>|&nbsp;Datensatz:</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

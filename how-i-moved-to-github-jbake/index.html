@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/how-i-moved-to-github-jbake/" />
+    <link rel="alternate" hreflang="de" href="/de/how-i-moved-to-github-jbake/" />
+    <link rel="alternate" hreflang="fr" href="/fr/how-i-moved-to-github-jbake/" />
+    <link rel="canonical" href="/how-i-moved-to-github-jbake/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -33,7 +37,7 @@
 
 
     <meta name="tags" contents="tech" />
-    <meta name="tags" contents="webSite" />
+    <meta name="tags" contents="website" />
 
 </head>
 
@@ -48,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -67,14 +71,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -101,7 +105,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      How I moved to GitHub <span class="amp">&amp;</span>&nbsp;JBake
+      How I moved to GitHub & JBake
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">November 30, 2015</span>
@@ -111,28 +115,28 @@ Français
   class="tag-pill ">tech</a>
 
   <a href="/tag/website/"
-  class="tag-pill ">webSite</a>
+  class="tag-pill ">website</a>
 
 </div>
 
     </div>
 
 
-    <p><strong>*</strong> This page is ~~under construction~~ unfinished… <strong>*</strong></p>
-<p>First: It’s not my invention! Many did it before, there are lots of description out there. It still took me some time ;)</p>
-<p><a href="http://alexcican.com/post/guide-hosting-website-dropbox-github/" rel="noopener noreferrer" target="_blank">This</a> and <a href="http://alexcican.com/post/blog-dropbox-scriptogram" rel="noopener noreferrer" target="_blank">this</a> was the most inspiring source and easiest explanation (that gives confidence ;) ).</p>
+    <p><strong>*</strong> This page is ~~under construction~~ unfinished&#8230; <strong>*</strong></p>
+<p>First: It&#8217;s not my invention! Many did it before, there are lots of description out there. It still took me some time&nbsp;;)</p>
+<p><a href="http://alexcican.com/post/guide-hosting-website-dropbox-github/" rel="noopener noreferrer" target="_blank">This</a> and <a href="http://alexcican.com/post/blog-dropbox-scriptogram" rel="noopener noreferrer" target="_blank">this</a> was the most inspiring source and easiest explanation (that gives confidence ;)&nbsp;).</p>
 <h1 id="setup">Setup</h1>
-<p>So this is the overall setup I have:</p>
+<p>So this is the overall setup I&nbsp;have:</p>
 <ul>
-<li>A directory on my Mac that holds the content. I use the basic structure that <a href="http://jbake.org" rel="noopener noreferrer" target="_blank">Jbake</a> uses.</li>
-<li>A git-cloned directory on my Mac with the output of the jBake-process</li>
-<li>A little script that I run every time I modified something. The script does the baking and the git-publishing</li>
-<li>And of course the settings in the <span class="caps">DNS</span> to point my Domain name to the Github IPs</li>
+<li>A directory on my Mac that holds the content. I use the basic structure that <a href="http://jbake.org" rel="noopener noreferrer" target="_blank">Jbake</a>&nbsp;uses.</li>
+<li>A git-cloned directory on my Mac with the output of the&nbsp;jBake-process</li>
+<li>A little script that I run every time I modified something. The script does the baking and the&nbsp;git-publishing</li>
+<li>And of course the settings in the <span class="caps">DNS</span> to point my Domain name to the Github&nbsp;IPs</li>
 </ul>
 <h2 id="jbake">JBake</h2>
-<p>Why do I use JBake? I like the principle and I feel more comfortable in Java than in other programming languages. I haven’t touched the JBake internal code, but I feel confident that I could.
-The principle way that JBake operates is similar to the famous <a href="https://jekyllrb.com/" rel="noopener noreferrer" target="_blank">Jekyll</a>: It parses content files and creates (static) <span class="caps">HTML</span> files out of it. The content files can contain Markdown or some other formats; I just use Markdown.</p>
-<p>My directory structure looks like this:</p>
+<p>Why do I use JBake? I like the principle and I feel more comfortable in Java than in other programming languages. I haven&#8217;t touched the JBake internal code, but I feel confident that I could.
+The principle way that JBake operates is similar to the famous <a href="https://jekyllrb.com/" rel="noopener noreferrer" target="_blank">Jekyll</a>: It parses content files and creates (static) <span class="caps">HTML</span> files out of it. The content files can contain Markdown or some other formats; I just use&nbsp;Markdown.</p>
+<p>My directory structure looks like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code>.
 |-- assets
 |   |-- favicon.gif
@@ -161,11 +165,11 @@ The principle way that JBake operates is similar to the famous <a href="https://
 |
 |-- jbake.properties
 </code></pre></div>
-<p>By default JBake produces the output directory into this tree. In my case I bake my stuff into a directory that is git-synced.</p>
-<h2 id="the-github-setup">The GitHub setup</h2>
-<h2 id="the-dns-settings">The <span class="caps">DNS</span> settings</h2>
-<h1 id="next-up">Next up</h1>
-<p>There are a couple of things I plan to change.</p>
+<p>By default JBake produces the output directory into this tree. In my case I bake my stuff into a directory that is&nbsp;git-synced.</p>
+<h2 id="the-github-setup">The GitHub&nbsp;setup</h2>
+<h2 id="the-dns-settings">The <span class="caps">DNS</span>&nbsp;settings</h2>
+<h1 id="next-up">Next&nbsp;up</h1>
+<p>There are a couple of things I plan to&nbsp;change.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

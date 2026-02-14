@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/optimal-swimming-slot/" />
+    <link rel="alternate" hreflang="de" href="/de/optimal-swimming-slot/" />
+    <link rel="alternate" hreflang="fr" href="/fr/optimal-swimming-slot/" />
+    <link rel="canonical" href="/de/optimal-swimming-slot/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/optimal-swimming-slot/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/optimal-swimming-slot/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -104,20 +115,20 @@ Français
       | <a href="/optimal-swimming-slot/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p><img alt="Schwimmbäder" src="pools.png"/></p>
-<p>Wie die meisten von Ihnen wahrscheinlich wissen, lebe ich in <a href="https://maps.app.goo.gl/QXy56tXkBf6tJ2s98" rel="noopener noreferrer" target="_blank">München/Deutschland</a>. Und seit wir in Vietnam gelebt haben, bin ich vom Schwimmen begeistert – vielleicht nicht wirklich süchtig, aber ich genieße es. Ich habe gelernt, über 1 km im Meer in Vietnam zu kraulen, und von Zeit zu Zeit arbeite ich daran, diese Fähigkeit hier in München aufrechtzuerhalten.</p>
-<p>Das Problem ist, in München braucht man ein öffentliches Schwimmbad (weil ich kein privates habe 😉), und öffentliche Schwimmbäder neigen dazu, voll und überfüllt zu sein. Glücklicherweise bieten die SWM (die Münchner Stadtwerke) eine <a href="https://www.swm.de/baeder/auslastung" rel="noopener noreferrer" target="_blank">Website</a> an, die uns sagt, wie voll die verschiedenen öffentlichen Schwimmbäder sind.</p>
-<p>Obwohl ich 40 Stunden pro Woche arbeite (oder so…), habe ich vielleicht etwas Flexibilität, wann ich schwimmen gehe: vor der Arbeit, nach der Arbeit, vielleicht sogar in der Mittagspause. Und die Frage stellt sich, wann man am besten gehen sollte. Wann sind die Schwimmbäder am wenigsten überfüllt?</p>
-<p>Zum Beispiel: Ich vermute, dass es nicht die klügste Idee ist, so früh wie möglich am Morgen zu gehen, da viele sportliche Büroangestellte dies tun. Vielleicht ist es also klüger, morgens mit meiner Frau Tee zu trinken und dann schwimmen zu gehen und ins Büro zu fahren.</p>
-<p>Das Beste an diesem Problem: Es ist ein typisches Machine-Learning-Problem 😉</p>
-<p>Also wäre dies der Plan:</p>
+    <p><img alt="Schwimmbäder" src="/optimal-swimming-slot/pools.png"/></p>
+<p>Wie die meisten von Ihnen wahrscheinlich wissen, lebe ich in <a href="https://maps.app.goo.gl/QXy56tXkBf6tJ2s98" rel="noopener noreferrer" target="_blank">München/Deutschland</a>. Und seit wir in Vietnam gelebt haben, bin ich vom Schwimmen begeistert – vielleicht nicht wirklich süchtig, aber ich genieße es. Ich habe gelernt, über 1 km im Meer in Vietnam zu kraulen, und von Zeit zu Zeit arbeite ich daran, diese Fähigkeit hier in München&nbsp;aufrechtzuerhalten.</p>
+<p>Das Problem ist, in München braucht man ein öffentliches Schwimmbad (weil ich kein privates habe 😉), und öffentliche Schwimmbäder neigen dazu, voll und überfüllt zu sein. Glücklicherweise bieten die <span class="caps">SWM</span> (die Münchner Stadtwerke) eine <a href="https://www.swm.de/baeder/auslastung" rel="noopener noreferrer" target="_blank">Website</a> an, die uns sagt, wie voll die verschiedenen öffentlichen Schwimmbäder&nbsp;sind.</p>
+<p>Obwohl ich 40 Stunden pro Woche arbeite (oder so…), habe ich vielleicht etwas Flexibilität, wann ich schwimmen gehe: vor der Arbeit, nach der Arbeit, vielleicht sogar in der Mittagspause. Und die Frage stellt sich, wann man am besten gehen sollte. Wann sind die Schwimmbäder am wenigsten&nbsp;überfüllt?</p>
+<p>Zum Beispiel: Ich vermute, dass es nicht die klügste Idee ist, so früh wie möglich am Morgen zu gehen, da viele sportliche Büroangestellte dies tun. Vielleicht ist es also klüger, morgens mit meiner Frau Tee zu trinken und dann schwimmen zu gehen und ins Büro zu&nbsp;fahren.</p>
+<p>Das Beste an diesem Problem: Es ist ein typisches Machine-Learning-Problem&nbsp;😉</p>
+<p>Also wäre dies der&nbsp;Plan:</p>
 <ul>
-<li>Einen Scraper bauen, der alle 10 Minuten die Belegung der Schwimmbäder erfasst und irgendwo speichert</li>
-<li>Ein Machine-Learning-Modell mit diesen Daten trainieren</li>
-<li>Eine Benutzeroberfläche erstellen, die fragt, wann Sie gehen könnten, und Ihnen Ratschläge gibt, wann Sie gehen sollten</li>
-<li>Zusätzliche Funktionen: Berücksichtigung von Wochenenden und Feiertagen, Schwimmbadmerkmale (z.B. ich schwimme lieber in einem 50m-Becken)</li>
+<li>Einen Scraper bauen, der alle 10 Minuten die Belegung der Schwimmbäder erfasst und irgendwo&nbsp;speichert</li>
+<li>Ein Machine-Learning-Modell mit diesen Daten&nbsp;trainieren</li>
+<li>Eine Benutzeroberfläche erstellen, die fragt, wann Sie gehen könnten, und Ihnen Ratschläge gibt, wann Sie gehen&nbsp;sollten</li>
+<li>Zusätzliche Funktionen: Berücksichtigung von Wochenenden und Feiertagen, Schwimmbadmerkmale (z.B. ich schwimme lieber in einem&nbsp;50m-Becken)</li>
 </ul>
-<p>Hat jemand Lust, solch ein Tool zu bauen? Schicken Sie mir eine E-Mail, wenn Sie mitmachen möchten 😉</p>
+<p>Hat jemand Lust, solch ein Tool zu bauen? Schicken Sie mir eine E-Mail, wenn Sie mitmachen möchten&nbsp;😉</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

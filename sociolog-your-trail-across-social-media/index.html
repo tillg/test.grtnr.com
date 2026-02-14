@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/sociolog-your-trail-across-social-media/" />
+    <link rel="alternate" hreflang="de" href="/de/sociolog-your-trail-across-social-media/" />
+    <link rel="alternate" hreflang="fr" href="/fr/sociolog-your-trail-across-social-media/" />
+    <link rel="canonical" href="/sociolog-your-trail-across-social-media/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -32,7 +36,7 @@
 
 
 
-    <meta name="tags" contents="softwareWeNeed" />
+    <meta name="tags" contents="softwareweneed" />
 
 </head>
 
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,54 +104,54 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      sociolog - Your trail across social&nbsp;media
+      sociolog - Your trail across social media
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">January 4, 2016</span>
       
       <div class="tag-pills">
   <a href="/tag/softwareweneed/"
-  class="tag-pill ">softwareWeNeed</a>
+  class="tag-pill ">softwareweneed</a>
 
 </div>
 
     </div>
 
 
-    <p>I write or blog in different media:</p>
+    <p>I write or blog in different&nbsp;media:</p>
 <ul>
 <li>Twitter</li>
 <li>Facebook</li>
-<li>A private blog with restricted access (because it contains family pictures)</li>
+<li>A private blog with restricted access (because it contains family&nbsp;pictures)</li>
 <li>This <a href="http://tillgartner.com" rel="noopener noreferrer" target="_blank">blog</a></li>
 </ul>
-<p>From time to time I find it nice to scroll through my past. I do this most often on our family blog, because it contains the most interesting content and because it is easy to scroll through. I would like to be able to scroll through all my past across all media.</p>
-<p>So this is what my software should do:</p>
+<p>From time to time I find it nice to scroll through my past. I do this most often on our family blog, because it contains the most interesting content and because it is easy to scroll through. I would like to be able to scroll through all my past across all&nbsp;media.</p>
+<p>So this is what my software should&nbsp;do:</p>
 <ul>
-<li>Collect all entries I wrote in the social media:</li>
+<li>Collect all entries I wrote in the social&nbsp;media:</li>
 <li>Twitter</li>
 <li>Facebook</li>
 <li>Wordpress</li>
-<li>Create one document per entry in a Github Repo</li>
-<li>Handle properly duplicate content: Since some years my Twitter account is <em>linked</em> to my Facebook account in that Twitter entries are replicated to Facebook. That’s because I have people that I consider <em>audience</em> in both media.</li>
-<li>Collect also the feedback to my posts</li>
-<li>Nicely display them in a static way, including overview pages</li>
+<li>Create one document per entry in a Github&nbsp;Repo</li>
+<li>Handle properly duplicate content: Since some years my Twitter account is <em>linked</em> to my Facebook account in that Twitter entries are replicated to Facebook. That&#8217;s because I have people that I consider <em>audience</em> in both&nbsp;media.</li>
+<li>Collect also the feedback to my&nbsp;posts</li>
+<li>Nicely display them in a static way, including overview&nbsp;pages</li>
 </ul>
-<p>Some technical thoughts:</p>
+<p>Some technical&nbsp;thoughts:</p>
 <ul>
-<li>I would write it in java because that’s what I know best</li>
+<li>I would write it in java because that&#8217;s what I know&nbsp;best</li>
 <li>Would be a headless program i.e. no <span class="caps">UI</span></li>
-<li>Input should be the date of the last recorded social media entry</li>
-<li>It collects all the entries (including the comments to it) on the different social media channels since that date</li>
-<li>It dedupes them (i.e. merges the ones that are the same or replicates of one another on different channels)</li>
-<li>It creates one document / file per social media entry and writes them in an output directory</li>
-<li>This directory is then replicated / added to a github account</li>
-<li>Social media entry documents would be named like <code>2015-12-03-The_title_of_what_ I_wrote-TWITTER.json</code></li>
-<li>There would be a <em>header file</em> with a fixed name, i.e. <code>sociologs.json</code>. This file would hold the first 20 logs and point to a file with the next logs.</li>
-<li>The domain <code>sociolog.io</code> would be <a href="https://www.godaddy.com/domains/searchresults.aspx?&amp;checkAvail=1&amp;domainToCheck=sociolog.io" rel="noopener noreferrer" target="_blank">available</a> - as of today, Jan 4 2016.</li>
-<li>The generated <code>index.html</code> would load the data via <span class="caps">JS</span>/<span class="caps">AJAX</span> requests and continue loading while the user scrolls down</li>
+<li>Input should be the date of the last recorded social media&nbsp;entry</li>
+<li>It collects all the entries (including the comments to it) on the different social media channels since that&nbsp;date</li>
+<li>It dedupes them (i.e. merges the ones that are the same or replicates of one another on different&nbsp;channels)</li>
+<li>It creates one document / file per social media entry and writes them in an output&nbsp;directory</li>
+<li>This directory is then replicated / added to a github&nbsp;account</li>
+<li>Social media entry documents would be named&nbsp;like <code>2015-12-03-The_title_of_what_ I_wrote-TWITTER.json</code></li>
+<li>There would be a <em>header file</em> with a fixed name,&nbsp;i.e. <code>sociologs.json</code>. This file would hold the first 20 logs and point to a file with the next&nbsp;logs.</li>
+<li>The&nbsp;domain <code>sociolog.io</code> would be <a href="https://www.godaddy.com/domains/searchresults.aspx?&amp;checkAvail=1&amp;domainToCheck=sociolog.io" rel="noopener noreferrer" target="_blank">available</a> - as of today, Jan 4&nbsp;2016.</li>
+<li>The&nbsp;generated <code>index.html</code> would load the data via <span class="caps">JS</span>/<span class="caps">AJAX</span> requests and continue loading while the user scrolls&nbsp;down</li>
 </ul>
-<p>If anyone is interested, or has comment, please get in touch at till<code>dot</code>gartner<code>at</code>gmail<code>dot</code>com.</p>
+<p>If anyone is interested, or has comment, please get in touch at&nbsp;till<code>dot</code>gartner<code>at</code>gmail<code>dot</code>com.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

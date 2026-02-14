@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/cursor-magic/" />
+    <link rel="alternate" hreflang="de" href="/de/cursor-magic/" />
+    <link rel="alternate" hreflang="fr" href="/fr/cursor-magic/" />
+    <link rel="canonical" href="/fr/cursor-magic/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/fr/">Home</a>
 
-  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/fr/about">About</a>
-  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+  <a class="sidebar-nav-item" href="/fr/tags">Sujets</a>
+  <a class="sidebar-nav-item" href="/recipes">Recettes</a>
+  <a class="sidebar-nav-item" href="/fr/about">À propos</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Mentions légales</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/cursor-magic/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/cursor-magic/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -106,34 +117,34 @@ Deutsch
 
     <div class="toc">
 <ul>
-<li><a href="#structure-du-prompt">Structure du Prompt</a></li>
+<li><a href="#structure-du-prompt">Structure du&nbsp;Prompt</a></li>
 <li><a href="#cursorrules">Cursorrules</a></li>
-<li><a href="#regles-ia-dans-les-parametres-de-cursor">Règles IA dans les Paramètres de Cursor</a></li>
-<li><a href="#petits-prompts-utiles">Petits Prompts Utiles</a></li>
+<li><a href="#regles-ia-dans-les-parametres-de-cursor">Règles <span class="caps">IA</span> dans les Paramètres de&nbsp;Cursor</a></li>
+<li><a href="#petits-prompts-utiles">Petits Prompts&nbsp;Utiles</a></li>
 <li><a href="#prompts-plus-grands">Prompts Plus Grands</a><ul>
-<li><a href="#resume-de-letat-actuel">Résumé de l'état actuel</a></li>
-<li><a href="#impartial-5050">Impartial 50/50</a></li>
-<li><a href="#requete-de-recherche-en-un-paragraphe">Requête de recherche en un paragraphe</a></li>
+<li><a href="#resume-de-letat-actuel">Résumé de l&#8217;état&nbsp;actuel</a></li>
+<li><a href="#impartial-5050">Impartial&nbsp;50/50</a></li>
+<li><a href="#requete-de-recherche-en-un-paragraphe">Requête de recherche en un&nbsp;paragraphe</a></li>
 </ul>
 </li>
 <li><a href="#instructions">Instructions</a></li>
-<li><a href="#autres-outils">Autres Outils</a></li>
+<li><a href="#autres-outils">Autres&nbsp;Outils</a></li>
 </ul>
 </div>
-<p>Le week-end dernier, j'ai découvert cette vidéo de David Ondrej : <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. Le titre n'est pas très accrocheur, mais le contenu m'a été très utile. Voici donc mes notes pour que je puisse utiliser tous ses conseils et avoir les différents prompts et extraits à portée de main pour les utiliser lors du codage.</p>
+<p>Le week-end dernier, j&#8217;ai découvert cette vidéo de David Ondrej : <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. Le titre n&#8217;est pas très accrocheur, mais le contenu m&#8217;a été très utile. Voici donc mes notes pour que je puisse utiliser tous ses conseils et avoir les différents prompts et extraits à portée de main pour les utiliser lors du&nbsp;codage.</p>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gYLNxUxVomY?si=xQAMyMvQCsSwWztk" title="YouTube video player" width="560"></iframe>
-<h2 id="structure-du-prompt">Structure du Prompt</h2>
-<p>La structure générale du prompt que David suggère :</p>
+<h2 id="structure-du-prompt">Structure du&nbsp;Prompt</h2>
+<p>La structure générale du prompt que David suggère&nbsp;:</p>
 <ol>
-<li>ce que nous faisons</li>
-<li>taguer les fichiers pertinents</li>
-<li>comment exécuter // ce qu'il ne faut pas faire</li>
-<li>décharge de contexte</li>
-<li>répéter l'instruction principale</li>
-<li>format de sortie</li>
+<li>ce que nous&nbsp;faisons</li>
+<li>taguer les fichiers&nbsp;pertinents</li>
+<li>comment exécuter // ce qu&#8217;il ne faut pas&nbsp;faire</li>
+<li>décharge de&nbsp;contexte</li>
+<li>répéter l&#8217;instruction&nbsp;principale</li>
+<li>format de&nbsp;sortie</li>
 </ol>
 <h2 id="cursorrules">Cursorrules</h2>
-<p><code>.cursorrules.md</code> est un fichier que vous placez dans le répertoire racine de votre projet pour donner à l'IA plus de contexte sur votre projet. Voici la structure du fichier que David suggère :</p>
+<p><code>.cursorrules.md</code> est un fichier que vous placez dans le répertoire racine de votre projet pour donner à l&#8217;<span class="caps">IA</span> plus de contexte sur votre projet. Voici la structure du fichier que David suggère&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># APERÇU DU PROJET</span>
 
 <span class="gh"># PERSONNALITÉ</span>
@@ -166,10 +177,10 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 
 <span class="k">-</span><span class="w"> </span>Répétez les instructions les plus importantes.
 </code></pre></div>
-<p>Il suggère également fortement d'avoir un <code>.cursorignore</code> dans lequel vous listez vos fichiers <code>.env</code>. Cela empêche le chat et Composer d'écrire accidentellement dans ces fichiers.</p>
-<h2 id="regles-ia-dans-les-parametres-de-cursor">Règles IA dans les Paramètres de Cursor</h2>
-<p>Les règles IA doivent être définies dans les paramètres de cursor. Elles ne doivent contenir rien de spécifique au projet, juste des principes de codage que vous voudriez toujours appliquer. C'est la différence avec les <code>.cursorrules</code> qui contiennent également des détails spécifiques au projet.</p>
-<p>Un exemple :</p>
+<p>Il suggère également fortement d&#8217;avoir&nbsp;un <code>.cursorignore</code> dans lequel vous listez vos&nbsp;fichiers <code>.env</code>. Cela empêche le chat et Composer d&#8217;écrire accidentellement dans ces&nbsp;fichiers.</p>
+<h2 id="regles-ia-dans-les-parametres-de-cursor">Règles <span class="caps">IA</span> dans les Paramètres de&nbsp;Cursor</h2>
+<p>Les règles <span class="caps">IA</span> doivent être définies dans les paramètres de cursor. Elles ne doivent contenir rien de spécifique au projet, juste des principes de codage que vous voudriez toujours appliquer. C&#8217;est la différence avec&nbsp;les <code>.cursorrules</code> qui contiennent également des détails spécifiques au&nbsp;projet.</p>
+<p>Un exemple&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># Principes Fondamentaux</span>
 
 <span class="k">-</span><span class="w"> </span>Écrire du code propre, simple et lisible
@@ -203,8 +214,8 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 <span class="k">-</span><span class="w"> </span>Documenter tous les changements et leur raisonnement DANS LES COMMENTAIRES QUE VOUS ÉCRIVEZ
 <span class="k">-</span><span class="w"> </span>lors de l'écriture de commentaires, utiliser un langage clair et facile à comprendre. écrire des phrases courtes.
 </code></pre></div>
-<h2 id="petits-prompts-utiles">Petits Prompts Utiles</h2>
-<p>David fournit une liste de petits prompts utiles ou d'extraits de prompts. J'en ai copié certains ici pour une utilisation copier-coller :</p>
+<h2 id="petits-prompts-utiles">Petits Prompts&nbsp;Utiles</h2>
+<p>David fournit une liste de petits prompts utiles ou d&#8217;extraits de prompts. J&#8217;en ai copié certains ici pour une utilisation copier-coller&nbsp;:</p>
 <div class="highlight"><pre><span></span><code>Procédez comme un développeur senior avec un accent sur une architecture claire.
 
 Moins il y a de lignes de code, mieux c'est.
@@ -219,9 +230,9 @@ NE PAS SUPPRIMER LES COMMENTAIRES
 
 Vous devriez commencer le paragraphe de raisonnement avec beaucoup d'incertitude, et gagner lentement en confiance à mesure que vous réfléchissez davantage à l'élément.
 </code></pre></div>
-<h2 id="prompts-plus-grands">Prompts Plus Grands</h2>
-<h3 id="resume-de-letat-actuel">Résumé de l'état actuel</h3>
-<p>Utilisé pour résumer un flux de composition et passer à un nouveau dialogue de composition.</p>
+<h2 id="prompts-plus-grands">Prompts Plus&nbsp;Grands</h2>
+<h3 id="resume-de-letat-actuel">Résumé de l&#8217;état&nbsp;actuel</h3>
+<p>Utilisé pour résumer un flux de composition et passer à un nouveau dialogue de&nbsp;composition.</p>
 <div class="highlight"><pre><span></span><code>Avant de continuer, j'ai besoin que vous me donniez un résumé de l'état actuel du projet.
 
 Formatez cela en 3 paragraphes concis, où vous décrivez ce que nous venons de faire, ce qui n'a pas fonctionné, quels fichiers ont été mis à jour/créés, quelles erreurs éviter, les idées clés/leçons que nous avons apprises, les problèmes/erreurs auxquels nous faisons face,… et tout autre élément dont un programmeur pourrait avoir besoin pour travailler efficacement sur ce projet.
@@ -230,31 +241,31 @@ Formatez cela en 3 paragraphes concis, où vous décrivez ce que nous venons de 
 
 Je m'attends à voir trois paragraphes concis, écrits comme si vous donniez des instructions à un autre programmeur et que c'était TOUT ce que vous pouviez lui dire.
 </code></pre></div>
-<h3 id="impartial-5050">Impartial 50/50</h3>
+<h3 id="impartial-5050">Impartial&nbsp;50/50</h3>
 <div class="highlight"><pre><span></span><code>AVANT DE RÉPONDRE, je veux que vous écriviez deux paragraphes détaillés, l'un argumentant pour chacune de ces solutions - ne tirez pas de conclusions hâtives, considérez sérieusement les deux approches
 
 ensuite, après avoir terminé, dites-moi si l'une de ces solutions est évidemment meilleure que l'autre, et pourquoi.
 </code></pre></div>
-<h3 id="requete-de-recherche-en-un-paragraphe">Requête de recherche en un paragraphe</h3>
+<h3 id="requete-de-recherche-en-un-paragraphe">Requête de recherche en un&nbsp;paragraphe</h3>
 <div class="highlight"><pre><span></span><code>effectuons une recherche web. votre tâche est d'écrire une requête de recherche en un paragraphe, comme si vous disiez à un chercheur humain ce qu'il faut trouver, en incluant tout le contexte pertinent. formatez le paragraphe comme des instructions claires, commandant à un chercheur de trouver ce que nous cherchons. demandez des extraits de code ou des détails techniques lorsque c'est pertinent
 </code></pre></div>
 <h2 id="instructions">Instructions</h2>
-<p>David suggère d'avoir un répertoire <code>instructions</code> qui contient des fichiers md avec des conseils pour l'IA. De cette façon, vous pouvez référencer ces fichiers depuis le prompt de Composer. Il préfère ce type de fichiers d'instructions plutôt que de référencer @Docs dans cursor, ce qui semble ne pas encore bien fonctionner.</p>
-<p>Fichiers d'instructions qu'il a mentionnés :</p>
+<p>David suggère d&#8217;avoir un&nbsp;répertoire <code>instructions</code> qui contient des fichiers md avec des conseils pour l&#8217;<span class="caps">IA</span>. De cette façon, vous pouvez référencer ces fichiers depuis le prompt de Composer. Il préfère ce type de fichiers d&#8217;instructions plutôt que de référencer @Docs dans cursor, ce qui semble ne pas encore bien&nbsp;fonctionner.</p>
+<p>Fichiers d&#8217;instructions qu&#8217;il a mentionnés&nbsp;:</p>
 <ul>
-<li><code>supabase.md</code> : Un fichier qui décrit la structure de sa base de données, afin que cursor connaisse les tables, champs, mandatorité, etc.</li>
-<li><code>roadmap.md</code> : Une explication de la feuille de route de votre projet.</li>
+<li><code>supabase.md</code> : Un fichier qui décrit la structure de sa base de données, afin que cursor connaisse les tables, champs, mandatorité,&nbsp;etc.</li>
+<li><code>roadmap.md</code> : Une explication de la feuille de route de votre&nbsp;projet.</li>
 </ul>
-<h2 id="autres-outils">Autres Outils</h2>
-<p>En plus de Cursor, David utilise de nombreux autres outils. Certains de ceux qu'il a mentionnés :</p>
+<h2 id="autres-outils">Autres&nbsp;Outils</h2>
+<p>En plus de Cursor, David utilise de nombreux autres outils. Certains de ceux qu&#8217;il a mentionnés&nbsp;:</p>
 <ul>
 <li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a></li>
-<li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> pour des discussions parallèles avec une IA avancée.</li>
-<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> pour des recherches web intelligentes.</li>
-<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> pour parler plutôt que taper</li>
-<li><a href="https://v0.dev" rel="noopener noreferrer" target="_blank">v0</a> un outil pour créer des applications Web dans le navigateur en discutant avec une IA.</li>
+<li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> pour des discussions parallèles avec une <span class="caps">IA</span>&nbsp;avancée.</li>
+<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> pour des recherches web&nbsp;intelligentes.</li>
+<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> pour parler plutôt que&nbsp;taper</li>
+<li><a href="https://v0.dev" rel="noopener noreferrer" target="_blank">v0</a> un outil pour créer des applications Web dans le navigateur en discutant avec une <span class="caps">IA</span>.</li>
 <li><a href="https://lovable.dev" rel="noopener noreferrer" target="_blank">Lovable</a> pour construire des backends, notamment avec <a href="https://supabase.com" rel="noopener noreferrer" target="_blank">Supabase</a></li>
-<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> pour construire des sites web.</li>
+<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> pour construire des sites&nbsp;web.</li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

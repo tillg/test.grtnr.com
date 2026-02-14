@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/mcp-playground/" />
+    <link rel="alternate" hreflang="de" href="/de/mcp-playground/" />
+    <link rel="alternate" hreflang="fr" href="/fr/mcp-playground/" />
+    <link rel="canonical" href="/mcp-playground/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -32,8 +36,8 @@
 
 
 
-    <meta name="tags" contents="Tech" />
-    <meta name="tags" contents="AI" />
+    <meta name="tags" contents="tech" />
+    <meta name="tags" contents="ai" />
 
 </head>
 
@@ -48,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -67,14 +71,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -101,17 +105,17 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      <span class="caps">MCP</span>&nbsp;Playground
+      MCP Playground
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">May 18, 2025</span>
       
       <div class="tag-pills">
   <a href="/tag/tech/"
-  class="tag-pill ">Tech</a>
+  class="tag-pill ">tech</a>
 
   <a href="/tag/ai/"
-  class="tag-pill ">AI</a>
+  class="tag-pill ">ai</a>
 
 </div>
 
@@ -122,27 +126,27 @@ Français
 <div class="toc">
 <ul>
 <li><a href="#questions">Questions</a></li>
-<li><a href="#accessing-a-mcp-server">Accessing a <span class="caps">MCP</span> server</a></li>
+<li><a href="#accessing-a-mcp-server">Accessing a <span class="caps">MCP</span>&nbsp;server</a></li>
 <li><a href="#mcp-servers"><span class="caps">MCP</span> Servers</a><ul>
-<li><a href="#filesystem-mcp-server">Filesystem <span class="caps">MCP</span> Server</a></li>
+<li><a href="#filesystem-mcp-server">Filesystem <span class="caps">MCP</span>&nbsp;Server</a></li>
 </ul>
 </li>
 <li><a href="#mcp-servers_1"><span class="caps">MCP</span> Servers</a><ul>
-<li><a href="#filesystem-access">FileSystem Access</a></li>
-<li><a href="#xcode-build">Xcode Build</a></li>
+<li><a href="#filesystem-access">FileSystem&nbsp;Access</a></li>
+<li><a href="#xcode-build">Xcode&nbsp;Build</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <h2 id="questions">Questions</h2>
-<p>Open questions that I have.</p>
+<p>Open questions that I&nbsp;have.</p>
 <ul>
-<li>Can I run Claude with different <span class="caps">MCP</span> Server configurations? I.e. I have one configuration per project, say one for my Python project (including access only to my Python project directory), one for my Swift/Xcode project (with a different dir and different tools).</li>
+<li>Can I run Claude with different <span class="caps">MCP</span> Server configurations? I.e. I have one configuration per project, say one for my Python project (including access only to my Python project directory), one for my Swift/Xcode project (with a different dir and different&nbsp;tools).</li>
 <li>Test: Play around with <span class="caps">MCP</span> Inspector and <a href="https://github.com/cameroncooke/XcodeBuildMCP" rel="noopener noreferrer" target="_blank">Xcode Build <span class="caps">MCP</span> Server</a>.</li>
 </ul>
-<h2 id="accessing-a-mcp-server">Accessing a <span class="caps">MCP</span> server</h2>
+<h2 id="accessing-a-mcp-server">Accessing a <span class="caps">MCP</span>&nbsp;server</h2>
 <p>When searching and eventually finding an <span class="caps">MCP</span> server for my use case, I find it helpful to play around with them, in order to <em>understand</em> what tooling the <span class="caps">LLM</span> gets. The easiest way to do this is with the <a href="https://github.com/modelcontextprotocol/inspector" rel="noopener noreferrer" target="_blank"><span class="caps">MCP</span> Inspector</a>.</p>
-<p>Get going:</p>
+<p>Get&nbsp;going:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Make sure you have installed a recent version of nodeJs (in my case with nvm)</span>
 nvm<span class="w"> </span>use<span class="w"> </span><span class="m">24</span>
 npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </span>node<span class="w"> </span>build/index.js
@@ -150,7 +154,7 @@ npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </spa
 <span class="c1"># It downloads &amp; starts the MCP UI Client and serves it locally.</span>
 </code></pre></div>
 <p><strong>Configuration</strong></p>
-<p>The Inspector keeps whatever you type in the sidebar in localStorage, but for repeatable setups you can save a tiny <span class="caps">JSON</span> file and point the <span class="caps">CLI</span> to it:</p>
+<p>The Inspector keeps whatever you type in the sidebar in localStorage, but for repeatable setups you can save a tiny <span class="caps">JSON</span> file and point the <span class="caps">CLI</span> to&nbsp;it:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// mcp.json</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -167,15 +171,15 @@ npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </spa
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Then run <code>npx @modelcontextprotocol/inspector --config ./mcp.json --server filesystem</code></p>
-<h2 id="mcp-servers"><span class="caps">MCP</span> Servers</h2>
-<p><span class="caps">MCP</span> Servers I used or looked at:</p>
-<h3 id="filesystem-mcp-server">Filesystem <span class="caps">MCP</span> Server</h3>
+<p>Then&nbsp;run <code>npx @modelcontextprotocol/inspector --config ./mcp.json --server filesystem</code></p>
+<h2 id="mcp-servers"><span class="caps">MCP</span>&nbsp;Servers</h2>
+<p><span class="caps">MCP</span> Servers I used or looked&nbsp;at:</p>
+<h3 id="filesystem-mcp-server">Filesystem <span class="caps">MCP</span>&nbsp;Server</h3>
 <ul>
-<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" rel="noopener noreferrer" target="_blank">Filesystem <span class="caps">MCP</span> Server</a></li>
-<li>One of the <a href="https://github.com/modelcontextprotocol/servers?tab=readme-ov-file#-reference-servers" rel="noopener noreferrer" target="_blank">Reference Servers</a></li>
+<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" rel="noopener noreferrer" target="_blank">Filesystem <span class="caps">MCP</span>&nbsp;Server</a></li>
+<li>One of the <a href="https://github.com/modelcontextprotocol/servers?tab=readme-ov-file#-reference-servers" rel="noopener noreferrer" target="_blank">Reference&nbsp;Servers</a></li>
 </ul>
-<p>Main config:</p>
+<p>Main&nbsp;config:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"filesystem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -190,13 +194,13 @@ npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </spa
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="mcp-servers_1"><span class="caps">MCP</span> Servers</h2>
-<p><span class="caps">MCP</span> Servers I tested or plan to test.</p>
-<h3 id="filesystem-access">FileSystem Access</h3>
-<h3 id="xcode-build">Xcode Build</h3>
+<h2 id="mcp-servers_1"><span class="caps">MCP</span>&nbsp;Servers</h2>
+<p><span class="caps">MCP</span> Servers I tested or plan to&nbsp;test.</p>
+<h3 id="filesystem-access">FileSystem&nbsp;Access</h3>
+<h3 id="xcode-build">Xcode&nbsp;Build</h3>
 <p><img alt="Xcode Build" src="/mcp-playground/xcode_build.png"/></p>
 <ul>
-<li>Enables Xcode build actions.</li>
+<li>Enables Xcode build&nbsp;actions.</li>
 <li>https://github.com/cameroncooke/XcodeBuildMCP</li>
 </ul>
     <div id="giscus">

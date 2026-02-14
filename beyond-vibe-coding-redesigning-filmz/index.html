@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/beyond-vibe-coding-redesigning-filmz/" />
+    <link rel="alternate" hreflang="de" href="/de/beyond-vibe-coding-redesigning-filmz/" />
+    <link rel="alternate" hreflang="fr" href="/fr/beyond-vibe-coding-redesigning-filmz/" />
+    <link rel="canonical" href="/beyond-vibe-coding-redesigning-filmz/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -33,7 +37,7 @@
 
 
     <meta name="tags" contents="tech" />
-    <meta name="tags" contents="AI" />
+    <meta name="tags" contents="ai" />
 
 </head>
 
@@ -48,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -67,14 +71,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -101,7 +105,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Beyond Vibe coding - Redesigning&nbsp;Filmz
+      Beyond Vibe coding - Redesigning Filmz
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">May 21, 2025</span>
@@ -111,7 +115,7 @@ Français
   class="tag-pill ">tech</a>
 
   <a href="/tag/ai/"
-  class="tag-pill ">AI</a>
+  class="tag-pill ">ai</a>
 
 </div>
 
@@ -119,10 +123,10 @@ Français
 
 
     <p><img alt="Filmz" src="/beyond-vibe-coding-redesigning-filmz/filmz.png" width="300"/></p>
-<p>Some time ago I built a little iOS App called Filmz: keep track of films and shows you want to see or you have seen. Keep personal additional information like “how did I like it?” (I.e. my personal rating), “For what audience would I recommend it?” (Adults, kids, family) “When and where did I see it” etc. And then comes sharing: passing on film recommendations to friends, either one film at a time or lists.</p>
-<p>As I didn’t know any Swift back then, I built it in a <em>vibe coding</em> style, fully supported by <span class="caps">AI</span> (back then mainly Cursor.ai). This gave me a fast start, but I was lost once I wanted to add more complex features that required a well structured code base. And since I didn’t know much about Swift, I couldn’t do it either. Vibe debugging doesn’t work - yet…</p>
-<p>So here I start again, and with a different approach: I will try to work in a similar way as I would with a smart but junior peer developer. The focus will be on a stepwise approach, followed along with a proper documentation: Descriptions of the task at hand, description of the architecture changes, of the options that were inspected / thought of and what was chosen why…</p>
-<p><a href="https://chatgpt.com/share/68371708-8a44-8009-b424-059b920feec9" rel="noopener noreferrer" target="_blank">I worked with my <span class="caps">AI</span> friend ChatGPT</a>, and plan to start with a structure as described below.</p>
+<p>Some time ago I built a little iOS App called Filmz: keep track of films and shows you want to see or you have seen. Keep personal additional information like &#8220;how did I like it?&#8221; (I.e. my personal rating), &#8220;For what audience would I recommend it?&#8221; (Adults, kids, family) &#8220;When and where did I see it&#8221; etc. And then comes sharing: passing on film recommendations to friends, either one film at a time or&nbsp;lists.</p>
+<p>As I didn’t know any Swift back then, I built it in a <em>vibe coding</em> style, fully supported by <span class="caps">AI</span> (back then mainly Cursor.ai). This gave me a fast start, but I was lost once I wanted to add more complex features that required a well structured code base. And since I didn’t know much about Swift, I couldn’t do it either. Vibe debugging doesn’t work -&nbsp;yet…</p>
+<p>So here I start again, and with a different approach: I will try to work in a similar way as I would with a smart but junior peer developer. The focus will be on a stepwise approach, followed along with a proper documentation: Descriptions of the task at hand, description of the architecture changes, of the options that were inspected / thought of and what was chosen&nbsp;why&#8230;</p>
+<p><a href="https://chatgpt.com/share/68371708-8a44-8009-b424-059b920feec9" rel="noopener noreferrer" target="_blank">I worked with my <span class="caps">AI</span> friend ChatGPT</a>, and plan to start with a structure as described&nbsp;below.</p>
 <div class="highlight"><pre><span></span><code>README.md                        # Project overview and setup instructions
 docs/                     # Everything that is *not* source code lives here
 ├── index.md              # High-level functional overview (user-centric)
@@ -146,7 +150,7 @@ docs/                     # Everything that is *not* source code lives here
 │   └── ADR-002-db-index.md
 └── changelog.md          # “Keep a Changelog” style history
 </code></pre></div>
-<p>2025-05-28: I take this as a starting point, work, and see what’s missing. And add the missing bits on the way.</p>
+<p>2025-05-28: I take this as a starting point, work, and see what&#8217;s missing. And add the missing bits on the&nbsp;way.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

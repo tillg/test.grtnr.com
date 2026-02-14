@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/mac-recording-screen-sound/" />
+    <link rel="alternate" hreflang="de" href="/de/mac-recording-screen-sound/" />
+    <link rel="alternate" hreflang="fr" href="/fr/mac-recording-screen-sound/" />
+    <link rel="canonical" href="/mac-recording-screen-sound/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -46,7 +50,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -65,14 +69,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -99,7 +103,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Mac: Recording screen <span class="amp">&amp;</span>&nbsp;sound
+      Mac: Recording screen & sound
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">June 11, 2020</span>
@@ -107,32 +111,32 @@ Français
     </div>
 
 
-    <p><strong><span class="caps">TL</span>;<span class="caps">DR</span></strong> In order to record the screen of your Mac together with the sound (i.e. a Zoom session) you can use Soundflower.</p>
-<p>Here is what I wanted to achieve: Make a (video) recording of what is happening on the screen of my Mac <strong>including the sound</strong>. All this, while still hearing what is happening at the same time. In my case I wanted to record a Zoom-Class, but I guess this is a setup that might be useful in many situations.</p>
-<p>macOS comes with a great built-in screen recording tool:<a href="https://support.apple.com/en-us/HT208721" rel="noopener noreferrer" target="_blank">QuickTime Player</a> (yes, it records, even though the name says <em>player</em> 😀).</p>
-<p>When using QuickTime Player the only problem is the sound: The choices you have are <em>Internal Microphone</em> or <em>None</em>. That fits well if you want to record a tutorial where the sound is what you explain through the microphone, but it doesn’t fit my situation.</p>
-<p>This is where <a href="https://github.com/mattingalls/Soundflower" rel="noopener noreferrer" target="_blank">SoundFlower</a> comes in the picture. It’s Open Source, mature and reliable (tested by me and far more experienced fellows - and always got very good reviews). SoundFlower as it is today (that’s Summer 2020) is not a program with a User Interface, but only a MacOS system extension. That’s something you don’t see as a user but that is very helpful in the background.</p>
-<p>What it does in our case: It creates a new, virtual sound channel that splits the sound stream into 2 other streams. In my case it means that in my Zoom session I select a virtual output instead of the speaker of my Mac. I called this output <em>MacSpkr_SndFlwr</em>. And this virtual stream splits the output to the Speaker of the Mac and the (logical) SoundFlower channel. Then I select the SoundFlower channel as input to my QuickTime Player Recording and that’s it.</p>
-<p><img alt="Flow" src="/mac-recording-screen-sound/MacSoundFlower.svg"/>The Sound Streams</p>
-<h2 id="setting-it-all-up">Setting it all up</h2>
-<p><strong>Installing Soundflower</strong> is well described on it’s <a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" rel="noopener noreferrer" target="_blank">download page on Github</a>. The process might seem a bit clumsy but works well if you follow it step by step. Note that it took me a while to figure out what they meant by “<em>Once there, there should be an “Allow” button (**) that you will need to click on to give permission to use Soundflower (developer: <span class="caps">MATT</span> <span class="caps">INGALLS</span>).</em>” I was expecting a popup dialog with the Allow-button, but it’s simply a button within the window.</p>
-<p>Also note that you need to reboot your Mac after installing Soundflower.</p>
-<p>Once you have Soundflower installed you can create a logical Audio Device that will be slipping the sound stream. To do so, open <em>Audio <span class="caps">MIDI</span> Setup</em>. It is a macOS utility program located in /Applications/Utilities. You can also start it via Spotlight (hit Cmd + Space) and enter “<em>Audio Midi”</em></p>
+    <p><strong><span class="caps">TL</span>;<span class="caps">DR</span></strong> In order to record the screen of your Mac together with the sound (i.e. a Zoom session) you can use&nbsp;Soundflower.</p>
+<p>Here is what I wanted to achieve: Make a (video) recording of what is happening on the screen of my Mac <strong>including the sound</strong>. All this, while still hearing what is happening at the same time. In my case I wanted to record a Zoom-Class, but I guess this is a setup that might be useful in many&nbsp;situations.</p>
+<p>macOS comes with a great built-in screen recording tool:<a href="https://support.apple.com/en-us/HT208721" rel="noopener noreferrer" target="_blank">QuickTime Player</a> (yes, it records, even though the name says <em>player</em>&nbsp;😀).</p>
+<p>When using QuickTime Player the only problem is the sound: The choices you have are <em>Internal Microphone</em> or <em>None</em>. That fits well if you want to record a tutorial where the sound is what you explain through the microphone, but it doesn&#8217;t fit my&nbsp;situation.</p>
+<p>This is where <a href="https://github.com/mattingalls/Soundflower" rel="noopener noreferrer" target="_blank">SoundFlower</a> comes in the picture. It&#8217;s Open Source, mature and reliable (tested by me and far more experienced fellows - and always got very good reviews). SoundFlower as it is today (that&#8217;s Summer 2020) is not a program with a User Interface, but only a MacOS system extension. That&#8217;s something you don&#8217;t see as a user but that is very helpful in the&nbsp;background.</p>
+<p>What it does in our case: It creates a new, virtual sound channel that splits the sound stream into 2 other streams. In my case it means that in my Zoom session I select a virtual output instead of the speaker of my Mac. I called this output <em>MacSpkr_SndFlwr</em>. And this virtual stream splits the output to the Speaker of the Mac and the (logical) SoundFlower channel. Then I select the SoundFlower channel as input to my QuickTime Player Recording and that&#8217;s&nbsp;it.</p>
+<p><img alt="Flow" src="/mac-recording-screen-sound/MacSoundFlower.svg"/>The Sound&nbsp;Streams</p>
+<h2 id="setting-it-all-up">Setting it all&nbsp;up</h2>
+<p><strong>Installing Soundflower</strong> is well described on it&#8217;s <a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" rel="noopener noreferrer" target="_blank">download page on Github</a>. The process might seem a bit clumsy but works well if you follow it step by step. Note that it took me a while to figure out what they meant by &#8220;<em>Once there, there should be an &#8220;Allow&#8221; button (**) that you will need to click on to give permission to use Soundflower (developer: <span class="caps">MATT</span> <span class="caps">INGALLS</span>).</em>&#8221; I was expecting a popup dialog with the Allow-button, but it&#8217;s simply a button within the&nbsp;window.</p>
+<p>Also note that you need to reboot your Mac after installing&nbsp;Soundflower.</p>
+<p>Once you have Soundflower installed you can create a logical Audio Device that will be slipping the sound stream. To do so, open <em>Audio <span class="caps">MIDI</span> Setup</em>. It is a macOS utility program located in /Applications/Utilities. You can also start it via Spotlight (hit Cmd + Space) and enter &#8220;<em>Audio&nbsp;Midi&#8221;</em></p>
 <p><img alt="Midi app launch" src="/mac-recording-screen-sound/Screenshot-2020-06-11-at-11.47.25.png"/></p>
-<p><em>Starting the Audio <span class="caps">MIDI</span> Setup via Spotlight</em></p>
-<p>Once you are in the Audio <span class="caps">MIDI</span> Setup program, create a new (logical) Audio Device: hit the “<strong>+</strong>” button in the bottom left corner and select “<em>Create Multi Output Device</em>“. In the the panel that appears on the right, select “<em>MacBook Speaker</em>” <span class="caps">AND</span> “<em>Soundflower (2ch)</em>“.</p>
+<p><em>Starting the Audio <span class="caps">MIDI</span> Setup via&nbsp;Spotlight</em></p>
+<p>Once you are in the Audio <span class="caps">MIDI</span> Setup program, create a new (logical) Audio Device: hit the &#8220;<strong>+</strong>&#8221; button in the bottom left corner and select &#8220;<em>Create Multi Output Device</em>&#8220;. In the the panel that appears on the right, select &#8220;<em>MacBook Speaker</em>&#8221; <span class="caps">AND</span> &#8220;<em>Soundflower (2ch)</em>&#8220;.</p>
 <p><img alt="Settings" src="/mac-recording-screen-sound/Screenshot-2020-06-11-at-11.14.46.png"/></p>
-<p><em>The newly created Multi Output Device</em></p>
-<p>Then launch your QuickTime Player (this one comes pre-installed on your Mac) and create a new Screen Recording: Menu <em>File ➡ New Screen Recording</em>. In the lower part of the screen a floating menu appears:</p>
+<p><em>The newly created Multi Output&nbsp;Device</em></p>
+<p>Then launch your QuickTime Player (this one comes pre-installed on your Mac) and create a new Screen Recording: Menu <em>File ➡ New Screen Recording</em>. In the lower part of the screen a floating menu&nbsp;appears:</p>
 <p><img alt="Entire screen" src="/mac-recording-screen-sound/macos-catalina-screenshot-menu-record.jpg"/></p>
-<p><em>The floating menu when recording with QuickTime Player</em></p>
-<p>Open the Options list and select “Soundflower (2ch)” as input for the recording. Click on “Record” and off you go: Now start your Zoom session, maximize the window and your entire Zoom session will be recorded in a .mov file.</p>
-<p>I hope this instructions were helpful; feel free to ask questions if you have any.</p>
+<p><em>The floating menu when recording with QuickTime&nbsp;Player</em></p>
+<p>Open the Options list and select &#8220;Soundflower (2ch)&#8221; as input for the recording. Click on &#8220;Record&#8221; and off you go: Now start your Zoom session, maximize the window and your entire Zoom session will be recorded in a .mov&nbsp;file.</p>
+<p>I hope this instructions were helpful; feel free to ask questions if you have&nbsp;any.</p>
 <h3 id="references">References</h3>
 <ul>
-<li><em>How to record the screen on your Mac</em> from <a href="https://support.apple.com/en-us/HT208721" rel="noopener noreferrer" target="_blank">Apple Support</a></li>
-<li><a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" rel="noopener noreferrer" target="_blank">Soundflower explanations</a></li>
-<li><em>Record your computer’s screen with audio on a Mac</em> from <a href="https://www.cnet.com/how-to/record-your-computers-screen-with-audio-on-a-mac/" rel="noopener noreferrer" target="_blank">c|net</a></li>
+<li><em>How to record the screen on your Mac</em> from <a href="https://support.apple.com/en-us/HT208721" rel="noopener noreferrer" target="_blank">Apple&nbsp;Support</a></li>
+<li><a href="https://github.com/mattingalls/Soundflower/releases/tag/2.0b2" rel="noopener noreferrer" target="_blank">Soundflower&nbsp;explanations</a></li>
+<li><em>Record your computer&#8217;s screen with audio on a Mac</em> from <a href="https://www.cnet.com/how-to/record-your-computers-screen-with-audio-on-a-mac/" rel="noopener noreferrer" target="_blank">c|net</a></li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

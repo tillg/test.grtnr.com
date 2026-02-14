@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/solid-comments-in-static-website/" />
+    <link rel="alternate" hreflang="de" href="/de/solid-comments-in-static-website/" />
+    <link rel="alternate" hreflang="fr" href="/fr/solid-comments-in-static-website/" />
+    <link rel="canonical" href="/solid-comments-in-static-website/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -46,7 +50,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -65,14 +69,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -99,7 +103,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Solid Comments In Static&nbsp;Website
+      Solid Comments In Static Website
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 11, 2025</span>
@@ -107,45 +111,45 @@ Français
     </div>
 
 
-    <p><strong><span class="caps">TL</span>;<span class="caps">DR</span>:</strong> I added comments to my static website. Here’s how I did it - including some technical details. I researched amongst different possible solutions for the most solid one, integrated it for all posts and added a counter of the number of comments in the post overview page.</p>
-<p><strong>2025-05-23 Update</strong> Since I moved from Jekyll to <a href="https://getpelican.com" rel="noopener noreferrer" target="_blank">Pelican</a>, I updated some details.</p>
-<h2 id="selecting-a-solution">Selecting a solution</h2>
-<p>As i planned to play around with the new <a href="https://openai.com/index/introducing-deep-research/" rel="noopener noreferrer" target="_blank">Deep Research Model from OpenAI</a> I gave it a spin with this topic: <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">feel free to read here</a>. Overall the research was helpful and I ended up using <a href="https://giscus.app/" rel="noopener noreferrer" target="_blank">Giscus</a> for the comments. Partly because it felt the most robust and reliable, partly because I had really bad expoerience with disqus some years ago.</p>
-<p>The choice was based on the set of criteria I gave to the model. Here are the most important ones:</p>
+    <p><strong><span class="caps">TL</span>;<span class="caps">DR</span>:</strong> I added comments to my static website. Here&#8217;s how I did it - including some technical details. I researched amongst different possible solutions for the most solid one, integrated it for all posts and added a counter of the number of comments in the post overview&nbsp;page.</p>
+<p><strong>2025-05-23 Update</strong> Since I moved from Jekyll to <a href="https://getpelican.com" rel="noopener noreferrer" target="_blank">Pelican</a>, I updated some&nbsp;details.</p>
+<h2 id="selecting-a-solution">Selecting a&nbsp;solution</h2>
+<p>As i planned to play around with the new <a href="https://openai.com/index/introducing-deep-research/" rel="noopener noreferrer" target="_blank">Deep Research Model from OpenAI</a> I gave it a spin with this topic: <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">feel free to read here</a>. Overall the research was helpful and I ended up using <a href="https://giscus.app/" rel="noopener noreferrer" target="_blank">Giscus</a> for the comments. Partly because it felt the most robust and reliable, partly because I had really bad expoerience with disqus some years&nbsp;ago.</p>
+<p>The choice was based on the set of criteria I gave to the model. Here are the most important&nbsp;ones:</p>
 <ul>
-<li>No self-hosted server – I don’t want to manage (and pay 😉) a server.</li>
-<li>Data portability – the comments can exported.</li>
-<li>Privacy-friendly – no extra trackers or ads beyond what I already use (e.g. Google Analytics).</li>
-<li>Markdown support – allow rich formatting (code blocks, etc.) suited for technical discussions.</li>
-<li>Spam protection – has measures to reduce spam, especially if allowing anonymous or unauthenticated comments.</li>
+<li>No self-hosted server – I don&#8217;t want to manage (and pay 😉) a&nbsp;server.</li>
+<li>Data portability – the comments can&nbsp;exported.</li>
+<li>Privacy-friendly – no extra trackers or ads beyond what I already use (e.g. Google&nbsp;Analytics).</li>
+<li>Markdown support – allow rich formatting (code blocks, etc.) suited for technical&nbsp;discussions.</li>
+<li>Spam protection – has measures to reduce spam, especially if allowing anonymous or unauthenticated&nbsp;comments.</li>
 </ul>
-<p>The tools that Deep Research <em>analyzed</em> were</p>
+<p>The tools that Deep Research <em>analyzed</em>&nbsp;were</p>
 <ul>
 <li>Giscus</li>
 <li>Utterances</li>
 <li>Staticman</li>
 <li>Commento</li>
-<li>Hyvor Talk</li>
+<li>Hyvor&nbsp;Talk</li>
 <li>Disqus</li>
-<li>Some <em>self made</em> solutions</li>
+<li>Some <em>self made</em>&nbsp;solutions</li>
 </ul>
-<h2 id="integrating-giscus">Integrating Giscus</h2>
-<p>In the follow up to it’s research I asked the model to give me a step by step guide on how to integrate the solution. This was far less reliable than the first research, but still helpful.</p>
+<h2 id="integrating-giscus">Integrating&nbsp;Giscus</h2>
+<p>In the follow up to it&#8217;s research I asked the model to give me a step by step guide on how to integrate the solution. This was far less reliable than the first research, but still&nbsp;helpful.</p>
 <p>Here is the executive summary (the details are in the <a href="https://chatgpt.com/share/67a8aea4-9bc8-8009-917b-8855ebdd4776" rel="noopener noreferrer" target="_blank">chat I had with the <span class="caps">AI</span></a>):</p>
 <ul>
-<li>Step 1: Enable GitHub Discussions for Your Repository. That means the repo into which the static site is generated (which sometimes is not the same as the source).</li>
-<li>Go to your GitHub repository</li>
-<li>Navigate to Settings &gt; General.</li>
-<li>Scroll down to the Discussions section and enable it.</li>
+<li>Step 1: Enable GitHub Discussions for Your Repository. That means the repo into which the static site is generated (which sometimes is not the same as the&nbsp;source).</li>
+<li>Go to your GitHub&nbsp;repository</li>
+<li>Navigate to Settings &gt;&nbsp;General.</li>
+<li>Scroll down to the Discussions section and enable&nbsp;it.</li>
 <li>Step in between, that the <span class="caps">AI</span> missed to mention: Install giscus for all or some of your repos. <a href="https://github.com/apps/giscus/installations/select_target" rel="noopener noreferrer" target="_blank">Here</a>
 <img alt="alt text" src="/solid-comments-in-static-website/image.png"/></li>
-<li>Step 2: Install Giscus and Configure It</li>
-<li>Visit the Giscus setup page: https://giscus.app/.</li>
-<li>Under “Repository”, enter your repo name. You now should see the green check mark that your repo meets all the criteria for using giscus.</li>
-<li>The “Page discussion mapping” option dictates a relationship between your pages, e.g an article, and a GitHub discussion. I selected, the pathname</li>
+<li>Step 2: Install Giscus and Configure&nbsp;It</li>
+<li>Visit the Giscus setup page:&nbsp;https://giscus.app/.</li>
+<li>Under &#8220;Repository&#8221;, enter your repo name. You now should see the green check mark that your repo meets all the criteria for using&nbsp;giscus.</li>
+<li>The “Page discussion mapping” option dictates a relationship between your pages, e.g an article, and a GitHub discussion. I selected, the&nbsp;pathname</li>
 <li>For the discussions category I selected “general”.
-    Set the Theme to “Match <span class="caps">OS</span>” or manually define light and dark mode.
-    Click “Copy Code” once you’ve generated the <script> tag.</li>
+    Set the Theme to &#8220;Match <span class="caps">OS</span>&#8221; or manually define light and dark mode.
+    Click &#8220;Copy Code&#8221; once you’ve generated the <script> tag.</li>
 </ul>
 <p><img alt="Giscus Features" src="/solid-comments-in-static-website/giscus-features.png"></p>
 <ul>

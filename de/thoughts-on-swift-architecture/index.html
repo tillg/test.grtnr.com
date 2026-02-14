@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/thoughts-on-swift-architecture/" />
+    <link rel="alternate" hreflang="de" href="/de/thoughts-on-swift-architecture/" />
+    <link rel="alternate" hreflang="fr" href="/fr/thoughts-on-swift-architecture/" />
+    <link rel="canonical" href="/de/thoughts-on-swift-architecture/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/thoughts-on-swift-architecture/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/thoughts-on-swift-architecture/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -107,20 +118,20 @@ Français
     <div class="toc">
 <ul>
 <li><a href="#frage">Frage</a><ul>
-<li><a href="#domanenmodelle-datenmodelle-und-mapper">Domänenmodelle, Datenmodelle und Mapper</a></li>
+<li><a href="#domanenmodelle-datenmodelle-und-mapper">Domänenmodelle, Datenmodelle und&nbsp;Mapper</a></li>
 <li><a href="#repository">Repository</a></li>
 </ul>
 </li>
 <li><a href="#antwort">Antwort</a></li>
 </ul>
 </div>
-<p>Ich habe gestern einen wirklich schönen Podcast darüber gehört, wie man verschiedene Modelltypen in Swift strukturiert: Domänenmodelle, die meine interne Darstellung sind, Datenmodelle (oder DTOs), die die externe Darstellung sind, und View-Modelle, die die Darstellung für meine Benutzeroberfläche sind:</p>
-<p><a href="https://podcasts.apple.com/de/podcast/developer-podcast/id1467065787?i=1000698509743" rel="noopener noreferrer" target="_blank"><img alt="Entwickler-Podcast" src="developer_podcast.jpg"/></a></p>
-<p>Dieser Beitrag ist im Grunde eine Frage, die ich dem <a href="https://discord.com/invite/j57uchzUa9" rel="noopener noreferrer" target="_blank">Discord, der zum Podcast gehört</a>, hinzugefügt habe.</p>
+<p>Ich habe gestern einen wirklich schönen Podcast darüber gehört, wie man verschiedene Modelltypen in Swift strukturiert: Domänenmodelle, die meine interne Darstellung sind, Datenmodelle (oder DTOs), die die externe Darstellung sind, und View-Modelle, die die Darstellung für meine Benutzeroberfläche&nbsp;sind:</p>
+<p><a href="https://podcasts.apple.com/de/podcast/developer-podcast/id1467065787?i=1000698509743" rel="noopener noreferrer" target="_blank"><img alt="Entwickler-Podcast" src="/thoughts-on-swift-architecture/developer_podcast.jpg"/></a></p>
+<p>Dieser Beitrag ist im Grunde eine Frage, die ich dem <a href="https://discord.com/invite/j57uchzUa9" rel="noopener noreferrer" target="_blank">Discord, der zum Podcast gehört</a>, hinzugefügt&nbsp;habe.</p>
 <h1 id="frage">Frage</h1>
-<p>Ich bin ein Swift-Anfänger, und viele Aspekte sind mir noch unklar. Basierend auf dem Beispiel, das ihr im Podcast verwendet habt, werde ich versuchen, die Lücken in meinem Verständnis zu füllen.</p>
-<h2 id="domanenmodelle-datenmodelle-und-mapper">Domänenmodelle, Datenmodelle und Mapper</h2>
-<p>Das Beispiel ist eine ToDo-App und somit ist die Haupteinheit die <strong>Aufgabe</strong>. Also hätte ich ein Domänenmodell <code>Task</code>, das so aussieht:</p>
+<p>Ich bin ein Swift-Anfänger, und viele Aspekte sind mir noch unklar. Basierend auf dem Beispiel, das ihr im Podcast verwendet habt, werde ich versuchen, die Lücken in meinem Verständnis zu&nbsp;füllen.</p>
+<h2 id="domanenmodelle-datenmodelle-und-mapper">Domänenmodelle, Datenmodelle und&nbsp;Mapper</h2>
+<p>Das Beispiel ist eine ToDo-App und somit ist die Haupteinheit die <strong>Aufgabe</strong>. Also hätte ich ein&nbsp;Domänenmodell <code>Task</code>, das so&nbsp;aussieht:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">Task</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">id</span><span class="p">:</span> <span class="n">UUID</span>
     <span class="kd">let</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span>
@@ -129,7 +140,7 @@ Français
     <span class="kd">let</span> <span class="nv">isCompleted</span><span class="p">:</span> <span class="nb">Bool</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Da ich meine Aufgaben in CloudKit speichern möchte, benötige ich ein Datenmodell, das mit CloudKit kompatibel ist. Also brauche ich <code>CKRecord</code>-Objekte, die Aufgaben darstellen. Meinem Verständnis nach werden sie so aufgebaut:</p>
+<p>Da ich meine Aufgaben in CloudKit speichern möchte, benötige ich ein Datenmodell, das mit CloudKit kompatibel ist. Also brauche&nbsp;ich <code>CKRecord</code>-Objekte, die Aufgaben darstellen. Meinem Verständnis nach werden sie so&nbsp;aufgebaut:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapTaskToCKRecord</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">CKRecord</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">record</span> <span class="p">=</span> <span class="bp">CKRecord</span><span class="p">(</span><span class="n">recordType</span><span class="p">:</span> <span class="s">"task"</span><span class="p">)</span>
     <span class="n">record</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
@@ -140,7 +151,7 @@ Français
     <span class="k">return</span> <span class="n">record</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Und ich hätte die entsprechende Funktion, um ein <code>CKRecord</code> zurück in eine <code>Task</code> zu konvertieren:</p>
+<p>Und ich hätte die entsprechende Funktion, um&nbsp;ein <code>CKRecord</code> zurück in&nbsp;eine <code>Task</code> zu&nbsp;konvertieren:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapCKRecordToTask</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="bp">CKRecord</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Task</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">id</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="n">UUID</span>
     <span class="kd">let</span> <span class="nv">title</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"title"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
@@ -152,11 +163,11 @@ Français
 </code></pre></div>
 <p>Fragen:</p>
 <ul>
-<li><strong>Wo</strong> platziere ich die Mapping-Funktionen? Sind sie Teil des Domänenmodells oder des Datenmodells? Ich vermute, sie gehören eher zum Datenmodell.</li>
-<li><strong>Fehler</strong>: Wie gehe ich mit Fehlern um? Zum Beispiel, wenn das <code>CKRecord</code> keinen Wert für <code>id</code> enthält, würde es zu einem Absturz kommen. Sollte ich Optionals verwenden oder einen Fehler werfen?</li>
+<li><strong>Wo</strong> platziere ich die Mapping-Funktionen? Sind sie Teil des Domänenmodells oder des Datenmodells? Ich vermute, sie gehören eher zum&nbsp;Datenmodell.</li>
+<li><strong>Fehler</strong>: Wie gehe ich mit Fehlern um? Zum Beispiel, wenn&nbsp;das <code>CKRecord</code> keinen Wert&nbsp;für <code>id</code> enthält, würde es zu einem Absturz kommen. Sollte ich Optionals verwenden oder einen Fehler&nbsp;werfen?</li>
 </ul>
 <h2 id="repository">Repository</h2>
-<p>Dann erwähnen Sie das Repository. Basierend auf der früheren Diskussion auf Discord würde ich annehmen, dass das Repository nur mit Domänenmodellen arbeitet. Es könnte also so aussehen:</p>
+<p>Dann erwähnen Sie das Repository. Basierend auf der früheren Diskussion auf Discord würde ich annehmen, dass das Repository nur mit Domänenmodellen arbeitet. Es könnte also so&nbsp;aussehen:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">getAllTasks</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span>
     <span class="kd">func</span> <span class="nf">getTaskById</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Task</span><span class="p">?</span>
@@ -166,18 +177,18 @@ Français
     <span class="kd">func</span> <span class="nf">deleteTask</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Und basierend auf diesem Protokoll könnte ich ein <code>TaskRepositoryCloudKit</code> implementieren, das die Mapping-Funktionen verwendet, um zwischen Domänen- und Datenmodellen zu konvertieren und alle CRUD-Operationen, die im (im Speicher befindlichen) TaskRepository durchgeführt werden, auf die CloudKit-Datenbank widerspiegelt.</p>
-<p>Nächste Frage:</p>
+<p>Und basierend auf diesem Protokoll könnte ich&nbsp;ein <code>TaskRepositoryCloudKit</code> implementieren, das die Mapping-Funktionen verwendet, um zwischen Domänen- und Datenmodellen zu konvertieren und alle <span class="caps">CRUD</span>-Operationen, die im (im Speicher befindlichen) TaskRepository durchgeführt werden, auf die CloudKit-Datenbank&nbsp;widerspiegelt.</p>
+<p>Nächste&nbsp;Frage:</p>
 <ul>
-<li><strong>Repository-Funktionen</strong>: Typischerweise würde ich Funktionen aus einem Repository erstellen, die über CRUD hinausgehen. Zum Beispiel ein <code>getTasksDateRange</code>, das das älteste und das neueste Fälligkeitsdatum zurückgibt. Wo würde ich das erstellen? Ich möchte es nicht in <code>TaskRepositoryCloudKit</code> einfügen, da es die gleiche Logik wäre, wenn ein anderer Speicher verwendet wird (d.h. alle Aufgaben in den Speicher laden, sortieren und die erste und letzte zurückgeben). Da ich keine Funktionen in einem Protokoll haben kann, wo platziere ich es?</li>
-<li><strong>Benennung</strong>: Ist die von mir vorgeschlagene Benennung sinnvoll? Ist es so, wie Sie es in Swift machen würden? Ich habe <code>TaskRepositoryCloudKit</code> gewählt, damit es im Xcode-Dateibrowser neben dem <code>TaskRepository</code> aufgelistet wird. Wenn ich andere Datenmodelle benötige, um ein System Xyz zu integrieren, würde ich sie <code>TaskRawXyz</code> nennen - ist das vernünftig?</li>
+<li><strong>Repository-Funktionen</strong>: Typischerweise würde ich Funktionen aus einem Repository erstellen, die über <span class="caps">CRUD</span> hinausgehen. Zum Beispiel&nbsp;ein <code>getTasksDateRange</code>, das das älteste und das neueste Fälligkeitsdatum zurückgibt. Wo würde ich das erstellen? Ich möchte es nicht&nbsp;in <code>TaskRepositoryCloudKit</code> einfügen, da es die gleiche Logik wäre, wenn ein anderer Speicher verwendet wird (d.h. alle Aufgaben in den Speicher laden, sortieren und die erste und letzte zurückgeben). Da ich keine Funktionen in einem Protokoll haben kann, wo platziere ich&nbsp;es?</li>
+<li><strong>Benennung</strong>: Ist die von mir vorgeschlagene Benennung sinnvoll? Ist es so, wie Sie es in Swift machen würden? Ich&nbsp;habe <code>TaskRepositoryCloudKit</code> gewählt, damit es im Xcode-Dateibrowser neben&nbsp;dem <code>TaskRepository</code> aufgelistet wird. Wenn ich andere Datenmodelle benötige, um ein System Xyz zu integrieren, würde ich&nbsp;sie <code>TaskRawXyz</code> nennen - ist das&nbsp;vernünftig?</li>
 </ul>
 <h1 id="antwort">Antwort</h1>
-<p>Ich habe eine großartige <a href="https://discord.com/channels/1028834407374655518/1028846930182291526/1353860001411760228" rel="noopener noreferrer" target="_blank">Antwort</a> von <a href="https://pado.name" rel="noopener noreferrer" target="_blank">Cocoatype</a> auf Discord erhalten. Und ich bin sehr dankbar, dass er sich die Zeit genommen hat, die Antwort zu lesen und zu tippen.</p>
-<p>Hier ist Cocoatypes Antwort zur Referenz:</p>
+<p>Ich habe eine großartige <a href="https://discord.com/channels/1028834407374655518/1028846930182291526/1353860001411760228" rel="noopener noreferrer" target="_blank">Antwort</a> von <a href="https://pado.name" rel="noopener noreferrer" target="_blank">Cocoatype</a> auf Discord erhalten. Und ich bin sehr dankbar, dass er sich die Zeit genommen hat, die Antwort zu lesen und zu&nbsp;tippen.</p>
+<p>Hier ist Cocoatypes Antwort zur&nbsp;Referenz:</p>
 <blockquote>
 <p><strong>Wo</strong> platziere ich die Mapping-Funktionen? Sind sie Teil des Domänenmodells oder des Datenmodells? Ich vermute, sie gehören eher zum Datenmodell.
-Ich würde diese im Repository oder in einem Hilfstyp für das Repository platzieren. Zum Beispiel habe ich in meiner App Barc ein <code>BarcodeRepository</code>-Protokoll und ein <code>FileBarcodeRepository</code>, das SwiftData verwendet. Hier ist ein kleiner Überblick, wie das aussieht:</p>
+Ich würde diese im Repository oder in einem Hilfstyp für das Repository platzieren. Zum Beispiel habe ich in meiner App Barc&nbsp;ein <code>BarcodeRepository</code>-Protokoll und&nbsp;ein <code>FileBarcodeRepository</code>, das SwiftData verwendet. Hier ist ein kleiner Überblick, wie das&nbsp;aussieht:</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="nc">BarcodeRepository</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">codes</span><span class="p">:</span> <span class="p">[</span><span class="n">Code</span><span class="p">]</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">throws</span> <span class="p">}</span>
@@ -226,13 +237,13 @@ Ich würde diese im Repository oder in einem Hilfstyp für das Repository platzi
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p><strong>Fehler</strong>: Wie gehe ich mit Fehlern um? Zum Beispiel, wenn das CKRecord keinen Wert für id enthält, würde es zu einem Absturz kommen. Sollte ich Optionals verwenden oder einen Fehler werfen?</p>
+<p><strong>Fehler</strong>: Wie gehe ich mit Fehlern um? Zum Beispiel, wenn das CKRecord keinen Wert für id enthält, würde es zu einem Absturz kommen. Sollte ich Optionals verwenden oder einen Fehler&nbsp;werfen?</p>
 </blockquote>
-<p>Ich persönlich werfe Fehler und gehe auf der Ebene mit ihnen um, auf der es sinnvoll ist, mit ihnen umzugehen. Optionals sind in Ordnung, wenn etwas tatsächlich optional ist, aber denken Sie daran, dass Sie hier versuchen, zu vermeiden, dass Sie sich in Ihrem View-Code mit API-Einschränkungen auseinandersetzen müssen. Ich würde also nichts optional machen, nur um Fehler zu vermeiden.</p>
+<p>Ich persönlich werfe Fehler und gehe auf der Ebene mit ihnen um, auf der es sinnvoll ist, mit ihnen umzugehen. Optionals sind in Ordnung, wenn etwas tatsächlich optional ist, aber denken Sie daran, dass Sie hier versuchen, zu vermeiden, dass Sie sich in Ihrem View-Code mit <span class="caps">API</span>-Einschränkungen auseinandersetzen müssen. Ich würde also nichts optional machen, nur um Fehler zu&nbsp;vermeiden.</p>
 <blockquote>
-<p><strong>Repository-Funktionen</strong>: Typischerweise würde ich Funktionen aus einem Repository erstellen, die über CRUD hinausgehen. Zum Beispiel ein getTasksDateRange, das das älteste und das neueste Fälligkeitsdatum zurückgibt. Wo würde ich das erstellen? Ich möchte es nicht in TaskRepositoryCloudKit einfügen, da es die gleiche Logik wäre, wenn ein anderer Speicher verwendet wird (d.h. alle Aufgaben in den Speicher laden, sortieren und die erste und letzte zurückgeben). Da ich keine Funktionen in einem Protokoll haben kann, wo platziere ich es?</p>
+<p><strong>Repository-Funktionen</strong>: Typischerweise würde ich Funktionen aus einem Repository erstellen, die über <span class="caps">CRUD</span> hinausgehen. Zum Beispiel ein getTasksDateRange, das das älteste und das neueste Fälligkeitsdatum zurückgibt. Wo würde ich das erstellen? Ich möchte es nicht in TaskRepositoryCloudKit einfügen, da es die gleiche Logik wäre, wenn ein anderer Speicher verwendet wird (d.h. alle Aufgaben in den Speicher laden, sortieren und die erste und letzte zurückgeben). Da ich keine Funktionen in einem Protokoll haben kann, wo platziere ich&nbsp;es?</p>
 </blockquote>
-<p>Wenn Sie etwas über mehrere Implementierungen hinweg haben möchten, verwenden Sie eine Protokollerweiterung. Zum Beispiel:</p>
+<p>Wenn Sie etwas über mehrere Implementierungen hinweg haben möchten, verwenden Sie eine Protokollerweiterung. Zum&nbsp;Beispiel:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">extension</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">getTasks</span><span class="p">(</span><span class="n">dateRange</span><span class="p">:</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="n">Date</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">getAllTasks</span><span class="p">().</span><span class="bp">filter</span> <span class="p">{</span> <span class="n">task</span> <span class="k">in</span>
@@ -241,11 +252,11 @@ Ich würde diese im Repository oder in einem Hilfstyp für das Repository platzi
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Da Sie wissen, dass alle TaskRepository-Implementierungen ein <code>getAllTasks()</code> haben, können Sie es in der Erweiterung so verwenden.</p>
+<p>Da Sie wissen, dass alle TaskRepository-Implementierungen&nbsp;ein <code>getAllTasks()</code> haben, können Sie es in der Erweiterung so&nbsp;verwenden.</p>
 <blockquote>
-<p><strong>Benennung</strong>: Ist die von mir vorgeschlagene Benennung sinnvoll? Ist es so, wie Sie es in Swift machen würden? Ich habe TaskRepositoryCloudKit gewählt, damit es im Xcode-Dateibrowser neben dem TaskRepository aufgelistet wird. Wenn ich andere Datenmodelle benötige, um ein System Xyz zu integrieren, würde ich sie TaskRawXyz nennen - ist das vernünftig</p>
+<p><strong>Benennung</strong>: Ist die von mir vorgeschlagene Benennung sinnvoll? Ist es so, wie Sie es in Swift machen würden? Ich habe TaskRepositoryCloudKit gewählt, damit es im Xcode-Dateibrowser neben dem TaskRepository aufgelistet wird. Wenn ich andere Datenmodelle benötige, um ein System Xyz zu integrieren, würde ich sie TaskRawXyz nennen - ist das&nbsp;vernünftig</p>
 </blockquote>
-<p>Ich persönlich setze den spezifischsten Teil zuerst (BarcodeRepository wird zu FileBarcodeRepository und PreviewBarcodeRepository und StubBarcodeRepository), aber am Ende ist auch in Ordnung. Daran ist nichts Ungewöhnliches.</p>
+<p>Ich persönlich setze den spezifischsten Teil zuerst (BarcodeRepository wird zu FileBarcodeRepository und PreviewBarcodeRepository und StubBarcodeRepository), aber am Ende ist auch in Ordnung. Daran ist nichts&nbsp;Ungewöhnliches.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

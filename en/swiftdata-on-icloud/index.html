@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/swiftdata-on-icloud/" />
+    <link rel="alternate" hreflang="de" href="/de/swiftdata-on-icloud/" />
+    <link rel="alternate" hreflang="fr" href="/fr/swiftdata-on-icloud/" />
+    <link rel="canonical" href="/en/swiftdata-on-icloud/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="tech" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/swiftdata-on-icloud/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/swiftdata-on-icloud/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 22:21:30.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      SwiftData on iCloud
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">November 2, 2025</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">tech</a>
+
+</div>
+
+    </div>
+
+
+    <p><strong>Note</strong>: The github repo that goes with this article is <a href="https://github.com/tillg/SwiftDataOniCloud" rel="noopener noreferrer" target="_blank">here</a>.</p>
+<p>As I have been learning Swift <span class="amp">&amp;</span> SwiftUI and started using it, I often struggled when trying to use CloudKit. Too often&#8230; This is a minimal setup I used to remind future me of how I set up things and document my&nbsp;learnings.</p>
+<ul>
+<li><a href="#starting-point">Starting&nbsp;point</a></li>
+<li><a href="#step-by-step">Step by&nbsp;step</a></li>
+<li><a href="#add-capabilities-to-xcode-project">Add Capabilities to Xcode&nbsp;project</a></li>
+<li><a href="#make-model-cloudkit-ready">Make model CloudKit&nbsp;ready</a></li>
+<li><a href="#investigating-testing-playing-around-maybe-understanding">Investigating, Testing, Playing around, maybe&nbsp;understanding&#8230;</a></li>
+<li><a href="#cloudkit-console">CloudKit Console</a><ul>
+<li><a href="#querying-data">Querying&nbsp;data</a></li>
+</ul>
+</li>
+<li><a href="#syncing-in-real-time">Syncing in real&nbsp;time</a></li>
+<li><a href="#reading">Reading</a></li>
+<li><a href="#apple">Apple</a></li>
+<li><a href="#frequent-errors">Frequent&nbsp;errors</a></li>
+<li><a href="#default-values-for-fields">Default values for&nbsp;fields</a></li>
+<li><a href="#not-signed-in-with-appleid">Not signed in with&nbsp;AppleId</a></li>
+<li><a href="#entitlements-was-modified-during-the-build">Entitlements was modified during the&nbsp;build</a></li>
+<li><a href="#unable-to-initialize-without-an-icloud-account-ckaccountstatusnoaccount">Unable to initialize without an iCloud account&nbsp;(CKAccountStatusNoAccount).</a></li>
+</ul>
+<h2 id="starting-point">Starting&nbsp;point</h2>
+<p>Almost all I know about SiftUI comes from the great tutorial <a href="https://www.hackingwithswift.com/100/swiftui" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> from Paul Hudson. He does a fantastic job explaining SwiftUI, and offers this well-maintained course for&nbsp;free.</p>
+<p>In order not having to start completely from scratch, I use the lesson from the course that introduces SwiftData: On <a href="https://www.hackingwithswift.com/100/swiftui/53" rel="noopener noreferrer" target="_blank">Day 53</a> Paul starts a new project called <em>Bookworm</em> that uses SwiftData to store it&#8217;s book data. At the end of <a href="https://www.hackingwithswift.com/100/swiftui/55" rel="noopener noreferrer" target="_blank">Day 55</a> he has built out a cute little application that stores it&#8217;s data in SwiftData. In case you are not fluent in SwiftData or don&#8217;t remember it, I strongly recommend watching the videos of those 3 days. His App uses SwiftData, but not in the cloud, just locally on&nbsp;device.</p>
+<p>I will use this as the starting point to add iCloud syncing to it. You can find the <em>Bookworm</em> app in <a href="https://github.com/twostraws/HackingWithSwift" rel="noopener noreferrer" target="_blank">Paul Hudson&#8217;s Github project</a>: It&#8217;s under <a href="https://github.com/twostraws/HackingWithSwift/tree/main/SwiftUI/project11" rel="noopener noreferrer" target="_blank">SwiftUI &gt; project 11</a>.</p>
+<p>If you clone / copy the <em>project 11</em> directory and open it with Xcode you have to set your Team <span class="amp">&amp;</span> Bundle Identifier to run&nbsp;it.</p>
+<p>Now we will try to add iCloud syncing to&nbsp;it.</p>
+<h2 id="step-by-step">Step by&nbsp;step</h2>
+<h3 id="add-capabilities-to-xcode-project">Add Capabilities to Xcode&nbsp;project</h3>
+<p>In order to use CloudKit for syncing, we have to add 2&nbsp;capabilities:</p>
+<ul>
+<li>CloudKit&nbsp;(duuh)</li>
+<li>Notification: This is needed so the device can get the signals that data changed and needs to be synced with the cloud&nbsp;again.</li>
+</ul>
+<p>If you open&nbsp;you <code>Xcode &gt; Project: MiniSwiftData &gt; Target: MiniSwiftData &gt; Signing &amp; Capabilities</code> this is what you should&nbsp;see:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/signing_wo_capabilities.png"/></p>
+<p>Click on&nbsp;the <code>+ Capability</code> button on the top left and search for&nbsp;iCloud:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/icloud_capability.png"/></p>
+<p>Then in&nbsp;the <code>iCloud</code> section select CloudKit as&nbsp;Service:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/cloudkit_service.png"/></p>
+<p>Then below we need a container. Click&nbsp;on <code>+</code> and enter a name. The usual name would be to the bundle Identifier, in my case that&nbsp;is <code>com.grtnr.Bookworm</code> (I just copy <span class="amp">&amp;</span> paste it from the <em>Bundle Identifier</em>&nbsp;field).</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/create_new_container.png"/></p>
+<p>That leads to&nbsp;this:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/new_container.png"/></p>
+<p>It&#8217;s red because it has not been created yet, that simply takes some&nbsp;time.</p>
+<p>In order to keep devices synced, iCloud uses the <em>Remote Push Notification</em>, so we have to add this service as well. Click&nbsp;on <code>+ Capability</code> again and search for <em>Back&#8230;</em>:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/background_modes.png"/></p>
+<p>Then in the list of services of the <em>Background Modes</em> section select <em>Remote notificatons</em>:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/remote_notifications.png"/></p>
+<p><strong>Note</strong>: Probably by now the container name has turned from red to black as it has been created in&nbsp;iCloud.</p>
+<h3 id="make-model-cloudkit-ready">Make model CloudKit&nbsp;ready</h3>
+<p>When starting the app now we get an error similar to&nbsp;this:</p>
+<div class="highlight"><pre><span></span><code>CoreData:<span class="w"> </span>error:<span class="w"> </span>Store<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>load.<span class="w">  </span>&lt;NSPersistentStoreDescription:<span class="w"> </span>0x600000c0e670&gt;<span class="w"> </span><span class="o">(</span>type:<span class="w"> </span>SQLite,<span class="w"> </span>url:<span class="w"> </span>file:///Users/tgartner/Library/Developer/CoreSimulator/Devices/1464DFC4-EE76-43DB-B178-C33F1FA97A91/data/Containers/Data/Application/34DEE59B-975D-4784-8A87-DC38A9D9DA37/Library/Application%20Support/default.store<span class="o">)</span><span class="w"> </span>with<span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Error<span class="w"> </span><span class="nv">Domain</span><span class="o">=</span>NSCocoaErrorDomain<span class="w"> </span><span class="nv">Code</span><span class="o">=</span><span class="m">134060</span><span class="w"> </span><span class="s2">"A Core Data error occurred."</span><span class="w"> </span><span class="nv">UserInfo</span><span class="o">={</span><span class="nv">NSLocalizedFailureReason</span><span class="o">=</span>CloudKit<span class="w"> </span>integration<span class="w"> </span>requires<span class="w"> </span>that<span class="w"> </span>all<span class="w"> </span>attributes<span class="w"> </span>be<span class="w"> </span>optional,<span class="w"> </span>or<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>default<span class="w"> </span>value<span class="w"> </span>set.<span class="w"> </span>The<span class="w"> </span>following<span class="w"> </span>attributes<span class="w"> </span>are<span class="w"> </span>marked<span class="w"> </span>non-optional<span class="w"> </span>but<span class="w"> </span><span class="k">do</span><span class="w"> </span>not<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>default<span class="w"> </span>value:
+Book:<span class="w"> </span>author
+Book:<span class="w"> </span>genre
+Book:<span class="w"> </span>rating
+Book:<span class="w"> </span>review
+Book:<span class="w"> </span>title<span class="o">}</span><span class="w"> </span>with<span class="w"> </span>userInfo<span class="w"> </span><span class="o">{</span>
+<span class="w">    </span><span class="nv">NSLocalizedFailureReason</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"CloudKit integration requires that all attributes be optional, or have a default value set. The following attributes are marked non-optional but do not have a default value:\nBook: author\nBook: genre\nBook: rating\nBook: review\nBook: title"</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>The reason is that a model needs to match a couple of restrictions
+When creating models for using them with CloudKist we need to stick to some&nbsp;rules:</p>
+<ul>
+<li>Properties Default Values: Every property needs default value - unless it&#8217;s&nbsp;optional.</li>
+<li>Can&#8217;t&nbsp;Use <code>@Unique</code></li>
+</ul>
+<p>So I simply changed&nbsp;the <code>Book.swift</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Foundation</span>
+<span class="kd">import</span> <span class="nc">SwiftData</span>
+
+<span class="p">@</span><span class="n">Model</span>
+<span class="kd">class</span> <span class="nc">Book</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="nv">author</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="nv">genre</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="nv">review</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="s">""</span>
+    <span class="kd">var</span> <span class="nv">rating</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">3</span>
+
+    <span class="kd">init</span><span class="p">(</span><span class="n">title</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">author</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">genre</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">review</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">rating</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">title</span> <span class="p">=</span> <span class="n">title</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">author</span> <span class="p">=</span> <span class="n">author</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">genre</span> <span class="p">=</span> <span class="n">genre</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">review</span> <span class="p">=</span> <span class="n">review</span>
+        <span class="kc">self</span><span class="p">.</span><span class="n">rating</span> <span class="p">=</span> <span class="n">rating</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Now I run the app on a Simulator, enter 3 books, run it on my real iPhone - et voilà, the books show up on my iPhone!!&nbsp;🥰</p>
+<h2 id="investigating-testing-playing-around-maybe-understanding">Investigating, Testing, Playing around, maybe&nbsp;understanding&#8230;</h2>
+<h3 id="cloudkit-console">CloudKit&nbsp;Console</h3>
+<p>When investigating what&#8217;s happening there is a very helpful tool: The <a href="https://icloud.developer.apple.com" rel="noopener noreferrer" target="_blank">CloudKit Console</a>:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/cloudkit_console_overview.png"/></p>
+<p>Select <em>CloudKit Database</em> and then select the Bookworm&nbsp;database:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/bookworm_db.png"/></p>
+<h4 id="querying-data">Querying&nbsp;data</h4>
+<p>To see what books have been created <span class="amp">&amp;</span> saved, you need to select the proper options <span class="amp">&amp;</span>&nbsp;filters</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/bookworm_record_filters.png"/></p>
+<ul>
+<li>Make sure at the top level you selected the Bookworm data base &gt;&nbsp;Development</li>
+<li>Select <strong>Private database</strong>: That means we a per user separation of&nbsp;data</li>
+<li>In the zone drop down, do select the one that is not the _<em>default</em>, in my case that is <strong>com.apple.coredata.cloudkit.zone</strong>. I have no clue (yet) what those zones are&nbsp;about&#8230;</li>
+<li>In <em><span class="caps">RECORD</span> <span class="caps">TYPE</span></em> select <strong>CD_Book</strong>, because we want to look at our&nbsp;books</li>
+</ul>
+<p>Hit <em>Query Records</em> and get an error&#8230; 😂
+<img alt="alt text" src="/swiftdata-on-icloud/query_error.png"/></p>
+<p>To fix this, select on the menu on the left side: Schema &gt; Record Types and see&nbsp;this:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/record_types.png"/></p>
+<p>We see that he was right with his error&nbsp;message: <code>recordName</code>is not marked queryable. So let&#8217;s fix&nbsp;that.</p>
+<p>In the left Menu select Schema &gt; Indexes and click&nbsp;on <code>+</code> to create a new index like&nbsp;so:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/new_index.png"/></p>
+<p>Return to the Data &gt; Records, set your filters <span class="amp">&amp;</span> switches: Private Database,&nbsp;zone <code>com.apple.coredata.cloudkit.zone</code>, <span class="caps">RECORD</span> <span class="caps">TYPE</span> to CD_Books and hit <strong>Query Records</strong> and&nbsp;Baammm:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/query_records.png"/></p>
+<h3 id="syncing-in-real-time">Syncing in real&nbsp;time</h3>
+<p>One of the very coo,l features of CloudKit is the near-real-time-syncing: You modify data on one device, and the changes become visible on the other device very quickly - of course on devices that are logged in with the same&nbsp;AppleId.</p>
+<p>The way that works is that a notification is sent to all devices that are logged in with that AppleId, and then they start a&nbsp;sync.</p>
+<p>Unfortunately Simulators don&#8217;t receive those notifications. So in order to test it, you have to make changes on a Simulator and then see them appear on your real device. Of course it also works if you use 2 physical&nbsp;devices.</p>
+<h2 id="reading">Reading</h2>
+<p>Some valuable documents and explanations I&nbsp;found.</p>
+<h3 id="apple">Apple</h3>
+<ul>
+<li><a href="https://developer.apple.com/documentation/cloudkit/enabling-cloudkit-in-your-app" rel="noopener noreferrer" target="_blank">Enabling CloudKit in Your App</a>: Explains how to configure your app to store data in iCloud using&nbsp;CloudKit.</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/cloudkit/managing-icloud-containers-with-cloudkit-database-app#//apple_ref/doc/uid/TP40014987-CH5" rel="noopener noreferrer" target="_blank">Managing iCloud Containers with CloudKit Database App</a>: Explains how to investigate <span class="amp">&amp;</span> see data in your containers via the Apple Web&nbsp;Dev.</p>
+</li>
+<li>
+<p><a href="https://developer.apple.com/documentation/technotes/tn3164-debugging-the-synchronization-of-nspersistentcloudkitcontainer" rel="noopener noreferrer" target="_blank"><span class="caps">TN3164</span>: Debugging the synchronization of NSPersistentCloudKitContainer</a>: While trying to figure out why my App couldn&#8217;t connect to it&#8217;s container and kept reporting access problems, this is the key sentence from that techNote that saved&nbsp;me:</p>
+</li>
+</ul>
+<blockquote>
+<p>If the portal shows that the association between your CloudKit container and app <span class="caps">ID</span> is correct, but the error still exists, it is most likely because the association isn’t synchronized to the CloudKit server. In that case, consider using a new CloudKit container to continue your&nbsp;development.</p>
+</blockquote>
+<h2 id="frequent-errors">Frequent&nbsp;errors</h2>
+<h3 id="default-values-for-fields">Default values for&nbsp;fields</h3>
+<p>The fields of a model must have standard values so they can be saved in CloudKit. You don&#8217;t need it for SwiftData if you just save the data locally on&nbsp;device.</p>
+<h3 id="not-signed-in-with-appleid">Not signed in with&nbsp;AppleId</h3>
+<p>If the device is not logged with an AppleId, it doesn&#8217;t&nbsp;sync.</p>
+<h3 id="entitlements-was-modified-during-the-build">Entitlements was modified during the&nbsp;build</h3>
+<div class="highlight"><pre><span></span><code>Entitlements file "MiniSwiftData.entitlements" was modified during the build, which is not supported. You can disable this error by setting 'CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION' to 'YES', however this may cause the built product's code signature or provisioning profile to contain incorrect entitlements.
+</code></pre></div>
+<p>Of course i didn&#8217;t change the entitlement right while Xcode was building. But the way to fix this is pretty&nbsp;easy:</p>
+<ul>
+<li>In Xcode go to <em>Project &gt; Target &gt; Signing <span class="amp">&amp;</span>&nbsp;Capabilities</em></li>
+<li>Unclick (deselect) <em>Automatically manage&nbsp;signing</em></li>
+<li>Re-select&nbsp;it</li>
+<li>Select your <em>Team</em></li>
+</ul>
+<p>&#8230;that&#8217;s it: Xcode now re-builds your entitlement&nbsp;file.</p>
+<h3 id="unable-to-initialize-without-an-icloud-account-ckaccountstatusnoaccount">Unable to initialize without an iCloud account&nbsp;(CKAccountStatusNoAccount).</h3>
+<p>If you are not logged in on your device or Simulator, iCloud sync can&#8217;t&nbsp;work.</p>
+<p>I saw this and was surpised, because I <span class="caps">WAS</span> logged into iCloud. <span class="caps">BUT</span> the iCloud access was switched off for the&nbsp;app:</p>
+<p><em>Settings &gt; iCloud &gt; Saved to iCloud | See All</em>. This is what the faulty guy looked&nbsp;like:</p>
+<p><img alt="alt text" src="/swiftdata-on-icloud/app_setting_icloud.png"/></p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

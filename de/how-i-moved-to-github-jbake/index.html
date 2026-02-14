@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/how-i-moved-to-github-jbake/" />
+    <link rel="alternate" hreflang="de" href="/de/how-i-moved-to-github-jbake/" />
+    <link rel="alternate" hreflang="fr" href="/fr/how-i-moved-to-github-jbake/" />
+    <link rel="canonical" href="/de/how-i-moved-to-github-jbake/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -33,7 +37,7 @@
 
 
     <meta name="tags" contents="tech" />
-    <meta name="tags" contents="webSite" />
+    <meta name="tags" contents="website" />
 
 </head>
 
@@ -50,17 +54,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/how-i-moved-to-github-jbake/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/how-i-moved-to-github-jbake/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -104,7 +115,7 @@ Français
   class="tag-pill ">tech</a>
 
   <a href="/tag/website/"
-  class="tag-pill ">webSite</a>
+  class="tag-pill ">website</a>
 
 </div>
 
@@ -115,21 +126,21 @@ Français
       | <a href="/how-i-moved-to-github-jbake/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p><strong>*</strong> Diese Seite ist ~~im Aufbau~~ unvollständig... <strong>*</strong></p>
-<p>Zuerst: Es ist nicht meine Erfindung! Viele haben es schon vorher gemacht, es gibt viele Beschreibungen da draußen. Es hat trotzdem einige Zeit gedauert ;)</p>
-<p><a href="http://alexcican.com/post/guide-hosting-website-dropbox-github/" rel="noopener noreferrer" target="_blank">Dieser</a> und <a href="http://alexcican.com/post/blog-dropbox-scriptogram" rel="noopener noreferrer" target="_blank">dieser</a> Beitrag waren die inspirierendsten Quellen und die einfachste Erklärung (die Vertrauen gibt ;) ).</p>
+    <p><strong>*</strong> Diese Seite ist ~~im Aufbau~~ unvollständig&#8230; <strong>*</strong></p>
+<p>Zuerst: Es ist nicht meine Erfindung! Viele haben es schon vorher gemacht, es gibt viele Beschreibungen da draußen. Es hat trotzdem einige Zeit gedauert&nbsp;;)</p>
+<p><a href="http://alexcican.com/post/guide-hosting-website-dropbox-github/" rel="noopener noreferrer" target="_blank">Dieser</a> und <a href="http://alexcican.com/post/blog-dropbox-scriptogram" rel="noopener noreferrer" target="_blank">dieser</a> Beitrag waren die inspirierendsten Quellen und die einfachste Erklärung (die Vertrauen gibt ;)&nbsp;).</p>
 <h1 id="einrichtung">Einrichtung</h1>
-<p>So sieht das Gesamtkonzept aus, das ich habe:</p>
+<p>So sieht das Gesamtkonzept aus, das ich&nbsp;habe:</p>
 <ul>
-<li>Ein Verzeichnis auf meinem Mac, das den Inhalt enthält. Ich verwende die grundlegende Struktur, die <a href="http://jbake.org" rel="noopener noreferrer" target="_blank">JBake</a> verwendet.</li>
-<li>Ein git-geklontes Verzeichnis auf meinem Mac mit dem Output des JBake-Prozesses</li>
-<li>Ein kleines Skript, das ich jedes Mal ausführe, wenn ich etwas geändert habe. Das Skript übernimmt das Backen und das Veröffentlichen auf Git</li>
-<li>Und natürlich die Einstellungen im DNS, um meinen Domainnamen auf die GitHub-IPs zu verweisen</li>
+<li>Ein Verzeichnis auf meinem Mac, das den Inhalt enthält. Ich verwende die grundlegende Struktur, die <a href="http://jbake.org" rel="noopener noreferrer" target="_blank">JBake</a>&nbsp;verwendet.</li>
+<li>Ein git-geklontes Verzeichnis auf meinem Mac mit dem Output des&nbsp;JBake-Prozesses</li>
+<li>Ein kleines Skript, das ich jedes Mal ausführe, wenn ich etwas geändert habe. Das Skript übernimmt das Backen und das Veröffentlichen auf&nbsp;Git</li>
+<li>Und natürlich die Einstellungen im <span class="caps">DNS</span>, um meinen Domainnamen auf die GitHub-IPs zu&nbsp;verweisen</li>
 </ul>
 <h2 id="jbake">JBake</h2>
 <p>Warum benutze ich JBake? Ich mag das Prinzip und fühle mich in Java wohler als in anderen Programmiersprachen. Ich habe den internen Code von JBake nicht angefasst, aber ich bin zuversichtlich, dass ich es könnte.
-Die Arbeitsweise von JBake ähnelt dem berühmten <a href="https://jekyllrb.com/" rel="noopener noreferrer" target="_blank">Jekyll</a>: Es analysiert Inhaltsdateien und erstellt daraus (statische) HTML-Dateien. Die Inhaltsdateien können Markdown oder andere Formate enthalten; ich verwende nur Markdown.</p>
-<p>Meine Verzeichnisstruktur sieht folgendermaßen aus:</p>
+Die Arbeitsweise von JBake ähnelt dem berühmten <a href="https://jekyllrb.com/" rel="noopener noreferrer" target="_blank">Jekyll</a>: Es analysiert Inhaltsdateien und erstellt daraus (statische) <span class="caps">HTML</span>-Dateien. Die Inhaltsdateien können Markdown oder andere Formate enthalten; ich verwende nur&nbsp;Markdown.</p>
+<p>Meine Verzeichnisstruktur sieht folgendermaßen&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><code>.
 |-- assets
 |   |-- favicon.gif
@@ -158,11 +169,11 @@ Die Arbeitsweise von JBake ähnelt dem berühmten <a href="https://jekyllrb.com/
 |
 |-- jbake.properties
 </code></pre></div>
-<p>Standardmäßig erzeugt JBake das Ausgabeverzeichnis in diesem Baum. In meinem Fall backe ich meine Sachen in ein Verzeichnis, das mit Git synchronisiert wird.</p>
-<h2 id="die-github-einrichtung">Die GitHub-Einrichtung</h2>
-<h2 id="die-dns-einstellungen">Die DNS-Einstellungen</h2>
-<h1 id="als-nachstes">Als Nächstes</h1>
-<p>Es gibt ein paar Dinge, die ich ändern möchte.</p>
+<p>Standardmäßig erzeugt JBake das Ausgabeverzeichnis in diesem Baum. In meinem Fall backe ich meine Sachen in ein Verzeichnis, das mit Git synchronisiert&nbsp;wird.</p>
+<h2 id="die-github-einrichtung">Die&nbsp;GitHub-Einrichtung</h2>
+<h2 id="die-dns-einstellungen">Die <span class="caps">DNS</span>-Einstellungen</h2>
+<h1 id="als-nachstes">Als&nbsp;Nächstes</h1>
+<p>Es gibt ein paar Dinge, die ich ändern&nbsp;möchte.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

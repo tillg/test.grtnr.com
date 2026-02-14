@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/development-environment-on-mac/" />
+    <link rel="alternate" hreflang="de" href="/de/development-environment-on-mac/" />
+    <link rel="alternate" hreflang="fr" href="/fr/development-environment-on-mac/" />
+    <link rel="canonical" href="/de/development-environment-on-mac/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -32,7 +36,7 @@
 
 
 
-    <meta name="tags" contents="Mac" />
+    <meta name="tags" contents="mac" />
 
 </head>
 
@@ -49,17 +53,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/development-environment-on-mac/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/development-environment-on-mac/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -100,7 +111,7 @@ Français
       
       <div class="tag-pills">
   <a href="/tag/mac/"
-  class="tag-pill ">Mac</a>
+  class="tag-pill ">mac</a>
 
 </div>
 
@@ -111,32 +122,32 @@ Français
       | <a href="/development-environment-on-mac/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p><img alt="Lustiges Bild von KI" src="dev_tools.png"/></p>
-<p>Ich bin kein professioneller Entwickler, ich mache es zum Spaß. Und ich spiele gerne herum, entdecke neue Technologien und entwickle alle möglichen kleinen Dinge. Manchmal brauche ich Python, manchmal React/Typescript, Java und mehr. Für jedes Entwicklungswerkzeug oder jede Sprache gibt es mehrere Möglichkeiten, wie man sie installieren und ihre Versionen verwalten kann. Da ich dazu neige, Dinge zu vergessen wie "Wie habe ich Python auf diesem Rechner installiert?", ist dies eine Notiz an mein zukünftiges Ich, die mir sagt, wie ich jedes Entwicklungswerkzeug installiert habe.</p>
-<p>Da sich die Art und Weise, wie bestimmte Pakete installiert werden, im Laufe der Zeit ändern kann, werde ich meinen Installationsentscheidungen Daten hinzufügen.</p>
+    <p><img alt="Lustiges Bild von KI" src="/development-environment-on-mac/dev_tools.png"/></p>
+<p>Ich bin kein professioneller Entwickler, ich mache es zum Spaß. Und ich spiele gerne herum, entdecke neue Technologien und entwickle alle möglichen kleinen Dinge. Manchmal brauche ich Python, manchmal React/Typescript, Java und mehr. Für jedes Entwicklungswerkzeug oder jede Sprache gibt es mehrere Möglichkeiten, wie man sie installieren und ihre Versionen verwalten kann. Da ich dazu neige, Dinge zu vergessen wie &#8220;Wie habe ich Python auf diesem Rechner installiert?&#8221;, ist dies eine Notiz an mein zukünftiges Ich, die mir sagt, wie ich jedes Entwicklungswerkzeug installiert&nbsp;habe.</p>
+<p>Da sich die Art und Weise, wie bestimmte Pakete installiert werden, im Laufe der Zeit ändern kann, werde ich meinen Installationsentscheidungen Daten&nbsp;hinzufügen.</p>
 <div class="toc">
 <ul>
 <li><a href="#xcode">Xcode</a></li>
 <li><a href="#terminal">Terminal</a></li>
-<li><a href="#zsh-shell">zsh Shell</a></li>
+<li><a href="#zsh-shell">zsh&nbsp;Shell</a></li>
 <li><a href="#vscode">VSCode</a></li>
 <li><a href="#docker">Docker</a></li>
 <li><a href="#java">Java</a></li>
 <li><a href="#maven">Maven</a></li>
 <li><a href="#gradle">Gradle</a></li>
-<li><a href="#node-und-npm">Node und npm</a></li>
+<li><a href="#node-und-npm">Node und&nbsp;npm</a></li>
 <li><a href="#python">Python</a></li>
-<li><a href="#markdown-linting">Markdown Linting</a></li>
+<li><a href="#markdown-linting">Markdown&nbsp;Linting</a></li>
 <li><a href="#ruby">Ruby</a></li>
 </ul>
 </div>
 <h2 id="xcode">Xcode</h2>
-<p>Xcode ist das grundlegende Entwicklerwerkzeug auf dem Mac. Es enthält git und andere grundlegende Werkzeuge und Compiler.</p>
-<p>Ich installiere es aus dem Apple App Store.</p>
+<p>Xcode ist das grundlegende Entwicklerwerkzeug auf dem Mac. Es enthält git und andere grundlegende Werkzeuge und&nbsp;Compiler.</p>
+<p>Ich installiere es aus dem Apple App&nbsp;Store.</p>
 <h2 id="terminal">Terminal</h2>
-<p>Mein bevorzugtes Terminal ist <a href="https://iterm2.com" rel="noopener noreferrer" target="_blank">iTerm2</a>, und ich installiere es einfach von der Website. Sehen Sie <a href="/de/setting-up-my-terminal/">hier</a>, wie ich es konfiguriere.</p>
-<h2 id="zsh-shell">zsh Shell</h2>
-<p>Auf einem neuen Mac mache ich Folgendes:</p>
+<p>Mein bevorzugtes Terminal ist <a href="https://iterm2.com" rel="noopener noreferrer" target="_blank">iTerm2</a>, und ich installiere es einfach von der Website. Sehen Sie <a href="/de/setting-up-my-terminal/">hier</a>, wie ich es&nbsp;konfiguriere.</p>
+<h2 id="zsh-shell">zsh&nbsp;Shell</h2>
+<p>Auf einem neuen Mac mache ich&nbsp;Folgendes:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Überprüfen, welche Shell ich habe</span>
 <span class="nb">echo</span><span class="w"> </span><span class="s2">"</span><span class="nv">$SHELL</span><span class="s2">"</span>
 
@@ -144,18 +155,18 @@ Français
 chsh<span class="w"> </span>-s<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>which<span class="w"> </span>zsh<span class="k">)</span><span class="s2">"</span>
 </code></pre></div>
 <h2 id="vscode">VSCode</h2>
-<p>... oder VSCode-insiders</p>
+<p>&#8230; oder&nbsp;VSCode-insiders</p>
 <p><strong>Erweiterungen:</strong></p>
 <ul>
 <li>
-<p><strong>markdownlint</strong> von David Anson (<code>davidanson.vscode-markdownlint</code>) - Der De-facto-Standard für Markdown-Linting mit über 10 Millionen Downloads. Unterstreicht Probleme inline und kann beim Speichern automatisch korrigieren.
+<p><strong>markdownlint</strong> von David Anson&nbsp;(<code>davidanson.vscode-markdownlint</code>) - Der De-facto-Standard für Markdown-Linting mit über 10 Millionen Downloads. Unterstreicht Probleme inline und kann beim Speichern automatisch&nbsp;korrigieren.
   <code>code --install-extension davidanson.vscode-markdownlint</code>
-  Konfigurationsdateien werden in folgender Reihenfolge gesucht: <code>.markdownlint.jsonc</code>, <code>.markdownlint.json</code>, <code>.markdownlint.yaml</code>/<code>.yml</code> oder <code>.markdownlintrc</code>. (Hinzugefügt im Januar 2026)</p>
+  Konfigurationsdateien werden in folgender Reihenfolge&nbsp;gesucht: <code>.markdownlint.jsonc</code>, <code>.markdownlint.json</code>, <code>.markdownlint.yaml</code>/<code>.yml</code> oder <code>.markdownlintrc</code>. (Hinzugefügt im Januar&nbsp;2026)</p>
 </li>
 <li>
-<p><strong>Prettier</strong> (<code>esbenp.prettier-vscode</code>) - Code-Formatter.
+<p><strong>Prettier</strong>&nbsp;(<code>esbenp.prettier-vscode</code>) -&nbsp;Code-Formatter.
   <code>code --install-extension esbenp.prettier-vscode</code>
-  Aktivieren Sie das Formatieren beim Speichern in den VS Code-Einstellungen:</p>
+  Aktivieren Sie das Formatieren beim Speichern in den <span class="caps">VS</span>&nbsp;Code-Einstellungen:</p>
 </li>
 </ul>
 <p><code>json
@@ -165,64 +176,64 @@ chsh<span class="w"> </span>-s<span class="w"> </span><span class="s2">"</span><
       "editor.formatOnSave": true
     }
   }</code></p>
-<p>(Hinzugefügt im Januar 2026)</p>
+<p>(Hinzugefügt im Januar&nbsp;2026)</p>
 <h2 id="docker">Docker</h2>
-<p><strong>Januar 2025:</strong> Ich bin von <a href="https://www.docker.com/products/docker-desktop/" rel="noopener noreferrer" target="_blank">Docker Desktop</a> zu <a href="https://rancherdesktop.io" rel="noopener noreferrer" target="_blank">Rancher Desktop</a> gewechselt.</p>
-<p>Installationshinweis: Ich habe die Apple Silicon-Version heruntergeladen, das DMG geöffnet und in mein Anwendungsverzeichnis kopiert. Das einzige Detail, das ich tun musste, war das Ankreuzen des "Administrative Access"-Kästchens in den Einstellungen.
-<img alt="alt text" src="rancher_prefs.png"/></p>
-<p><em>Registry</em>: Ich verwende verschiedene Registries, wenn ich an verschiedenen Projekten arbeite.</p>
-<p><em>Frage</em>: Wie konfiguriere ich Docker so, dass es Images aus einem bestimmten Registry zieht?</p>
+<p><strong>Januar 2025:</strong> Ich bin von <a href="https://www.docker.com/products/docker-desktop/" rel="noopener noreferrer" target="_blank">Docker Desktop</a> zu <a href="https://rancherdesktop.io" rel="noopener noreferrer" target="_blank">Rancher Desktop</a>&nbsp;gewechselt.</p>
+<p>Installationshinweis: Ich habe die Apple Silicon-Version heruntergeladen, das <span class="caps">DMG</span> geöffnet und in mein Anwendungsverzeichnis kopiert. Das einzige Detail, das ich tun musste, war das Ankreuzen des &#8220;Administrative Access&#8221;-Kästchens in den Einstellungen.
+<img alt="alt text" src="/development-environment-on-mac/rancher_prefs.png"/></p>
+<p><em>Registry</em>: Ich verwende verschiedene Registries, wenn ich an verschiedenen Projekten&nbsp;arbeite.</p>
+<p><em>Frage</em>: Wie konfiguriere ich Docker so, dass es Images aus einem bestimmten Registry&nbsp;zieht?</p>
 <h2 id="java">Java</h2>
-<p>Dies sind die Optionen, die ich gesehen habe:</p>
+<p>Dies sind die Optionen, die ich gesehen&nbsp;habe:</p>
 <ul>
 <li><a href="https://github.com/jenv/jenv" rel="noopener noreferrer" target="_blank">jenv</a></li>
-<li><a href="https://sdkman.io" rel="noopener noreferrer" target="_blank">SDK man</a></li>
+<li><a href="https://sdkman.io" rel="noopener noreferrer" target="_blank"><span class="caps">SDK</span>&nbsp;man</a></li>
 </ul>
-<p><strong>Januar 2025</strong>: Ich habe mich entschieden, SDK Man zu verwenden, da es auch Maven abdeckt.</p>
+<p><strong>Januar 2025</strong>: Ich habe mich entschieden, <span class="caps">SDK</span> Man zu verwenden, da es auch Maven&nbsp;abdeckt.</p>
 <p><strong>Mini-Cheatsheet</strong></p>
 <ul>
-<li><code>sdk install java 17.0.12-jbr</code> installiert diese spezifische Java-Version</li>
-<li><code>sdk list java</code> zeigt alle verfügbaren Java-Versionen (zum Installieren) an</li>
-<li>Um die installierten Java-Versionen aufzulisten:</li>
-<li><code>sdk offline enable</code>, damit werden nur lokal installierte Versionen aufgelistet</li>
+<li><code>sdk install java 17.0.12-jbr</code> installiert diese spezifische&nbsp;Java-Version</li>
+<li><code>sdk list java</code> zeigt alle verfügbaren Java-Versionen (zum Installieren)&nbsp;an</li>
+<li>Um die installierten Java-Versionen&nbsp;aufzulisten:</li>
+<li><code>sdk offline enable</code>, damit werden nur lokal installierte Versionen&nbsp;aufgelistet</li>
 <li><code>sdk list java</code></li>
 <li><code>sdk offline disable</code></li>
 <li><code>sdk default java 21.0.6-amzn</code> setzt diese Version als Standard
   Um eine Java-Version als Standard innerhalb eines Verzeichnisses festzulegen, siehe den <a href="https://sdkman.io/usage/#env-command" rel="noopener noreferrer" target="_blank">Env-Befehl</a></li>
 </ul>
 <h2 id="maven">Maven</h2>
-<p>Ich verwende einfach <code>brew install maven</code>. Für ältere Versionen installiert <code>brew install maven30</code> Maven 3.0.</p>
+<p>Ich verwende&nbsp;einfach <code>brew install maven</code>. Für ältere Versionen&nbsp;installiert <code>brew install maven30</code> Maven&nbsp;3.0.</p>
 <h2 id="gradle">Gradle</h2>
-<p><strong>Januar 2025</strong>: Ich habe mich entschieden, SDK Man auch für Gradle zu verwenden.</p>
-<p>Grund: <code>brew install gradle</code> installierte Gradle Version 8.12.1, aber für das aktuelle Projekt benötigte ich 8.5.</p>
+<p><strong>Januar 2025</strong>: Ich habe mich entschieden, <span class="caps">SDK</span> Man auch für Gradle zu&nbsp;verwenden.</p>
+<p>Grund: <code>brew install gradle</code> installierte Gradle Version 8.12.1, aber für das aktuelle Projekt benötigte ich&nbsp;8.5.</p>
 <ul>
-<li><code>sdk install gradle 8.5</code>: Installiert die spezifische Gradle-Version</li>
+<li><code>sdk install gradle 8.5</code>: Installiert die spezifische&nbsp;Gradle-Version</li>
 <li><code>sdk use gradle 8.5</code></li>
 </ul>
-<h2 id="node-und-npm">Node und npm</h2>
-<p><strong>Januar 2025</strong> Ich habe mich entschieden, <a href="https://github.com/nvm-sh/nvm" rel="noopener noreferrer" target="_blank">nvm</a> zu verwenden.</p>
+<h2 id="node-und-npm">Node und&nbsp;npm</h2>
+<p><strong>Januar 2025</strong> Ich habe mich entschieden, <a href="https://github.com/nvm-sh/nvm" rel="noopener noreferrer" target="_blank">nvm</a> zu&nbsp;verwenden.</p>
 <p><strong>Mini-Cheatsheet</strong></p>
 <ul>
 <li><code>nvm use 16</code></li>
-<li><code>node -v</code> zeigt die aktuell verwendete Version an</li>
-<li><code>nvm install 12</code> installiert Node 12 und verwendet es</li>
+<li><code>node -v</code> zeigt die aktuell verwendete Version&nbsp;an</li>
+<li><code>nvm install 12</code> installiert Node 12 und verwendet&nbsp;es</li>
 </ul>
 <h2 id="python">Python</h2>
 <ul>
 <li><strong>Sommer 2024</strong>: Ich verwende <a href="https://github.com/pyenv/pyenv" rel="noopener noreferrer" target="_blank">pyenv</a></li>
-<li>Um pyenv zu installieren: <code>brew install pyenv</code></li>
+<li>Um pyenv zu&nbsp;installieren: <code>brew install pyenv</code></li>
 </ul>
 <p><strong>Mini-Cheatsheet</strong></p>
-<p>Um eine mit Pyenv installierte Python-Version auszuwählen, führen Sie einen der folgenden Befehle aus:</p>
+<p>Um eine mit Pyenv installierte Python-Version auszuwählen, führen Sie einen der folgenden Befehle&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><code>pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.12
 pyenv<span class="w"> </span>shell<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>nur<span class="w"> </span>für<span class="w"> </span>die<span class="w"> </span>aktuelle<span class="w"> </span>Shell-Sitzung<span class="w"> </span>auswählen
 pyenv<span class="w"> </span><span class="nb">local</span><span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>automatisch<span class="w"> </span>auswählen,<span class="w"> </span>wann<span class="w"> </span>immer<span class="w"> </span>Sie<span class="w"> </span>sich<span class="w"> </span>im<span class="w"> </span>aktuellen<span class="w"> </span>Verzeichnis<span class="w"> </span><span class="o">(</span>oder<span class="w"> </span>dessen<span class="w"> </span>Unterverzeichnissen<span class="o">)</span><span class="w"> </span>befinden
 pyenv<span class="w"> </span>global<span class="w"> </span>&lt;version&gt;<span class="w"> </span>--<span class="w"> </span>global<span class="w"> </span>für<span class="w"> </span>Ihr<span class="w"> </span>Benutzerkonto<span class="w"> </span>auswählen
 </code></pre></div>
-<h2 id="markdown-linting">Markdown Linting</h2>
+<h2 id="markdown-linting">Markdown&nbsp;Linting</h2>
 <p><code>brew install markdownlint-cli2</code></p>
 <h2 id="ruby">Ruby</h2>
-<p>Noch nicht durchdacht. Vermeiden Sie Ruby im Allgemeinen... 😉</p>
+<p>Noch nicht durchdacht. Vermeiden Sie Ruby im Allgemeinen&#8230;&nbsp;😉</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

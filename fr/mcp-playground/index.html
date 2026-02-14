@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/mcp-playground/" />
+    <link rel="alternate" hreflang="de" href="/de/mcp-playground/" />
+    <link rel="alternate" hreflang="fr" href="/fr/mcp-playground/" />
+    <link rel="canonical" href="/fr/mcp-playground/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -32,8 +36,8 @@
 
 
 
-    <meta name="tags" contents="Tech" />
-    <meta name="tags" contents="AI" />
+    <meta name="tags" contents="tech" />
+    <meta name="tags" contents="ai" />
 
 </head>
 
@@ -50,17 +54,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/fr/">Home</a>
 
-  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/fr/about">About</a>
-  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+  <a class="sidebar-nav-item" href="/fr/tags">Sujets</a>
+  <a class="sidebar-nav-item" href="/recipes">Recettes</a>
+  <a class="sidebar-nav-item" href="/fr/about">À propos</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Mentions légales</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/mcp-playground/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/mcp-playground/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -101,10 +112,10 @@ Deutsch
       
       <div class="tag-pills">
   <a href="/tag/tech/"
-  class="tag-pill ">Tech</a>
+  class="tag-pill ">tech</a>
 
   <a href="/tag/ai/"
-  class="tag-pill ">AI</a>
+  class="tag-pill ">ai</a>
 
 </div>
 
@@ -119,27 +130,27 @@ Deutsch
 <div class="toc">
 <ul>
 <li><a href="#questions">Questions</a></li>
-<li><a href="#acceder-a-un-serveur-mcp">Accéder à un serveur MCP</a></li>
-<li><a href="#serveurs-mcp">Serveurs MCP</a><ul>
-<li><a href="#serveur-mcp-de-systeme-de-fichiers">Serveur MCP de Système de Fichiers</a></li>
+<li><a href="#acceder-a-un-serveur-mcp">Accéder à un serveur <span class="caps">MCP</span></a></li>
+<li><a href="#serveurs-mcp">Serveurs <span class="caps">MCP</span></a><ul>
+<li><a href="#serveur-mcp-de-systeme-de-fichiers">Serveur <span class="caps">MCP</span> de Système de&nbsp;Fichiers</a></li>
 </ul>
 </li>
-<li><a href="#serveurs-mcp_1">Serveurs MCP</a><ul>
-<li><a href="#acces-au-systeme-de-fichiers">Accès au Système de Fichiers</a></li>
-<li><a href="#construction-xcode">Construction Xcode</a></li>
+<li><a href="#serveurs-mcp_1">Serveurs <span class="caps">MCP</span></a><ul>
+<li><a href="#acces-au-systeme-de-fichiers">Accès au Système de&nbsp;Fichiers</a></li>
+<li><a href="#construction-xcode">Construction&nbsp;Xcode</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <h2 id="questions">Questions</h2>
-<p>Questions ouvertes que j'ai.</p>
+<p>Questions ouvertes que&nbsp;j&#8217;ai.</p>
 <ul>
-<li>Puis-je exécuter Claude avec différentes configurations de serveur MCP ? C'est-à-dire que j'ai une configuration par projet, disons une pour mon projet Python (incluant l'accès uniquement à mon répertoire de projet Python), une pour mon projet Swift/Xcode (avec un répertoire différent et des outils différents).</li>
-<li>Test : Expérimenter avec MCP Inspector et <a href="https://github.com/cameroncooke/XcodeBuildMCP" rel="noopener noreferrer" target="_blank">Xcode Build MCP Server</a>.</li>
+<li>Puis-je exécuter Claude avec différentes configurations de serveur <span class="caps">MCP</span> ? C&#8217;est-à-dire que j&#8217;ai une configuration par projet, disons une pour mon projet Python (incluant l&#8217;accès uniquement à mon répertoire de projet Python), une pour mon projet Swift/Xcode (avec un répertoire différent et des outils&nbsp;différents).</li>
+<li>Test : Expérimenter avec <span class="caps">MCP</span> Inspector et <a href="https://github.com/cameroncooke/XcodeBuildMCP" rel="noopener noreferrer" target="_blank">Xcode Build <span class="caps">MCP</span> Server</a>.</li>
 </ul>
-<h2 id="acceder-a-un-serveur-mcp">Accéder à un serveur MCP</h2>
-<p>Lors de la recherche et de la découverte éventuelle d'un serveur MCP pour mon cas d'utilisation, je trouve utile de les expérimenter, afin de <em>comprendre</em> quels outils le LLM obtient. Le moyen le plus simple de le faire est avec le <a href="https://github.com/modelcontextprotocol/inspector" rel="noopener noreferrer" target="_blank">MCP Inspector</a>.</p>
-<p>Pour commencer :</p>
+<h2 id="acceder-a-un-serveur-mcp">Accéder à un serveur <span class="caps">MCP</span></h2>
+<p>Lors de la recherche et de la découverte éventuelle d&#8217;un serveur <span class="caps">MCP</span> pour mon cas d&#8217;utilisation, je trouve utile de les expérimenter, afin de <em>comprendre</em> quels outils le <span class="caps">LLM</span> obtient. Le moyen le plus simple de le faire est avec le <a href="https://github.com/modelcontextprotocol/inspector" rel="noopener noreferrer" target="_blank"><span class="caps">MCP</span> Inspector</a>.</p>
+<p>Pour commencer&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Assurez-vous d'avoir installé une version récente de nodeJs (dans mon cas avec nvm)</span>
 nvm<span class="w"> </span>use<span class="w"> </span><span class="m">24</span>
 npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </span>node<span class="w"> </span>build/index.js
@@ -147,7 +158,7 @@ npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </spa
 <span class="c1"># Il télécharge et démarre le client MCP UI et le sert localement.</span>
 </code></pre></div>
 <p><strong>Configuration</strong></p>
-<p>L'Inspector conserve tout ce que vous tapez dans la barre latérale dans localStorage, mais pour des configurations répétables, vous pouvez enregistrer un petit fichier JSON et le pointer avec le CLI :</p>
+<p>L&#8217;Inspector conserve tout ce que vous tapez dans la barre latérale dans localStorage, mais pour des configurations répétables, vous pouvez enregistrer un petit fichier <span class="caps">JSON</span> et le pointer avec le <span class="caps">CLI</span>&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// mcp.json</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -164,15 +175,15 @@ npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </spa
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Ensuite, exécutez <code>npx @modelcontextprotocol/inspector --config ./mcp.json --server filesystem</code></p>
-<h2 id="serveurs-mcp">Serveurs MCP</h2>
-<p>Serveurs MCP que j'ai utilisés ou examinés :</p>
-<h3 id="serveur-mcp-de-systeme-de-fichiers">Serveur MCP de Système de Fichiers</h3>
+<p>Ensuite,&nbsp;exécutez <code>npx @modelcontextprotocol/inspector --config ./mcp.json --server filesystem</code></p>
+<h2 id="serveurs-mcp">Serveurs <span class="caps">MCP</span></h2>
+<p>Serveurs <span class="caps">MCP</span> que j&#8217;ai utilisés ou examinés&nbsp;:</p>
+<h3 id="serveur-mcp-de-systeme-de-fichiers">Serveur <span class="caps">MCP</span> de Système de&nbsp;Fichiers</h3>
 <ul>
-<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" rel="noopener noreferrer" target="_blank">Serveur MCP de Système de Fichiers</a></li>
-<li>L'un des <a href="https://github.com/modelcontextprotocol/servers?tab=readme-ov-file#-reference-servers" rel="noopener noreferrer" target="_blank">Serveurs de Référence</a></li>
+<li><a href="https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem" rel="noopener noreferrer" target="_blank">Serveur <span class="caps">MCP</span> de Système de&nbsp;Fichiers</a></li>
+<li>L&#8217;un des <a href="https://github.com/modelcontextprotocol/servers?tab=readme-ov-file#-reference-servers" rel="noopener noreferrer" target="_blank">Serveurs de&nbsp;Référence</a></li>
 </ul>
-<p>Configuration principale :</p>
+<p>Configuration principale&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">"mcpServers"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"filesystem"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -187,13 +198,13 @@ npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </spa
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="serveurs-mcp_1">Serveurs MCP</h2>
-<p>Serveurs MCP que j'ai testés ou que je prévois de tester.</p>
-<h3 id="acces-au-systeme-de-fichiers">Accès au Système de Fichiers</h3>
-<h3 id="construction-xcode">Construction Xcode</h3>
-<p><img alt="Construction Xcode" src="xcode_build.png"/></p>
+<h2 id="serveurs-mcp_1">Serveurs <span class="caps">MCP</span></h2>
+<p>Serveurs <span class="caps">MCP</span> que j&#8217;ai testés ou que je prévois de&nbsp;tester.</p>
+<h3 id="acces-au-systeme-de-fichiers">Accès au Système de&nbsp;Fichiers</h3>
+<h3 id="construction-xcode">Construction&nbsp;Xcode</h3>
+<p><img alt="Construction Xcode" src="/mcp-playground/xcode_build.png"/></p>
 <ul>
-<li>Active les actions de construction Xcode.</li>
+<li>Active les actions de construction&nbsp;Xcode.</li>
 <li>https://github.com/cameroncooke/XcodeBuildMCP</li>
 </ul>
     <div id="giscus">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/playing-with-javascript/" />
+    <link rel="alternate" hreflang="de" href="/de/playing-with-javascript/" />
+    <link rel="alternate" hreflang="fr" href="/fr/playing-with-javascript/" />
+    <link rel="canonical" href="/playing-with-javascript/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,7 +104,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Playing with&nbsp;JavaScript
+      Playing with JavaScript
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">December 6, 2015</span>
@@ -114,13 +118,13 @@ Français
     </div>
 
 
-    <p>I’ve been playing around with <span class="caps">HTML</span> <span class="amp">&amp;</span> JavaScript. And Geometry is just it ;)</p>
-<p>Unfortunatly the script won’t render here, nso I just show you the code:</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">"c"</span> <span class="na">onload</span><span class="o">=</span><span class="s">"Draw()"</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <p>I&#8217;ve been playing around with <span class="caps">HTML</span> <span class="amp">&amp;</span> JavaScript. And Geometry is just it&nbsp;;)</p>
+<p>Unfortunatly the script won&#8217;t render here, nso I just show you the&nbsp;code:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;c&quot;</span> <span class="na">onload</span><span class="o">=</span><span class="s">&quot;Draw()&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">"c"</span><span class="p">)</span>
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">"2d"</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">c</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&quot;2d&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">cw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">600</span><span class="p">),</span>
 <span class="w">    </span><span class="nx">cx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cw</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">2</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">600</span><span class="p">),</span>
@@ -129,7 +133,7 @@ Français
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">phi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
 
 <span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">lineWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.2</span>
-<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">strokeStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"black"</span>
+<span class="w">  </span><span class="nx">ctx</span><span class="p">.</span><span class="nx">strokeStyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;black&quot;</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">num_circles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">200</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">frames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
@@ -187,10 +191,10 @@ Français
 <span class="w">    </span><span class="nx">stopped</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">}</span>
 
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">"load"</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="p">(),</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&quot;load&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">start</span><span class="p">(),</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
 
 <span class="w">  </span><span class="nx">c</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span>
-<span class="w">    </span><span class="s2">"click"</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;click&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">stopped</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">start</span><span class="p">()</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">stopAnim</span><span class="p">()</span>
 <span class="w">    </span><span class="p">},</span>

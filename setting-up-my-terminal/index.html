@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/setting-up-my-terminal/" />
+    <link rel="alternate" hreflang="de" href="/de/setting-up-my-terminal/" />
+    <link rel="alternate" hreflang="fr" href="/fr/setting-up-my-terminal/" />
+    <link rel="canonical" href="/setting-up-my-terminal/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -33,7 +37,7 @@
 
 
     <meta name="tags" contents="tech" />
-    <meta name="tags" contents="Mac" />
+    <meta name="tags" contents="mac" />
 
 </head>
 
@@ -48,7 +52,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -67,14 +71,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -101,7 +105,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Setting up my&nbsp;terminal
+      Setting up my terminal
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 6, 2020</span>
@@ -111,35 +115,35 @@ Français
   class="tag-pill ">tech</a>
 
   <a href="/tag/mac/"
-  class="tag-pill ">Mac</a>
+  class="tag-pill ">mac</a>
 
 </div>
 
     </div>
 
 
-    <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that’s what was missing to me…</p>
-<p>So here I go with yet another article. Or rather a collection of snippets of the information that I found valuable.</p>
-<h2 id="setting-the-scene">Setting the scene</h2>
-<p>My target setup <span class="amp">&amp;</span> requirements are simple:</p>
+    <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that&#8217;s what was missing to&nbsp;me&#8230;</p>
+<p>So here I go with yet another article. Or rather a collection of snippets of the information that I found&nbsp;valuable.</p>
+<h2 id="setting-the-scene">Setting the&nbsp;scene</h2>
+<p>My target setup <span class="amp">&amp;</span> requirements are&nbsp;simple:</p>
 <ul>
-<li>macOS (Catalina 10.15.2 at the time of writing)</li>
-<li>iTerm2 (Build 3.3.8)</li>
-<li>zsh (as provided by Apple since a couple of macOS versions)</li>
-<li>I want proper coloring</li>
-<li>I want to see what Git branch I am in - if the current directory is within a git repo</li>
+<li>macOS (Catalina 10.15.2 at the time of&nbsp;writing)</li>
+<li>iTerm2 (Build&nbsp;3.3.8)</li>
+<li>zsh (as provided by Apple since a couple of macOS&nbsp;versions)</li>
+<li>I want proper&nbsp;coloring</li>
+<li>I want to see what Git branch I am in - if the current directory is within a git&nbsp;repo</li>
 </ul>
-<h2 id="the-moving-parts">The moving parts</h2>
-<p>What made me get lost, was missing overview. Therefore, here are the different bits and pices that are involved in my setup:</p>
+<h2 id="the-moving-parts">The moving&nbsp;parts</h2>
+<p>What made me get lost, was missing overview. Therefore, here are the different bits and pices that are involved in my&nbsp;setup:</p>
 <ul>
-<li><strong>zsh</strong>: The shell</li>
-<li><strong>Oh My Zsh</strong>: A framework that enhances the zsh shell with functions and design.</li>
-<li><strong>powerlevel9k</strong>: A theme for Oh My Zsh</li>
-<li><strong>Fonts</strong> required by powerlevel9k to display it’s text and icons</li>
+<li><strong>zsh</strong>: The&nbsp;shell</li>
+<li><strong>Oh My Zsh</strong>: A framework that enhances the zsh shell with functions and&nbsp;design.</li>
+<li><strong>powerlevel9k</strong>: A theme for Oh My&nbsp;Zsh</li>
+<li><strong>Fonts</strong> required by powerlevel9k to display it&#8217;s text and&nbsp;icons</li>
 </ul>
-<p>The dependencies in this list are from top to bottom, i.e. the fonts are required by powerlevel9k that runs on top of Oh My Zsh that uses zsh.</p>
-<h2 id="directory-structure">Directory structure</h2>
-<p>Before going thru the different components one by one, this is the directory structure we will have after installing all the bits <span class="amp">&amp;</span> pices:</p>
+<p>The dependencies in this list are from top to bottom, i.e. the fonts are required by powerlevel9k that runs on top of Oh My Zsh that uses&nbsp;zsh.</p>
+<h2 id="directory-structure">Directory&nbsp;structure</h2>
+<p>Before going thru the different components one by one, this is the directory structure we will have after installing all the bits <span class="amp">&amp;</span>&nbsp;pices:</p>
 <div class="highlight"><pre><span></span><code>├── $HOME
 │   └── .oh-my-zsh/
 │   │   └── custom/
@@ -150,24 +154,24 @@ Français
 ├── .zshrc
 </code></pre></div>
 <h2 id="zsh">zsh</h2>
-<p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it also fired up with bash. So why move over to zsh?</p>
-<p>This article explains it nicely and extensively. In short:</p>
+<p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it also fired up with bash. So why move over to&nbsp;zsh?</p>
+<p>This article explains it nicely and extensively. In&nbsp;short:</p>
 <ul>
-<li>Apple used bash in the past as it was the de-facto standard</li>
-<li>In 2007 bash switched to <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="noopener noreferrer" target="_blank"><span class="caps">GNU</span> Public License 3.0</a>, which Apple didn’t like for some reasons. So they stayed with the pre-2007 release of bash. And that’s old - including <a href="https://www.wikiwand.com/en/Shellshock_(software_bug)" rel="noopener noreferrer" target="_blank">a vulnerabilty</a> that forced Apple to update bash for Macs.</li>
-<li>zsh over time became the emerging de-facto standard, so Apple moved.</li>
+<li>Apple used bash in the past as it was the de-facto&nbsp;standard</li>
+<li>In 2007 bash switched to <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="noopener noreferrer" target="_blank"><span class="caps">GNU</span> Public License 3.0</a>, which Apple didn&#8217;t like for some reasons. So they stayed with the pre-2007 release of bash. And that&#8217;s old - including <a href="https://www.wikiwand.com/en/Shellshock_(software_bug)" rel="noopener noreferrer" target="_blank">a vulnerabilty</a> that forced Apple to update bash for&nbsp;Macs.</li>
+<li>zsh over time became the emerging de-facto standard, so Apple&nbsp;moved.</li>
 </ul>
 <p>And of course, <a href="https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/" rel="noopener noreferrer" target="_blank">zsh offers more modern, cool features</a>.</p>
-<p>So anyways, it’s trhe new standard, it looks good - let’s use it. As it’s the new mac standard shell, you don’t need to install it. In case you got a new mac that came with Catalina pre-installed, you are using zsh already. In case you upgraded your Mac from Mojave, you need to set zsh as your terminal shell like so:</p>
+<p>So anyways, it&#8217;s trhe new standard, it looks good - let&#8217;s use it. As it&#8217;s the new mac standard shell, you don&#8217;t need to install it. In case you got a new mac that came with Catalina pre-installed, you are using zsh already. In case you upgraded your Mac from Mojave, you need to set zsh as your terminal shell like&nbsp;so:</p>
 <div class="highlight"><pre><span></span><code>chsh<span class="w"> </span>-s<span class="w"> </span>/bin/zsh
 </code></pre></div>
-<p>This sets zsh as the default Shell.</p>
+<p>This sets zsh as the default&nbsp;Shell.</p>
 <h3 id="configuration">Configuration</h3>
-<p>Configuring the zsh shell is done via entries in <code>.zshrc</code>, which is located in your <code>$HOME</code> directory. As described above, there are a couple of components that interact. Some of them offer configuration options, and can be configured in different locations. In order to keep an overview, I opted for installing the components in their respective default location, and trying to have all the configuration option in the <code>.zshrc</code> file.</p>
-<h2 id="oh-my-zsh">Oh My Zsh</h2>
+<p>Configuring the zsh shell is done via entries&nbsp;in <code>.zshrc</code>, which is located in&nbsp;your <code>$HOME</code> directory. As described above, there are a couple of components that interact. Some of them offer configuration options, and can be configured in different locations. In order to keep an overview, I opted for installing the components in their respective default location, and trying to have all the configuration option in&nbsp;the <code>.zshrc</code> file.</p>
+<h2 id="oh-my-zsh">Oh My&nbsp;Zsh</h2>
 <blockquote>
 <p>Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.
-— <cite><a href="https://ohmyz.sh/" rel="noopener noreferrer" target="_blank">Oh My Zsh website</a></cite></p>
+&#8212; <cite><a href="https://ohmyz.sh/" rel="noopener noreferrer" target="_blank">Oh My Zsh website</a></cite></p>
 </blockquote>
 <p>Bascically Oh My Zsh makes your terminal look very nice (via <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" rel="noopener noreferrer" target="_blank">themes</a>) and offers lots of helpful plugins. An example list from their <a href="https://github.com/ohmyzsh/ohmyzsh" rel="noopener noreferrer" target="_blank">github page</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">plugins</span><span class="o">=(</span>
@@ -180,9 +184,9 @@ Français
 <span class="w">  </span>ruby
 <span class="o">)</span>
 </code></pre></div>
-<p>I currently use the git plugin, which offers shortcuts for often used git commands.</p>
-<h3 id="configuring-oh-my-zsh">Configuring Oh My Zsh</h3>
-<p>As mentioned, I have all the configurations integrated in my <code>$HOME/.zshrc</code> file. The relevant snippets from my <code>.zshrc</code>file:</p>
+<p>I currently use the git plugin, which offers shortcuts for often used git&nbsp;commands.</p>
+<h3 id="configuring-oh-my-zsh">Configuring Oh My&nbsp;Zsh</h3>
+<p>As mentioned, I have all the configurations integrated in&nbsp;my <code>$HOME/.zshrc</code> file. The relevant snippets from&nbsp;my <code>.zshrc</code>file:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Path to your oh-my-zsh installation.</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"/Users/tgartner/.oh-my-zsh"</span>
 

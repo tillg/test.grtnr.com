@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/named-volumes-with-docker-compose/" />
+    <link rel="alternate" hreflang="de" href="/de/named-volumes-with-docker-compose/" />
+    <link rel="alternate" hreflang="fr" href="/fr/named-volumes-with-docker-compose/" />
+    <link rel="canonical" href="/named-volumes-with-docker-compose/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -32,7 +36,7 @@
 
 
 
-    <meta name="tags" contents="Tech" />
+    <meta name="tags" contents="tech" />
 
 </head>
 
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,28 +104,28 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Named volumes with&nbsp;docker-compose
+      Named volumes with docker-compose
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">September 4, 2021</span>
       
       <div class="tag-pills">
   <a href="/tag/tech/"
-  class="tag-pill ">Tech</a>
+  class="tag-pill ">tech</a>
 
 </div>
 
     </div>
 
 
-    <p>While working on a side project that uses <strong>docker-compose</strong>, I stumbled over a problem. One that I had encountered before but had never properly investigated or solved.</p>
-<p>Here is what I want to do:</p>
+    <p>While working on a side project that uses <strong>docker-compose</strong>, I stumbled over a problem. One that I had encountered before but had never properly investigated or&nbsp;solved.</p>
+<p>Here is what I want to&nbsp;do:</p>
 <ul>
-<li>Have a bunch of services running within a docker-compose setup</li>
-<li>Have those services use mounted shares - one share, used by more than one container.</li>
+<li>Have a bunch of services running within a docker-compose&nbsp;setup</li>
+<li>Have those services use mounted shares - one share, used by more than one&nbsp;container.</li>
 <li>The problematic thing: I want <strong>multiple containers</strong> to use the <strong>same volume</strong>!</li>
 </ul>
-<p>Make a long story short, here is how it works smoothly:</p>
+<p>Make a long story short, here is how it works&nbsp;smoothly:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">version</span><span class="p">:</span><span class="w"> </span><span class="sc">'3'</span>
 <span class="nx">services</span><span class="p">:</span>
 <span class="w">  </span><span class="nx">service1</span><span class="p">:</span>
@@ -147,17 +151,17 @@ Français
 <span class="w">           </span><span class="nx">device</span><span class="p">:</span><span class="w"> </span><span class="p">.</span><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">content</span>
 <span class="w">           </span><span class="nx">o</span><span class="p">:</span><span class="w"> </span><span class="nx">bind</span>
 </code></pre></div>
-<p>That’s what’s going on:</p>
+<p>That&#8217;s what&#8217;s going&nbsp;on:</p>
 <ul>
-<li>We have 2 services of the same type: plain nginx containers for demo purposes.</li>
-<li>They both expose their (internal) port 80 to port 81 resp. 82 to the outside world.</li>
-<li>They both use a volume called <strong>content</strong> that is defined in the volumes section.</li>
+<li>We have 2 services of the same type: plain nginx containers for demo&nbsp;purposes.</li>
+<li>They both expose their (internal) port 80 to port 81 resp. 82 to the outside&nbsp;world.</li>
+<li>They both use a volume called <strong>content</strong> that is defined in the volumes&nbsp;section.</li>
 </ul>
-<p>The detail that I missed for so long was the <strong>volumes</strong> section with the <strong>driver_opts</strong>. And while I ran a couple of tests and everything behaved exactly the way I hoped, I couldn’t find any proper documentation. Here’s what the <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts" rel="noopener noreferrer" target="_blank">docker documentation</a> says about <strong>driver_opts</strong>:</p>
+<p>The detail that I missed for so long was the <strong>volumes</strong> section with the <strong>driver_opts</strong>. And while I ran a couple of tests and everything behaved exactly the way I hoped, I couldn&#8217;t find any proper documentation. Here&#8217;s what the <a href="https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts" rel="noopener noreferrer" target="_blank">docker documentation</a> says about <strong>driver_opts</strong>:</p>
 <blockquote>
-<p>Specify a list of options as key-value pairs to pass to the driver for this volume. Those options are driver-dependent - consult the driver’s documentation for more information.</p>
+<p>Specify a list of options as key-value pairs to pass to the driver for this volume. Those options are driver-dependent - consult the driver’s documentation for more&nbsp;information.</p>
 </blockquote>
-<p>When investigating how things are working, docker’s inspect tools give some insights: This is the <strong>Mounts</strong> part of <strong>docker inspect service1</strong></p>
+<p>When investigating how things are working, docker&#8217;s inspect tools give some insights: This is the <strong>Mounts</strong> part of <strong>docker inspect&nbsp;service1</strong></p>
 <div class="highlight"><pre><span></span><code><span class="w"> </span><span class="s2">"Mounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">            </span><span class="p">{</span>
 <span class="w">                </span><span class="s2">"Type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"volume"</span><span class="p">,</span>
@@ -171,24 +175,24 @@ Français
 <span class="w">            </span><span class="p">}</span>
 <span class="w">        </span><span class="p">]</span>
 </code></pre></div>
-<p>At first I was sceptic because of this line:</p>
+<p>At first I was sceptic because of this&nbsp;line:</p>
 <div class="highlight"><pre><span></span><code><span class="s2">"Source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/var/lib/docker/volumes/docker-playground_content/_data"</span>
 </code></pre></div>
-<p>But it turns out my data is <strong>not</strong> in this docker-managed directory, but where I wanted it. In my case that’s in <strong>./data/content</strong>. Also the relative path works fine.</p>
+<p>But it turns out my data is <strong>not</strong> in this docker-managed directory, but where I wanted it. In my case that&#8217;s in <strong>./data/content</strong>. Also the relative path works&nbsp;fine.</p>
 <h3 id="sources">Sources</h3>
-<p>Here are the original sources that helped me most</p>
+<p>Here are the original sources that helped me&nbsp;most</p>
 <ul>
-<li>Docker documentation - strange enough, it dodn’t help at all…</li>
+<li>Docker documentation - strange enough, it dodn&#8217;t help at&nbsp;all&#8230;</li>
 <li>This was the most helpful <a href="https://stackoverflow.com/questions/35841241/docker-compose-named-mounted-volume" rel="noopener noreferrer" target="_blank">Stackoverflow article</a>.</li>
 </ul>
 <h3 id="versions">Versions</h3>
-<p>Since these kind of setups might be version sensitive, here is my setup:</p>
+<p>Since these kind of setups might be version sensitive, here is my&nbsp;setup:</p>
 <div class="highlight"><pre><span></span><code>docker-compose version 1.29.2, build 5becea4c
 docker-py version: 5.0.0
 CPython version: 3.9.0
 OpenSSL version: OpenSSL 1.1.1h  22 Sep 2020
 </code></pre></div>
-<p>And it runs on my Mac with Big Sur Version 11.5.2 (wit h Intel <span class="caps">CPU</span> 😜).</p>
+<p>And it runs on my Mac with Big Sur Version 11.5.2 (wit h Intel <span class="caps">CPU</span>&nbsp;😜).</p>
 <p>The code can be found <a href="https://github.com/tillg/docker-compose-volumes-playground/" rel="noopener noreferrer" target="_blank">on Github</a>.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

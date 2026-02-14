@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <title>test.grtnr.com</title>
+
+  <meta charset="utf-8" />
+
+  <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/setting-up-my-terminal/" />
+    <link rel="alternate" hreflang="de" href="/de/setting-up-my-terminal/" />
+    <link rel="alternate" hreflang="fr" href="/fr/setting-up-my-terminal/" />
+    <link rel="canonical" href="/en/setting-up-my-terminal/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+  <link rel="stylesheet" href="/theme/css/styles.css" />
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-H8M7YDCSD4');
+  </script>
+
+
+
+
+    <meta name="tags" contents="tech" />
+    <meta name="tags" contents="mac" />
+
+</head>
+
+<body>
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  
+    <div class="sidebar-item">Stuff that keeps me busy, like family, coding, math, mountains and more.</div>
+
+  <nav class="sidebar-nav">
+
+  <a class="sidebar-nav-item" href="/">Home</a>
+
+  <a class="sidebar-nav-item" href="/tags">Topics</a>
+  <a class="sidebar-nav-item" href="/recipes">Recipes</a>
+  <a class="sidebar-nav-item" href="/about">About</a>
+  <a class="sidebar-nav-item" href="/impressum">Impressum</a>
+
+  </nav>
+
+  <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/setting-up-my-terminal/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/setting-up-my-terminal/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
+
+  <div class="sidebar-item">
+      Last built 14.02.2026 22:21:30.
+  </div>
+</div>
+  <div class="wrap">
+    <div class="masthead">
+      <div class="container">
+        <h3 class="masthead-title">
+          <a href="/" title="Home">
+            <span style="color: #C00000;">test</span>.grtnr.com
+          </a>         </h3>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher-top">
+          <button class="language-globe-btn" onclick="toggleLanguageMenu()">
+            <svg class="globe-icon" viewBox="0 0 24 24" width="20" height="20">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+          </button>
+          <div class="language-menu" id="languageMenu">
+                <a href="#" class="language-option" data-lang="de" onclick="switchLanguage('de')">
+Deutsch
+                </a>
+                <a href="#" class="language-option" data-lang="fr" onclick="switchLanguage('fr')">
+Français
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content">
+<div class="posts">
+<div class="post">
+    <h1 class="post-title">
+      Setting up my terminal
+    </h1>
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
+      <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 6, 2020</span>
+      
+      <div class="tag-pills">
+  <a href="/tag/tech/"
+  class="tag-pill ">tech</a>
+
+  <a href="/tag/mac/"
+  class="tag-pill ">mac</a>
+
+</div>
+
+    </div>
+
+
+    <p>I know, there are lots of articles and explanations out there on how to configure and set up your terminal. Yet, it took me more than 2 hours to get things working the way I wanted. Reason was, lots of the articles and explanations provide step by step guide on installing things, but to little background information on how things relate and work together in the background. And that&#8217;s what was missing to&nbsp;me&#8230;</p>
+<p>So here I go with yet another article. Or rather a collection of snippets of the information that I found&nbsp;valuable.</p>
+<h2 id="setting-the-scene">Setting the&nbsp;scene</h2>
+<p>My target setup <span class="amp">&amp;</span> requirements are&nbsp;simple:</p>
+<ul>
+<li>macOS (Catalina 10.15.2 at the time of&nbsp;writing)</li>
+<li>iTerm2 (Build&nbsp;3.3.8)</li>
+<li>zsh (as provided by Apple since a couple of macOS&nbsp;versions)</li>
+<li>I want proper&nbsp;coloring</li>
+<li>I want to see what Git branch I am in - if the current directory is within a git&nbsp;repo</li>
+</ul>
+<h2 id="the-moving-parts">The moving&nbsp;parts</h2>
+<p>What made me get lost, was missing overview. Therefore, here are the different bits and pices that are involved in my&nbsp;setup:</p>
+<ul>
+<li><strong>zsh</strong>: The&nbsp;shell</li>
+<li><strong>Oh My Zsh</strong>: A framework that enhances the zsh shell with functions and&nbsp;design.</li>
+<li><strong>powerlevel9k</strong>: A theme for Oh My&nbsp;Zsh</li>
+<li><strong>Fonts</strong> required by powerlevel9k to display it&#8217;s text and&nbsp;icons</li>
+</ul>
+<p>The dependencies in this list are from top to bottom, i.e. the fonts are required by powerlevel9k that runs on top of Oh My Zsh that uses&nbsp;zsh.</p>
+<h2 id="directory-structure">Directory&nbsp;structure</h2>
+<p>Before going thru the different components one by one, this is the directory structure we will have after installing all the bits <span class="amp">&amp;</span>&nbsp;pices:</p>
+<div class="highlight"><pre><span></span><code>├── $HOME
+│   └── .oh-my-zsh/
+│   │   └── custom/
+│   │   │   └── themes/
+│   │   │       └── powerlevel9k/
+│   │   └── themes/
+│   └── .zsh/
+├── .zshrc
+</code></pre></div>
+<h2 id="zsh">zsh</h2>
+<p>I used bash in the past and I was happy with it. I simply started my Mac Terminal, and there it was. And later I used iTerm2, and it also fired up with bash. So why move over to&nbsp;zsh?</p>
+<p>This article explains it nicely and extensively. In&nbsp;short:</p>
+<ul>
+<li>Apple used bash in the past as it was the de-facto&nbsp;standard</li>
+<li>In 2007 bash switched to <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" rel="noopener noreferrer" target="_blank"><span class="caps">GNU</span> Public License 3.0</a>, which Apple didn&#8217;t like for some reasons. So they stayed with the pre-2007 release of bash. And that&#8217;s old - including <a href="https://www.wikiwand.com/en/Shellshock_(software_bug)" rel="noopener noreferrer" target="_blank">a vulnerabilty</a> that forced Apple to update bash for&nbsp;Macs.</li>
+<li>zsh over time became the emerging de-facto standard, so Apple&nbsp;moved.</li>
+</ul>
+<p>And of course, <a href="https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/" rel="noopener noreferrer" target="_blank">zsh offers more modern, cool features</a>.</p>
+<p>So anyways, it&#8217;s trhe new standard, it looks good - let&#8217;s use it. As it&#8217;s the new mac standard shell, you don&#8217;t need to install it. In case you got a new mac that came with Catalina pre-installed, you are using zsh already. In case you upgraded your Mac from Mojave, you need to set zsh as your terminal shell like&nbsp;so:</p>
+<div class="highlight"><pre><span></span><code>chsh<span class="w"> </span>-s<span class="w"> </span>/bin/zsh
+</code></pre></div>
+<p>This sets zsh as the default&nbsp;Shell.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Configuring the zsh shell is done via entries&nbsp;in <code>.zshrc</code>, which is located in&nbsp;your <code>$HOME</code> directory. As described above, there are a couple of components that interact. Some of them offer configuration options, and can be configured in different locations. In order to keep an overview, I opted for installing the components in their respective default location, and trying to have all the configuration option in&nbsp;the <code>.zshrc</code> file.</p>
+<h2 id="oh-my-zsh">Oh My&nbsp;Zsh</h2>
+<blockquote>
+<p>Oh My Zsh is an open source, community-driven framework for managing your zsh configuration.
+&#8212; <cite><a href="https://ohmyz.sh/" rel="noopener noreferrer" target="_blank">Oh My Zsh website</a></cite></p>
+</blockquote>
+<p>Bascically Oh My Zsh makes your terminal look very nice (via <a href="https://github.com/ohmyzsh/ohmyzsh/wiki/Themes" rel="noopener noreferrer" target="_blank">themes</a>) and offers lots of helpful plugins. An example list from their <a href="https://github.com/ohmyzsh/ohmyzsh" rel="noopener noreferrer" target="_blank">github page</a>:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">plugins</span><span class="o">=(</span>
+<span class="w">  </span>git
+<span class="w">  </span>bundler
+<span class="w">  </span>dotenv
+<span class="w">  </span>osx
+<span class="w">  </span>rake
+<span class="w">  </span>rbenv
+<span class="w">  </span>ruby
+<span class="o">)</span>
+</code></pre></div>
+<p>I currently use the git plugin, which offers shortcuts for often used git&nbsp;commands.</p>
+<h3 id="configuring-oh-my-zsh">Configuring Oh My&nbsp;Zsh</h3>
+<p>As mentioned, I have all the configurations integrated in&nbsp;my <code>$HOME/.zshrc</code> file. The relevant snippets from&nbsp;my <code>.zshrc</code>file:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Path to your oh-my-zsh installation.</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">ZSH</span><span class="o">=</span><span class="s2">"/Users/tgartner/.oh-my-zsh"</span>
+
+<span class="c1"># Set name of the theme to load.</span>
+<span class="c1"># See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes</span>
+<span class="nv">ZSH_THEME</span><span class="o">=</span><span class="s2">"powerlevel9k/powerlevel9k"</span>
+
+<span class="o">(</span>...<span class="o">)</span>
+
+<span class="c1"># Which plugins would you like to load?</span>
+<span class="c1"># Standard plugins can be found in ~/.oh-my-zsh/plugins/*</span>
+<span class="c1"># Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/</span>
+<span class="c1"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+<span class="c1"># Add wisely, as too many plugins slow down shell startup.</span>
+<span class="nv">plugins</span><span class="o">=(</span>git<span class="w"> </span>python<span class="o">)</span>
+</code></pre></div>
+<h2 id="powerlevel10k">powerlevel10k</h2>
+<p>Note: I used to use <a href="https://github.com/Powerlevel9k/powerlevel9k" rel="noopener noreferrer" target="_blank">powerlevel9k</a>, but when installing my Mac in May 2025, 9k was outdated and pointed to <a href="https://github.com/romkatv/powerlevel10k" rel="noopener noreferrer" target="_blank">powerlevel10k</a>.</p>
+<p>Install powerlevel10k following their <a href="https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh" rel="noopener noreferrer" target="_blank">installation guide for zsh</a>.</p>
+    <div id="giscus">
+      <script src="https://giscus.app/client.js"
+        data-repo="tillg/grtnr.com"
+        data-repo-id="R_kgDOOjwMSg"
+        data-category="General"
+        data-category-id="DIC_kwDOOjwMSs4CqfLX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+</div>
+</div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function (document) {
+        var i = 0;
+        // snip empty header rows since markdown can't
+        var rows = document.querySelectorAll('tr');
+        for (i = 0; i < rows.length; i++) {
+          var ths = rows[i].querySelectorAll('th');
+          var rowlen = rows[i].children.length;
+          if (ths.length > 0 && ths.length === rowlen) {
+            rows[i].remove();
+          }
+        }
+      })(document);
+
+      // Language switcher functionality
+      function toggleLanguageMenu() {
+        var menu = document.getElementById('languageMenu');
+        menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+      }
+
+      // Close language menu when clicking outside
+      document.addEventListener('click', function(e) {
+        var menu = document.getElementById('languageMenu');
+        var button = document.querySelector('.language-globe-btn');
+        
+        if (menu && button && !menu.contains(e.target) && !button.contains(e.target)) {
+          menu.style.display = 'none';
+        }
+      });
+
+      // Language persistence: Store selected language in localStorage
+      function setLanguage(lang) {
+        localStorage.setItem('selectedLanguage', lang);
+      }
+
+      // Get stored language preference
+      function getStoredLanguage() {
+        return localStorage.getItem('selectedLanguage') || 'en';
+      }
+
+      // Switch language function
+      function switchLanguage(targetLang) {
+        setLanguage(targetLang);
+        var currentPath = window.location.pathname;
+        var newPath = translatePath(currentPath, targetLang);
+        window.location.href = newPath;
+      }
+
+      // Translate current path to target language
+      function translatePath(currentPath, targetLang) {
+        // Remove leading and trailing slashes
+        var cleanPath = currentPath.replace(/^\/|\/$/g, '');
+        var pathParts = cleanPath.split('/');
+        
+        // Check if first part is a language code
+        var supportedLangs = ['en', 'de', 'fr'];
+        var currentLang = 'en'; // default
+        var contentPath = cleanPath;
+        
+        if (pathParts.length > 0 && supportedLangs.includes(pathParts[0])) {
+          currentLang = pathParts[0];
+          contentPath = pathParts.slice(1).join('/');
+        }
+        
+        // Build new path
+        var newPath = '/';
+        if (targetLang !== 'en') {
+          newPath += targetLang + '/';
+        }
+        if (contentPath) {
+          newPath += contentPath;
+          if (!newPath.endsWith('/')) {
+            newPath += '/';
+          }
+        }
+        
+        return newPath;
+      }
+
+      // Initialize language on page load
+      document.addEventListener('DOMContentLoaded', function() {
+        var storedLang = getStoredLanguage();
+        var currentPath = window.location.pathname;
+        
+        // Check if we need to redirect to the stored language
+        // Only redirect if on root page and user prefers a different language
+        if (currentPath === '/' && storedLang !== 'en') {
+          window.location.href = '/' + storedLang + '/';
+        }
+      });
+    </script>
+
+    <script>
+      /* Lanyon & Poole are Copyright (c) 2014 Mark Otto. Adapted to Pelican 20141223 and extended a bit by @thomaswilley */
+      (function (document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function (e) {
+          var target = e.target;
+          if (!checkbox.checked ||
+            sidebar.contains(target) ||
+            (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+    <script src="/theme/js/giscus-comments.js"></script>
+
+  </div>
+</body>
+
+</html>

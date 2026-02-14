@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/image-encoding-in-node-js/" />
+    <link rel="alternate" hreflang="de" href="/de/image-encoding-in-node-js/" />
+    <link rel="alternate" hreflang="fr" href="/fr/image-encoding-in-node-js/" />
+    <link rel="canonical" href="/image-encoding-in-node-js/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -32,7 +36,7 @@
 
 
 
-    <meta name="tags" contents="Tech" />
+    <meta name="tags" contents="tech" />
 
 </head>
 
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,45 +104,45 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Image encoding in Node <span class="caps">JS</span>
+      Image encoding in Node JS
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">April 11, 2019</span>
       
       <div class="tag-pills">
   <a href="/tag/tech/"
-  class="tag-pill ">Tech</a>
+  class="tag-pill ">tech</a>
 
 </div>
 
     </div>
 
 
-    <p><strong>This article is work in progress!</strong></p>
+    <p><strong>This article is work in&nbsp;progress!</strong></p>
 <p>While programming on a side project, I had to deal with images in a node application. My application is using <a href="https://expressjs.com/" rel="noopener noreferrer" target="_blank">Express</a>, <a href="https://aws.amazon.com/rekognition/" rel="noopener noreferrer" target="_blank">Amazon Rekognition</a> as well as <a href="https://pouchdb.com/" rel="noopener noreferrer" target="_blank">Pouchdb</a>.</p>
-<p>I was dealing with different sources <span class="amp">&amp;</span> targets:</p>
+<p>I was dealing with different sources <span class="amp">&amp;</span>&nbsp;targets:</p>
 <ul>
-<li>A user uploads a picture</li>
-<li>I read a picture from file, be it in <span class="caps">JPEG</span> or <span class="caps">PNG</span> format</li>
+<li>A user uploads a&nbsp;picture</li>
+<li>I read a picture from file, be it in <span class="caps">JPEG</span> or <span class="caps">PNG</span>&nbsp;format</li>
 <li>I send a picture to <span class="caps">AWS</span></li>
-<li>I store a picture in my pouchDB</li>
+<li>I store a picture in my&nbsp;pouchDB</li>
 </ul>
-<p>While browsing the different sources, I encountered various formats on how images can be handled in node:</p>
+<p>While browsing the different sources, I encountered various formats on how images can be handled in&nbsp;node:</p>
 <ul>
-<li>As buffer containing binary data</li>
-<li>As string conatining Base64 encoded data, starting with something like <code>data:image/jpeg;base64,</code> (or with <code>png</code>)</li>
-<li>As string containing base64 encoded data without the special beginning</li>
+<li>As buffer containing binary&nbsp;data</li>
+<li>As string conatining Base64 encoded data, starting with something&nbsp;like <code>data:image/jpeg;base64,</code> (or&nbsp;with <code>png</code>)</li>
+<li>As string containing base64 encoded data without the special&nbsp;beginning</li>
 </ul>
-<p>These are the different operations I am doing and what they provide as output:</p>
-<h2 id="-reading-a-file-from-disk-with-fs-return-a-bufferwith-binary-data">- Reading a file from disk with <code>fs</code>: return a <code>Buffer</code>with binary data</h2>
+<p>These are the different operations I am doing and what they provide as&nbsp;output:</p>
+<h2 id="-reading-a-file-from-disk-with-fs-return-a-bufferwith-binary-data">- Reading a file from disk&nbsp;with <code>fs</code>: return&nbsp;a <code>Buffer</code>with binary&nbsp;data</h2>
 <p>These are the sources and targets in/from which image data is transferred in my example:
 <img alt="Image sources and targets" src="https://docs.google.com/drawings/d/e/2PACX-1vTaOoDUdKWZ9q05WH1LX1Yz_JbismNFdrYMoFYYsbU410xf23mi4GxRv_ZvhIQipnLDXunKU5eCh-Ju/pub?w=960&amp;h=720"/></p>
 <h2 id="reading">Reading</h2>
-<p>Helpful stuff I found about the topics:</p>
+<p>Helpful stuff I found about the&nbsp;topics:</p>
 <ul>
-<li><a href="https://stackoverflow.com/questions/24523532/how-do-i-convert-an-image-to-a-base64-encoded-data-url-in-sails-js-or-generally" rel="noopener noreferrer" target="_blank">How do I convert an image to a base64-encoded data <span class="caps">URL</span> in sails.js or generally in the servers side JavaScript? StackOverflow</a></li>
-<li><a href="https://stackoverflow.com/questions/8110294/nodejs-base64-image-encoding-decoding-not-quite-working" rel="noopener noreferrer" target="_blank">NodeJS base64 image encoding/decoding not quite working, StackOverflow</a></li>
-<li><a href="https://github.com/gchudnov/inkjet/blob/master/README.md" rel="noopener noreferrer" target="_blank">Inkjet, <span class="caps">JPEG</span>-image decoding, encoding <span class="amp">&amp;</span> <span class="caps">EXIF</span> reading library for a browser and node.js, Github</a></li>
+<li><a href="https://stackoverflow.com/questions/24523532/how-do-i-convert-an-image-to-a-base64-encoded-data-url-in-sails-js-or-generally" rel="noopener noreferrer" target="_blank">How do I convert an image to a base64-encoded data <span class="caps">URL</span> in sails.js or generally in the servers side JavaScript?&nbsp;StackOverflow</a></li>
+<li><a href="https://stackoverflow.com/questions/8110294/nodejs-base64-image-encoding-decoding-not-quite-working" rel="noopener noreferrer" target="_blank">NodeJS base64 image encoding/decoding not quite working,&nbsp;StackOverflow</a></li>
+<li><a href="https://github.com/gchudnov/inkjet/blob/master/README.md" rel="noopener noreferrer" target="_blank">Inkjet, <span class="caps">JPEG</span>-image decoding, encoding <span class="amp">&amp;</span> <span class="caps">EXIF</span> reading library for a browser and node.js,&nbsp;Github</a></li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/my-notes-from-rc3-2020/" />
+    <link rel="alternate" hreflang="de" href="/de/my-notes-from-rc3-2020/" />
+    <link rel="alternate" hreflang="fr" href="/fr/my-notes-from-rc3-2020/" />
+    <link rel="canonical" href="/fr/my-notes-from-rc3-2020/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/fr/">Home</a>
 
-  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/fr/about">About</a>
-  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+  <a class="sidebar-nav-item" href="/fr/tags">Sujets</a>
+  <a class="sidebar-nav-item" href="/recipes">Recettes</a>
+  <a class="sidebar-nav-item" href="/fr/about">À propos</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Mentions légales</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/my-notes-from-rc3-2020/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/my-notes-from-rc3-2020/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -104,85 +115,85 @@ Deutsch
       | <a href="/my-notes-from-rc3-2020/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p>Cette année (décembre 2020), j'avais un billet pour le RC3. Ils étaient distribués gratuitement, mais se sont épuisés rapidement. J'étais donc fier et j'ai passé pas mal de temps à regarder les sessions du CCC.</p>
-<p>Toutes les conférences sont disponibles <a href="https://media.ccc.de/c/rc3" rel="noopener noreferrer" target="_blank">ici</a>. J'en ai regardé certaines (en partie ou en totalité).</p>
-<p>En plus des conférences, il y avait un <em>Monde 2D</em> - qui n'a jamais fonctionné pour moi 😢 (et ma connexion réseau était plutôt bonne !) :
-<img alt="Connexion perdue" src="image-8.png"/></p>
-<h3 id="une-introduction-a-tox">Une introduction à Tox</h3>
-<p>Un nouveau service de messagerie. Mieux que l'email, Matrix et toutes les autres plateformes de messagerie. Avantages :</p>
+    <p>Cette année (décembre 2020), j&#8217;avais un billet pour le <span class="caps">RC3</span>. Ils étaient distribués gratuitement, mais se sont épuisés rapidement. J&#8217;étais donc fier et j&#8217;ai passé pas mal de temps à regarder les sessions du <span class="caps">CCC</span>.</p>
+<p>Toutes les conférences sont disponibles <a href="https://media.ccc.de/c/rc3" rel="noopener noreferrer" target="_blank">ici</a>. J&#8217;en ai regardé certaines (en partie ou en&nbsp;totalité).</p>
+<p>En plus des conférences, il y avait un <em>Monde 2D</em> - qui n&#8217;a jamais fonctionné pour moi 😢 (et ma connexion réseau était plutôt bonne !) :
+<img alt="Connexion perdue" src="/my-notes-from-rc3-2020/image-8.png"/></p>
+<h3 id="une-introduction-a-tox">Une introduction à&nbsp;Tox</h3>
+<p>Un nouveau service de messagerie. Mieux que l&#8217;email, Matrix et toutes les autres plateformes de messagerie. Avantages&nbsp;:</p>
 <ul>
-<li>Pas de serveurs centraux, aucun moyen de désactiver l'une des fonctionnalités de cryptage.</li>
-<li>Fonctionnalités de Tox : Messagerie instantanée, Appels vocaux, Appels vidéo, Partage d'écran, Partage de fichiers, Groupes.</li>
+<li>Pas de serveurs centraux, aucun moyen de désactiver l&#8217;une des fonctionnalités de&nbsp;cryptage.</li>
+<li>Fonctionnalités de Tox : Messagerie instantanée, Appels vocaux, Appels vidéo, Partage d&#8217;écran, Partage de fichiers,&nbsp;Groupes.</li>
 </ul>
-<p>Il était intéressant d'apprendre qu'il existe de NOMBREUX protocoles de chat. Et beaucoup d'entre eux ont des objectifs similaires : Garder les données sécurisées, et parfois même les métadonnées. Il semble qu'il faille décider si votre protocole cache vraiment les métadonnées (généralement cela se fait en utilisant Tor en dessous) ou s'il fournit une faible latence pour permettre également la voix et la vidéo.</p>
-<p>Questions qui me viennent à l'esprit :</p>
+<p>Il était intéressant d&#8217;apprendre qu&#8217;il existe de <span class="caps">NOMBREUX</span> protocoles de chat. Et beaucoup d&#8217;entre eux ont des objectifs similaires : Garder les données sécurisées, et parfois même les métadonnées. Il semble qu&#8217;il faille décider si votre protocole cache vraiment les métadonnées (généralement cela se fait en utilisant Tor en dessous) ou s&#8217;il fournit une faible latence pour permettre également la voix et la&nbsp;vidéo.</p>
+<p>Questions qui me viennent à l&#8217;esprit&nbsp;:</p>
 <ul>
-<li>Offre-t-il vraiment des appels vidéo, ou lance-t-il simplement d'autres appels vidéo (c'est-à-dire Jitsi) - tout comme Matrix ?</li>
-<li>Les appels vocaux et vidéo sont-ils également vraiment cryptés ? Parce que Cisco Webex ne crypte pas ses appels vidéo (seulement les chats)</li>
+<li>Offre-t-il vraiment des appels vidéo, ou lance-t-il simplement d&#8217;autres appels vidéo (c&#8217;est-à-dire Jitsi) - tout comme Matrix&nbsp;?</li>
+<li>Les appels vocaux et vidéo sont-ils également vraiment cryptés ? Parce que Cisco Webex ne crypte pas ses appels vidéo (seulement les&nbsp;chats)</li>
 </ul>
-<p><img alt="Fonctionnalités clés" src="image-rc3.png"/></p>
-<p>À propos de l'intervenant :</p>
-<p><img alt="À propos" src="image-10.png"/></p>
-<p><img alt="Prendre contact" src="image-11.png"/></p>
-<h3 id="der-netzpolitische-wetterbericht">Der netzpolitische Wetterbericht</h3>
+<p><img alt="Fonctionnalités clés" src="/my-notes-from-rc3-2020/image-rc3.png"/></p>
+<p>À propos de l&#8217;intervenant&nbsp;:</p>
+<p><img alt="À propos" src="/my-notes-from-rc3-2020/image-10.png"/></p>
+<p><img alt="Prendre contact" src="/my-notes-from-rc3-2020/image-11.png"/></p>
+<h3 id="der-netzpolitische-wetterbericht">Der netzpolitische&nbsp;Wetterbericht</h3>
 <p>Écouté en direct, par Markus Beckedahl (de <a href="https://netzpolitik.org" rel="noopener noreferrer" target="_blank">netzpolitik.org</a>)</p>
-<p>Qu'est-ce qui s'est passé l'année dernière, quels sujets sont brûlants ?</p>
+<p>Qu&#8217;est-ce qui s&#8217;est passé l&#8217;année dernière, quels sujets sont brûlants&nbsp;?</p>
 <ul>
-<li>Les gouvernements veulent des clés pour écouter les communications cryptées.</li>
-<li>Les chevaux de Troie d'État exploitent des failles de sécurité - au lieu de les combler rapidement.</li>
-<li>Les appareils SmartHome ont été convoqués comme témoins devant les tribunaux : Alexa a raconté ce qu'on lui avait demandé.</li>
-<li>La loi BND a été classée comme inconstitutionnelle - belle expérience 😀. Mais une nouvelle loi BND a été rapidement adoptée...</li>
-<li>Le <a href="https://podcasts.apple.com/lu/podcast/npp-211-zu-fünft-mit-i-dil-baydar/id1281525246?i=1000492613815" rel="noopener noreferrer" target="_blank">podcast avec Idil Baydar</a> - un peu cru mais assez intéressant, en somme recommandable.</li>
+<li>Les gouvernements veulent des clés pour écouter les communications&nbsp;cryptées.</li>
+<li>Les chevaux de Troie d&#8217;État exploitent des failles de sécurité - au lieu de les combler&nbsp;rapidement.</li>
+<li>Les appareils SmartHome ont été convoqués comme témoins devant les tribunaux : Alexa a raconté ce qu&#8217;on lui avait&nbsp;demandé.</li>
+<li>La loi <span class="caps">BND</span> a été classée comme inconstitutionnelle - belle expérience 😀. Mais une nouvelle loi <span class="caps">BND</span> a été rapidement&nbsp;adoptée&#8230;</li>
+<li>Le <a href="https://podcasts.apple.com/lu/podcast/npp-211-zu-fünft-mit-i-dil-baydar/id1281525246?i=1000492613815" rel="noopener noreferrer" target="_blank">podcast avec Idil Baydar</a> - un peu cru mais assez intéressant, en somme&nbsp;recommandable.</li>
 </ul>
-<p>J'ai ensuite arrêté, c'était assez ennuyeux...</p>
-<p><img alt="Zu fünft..." src="image-2.png"/></p>
-<h3 id="integrite-numerique-de-la-personne-humaine-un-nouveau-droit-fondamental-mise-a-jour-2020">Intégrité numérique de la personne humaine, un nouveau droit fondamental mise à jour 2020</h3>
-<p>L'intervenant (Alexis Roussel, Suisse) explique comment les Droits de l'Homme devraient / pourraient être étendus à l'espace numérique.</p>
-<p>Quelques points intéressants qu'il a soulevés :</p>
+<p>J&#8217;ai ensuite arrêté, c&#8217;était assez&nbsp;ennuyeux&#8230;</p>
+<p><img alt="Zu fünft..." src="/my-notes-from-rc3-2020/image-2.png"/></p>
+<h3 id="integrite-numerique-de-la-personne-humaine-un-nouveau-droit-fondamental-mise-a-jour-2020">Intégrité numérique de la personne humaine, un nouveau droit fondamental mise à jour&nbsp;2020</h3>
+<p>L&#8217;intervenant (Alexis Roussel, Suisse) explique comment les Droits de l&#8217;Homme devraient / pourraient être étendus à l&#8217;espace&nbsp;numérique.</p>
+<p>Quelques points intéressants qu&#8217;il a soulevés&nbsp;:</p>
 <ul>
-<li>Il y a un bug dans le RGPD (Article 2) : Le gouvernement peut accéder à toutes les données en cas de danger. Description trop vague et qui brise l'idée de base du RGPD.</li>
-<li>En Suisse, certains cantons mettent à jour leur Constitution pour l'étendre à l'espace numérique.</li>
+<li>Il y a un bug dans le <span class="caps">RGPD</span> (Article 2) : Le gouvernement peut accéder à toutes les données en cas de danger. Description trop vague et qui brise l&#8217;idée de base du <span class="caps">RGPD</span>.</li>
+<li>En Suisse, certains cantons mettent à jour leur Constitution pour l&#8217;étendre à l&#8217;espace&nbsp;numérique.</li>
 </ul>
-<p>Je suis passé pour 15 minutes, je n'ai pas écouté jusqu'à la fin...</p>
-<p><img alt="Wikipedia" src="image-3.png"/></p>
-<h3 id="les-blocs-de-construction-de-la-decentralisation">Les blocs de construction de la décentralisation</h3>
-<p>L'intervenant est <a href="https://www.linkedin.com/in/willrscott/" rel="noopener noreferrer" target="_blank">Will Scott</a>. Il semble être un spécialiste d'IPFS.</p>
+<p>Je suis passé pour 15 minutes, je n&#8217;ai pas écouté jusqu&#8217;à la&nbsp;fin&#8230;</p>
+<p><img alt="Wikipedia" src="/my-notes-from-rc3-2020/image-3.png"/></p>
+<h3 id="les-blocs-de-construction-de-la-decentralisation">Les blocs de construction de la&nbsp;décentralisation</h3>
+<p>L&#8217;intervenant est <a href="https://www.linkedin.com/in/willrscott/" rel="noopener noreferrer" target="_blank">Will Scott</a>. Il semble être un spécialiste d&#8217;<span class="caps">IPFS</span>.</p>
 <ul>
-<li>Actuellement, le plus grand système décentralisé est BitTorrent</li>
+<li>Actuellement, le plus grand système décentralisé est&nbsp;BitTorrent</li>
 </ul>
-<p><img alt="Chiffres de BitTorrent" src="image-4.png"/></p>
+<p><img alt="Chiffres de BitTorrent" src="/my-notes-from-rc3-2020/image-4.png"/></p>
 <ul>
-<li>Un autre grand système distribué est <a href="https://github.com/tootsuite/mastodon" rel="noopener noreferrer" target="_blank">Mastodon</a> "Le Fediverse". <em>Qu'est-ce que c'est que ça ?</em></li>
+<li>Un autre grand système distribué est <a href="https://github.com/tootsuite/mastodon" rel="noopener noreferrer" target="_blank">Mastodon</a> &#8220;Le Fediverse&#8221;. <em>Qu&#8217;est-ce que c&#8217;est que ça&nbsp;?</em></li>
 </ul>
-<p><img alt="Mastodon" src="image-5.png"/></p>
-<p><img alt="Chiffres de Mastodon" src="image-6.png"/></p>
+<p><img alt="Mastodon" src="/my-notes-from-rc3-2020/image-5.png"/></p>
+<p><img alt="Chiffres de Mastodon" src="/my-notes-from-rc3-2020/image-6.png"/></p>
 <ul>
-<li>IPFS a dépassé les 2M d'utilisateurs</li>
-<li>SSB (Secure Scuttlebutt) 100K utilisateurs</li>
-<li>Bitcoin : 1M de comptes actifs</li>
+<li><span class="caps">IPFS</span> a dépassé les 2M&nbsp;d&#8217;utilisateurs</li>
+<li><span class="caps">SSB</span> (Secure Scuttlebutt) 100K&nbsp;utilisateurs</li>
+<li>Bitcoin : 1M de comptes&nbsp;actifs</li>
 </ul>
-<p><img alt="Modèles de décentralisation" src="Screenshot-2020-12-28-at-19.37.34.png"/></p>
+<p><img alt="Modèles de décentralisation" src="/my-notes-from-rc3-2020/Screenshot-2020-12-28-at-19.37.34.png"/></p>
 <ul>
-<li>Centralisé : Facebook. Fédéré : matrix. Réseau maillé décentralisé ?</li>
+<li>Centralisé : Facebook. Fédéré : matrix. Réseau maillé décentralisé&nbsp;?</li>
 </ul>
-<p>Les véritables blocs de construction de la décentralisation :</p>
+<p>Les véritables blocs de construction de la décentralisation&nbsp;:</p>
 <ul>
-<li>DHT : Tables de hachage distribuées</li>
-<li>BFT (Tolérance aux pannes byzantines) Consensus. Il semble y avoir une explication <a href="https://academy.binance.com/en/articles/byzantine-fault-tolerance-explained" rel="noopener noreferrer" target="_blank">ici</a>.</li>
+<li><span class="caps">DHT</span> : Tables de hachage&nbsp;distribuées</li>
+<li><span class="caps">BFT</span> (Tolérance aux pannes byzantines) Consensus. Il semble y avoir une explication <a href="https://academy.binance.com/en/articles/byzantine-fault-tolerance-explained" rel="noopener noreferrer" target="_blank">ici</a>.</li>
 <li>Le consensus peut être atteint par <em>Proof of Work</em> ou par <em>Proof of Stake</em>.</li>
 </ul>
-<p>Il a ensuite discuté des limitations de ces blocs de construction : Volume, nombre d'entités, combien de sauts --&gt; latence, bande passante (surtout en upload par rapport au download),</p>
-<p><img alt="Exposition des métadonnées" src="image-7.png"/></p>
-<h3 id="autres-conferences">Autres conférences...</h3>
-<p>...que j'aimerais écouter :</p>
+<p>Il a ensuite discuté des limitations de ces blocs de construction : Volume, nombre d&#8217;entités, combien de sauts &#8212;&gt; latence, bande passante (surtout en upload par rapport au&nbsp;download),</p>
+<p><img alt="Exposition des métadonnées" src="/my-notes-from-rc3-2020/image-7.png"/></p>
+<h3 id="autres-conferences">Autres&nbsp;conférences&#8230;</h3>
+<p>&#8230;que j&#8217;aimerais écouter&nbsp;:</p>
 <ul>
-<li><a href="https://media.ccc.de/v/rc3-channels-2020-70-verwaltung-von-projekten-mit-gitea" rel="noopener noreferrer" target="_blank">Gestion de projets avec Gitea</a> : Après la vente de Github à Microsoft, beaucoup se sont demandé s'il n'existait pas d'alternatives sur lesquelles on aurait un contrôle total. J'utilise depuis deux ans l'application Go Gitea à la fois pour des projets professionnels et Open Source. Gitea a l'avantage que les obstacles à l'installation, à la maintenance et à l'utilisation sont clairs et rapidement surmontés.
-  Remarque : j'ai essayé le lien le 28.12.20, il semblait incorrect, on parlait de tout autres sujets (également intéressant : Internationaly Netzpolitik)</li>
-<li><a href="https://media.ccc.de/v/rc3-11591-digitales_klassenzimmer" rel="noopener noreferrer" target="_blank">Salle de classe numérique</a> : Dans cet atelier, les enseignants, élèves et autres intéressés peuvent découvrir les logiciels scolaires libres. BigBlueButton ? Moodle ? Nextcloud ? Ce sont les salles de classe numériques de l'avenir.</li>
-<li><a href="https://media.ccc.de/v/rc3-11583-rc3_eroffnung" rel="noopener noreferrer" target="_blank">Ouverture du rC3</a></li>
+<li><a href="https://media.ccc.de/v/rc3-channels-2020-70-verwaltung-von-projekten-mit-gitea" rel="noopener noreferrer" target="_blank">Gestion de projets avec Gitea</a> : Après la vente de Github à Microsoft, beaucoup se sont demandé s&#8217;il n&#8217;existait pas d&#8217;alternatives sur lesquelles on aurait un contrôle total. J&#8217;utilise depuis deux ans l&#8217;application Go Gitea à la fois pour des projets professionnels et Open Source. Gitea a l&#8217;avantage que les obstacles à l&#8217;installation, à la maintenance et à l&#8217;utilisation sont clairs et rapidement surmontés.
+  Remarque : j&#8217;ai essayé le lien le 28.12.20, il semblait incorrect, on parlait de tout autres sujets (également intéressant : Internationaly&nbsp;Netzpolitik)</li>
+<li><a href="https://media.ccc.de/v/rc3-11591-digitales_klassenzimmer" rel="noopener noreferrer" target="_blank">Salle de classe numérique</a> : Dans cet atelier, les enseignants, élèves et autres intéressés peuvent découvrir les logiciels scolaires libres. BigBlueButton ? Moodle ? Nextcloud ? Ce sont les salles de classe numériques de&nbsp;l&#8217;avenir.</li>
+<li><a href="https://media.ccc.de/v/rc3-11583-rc3_eroffnung" rel="noopener noreferrer" target="_blank">Ouverture du&nbsp;rC3</a></li>
 </ul>
-<p>Et c'était mon programme pour le Jour 3 (mardi 29 décembre) :</p>
-<p><img alt="Programme Jour 3" src="image-9.png"/></p>
+<p>Et c&#8217;était mon programme pour le Jour 3 (mardi 29 décembre)&nbsp;:</p>
+<p><img alt="Programme Jour 3" src="/my-notes-from-rc3-2020/image-9.png"/></p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

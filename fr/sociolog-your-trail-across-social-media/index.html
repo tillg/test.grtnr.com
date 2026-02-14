@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/sociolog-your-trail-across-social-media/" />
+    <link rel="alternate" hreflang="de" href="/de/sociolog-your-trail-across-social-media/" />
+    <link rel="alternate" hreflang="fr" href="/fr/sociolog-your-trail-across-social-media/" />
+    <link rel="canonical" href="/fr/sociolog-your-trail-across-social-media/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -32,7 +36,7 @@
 
 
 
-    <meta name="tags" contents="softwareWeNeed" />
+    <meta name="tags" contents="softwareweneed" />
 
 </head>
 
@@ -49,17 +53,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/fr/">Home</a>
 
-  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/fr/about">About</a>
-  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+  <a class="sidebar-nav-item" href="/fr/tags">Sujets</a>
+  <a class="sidebar-nav-item" href="/recipes">Recettes</a>
+  <a class="sidebar-nav-item" href="/fr/about">À propos</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Mentions légales</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/sociolog-your-trail-across-social-media/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/sociolog-your-trail-across-social-media/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -100,7 +111,7 @@ Deutsch
       
       <div class="tag-pills">
   <a href="/tag/softwareweneed/"
-  class="tag-pill ">softwareWeNeed</a>
+  class="tag-pill ">softwareweneed</a>
 
 </div>
 
@@ -111,40 +122,40 @@ Deutsch
       | <a href="/sociolog-your-trail-across-social-media/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p>J'écris ou je blogue sur différents médias :</p>
+    <p>J&#8217;écris ou je blogue sur différents médias&nbsp;:</p>
 <ul>
 <li>Twitter</li>
 <li>Facebook</li>
-<li>Un blog privé avec accès restreint (car il contient des photos de famille)</li>
+<li>Un blog privé avec accès restreint (car il contient des photos de&nbsp;famille)</li>
 <li>Ce <a href="http://tillgartner.com" rel="noopener noreferrer" target="_blank">blog</a></li>
 </ul>
-<p>De temps en temps, je trouve agréable de parcourir mon passé. Je le fais le plus souvent sur notre blog familial, car il contient le contenu le plus intéressant et parce qu'il est facile à parcourir. J'aimerais pouvoir faire défiler tout mon passé à travers tous les médias.</p>
-<p>Voici donc ce que mon logiciel devrait faire :</p>
+<p>De temps en temps, je trouve agréable de parcourir mon passé. Je le fais le plus souvent sur notre blog familial, car il contient le contenu le plus intéressant et parce qu&#8217;il est facile à parcourir. J&#8217;aimerais pouvoir faire défiler tout mon passé à travers tous les&nbsp;médias.</p>
+<p>Voici donc ce que mon logiciel devrait faire&nbsp;:</p>
 <ul>
-<li>Collecter toutes les entrées que j'ai écrites sur les réseaux sociaux :</li>
+<li>Collecter toutes les entrées que j&#8217;ai écrites sur les réseaux sociaux&nbsp;:</li>
 <li>Twitter</li>
 <li>Facebook</li>
 <li>Wordpress</li>
-<li>Créer un document par entrée dans un dépôt Github</li>
-<li>Gérer correctement le contenu dupliqué : Depuis quelques années, mon compte Twitter est <em>lié</em> à mon compte Facebook de sorte que les entrées Twitter sont répliquées sur Facebook. C'est parce que j'ai des personnes que je considère comme <em>audience</em> sur les deux médias.</li>
-<li>Collecter également les retours sur mes publications</li>
-<li>Les afficher joliment de manière statique, y compris des pages de vue d'ensemble</li>
+<li>Créer un document par entrée dans un dépôt&nbsp;Github</li>
+<li>Gérer correctement le contenu dupliqué : Depuis quelques années, mon compte Twitter est <em>lié</em> à mon compte Facebook de sorte que les entrées Twitter sont répliquées sur Facebook. C&#8217;est parce que j&#8217;ai des personnes que je considère comme <em>audience</em> sur les deux&nbsp;médias.</li>
+<li>Collecter également les retours sur mes&nbsp;publications</li>
+<li>Les afficher joliment de manière statique, y compris des pages de vue&nbsp;d&#8217;ensemble</li>
 </ul>
-<p>Quelques réflexions techniques :</p>
+<p>Quelques réflexions techniques&nbsp;:</p>
 <ul>
-<li>Je l'écrirais en java car c'est ce que je connais le mieux</li>
-<li>Serait un programme sans interface utilisateur, c'est-à-dire sans UI</li>
-<li>L'entrée devrait être la date de la dernière entrée enregistrée sur les réseaux sociaux</li>
-<li>Il collecte toutes les entrées (y compris les commentaires) sur les différents canaux de réseaux sociaux depuis cette date</li>
-<li>Il élimine les doublons (c'est-à-dire fusionne celles qui sont identiques ou répliquées sur différents canaux)</li>
-<li>Il crée un document / fichier par entrée de réseau social et les écrit dans un répertoire de sortie</li>
-<li>Ce répertoire est ensuite répliqué / ajouté à un compte github</li>
-<li>Les documents d'entrée de réseau social seraient nommés comme <code>2015-12-03-Le_titre_de_ce_que_j'ai_écrit-TWITTER.json</code></li>
-<li>Il y aurait un <em>fichier d'en-tête</em> avec un nom fixe, c'est-à-dire <code>sociologs.json</code>. Ce fichier contiendrait les 20 premiers journaux et pointerait vers un fichier avec les journaux suivants.</li>
-<li>Le domaine <code>sociolog.io</code> serait <a href="https://www.godaddy.com/domains/searchresults.aspx?&amp;checkAvail=1&amp;domainToCheck=sociolog.io" rel="noopener noreferrer" target="_blank">disponible</a> - à ce jour, le 4 janvier 2016.</li>
-<li>Le <code>index.html</code> généré chargerait les données via des requêtes JS/AJAX et continuerait à charger pendant que l'utilisateur fait défiler vers le bas</li>
+<li>Je l&#8217;écrirais en java car c&#8217;est ce que je connais le&nbsp;mieux</li>
+<li>Serait un programme sans interface utilisateur, c&#8217;est-à-dire sans <span class="caps">UI</span></li>
+<li>L&#8217;entrée devrait être la date de la dernière entrée enregistrée sur les réseaux&nbsp;sociaux</li>
+<li>Il collecte toutes les entrées (y compris les commentaires) sur les différents canaux de réseaux sociaux depuis cette&nbsp;date</li>
+<li>Il élimine les doublons (c&#8217;est-à-dire fusionne celles qui sont identiques ou répliquées sur différents&nbsp;canaux)</li>
+<li>Il crée un document / fichier par entrée de réseau social et les écrit dans un répertoire de&nbsp;sortie</li>
+<li>Ce répertoire est ensuite répliqué / ajouté à un compte&nbsp;github</li>
+<li>Les documents d&#8217;entrée de réseau social seraient nommés&nbsp;comme <code>2015-12-03-Le_titre_de_ce_que_j'ai_écrit-TWITTER.json</code></li>
+<li>Il y aurait un <em>fichier d&#8217;en-tête</em> avec un nom fixe,&nbsp;c&#8217;est-à-dire <code>sociologs.json</code>. Ce fichier contiendrait les 20 premiers journaux et pointerait vers un fichier avec les journaux&nbsp;suivants.</li>
+<li>Le&nbsp;domaine <code>sociolog.io</code> serait <a href="https://www.godaddy.com/domains/searchresults.aspx?&amp;checkAvail=1&amp;domainToCheck=sociolog.io" rel="noopener noreferrer" target="_blank">disponible</a> - à ce jour, le 4 janvier&nbsp;2016.</li>
+<li>Le <code>index.html</code> généré chargerait les données via des requêtes <span class="caps">JS</span>/<span class="caps">AJAX</span> et continuerait à charger pendant que l&#8217;utilisateur fait défiler vers le&nbsp;bas</li>
 </ul>
-<p>Si quelqu'un est intéressé ou a des commentaires, veuillez me contacter à till<code>point</code>gartner<code>arobase</code>gmail<code>point</code>com.</p>
+<p>Si quelqu&#8217;un est intéressé ou a des commentaires, veuillez me contacter à&nbsp;till<code>point</code>gartner<code>arobase</code>gmail<code>point</code>com.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

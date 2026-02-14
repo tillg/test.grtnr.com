@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/setting-up-jupyter-lab-on-mac/" />
+    <link rel="alternate" hreflang="de" href="/de/setting-up-jupyter-lab-on-mac/" />
+    <link rel="alternate" hreflang="fr" href="/fr/setting-up-jupyter-lab-on-mac/" />
+    <link rel="canonical" href="/de/setting-up-jupyter-lab-on-mac/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -33,7 +37,7 @@
 
 
     <meta name="tags" contents="tech" />
-    <meta name="tags" contents="Mac" />
+    <meta name="tags" contents="mac" />
 
 </head>
 
@@ -50,17 +54,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/setting-up-jupyter-lab-on-mac/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/setting-up-jupyter-lab-on-mac/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -104,7 +115,7 @@ Français
   class="tag-pill ">tech</a>
 
   <a href="/tag/mac/"
-  class="tag-pill ">Mac</a>
+  class="tag-pill ">mac</a>
 
 </div>
 
@@ -115,41 +126,41 @@ Français
       | <a href="/setting-up-jupyter-lab-on-mac/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p>Die Einrichtung von Python auf einem Mac kann knifflig sein. Die Anzahl der Optionen ist groß, und sie können seltsam interagieren. Außerdem müssen Sie sich merken, welche Installationsmethode Sie verwendet haben, wenn Sie die Version ändern oder ein Upgrade durchführen möchten. Dieser Beitrag soll mich daran erinnern, wie ich es gemacht habe 😉</p>
-<h2 id="python-installieren">Python installieren</h2>
-<p>Es gibt viele Möglichkeiten, Python auf einem Mac zu installieren und seine Versionen zu verwalten:</p>
+    <p>Die Einrichtung von Python auf einem Mac kann knifflig sein. Die Anzahl der Optionen ist groß, und sie können seltsam interagieren. Außerdem müssen Sie sich merken, welche Installationsmethode Sie verwendet haben, wenn Sie die Version ändern oder ein Upgrade durchführen möchten. Dieser Beitrag soll mich daran erinnern, wie ich es gemacht habe&nbsp;😉</p>
+<h2 id="python-installieren">Python&nbsp;installieren</h2>
+<p>Es gibt viele Möglichkeiten, Python auf einem Mac zu installieren und seine Versionen zu&nbsp;verwalten:</p>
 <ul>
-<li>Das auf MacOS installierte Python</li>
+<li>Das auf MacOS installierte&nbsp;Python</li>
 <li><code>brew</code></li>
 <li>Anaconda</li>
 <li><code>pyenv</code></li>
-<li>...</li>
+<li>&#8230;</li>
 </ul>
 <p>Was für mich am besten funktioniert hat, ist <strong>pyenv</strong>:</p>
 <ul>
-<li>Installieren Sie es: <code>brew install pyenv</code>. Ich gehe davon aus, dass Sie <a href="https://brew.sh" rel="noopener noreferrer" target="_blank">Homebrew</a> installiert haben...</li>
-<li>Sehen Sie sich die verfügbaren Optionen und Befehle an: <code>pyenv</code></li>
-<li>Listen Sie alle Python-Versionen auf, die pyenv zur Verfügung stehen: <code>pyenv versions</code></li>
-<li>Installieren Sie eine Version: <code>pyenv install 3.12</code> (Das ist die Python-Version, die ich derzeit verwende)</li>
-<li>Setzen Sie die Version, die global verwendet wird: <code>pyenv global 3.12</code></li>
-<li>Überprüfen Sie, welche Version global eingestellt ist: <code>pyenv global</code> oder <code>python --version</code></li>
+<li>Installieren Sie&nbsp;es: <code>brew install pyenv</code>. Ich gehe davon aus, dass Sie <a href="https://brew.sh" rel="noopener noreferrer" target="_blank">Homebrew</a> installiert&nbsp;haben&#8230;</li>
+<li>Sehen Sie sich die verfügbaren Optionen und Befehle&nbsp;an: <code>pyenv</code></li>
+<li>Listen Sie alle Python-Versionen auf, die pyenv zur Verfügung&nbsp;stehen: <code>pyenv versions</code></li>
+<li>Installieren Sie eine&nbsp;Version: <code>pyenv install 3.12</code> (Das ist die Python-Version, die ich derzeit&nbsp;verwende)</li>
+<li>Setzen Sie die Version, die global verwendet&nbsp;wird: <code>pyenv global 3.12</code></li>
+<li>Überprüfen Sie, welche Version global eingestellt&nbsp;ist: <code>pyenv global</code> oder <code>python --version</code></li>
 </ul>
-<h2 id="arbeitsverzeichnis-erstellen">Arbeitsverzeichnis erstellen</h2>
-<p>Erstellen Sie das Verzeichnis, in dem Sie im Rahmen Ihres Projekts arbeiten möchten. Ich halte alle meine Coding-Projekte unter <code>~/git</code>. Auf diese Weise weiß ich, dass alle Projekte unter <code>~/git</code> nicht gesichert werden müssen, da sie in einem Git-Repo sind.</p>
+<h2 id="arbeitsverzeichnis-erstellen">Arbeitsverzeichnis&nbsp;erstellen</h2>
+<p>Erstellen Sie das Verzeichnis, in dem Sie im Rahmen Ihres Projekts arbeiten möchten. Ich halte alle meine Coding-Projekte&nbsp;unter <code>~/git</code>. Auf diese Weise weiß ich, dass alle Projekte&nbsp;unter <code>~/git</code> nicht gesichert werden müssen, da sie in einem Git-Repo&nbsp;sind.</p>
 <p>Beispiel:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/git
 mkdir<span class="w"> </span>my_python_project
 <span class="nb">cd</span><span class="w"> </span>my_python_project
 </code></pre></div>
-<h2 id="lokale-umgebung-erstellen">Lokale Umgebung erstellen</h2>
+<h2 id="lokale-umgebung-erstellen">Lokale Umgebung&nbsp;erstellen</h2>
 <p>Um meinem Projekt seine eigene Python-Umgebung bereitzustellen, verwende ich <a href="https://docs.python.org/3/library/venv.html" rel="noopener noreferrer" target="_blank">Pythons virtuelle Umgebungen</a>:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/git/my_python_project
 python3.12<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
 </code></pre></div>
-<p>Auf diese Weise habe ich eine Umgebung im Unterverzeichnis <code>.env</code> erstellt. Um sie zu aktivieren, verwenden Sie <code>source .venv/bin/activate</code>.</p>
-<p><strong>Hinweis</strong>: Da mein <code>.env</code>-Unterverzeichnis nicht im Git-Repo sein sollte, muss es in der <code>.gitignore</code>-Datei aufgeführt werden.</p>
-<h2 id="jupyter-lab-installieren">Jupyter Lab installieren</h2>
-<p>Jetzt, da ich die Python-Umgebung habe, kann ich Jupyter installieren. Stellen Sie sicher, dass ich im richtigen Verzeichnis bin und die Python-Umgebung aktiviert ist:</p>
+<p>Auf diese Weise habe ich eine Umgebung im&nbsp;Unterverzeichnis <code>.env</code> erstellt. Um sie zu aktivieren, verwenden&nbsp;Sie <code>source .venv/bin/activate</code>.</p>
+<p><strong>Hinweis</strong>: Da&nbsp;mein <code>.env</code>-Unterverzeichnis nicht im Git-Repo sein sollte, muss es in&nbsp;der <code>.gitignore</code>-Datei aufgeführt&nbsp;werden.</p>
+<h2 id="jupyter-lab-installieren">Jupyter Lab&nbsp;installieren</h2>
+<p>Jetzt, da ich die Python-Umgebung habe, kann ich Jupyter installieren. Stellen Sie sicher, dass ich im richtigen Verzeichnis bin und die Python-Umgebung aktiviert&nbsp;ist:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># Gehen Sie in mein Projektverzeichnis und aktivieren Sie dessen Python-Umgebung</span>
 <span class="nb">cd</span><span class="w"> </span>~/git/my_python_project
 <span class="nb">source</span><span class="w"> </span>.venv/bin/activate
@@ -164,11 +175,11 @@ pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="
 jupyter<span class="w"> </span>lab
 <span class="c1"># Warten Sie nun ein wenig und Ihr Browser sollte sich auf http://localhost:8888/lab öffnen</span>
 </code></pre></div>
-<h2 id="ein-neues-notebook-erstellen">Ein neues Notebook erstellen</h2>
+<h2 id="ein-neues-notebook-erstellen">Ein neues Notebook&nbsp;erstellen</h2>
 <p>Ihr Browser sollte in einer frischen Jupyter Lab-Umgebung geöffnet sein:
-<img alt="Eine leere Lab-Umgebung" src="jupyter_overview.png"/></p>
-<p>Klicken Sie auf <em>Notebook &gt; Python 3</em> und Ihr erstes Notebook sollte bereit sein:</p>
-<p><img alt="Ein frisches Notebook" src="jupyter_detail.png"/></p>
+<img alt="Eine leere Lab-Umgebung" src="/setting-up-jupyter-lab-on-mac/jupyter_overview.png"/></p>
+<p>Klicken Sie auf <em>Notebook &gt; Python 3</em> und Ihr erstes Notebook sollte bereit&nbsp;sein:</p>
+<p><img alt="Ein frisches Notebook" src="/setting-up-jupyter-lab-on-mac/jupyter_detail.png"/></p>
 <p>Um in Jupyter Lab loszulegen, folgen Sie deren <a href="https://jupyterlab.readthedocs.io/en/latest/user/interface.html" rel="noopener noreferrer" target="_blank">Benutzerhandbuch</a>.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

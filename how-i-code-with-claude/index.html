@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/how-i-code-with-claude/" />
+    <link rel="alternate" hreflang="de" href="/de/how-i-code-with-claude/" />
+    <link rel="alternate" hreflang="fr" href="/fr/how-i-code-with-claude/" />
+    <link rel="canonical" href="/how-i-code-with-claude/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,7 +104,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      How I Code With&nbsp;Claude
+      How I Code With Claude
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 14, 2026</span>
@@ -114,18 +118,18 @@ Français
     </div>
 
 
-    <p>Since I presented it a couple of times, and since I got asked even more often, here is a short overview of how I work when coding with Claude Code. It’s a simple workflow, nothing fancy. It focusses on the spec first, iterating them before launching the actual coding.</p>
-<p>Here is how it works:</p>
+    <p>Since I presented it a couple of times, and since I got asked even more often, here is a short overview of how I work when coding with Claude Code. It&#8217;s a simple workflow, nothing fancy. It focusses on the spec first, iterating them before launching the actual&nbsp;coding.</p>
+<p>Here is how it&nbsp;works:</p>
 <ul>
-<li>I start by jotting down a brief spec (e.g. in <code>spec.md</code>). Often just a single line of text, followed by a bullet list with my thoughts. All as a markdown file.</li>
-<li>Then I run my <code>/spec-build-out</code> command: <code>/spec-build-out spec.md</code> (Note: I often work in the integrated terminal in VScode, and there you can drag-and-drop the md file into the terminal and it will paste in the entire file name).</li>
-<li>This expands and refines my <code>spec.md</code>. I read it, revise it, and annotate it. I mark my notes with <code>-&gt;</code>.</li>
-<li>Then I run the <code>/spec-iterate</code> command: This incorporates my annotations and cleans up <code>spec.md</code> again.</li>
-<li>Then I annotate again, run <code>/spec-iterate</code> again, and so on.</li>
-<li>When I feel like everything looks right, I start a <code>/new</code> conversation and run <code>/spec-ready-or-not spec.md</code>.</li>
-<li>This appends any open issues it found to the end of <code>spec.md</code>.</li>
-<li>Same game: annotate <code>spec.md</code>, then <code>/spec-iterate</code>.</li>
-<li>At some point I’m satisfied. Then I commit the specs and let Claude implement them. Sometimes I start with a <code>/new</code> first, to begin with a clean, fresh context.</li>
+<li>I start by jotting down a brief spec (e.g.&nbsp;in <code>spec.md</code>). Often just a single line of text, followed by a bullet list with my thoughts. All as a markdown&nbsp;file.</li>
+<li>Then I run&nbsp;my <code>/spec-build-out</code> command: <code>/spec-build-out spec.md</code> (Note: I often work in the integrated terminal in VScode, and there you can drag-and-drop the md file into the terminal and it will paste in the entire file&nbsp;name).</li>
+<li>This expands and refines&nbsp;my <code>spec.md</code>. I read it, revise it, and annotate it. I mark my notes&nbsp;with <code>-&gt;</code>.</li>
+<li>Then I run&nbsp;the <code>/spec-iterate</code> command: This incorporates my annotations and cleans&nbsp;up <code>spec.md</code> again.</li>
+<li>Then I annotate again,&nbsp;run <code>/spec-iterate</code> again, and so&nbsp;on.</li>
+<li>When I feel like everything looks right, I start&nbsp;a <code>/new</code> conversation and&nbsp;run <code>/spec-ready-or-not spec.md</code>.</li>
+<li>This appends any open issues it found to the end&nbsp;of <code>spec.md</code>.</li>
+<li>Same game:&nbsp;annotate <code>spec.md</code>,&nbsp;then <code>/spec-iterate</code>.</li>
+<li>At some point I&#8217;m satisfied. Then I commit the specs and let Claude implement them. Sometimes I start with&nbsp;a <code>/new</code> first, to begin with a clean, fresh&nbsp;context.</li>
 </ul>
 <p>My <code>/</code>-commands:</p>
 <ul>
@@ -134,15 +138,15 @@ Français
 <li><a href="/how-i-code-with-claude/spec-ready-or-not.md">/spec-ready-or-not</a></li>
 <li><a href="/how-i-code-with-claude/spec-finish.md">/spec-finish</a></li>
 </ul>
-<h3 id="comments-notes-and-thoughts">Comments, notes and thoughts</h3>
-<p>When I ran the Claude <code>/insights</code> I got complimented for the <strong>Disciplined Spec-Driven Development Cycle</strong> 😉</p>
-<p>I played around a bit with the explanation to Claude about how long the <code>spec.md</code> should be. Without any guidance it became huge, contained almost all the code it planned to insert in the code base. Once I added a <code>Please keep the document short! Add code snippets only if they are REALLY key!!</code> it became shorter - sometimes too short.</p>
-<p><code>/insights</code> also suggested the following addition to my <code>claude.md</code>:</p>
+<h3 id="comments-notes-and-thoughts">Comments, notes and&nbsp;thoughts</h3>
+<p>When I ran the&nbsp;Claude <code>/insights</code> I got complimented for the <strong>Disciplined Spec-Driven Development Cycle</strong>&nbsp;😉</p>
+<p>I played around a bit with the explanation to Claude about how long&nbsp;the <code>spec.md</code> should be. Without any guidance it became huge, contained almost all the code it planned to insert in the code base. Once I added&nbsp;a <code>Please keep the document short! Add code snippets only if they are REALLY key!!</code> it became shorter - sometimes too&nbsp;short.</p>
+<p><code>/insights</code> also suggested the following addition to&nbsp;my <code>claude.md</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="gu">## Spec Workflow</span>
 
 When iterating on spec documents:
 
-<span class="k">1.</span> Always look for user annotations (e.g., '-&gt;' arrows, tags like [ACCEPTED], [REJECTED]) on the FIRST pass — do not require re-prompting.
+<span class="k">1.</span> Always look for user annotations (e.g., &#39;-&gt;&#39; arrows, tags like [ACCEPTED], [REJECTED]) on the FIRST pass — do not require re-prompting.
 <span class="k">2.</span> When consolidating a spec, remove rejected options entirely and keep the document concise.
 <span class="k">3.</span> After spec finalization, confirm all open questions are resolved before moving to implementation.
 </code></pre></div>

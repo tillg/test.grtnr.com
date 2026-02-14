@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/embeddings-in-swift-on-apple-silicon/" />
+    <link rel="alternate" hreflang="de" href="/de/embeddings-in-swift-on-apple-silicon/" />
+    <link rel="alternate" hreflang="fr" href="/fr/embeddings-in-swift-on-apple-silicon/" />
+    <link rel="canonical" href="/embeddings-in-swift-on-apple-silicon/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,7 +104,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Embeddings in Swift on Apple&nbsp;Silicon
+      Embeddings in Swift on Apple Silicon
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">September 30, 2025</span>
@@ -114,51 +118,51 @@ Français
     </div>
 
 
-    <p><strong>Work in Progress!!</strong></p>
-<p>I am in process of learning the Swift programming language. I do so by following the fantastic course <a href="https://www.hackingwithswift.com/100/swiftui/" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> by Paul Hudson. It’s a fantastic course, covers basic Swift first and then SwiftUI.</p>
-<p>When trying to apply my learning to little projects I always have lots of questions coming up, and the most reliable source to look for answers is the course, i.e. it’s pages. So I need to search in Paul Hudson’s site, more specifically in the pages of his course.</p>
-<p>As I also play around with Machine Learning, I planned to build an App that I would call <strong>AskPaul</strong>: enter your question and get answers built by a (local!) <span class="caps">RAG</span> system: A system that contains all the pages of the course, in Markdown, chunked and index with it’s embeddings. Then search for the relevant chunks for the question at hand and pass it to the <span class="caps">LLM</span> together with the question. And when I say <span class="caps">LLM</span>, I mean the local <span class="caps">LLM</span> on your Apple device 😜</p>
+    <p><strong>Work in&nbsp;Progress!!</strong></p>
+<p>I am in process of learning the Swift programming language. I do so by following the fantastic course <a href="https://www.hackingwithswift.com/100/swiftui/" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> by Paul Hudson. It&#8217;s a fantastic course, covers basic Swift first and then&nbsp;SwiftUI.</p>
+<p>When trying to apply my learning to little projects I always have lots of questions coming up, and the most reliable source to look for answers is the course, i.e. it&#8217;s pages. So I need to search in Paul Hudson&#8217;s site, more specifically in the pages of his&nbsp;course.</p>
+<p>As I also play around with Machine Learning, I planned to build an App that I would call <strong>AskPaul</strong>: enter your question and get answers built by a (local!) <span class="caps">RAG</span> system: A system that contains all the pages of the course, in Markdown, chunked and index with it&#8217;s embeddings. Then search for the relevant chunks for the question at hand and pass it to the <span class="caps">LLM</span> together with the question. And when I say <span class="caps">LLM</span>, I mean the local <span class="caps">LLM</span> on your Apple device&nbsp;😜</p>
 <p>In order to experiment with the Swift Embeddings I set up a repo <a href="https://github.com/tillg/SwiftEmbeddings" rel="noopener noreferrer" target="_blank">SwiftEmbeddings</a>. It contains my code <span class="amp">&amp;</span> <a href="https://github.com/tillg/SwiftEmbeddings/tree/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds" rel="noopener noreferrer" target="_blank">Playgrounds</a>.</p>
-<h2 id="what-needs-to-be-done">What needs to be done</h2>
-<p>Here is what I want to achieve:</p>
-<p>Given a set of web pages available as Markdown, chunk them into handy sized portions and create their embeddings: A vector (i.e. a series of 512 Double values) that <em>represents their content</em> in a mathematical way.</p>
-<p>Given a question (think of something like <code>In Swift, how can I extend a protocol?</code>) the system should find the chunks with relevant content by calculating the embedding vector of that question and then compare it to all the chunk’s vectors to find the closest one. Those chunks are then passed to the <span class="caps">LLM</span> together with the question.</p>
+<h2 id="what-needs-to-be-done">What needs to be&nbsp;done</h2>
+<p>Here is what I want to&nbsp;achieve:</p>
+<p>Given a set of web pages available as Markdown, chunk them into handy sized portions and create their embeddings: A vector (i.e. a series of 512 Double values) that <em>represents their content</em> in a mathematical&nbsp;way.</p>
+<p>Given a question (think of something&nbsp;like <code>In Swift, how can I extend a protocol?</code>) the system should find the chunks with relevant content by calculating the embedding vector of that question and then compare it to all the chunk&#8217;s vectors to find the closest one. Those chunks are then passed to the <span class="caps">LLM</span> together with the&nbsp;question.</p>
 <p>In the <em>old</em> Apple Embedding system that is located in the <a href="https://developer.apple.com/documentation/NaturalLanguage" rel="noopener noreferrer" target="_blank">Natural Language framework</a>, the functions to achieve this are easily accessible and very nicely explained in the article <a href="https://developer.apple.com/documentation/naturallanguage/finding-similarities-between-pieces-of-text" rel="noopener noreferrer" target="_blank">Finding similarities between pieces of text</a>.</p>
-<h2 id="the-problem">The problem</h2>
-<p>But there is a new kid on the block: <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembedding" rel="noopener noreferrer" target="_blank">NLContextualEmbedding</a>. It was introduced in iOS 17/macOS 14 and expanded in iOS 18/macOS 15.</p>
-<p>Here is why I want to use the new <code>NLContextualEmbedding</code>:</p>
+<h2 id="the-problem">The&nbsp;problem</h2>
+<p>But there is a new kid on the block: <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembedding" rel="noopener noreferrer" target="_blank">NLContextualEmbedding</a>. It was introduced in iOS 17/macOS 14 and expanded in iOS 18/macOS&nbsp;15.</p>
+<p>Here is why I want to use the&nbsp;new <code>NLContextualEmbedding</code>:</p>
 <ul>
-<li>Captures context: It would make the difference between “river bank” and “investment bank.”. The older <code>NLEmbedding</code> didn’t make this difference.</li>
-<li>Is multilingual and cross‑lingual: By training on multiple languages simultaneously, the model aligns semantic spaces across languages, so “chien” and “dog” are embedded nearby</li>
-<li>Supports more languages</li>
-<li>Runs entirely on device: The model respects user privacy and works offline. Only small model files are downloaded when needed, and those are cached system‑wide.</li>
-<li>Offers robust <span class="caps">API</span> controls: Developers can inspect model properties, manage assets, and integrate embeddings into their own <span class="caps">ML</span> pipelines.</li>
+<li>Captures context: It would make the difference between “river bank” and “investment bank.”. The&nbsp;older <code>NLEmbedding</code> didn&#8217;t make this&nbsp;difference.</li>
+<li>Is multilingual and cross‑lingual: By training on multiple languages simultaneously, the model aligns semantic spaces across languages, so “chien” and “dog” are embedded&nbsp;nearby</li>
+<li>Supports more&nbsp;languages</li>
+<li>Runs entirely on device: The model respects user privacy and works offline. Only small model files are downloaded when needed, and those are cached&nbsp;system‑wide.</li>
+<li>Offers robust <span class="caps">API</span> controls: Developers can inspect model properties, manage assets, and integrate embeddings into their own <span class="caps">ML</span>&nbsp;pipelines.</li>
 </ul>
-<p>What’s missing are</p>
+<p>What&#8217;s missing&nbsp;are</p>
 <ul>
-<li>the equivalent of <code>NLEmbedding</code><span class="quo">‘</span>s <code>vector(for:)</code>: Getting a vector for a sentence or a chunk</li>
-<li>the equivalent of <code>distanceBetweenString:andString:distanceType:</code>: Getting a measure for the distance between 2 sentences.</li>
+<li>the equivalent&nbsp;of <code>NLEmbedding</code><span class="quo">&#8216;</span>s <code>vector(for:)</code>: Getting a vector for a sentence or a&nbsp;chunk</li>
+<li>the equivalent&nbsp;of <code>distanceBetweenString:andString:distanceType:</code>: Getting a measure for the distance between 2&nbsp;sentences.</li>
 </ul>
-<p>What <code>NLContextualEmbedding</code> provides is a function <code>embeddingResult(for: String, language: NLLanguage?) throws -&gt; NLContextualEmbeddingResult</code>. But if you look into the structure of the <code>NLContextualEmbeddingResult</code> you see it creates a vector for every token, so a vector of vectors. Furthermore these vectors are accessed with an iterator: <code>enumerateTokenVectors(in: Range&lt;String.Index&gt;, using: ([Double], Range&lt;String.Index&gt;) -&gt; Bool)</code> - which took some thinking and learning for me…</p>
-<p>So I went out to build a simple to use tooling that is based on the new <code>NLContextualEmbedding</code>, similar to what we have in <code>NLEmbedding</code>.</p>
-<p>Note that a crucial aspect is performance, as to find the best matching chunks / vectors in a larger set, it takes many comparisons - and my first attempts took many minutes to search…</p>
-<h2 id="test-data">Test Data</h2>
-<p>As I started with the idea of building an on-device <span class="caps">RAG</span> system for Paul Hudson’s SwiftUI course, here is what I did:</p>
+<p>What <code>NLContextualEmbedding</code> provides is a&nbsp;function <code>embeddingResult(for: String, language: NLLanguage?) throws -&gt; NLContextualEmbeddingResult</code>. But if you look into the structure of&nbsp;the <code>NLContextualEmbeddingResult</code> you see it creates a vector for every token, so a vector of vectors. Furthermore these vectors are accessed with an&nbsp;iterator: <code>enumerateTokenVectors(in: Range&lt;String.Index&gt;, using: ([Double], Range&lt;String.Index&gt;) -&gt; Bool)</code> - which took some thinking and learning for&nbsp;me&#8230;</p>
+<p>So I went out to build a simple to use tooling that is based on the&nbsp;new <code>NLContextualEmbedding</code>, similar to what we have&nbsp;in <code>NLEmbedding</code>.</p>
+<p>Note that a crucial aspect is performance, as to find the best matching chunks / vectors in a larger set, it takes many comparisons - and my first attempts took many minutes to&nbsp;search&#8230;</p>
+<h2 id="test-data">Test&nbsp;Data</h2>
+<p>As I started with the idea of building an on-device <span class="caps">RAG</span> system for Paul Hudson&#8217;s SwiftUI course, here is what I&nbsp;did:</p>
 <ul>
-<li>Scrape the main pages of the SwiftUI course to Markdown</li>
-<li>Chunk them</li>
-<li>Write them all in one <span class="caps">JSON</span> file that I can copy in my Swift project</li>
+<li>Scrape the main pages of the SwiftUI course to&nbsp;Markdown</li>
+<li>Chunk&nbsp;them</li>
+<li>Write them all in one <span class="caps">JSON</span> file that I can copy in my Swift&nbsp;project</li>
 </ul>
 <p>To get this done I plugged together some scripts in <a href="https://github.com/tillg/site2chunks" rel="noopener noreferrer" target="_blank">site2chunks</a>. An example <span class="caps">JSON</span> is in my AskPaul project: <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/merged_chunks.json" rel="noopener noreferrer" target="_blank">merged_chunks</a></p>
-<p>Based on this I have in my Swift code</p>
+<p>Based on this I have in my Swift&nbsp;code</p>
 <ul>
-<li>A <code>struct Chunk</code>. If you are curious, go see the <a href="https://github.com/tillg/AskPaul/blob/main/AskPaul/AskPaul/Chunk.swift" rel="noopener noreferrer" target="_blank">code</a> that represents a chunk</li>
-<li>A <code>Bundle Extension</code> that reads the chunks from the <span class="caps">JSON</span> file (<a href="">Code</a>). Note: This is of course inspired from <a href="https://www.hackingwithswift.com/example-code/system/how-to-decode-json-from-your-app-bundle-the-easy-way" rel="noopener noreferrer" target="_blank">Paul Hudson’s course</a> 😜</li>
+<li>A <code>struct Chunk</code>. If you are curious, go see the <a href="https://github.com/tillg/AskPaul/blob/main/AskPaul/AskPaul/Chunk.swift" rel="noopener noreferrer" target="_blank">code</a> that represents a&nbsp;chunk</li>
+<li>A <code>Bundle Extension</code> that reads the chunks from the <span class="caps">JSON</span> file (<a href="">Code</a>). Note: This is of course inspired from <a href="https://www.hackingwithswift.com/example-code/system/how-to-decode-json-from-your-app-bundle-the-easy-way" rel="noopener noreferrer" target="_blank">Paul Hudson&#8217;s course</a>&nbsp;😜</li>
 </ul>
-<p><strong>Note</strong>: I start with just the <em>main pages</em>: the entry page of each of the 100 lessons. I do this so the data set is easy to handle and my experiments are fast to run. These 100 pages are chunked into 722 chunks. Once I am done with the experiments I will increase the data set to all the pages from hackingwithswift.com .</p>
-<h2 id="the-starting-point-nlembedding">The starting point: <code>NLEmbedding</code></h2>
-<p>With this test data in place, let’s play around with the <em>old</em> <code>NLEmbedding</code>. You can look up the code in <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds/01-NLEmbedding.swift" rel="noopener noreferrer" target="_blank">Playgrounds/01-NLEmbedding.swift</a></p>
-<p>The rough structure of the code looks like this:</p>
+<p><strong>Note</strong>: I start with just the <em>main pages</em>: the entry page of each of the 100 lessons. I do this so the data set is easy to handle and my experiments are fast to run. These 100 pages are chunked into 722 chunks. Once I am done with the experiments I will increase the data set to all the pages from hackingwithswift.com&nbsp;.</p>
+<h2 id="the-starting-point-nlembedding">The starting&nbsp;point: <code>NLEmbedding</code></h2>
+<p>With this test data in place, let&#8217;s play around with the <em>old</em> <code>NLEmbedding</code>. You can look up the code in <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/Playgrounds/01-NLEmbedding.swift" rel="noopener noreferrer" target="_blank">Playgrounds/01-NLEmbedding.swift</a></p>
+<p>The rough structure of the code looks like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="p">#</span><span class="n">Playground</span><span class="p">(</span><span class="s">"Basic embedding &amp; distance"</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">question</span> <span class="p">=</span> <span class="s">"What is a protocol?"</span>
@@ -175,24 +179,24 @@ Français
     <span class="bp">print</span><span class="p">(</span><span class="s">"Distance: </span><span class="si">\(</span><span class="bp">distance</span><span class="p">.</span><span class="n">description</span><span class="si">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Here’s what this code is about:</p>
+<p>Here&#8217;s what this code is&nbsp;about:</p>
 <ul>
-<li>We initialize our variables <code>question</code> and <code>potentialAnswer</code></li>
-<li>We create our <code>NLEmbedding</code> object - which might (theoretically) fail. If it does, there’s nothing we can do but fail it all.</li>
-<li>Then we calculate the <a href="https://developer.apple.com/documentation/naturallanguage/nlembedding/distance(between:and:distancetype:)" rel="noopener noreferrer" target="_blank">distance</a> between the question and print it.</li>
+<li>We initialize our&nbsp;variables <code>question</code> and <code>potentialAnswer</code></li>
+<li>We create&nbsp;our <code>NLEmbedding</code> object - which might (theoretically) fail. If it does, there&#8217;s nothing we can do but fail it&nbsp;all.</li>
+<li>Then we calculate the <a href="https://developer.apple.com/documentation/naturallanguage/nlembedding/distance(between:and:distancetype:)" rel="noopener noreferrer" target="_blank">distance</a> between the question and print&nbsp;it.</li>
 </ul>
-<p>Next, let’s see how long it takes to calculate the embedding vectors for all the 722 chunks from our test data. On my MacBook Pro it takes 35‘966 ms ~ 35 seconds or ~ 49 ms / Vector.</p>
-<p>The other test is calculating distances between pairs of sentences:</p>
+<p>Next, let&#8217;s see how long it takes to calculate the embedding vectors for all the 722 chunks from our test data. On my MacBook Pro it takes 35&#8216;966 ms ~ 35 seconds or ~ 49 ms /&nbsp;Vector.</p>
+<p>The other test is calculating distances between pairs of&nbsp;sentences:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">distance</span> <span class="p">=</span> <span class="n">sentenceEmbedding</span><span class="p">.</span><span class="bp">distance</span><span class="p">(</span><span class="n">between</span><span class="p">:</span> <span class="n">chunk1</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="n">and</span><span class="p">:</span> <span class="n">chunk2</span><span class="p">.</span><span class="n">content</span><span class="p">)</span>
 </code></pre></div>
-<p>As expected this takes about twice as long, as for every distance calculation 2 embedding vectors have to be calculated: <code>⏱️ [Calculating distances with NLEmbedding] count=1  total=72.558420s  avg=72.558420s</code></p>
-<p>Note that if I run the loop calculating the distance always to the same text, it takes almost exactly the same time as just calculating one vector. In other words this loop:</p>
+<p>As expected this takes about twice as long, as for every distance calculation 2 embedding vectors have to be&nbsp;calculated: <code>⏱️ [Calculating distances with NLEmbedding] count=1  total=72.558420s  avg=72.558420s</code></p>
+<p>Note that if I run the loop calculating the distance always to the same text, it takes almost exactly the same time as just calculating one vector. In other words this&nbsp;loop:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span> <span class="n">chunk</span> <span class="k">in</span> <span class="n">chunks</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">distance</span> <span class="p">=</span> <span class="n">sentenceEmbedding</span><span class="p">.</span><span class="bp">distance</span><span class="p">(</span><span class="n">between</span><span class="p">:</span> <span class="n">chunk</span><span class="p">.</span><span class="n">content</span><span class="p">,</span> <span class="n">and</span><span class="p">:</span> <span class="s">"This is a simple text"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>takes about 36 seconds. This would indicate that calculating the distance between 2 vectors takes very little time…</p>
-<p>The last thing I would like to do is to get the <code>k</code> closest chunks to a given question. My way of doing thins, is to sort the array of chunks by their distance to our question:</p>
+<p>takes about 36 seconds. This would indicate that calculating the distance between 2 vectors takes very little&nbsp;time&#8230;</p>
+<p>The last thing I would like to do is to get&nbsp;the <code>k</code> closest chunks to a given question. My way of doing thins, is to sort the array of chunks by their distance to our&nbsp;question:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">findClosest</span><span class="p">&lt;</span><span class="n">T</span><span class="p">:</span> <span class="n">Embeddable</span><span class="p">&gt;(</span><span class="n">to</span> <span class="n">question</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="k">in</span> <span class="n">chunks</span><span class="p">:</span> <span class="p">[</span><span class="n">T</span><span class="p">],</span> <span class="n">k</span><span class="p">:</span> <span class="nb">Int</span> <span class="p">=</span> <span class="mi">3</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">T</span><span class="p">]</span> <span class="p">{</span>
         <span class="k">guard</span> <span class="kd">let</span> <span class="nv">sentenceEmbedding</span> <span class="p">=</span> <span class="bp">NLEmbedding</span><span class="p">.</span><span class="n">sentenceEmbedding</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="p">.</span><span class="n">english</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
             <span class="c1">// Fallback if embedding is unavailable</span>
@@ -206,9 +210,9 @@ Français
         <span class="k">return</span> <span class="nb">Array</span><span class="p">(</span><span class="bp">sorted</span><span class="p">.</span><span class="kr">prefix</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
     <span class="p">}</span>
 </code></pre></div>
-<p>Finding the closest chunks to a given question (which is equivalent to sorting the array) takes quite long: 1‘554‘280 ms ~ 1‘554 secs ~ 25 <span class="caps">MINUTES</span></p>
-<p>Note that we need 11‘290 comparisons. As I assume that Apple caches the Vector of the one sentence that is used in every comparison, that means that it used the time for 11‘290 x (calculate vector + calculate distance of vectors). Strange enough, this makes ~ 137ms / (calc vector + calc distance)…</p>
-<p>An attempt to put our results in an overview:</p>
+<p>Finding the closest chunks to a given question (which is equivalent to sorting the array) takes quite long: 1&#8216;554&#8216;280 ms ~ 1&#8216;554 secs ~ 25 <span class="caps">MINUTES</span></p>
+<p>Note that we need 11&#8216;290 comparisons. As I assume that Apple caches the Vector of the one sentence that is used in every comparison, that means that it used the time for 11&#8216;290 x (calculate vector + calculate distance of vectors). Strange enough, this makes ~ 137ms / (calc vector + calc&nbsp;distance)&#8230;</p>
+<p>An attempt to put our results in an&nbsp;overview:</p>
 <table>
 <thead>
 <tr>
@@ -224,46 +228,46 @@ Français
 <td>NLEmbedding</td>
 <td>35 sec</td>
 <td>70 sec</td>
-<td>1‘554 sec</td>
+<td>1&#8216;554 sec</td>
 <td>49 ms</td>
 </tr>
 </tbody>
 </table>
-<h2 id="measuring-time">Measuring time</h2>
-<p>As we will measure lots of processing time consumed by our calculations, I built a little time tracking system. This is how to call it:</p>
+<h2 id="measuring-time">Measuring&nbsp;time</h2>
+<p>As we will measure lots of processing time consumed by our calculations, I built a little time tracking system. This is how to call&nbsp;it:</p>
 <div class="highlight"><pre><span></span><code><span class="n">timerTrack</span><span class="p">(</span><span class="s">"Timer name"</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Some code that I want to time here</span>
 <span class="p">}</span>
 <span class="n">timerReport</span><span class="p">(</span><span class="s">"Timer name"</span><span class="p">)</span> <span class="c1">// Prints out my timer stats</span>
 </code></pre></div>
-<p>My <code>timerTrack</code> also returns the result of it’s block and works as async. So we can do things like this:</p>
+<p>My <code>timerTrack</code> also returns the result of it&#8217;s block and works as async. So we can do things like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">let</span> <span class="nv">result</span> <span class="p">=</span> <span class="k">try</span> <span class="n">timerTrack</span><span class="p">(</span><span class="s">"Embedding"</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">try</span> <span class="n">embeddingResult</span><span class="p">(</span><span class="k">for</span><span class="p">:</span> <span class="n">sentence</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="n">language</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="calculating-an-embedding-vector-based-on-nlcontextualembedding-the-naive-way">Calculating an embedding vector based on <code>NLContextualEmbedding</code> the naive way</h2>
-<p>Now if we try to do a similar thing using <code>NLContextualEmbedding</code>, we first need to do some basic coding: Apple’s Contextual Embedding generates a list of vectors, specifically one per token.</p>
-<p>So we need to compile them to just one vector. A standard way of achieving this is vector pooling:</p>
-<p><a href="https://milvus.io/ai-quick-reference/how-do-sentence-transformers-create-fixedlength-sentence-embeddings-from-transformer-models-like-bert-or-roberta" rel="noopener noreferrer" target="_blank">The most common method is mean pooling, where the embeddings of all tokens (excluding padding) are averaged.</a></p>
-<p>Imagine you have 2 3-dimensional vectors <code>v1</code> and <code>v2</code>, and want to calculate their mean vector <code>v3</code>:</p>
+<h2 id="calculating-an-embedding-vector-based-on-nlcontextualembedding-the-naive-way">Calculating an embedding vector based&nbsp;on <code>NLContextualEmbedding</code> the naive&nbsp;way</h2>
+<p>Now if we try to do a similar thing&nbsp;using <code>NLContextualEmbedding</code>, we first need to do some basic coding: Apple&#8217;s Contextual Embedding generates a list of vectors, specifically one per&nbsp;token.</p>
+<p>So we need to compile them to just one vector. A standard way of achieving this is vector&nbsp;pooling:</p>
+<p><a href="https://milvus.io/ai-quick-reference/how-do-sentence-transformers-create-fixedlength-sentence-embeddings-from-transformer-models-like-bert-or-roberta" rel="noopener noreferrer" target="_blank">The most common method is mean pooling, where the embeddings of all tokens (excluding padding) are&nbsp;averaged.</a></p>
+<p>Imagine you have 2 3-dimensional&nbsp;vectors <code>v1</code> and <code>v2</code>, and want to calculate their mean&nbsp;vector <code>v3</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="n">v3</span><span class="p">.</span><span class="n">x</span> <span class="p">=</span> <span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">v3</span><span class="p">.</span><span class="n">y</span> <span class="p">=</span> <span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 <span class="n">v3</span><span class="p">.</span><span class="n">z</span> <span class="p">=</span> <span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">z</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
 </code></pre></div>
-<p>It would be an easy loop through the dimensions, and for every dimension calculate the average of all the components of the vectors. Now we face a little technicality: <code>NLContextualEmbedding</code> delivers us the vectors, wrapped in a <code>NLContextualEmbeddingResult</code>. If you look up the <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembeddingresult" rel="noopener noreferrer" target="_blank">docs</a> here is what they say:</p>
+<p>It would be an easy loop through the dimensions, and for every dimension calculate the average of all the components of the vectors. Now we face a little&nbsp;technicality: <code>NLContextualEmbedding</code> delivers us the vectors, wrapped in&nbsp;a <code>NLContextualEmbeddingResult</code>. If you look up the <a href="https://developer.apple.com/documentation/naturallanguage/nlcontextualembeddingresult" rel="noopener noreferrer" target="_blank">docs</a> here is what they&nbsp;say:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">enumerateTokenVectors</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">.</span><span class="n">Index</span><span class="p">&gt;,</span> <span class="n">using</span><span class="p">:</span> <span class="p">([</span><span class="nb">Double</span><span class="p">],</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="nb">String</span><span class="p">.</span><span class="n">Index</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span><span class="p">)</span>
 <span class="p">#</span> <span class="n">Iterates</span> <span class="n">over</span> <span class="n">the</span> <span class="n">embedding</span> <span class="n">vectors</span> <span class="k">for</span> <span class="n">the</span> <span class="n">range</span> <span class="n">you</span> <span class="n">specify</span><span class="p">.</span>
 </code></pre></div>
-<p>It took me some time to digest this, but this is what it boils down to:</p>
-<p>You give it a <code>Range&lt;String.Index&gt;</code> to indicate from where to where you want the vectors listed. Why did they not simply use something like <code>0...10</code>? The secret is, that the <code>Range&lt;String.Index&gt;</code> is not going through the text like <code>T</code>, <code>h</code>, <code>ì</code>, <code>s</code>, <code>_</code>, <code>i</code>, <code>s</code>… but through the <strong>tokens</strong>.</p>
-<p>Let’s inspect what the tokens actually look like:</p>
+<p>It took me some time to digest this, but this is what it boils down&nbsp;to:</p>
+<p>You give it&nbsp;a <code>Range&lt;String.Index&gt;</code> to indicate from where to where you want the vectors listed. Why did they not simply use something&nbsp;like <code>0...10</code>? The secret is, that&nbsp;the <code>Range&lt;String.Index&gt;</code> is not going through the text&nbsp;like <code>T</code>, <code>h</code>, <code>ì</code>, <code>s</code>, <code>_</code>, <code>i</code>, <code>s</code>&#8230; but through the <strong>tokens</strong>.</p>
+<p>Let&#8217;s inspect what the tokens actually look&nbsp;like:</p>
 <div class="highlight"><pre><span></span><code><span class="n">result</span><span class="p">.</span><span class="n">enumerateTokenVectors</span><span class="p">(</span><span class="k">in</span><span class="p">:</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">startIndex</span><span class="p">..&lt;</span><span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">.</span><span class="n">endIndex</span><span class="p">)</span> <span class="p">{</span> <span class="n">vector</span><span class="p">,</span> <span class="n">range</span> <span class="k">in</span>
     <span class="kd">let</span> <span class="nv">token</span> <span class="p">=</span> <span class="n">result</span><span class="p">.</span><span class="n">string</span><span class="p">[</span><span class="n">range</span><span class="p">]</span>
     <span class="bp">print</span><span class="p">(</span><span class="s">"Vector for token [</span><span class="si">\(</span><span class="n">token</span><span class="si">)</span><span class="s">]"</span><span class="p">)</span>
     <span class="k">return</span> <span class="kc">true</span> <span class="c1">// Return true to keep enumerating, false to stop early</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>This is what we get:</p>
+<p>This is what we&nbsp;get:</p>
 <div class="highlight"><pre><span></span><code>Vector for token []
 Vector for token []
 Vector for token [This]
@@ -273,9 +277,9 @@ Vector for token [sentenc]
 Vector for token [e]
 Vector for token [.]
 </code></pre></div>
-<p>Seeing this, it makes sense that the index is not just counting from 1 to the <code>string.count</code>, but is a bit of a more complex beast.</p>
-<p>You already saw how to use the second argument of our <code>enumerateTokenVectors</code> function: The <code>using</code>-closure with a signature of <code>([Double], Range&lt;String.Index&gt;) -&gt; Bool</code>. That basically means you give it an array of <code>Double</code> (yes, this is finally our vector 😜) and a String index and return a <code>Bool</code>: <code>true</code> if you want it to continue, <code>false</code> if you want it to stop.</p>
-<p>With this in mind, let’s write a function that caclculates the average of our vectors that are inside a <code>NLContextualResult</code>:</p>
+<p>Seeing this, it makes sense that the index is not just counting from 1 to&nbsp;the <code>string.count</code>, but is a bit of a more complex&nbsp;beast.</p>
+<p>You already saw how to use the second argument of&nbsp;our <code>enumerateTokenVectors</code> function:&nbsp;The <code>using</code>-closure with a signature&nbsp;of <code>([Double], Range&lt;String.Index&gt;) -&gt; Bool</code>. That basically means you give it an array&nbsp;of <code>Double</code> (yes, this is finally our vector 😜) and a String index and return&nbsp;a <code>Bool</code>: <code>true</code> if you want it to&nbsp;continue, <code>false</code> if you want it to&nbsp;stop.</p>
+<p>With this in mind, let&#8217;s write a function that caclculates the average of our vectors that are inside&nbsp;a <code>NLContextualResult</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">meanVectorNaive</span><span class="p">(</span><span class="n">result</span><span class="p">:</span> <span class="n">NLContextualEmbeddingResult</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="nb">Double</span><span class="p">]?</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">sumVector</span><span class="p">:</span> <span class="p">[</span><span class="nb">Double</span><span class="p">]?</span> <span class="p">=</span> <span class="kc">nil</span>
     <span class="kd">var</span> <span class="nv">count</span> <span class="p">=</span> <span class="mi">0</span>
@@ -305,23 +309,23 @@ Vector for token [.]
     <span class="k">return</span> <span class="n">sumVector</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Here is what’s happening in the code:</p>
+<p>Here is what&#8217;s happening in the&nbsp;code:</p>
 <ul>
-<li>We set our <code>sumVector</code> and <code>count</code> (this will be the number of vectors we added up).</li>
-<li>Then we call the <code>enumerateTokenVectors</code> with a closure that adds the value of each vector to the <code>sumVector</code> and increase <code>count</code> by +1 for every vector. We start the loop with a <code>sumVector</code> being <code>nil</code> and setting it to the value of the first vector that comes in.</li>
-<li>Then we divide every component of the <code>sumVector</code> by the number of vectors we initially had,</li>
-<li>…and we surround this by some guards for avoiding division by zero.</li>
+<li>We set&nbsp;our <code>sumVector</code> and <code>count</code> (this will be the number of vectors we added&nbsp;up).</li>
+<li>Then we call&nbsp;the <code>enumerateTokenVectors</code> with a closure that adds the value of each vector to&nbsp;the <code>sumVector</code> and&nbsp;increase <code>count</code> by +1 for every vector. We start the loop with&nbsp;a <code>sumVector</code> being <code>nil</code> and setting it to the value of the first vector that comes&nbsp;in.</li>
+<li>Then we divide every component of&nbsp;the <code>sumVector</code> by the number of vectors we initially&nbsp;had,</li>
+<li>&#8230;and we surround this by some guards for avoiding division by&nbsp;zero.</li>
 </ul>
-<p>Note that in my code base I wrapped this as <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/NLContextualEmbeddingExtension.swift" rel="noopener noreferrer" target="_blank">extensions to <code>NLContextualEmbeddingResult</code></a>.</p>
-<p>Before we measure the timing of our naive mean pooling, let’s see how long it takes to just calculate the embedding vectors with <code>NLContextualEmbedding</code>:</p>
-<p>Calculating 722 embeddings with <code>NLContextualEmbedding</code> (w/o compiling them to their mean) takes 5245 ms ~ 5,2 seconds.</p>
-<p>To put it into relation, let’s add this to our overview table:</p>
+<p>Note that in my code base I wrapped this as <a href="https://github.com/tillg/SwiftEmbeddings/blob/main/SwiftEmbeddings/SwiftEmbeddings/NLContextualEmbeddingExtension.swift" rel="noopener noreferrer" target="_blank">extensions&nbsp;to <code>NLContextualEmbeddingResult</code></a>.</p>
+<p>Before we measure the timing of our naive mean pooling, let&#8217;s see how long it takes to just calculate the embedding vectors&nbsp;with <code>NLContextualEmbedding</code>:</p>
+<p>Calculating 722 embeddings&nbsp;with <code>NLContextualEmbedding</code> (w/o compiling them to their mean) takes 5245 ms ~ 5,2&nbsp;seconds.</p>
+<p>To put it into relation, let&#8217;s add this to our overview&nbsp;table:</p>
 <table>
 <thead>
 <tr>
 <th>Data set: 722 chunks</th>
-<th>Calc’ vectors</th>
-<th>Calc’ distances</th>
+<th>Calc&#8217; vectors</th>
+<th>Calc&#8217; distances</th>
 <th>Sort array</th>
 <th>ms / Vector</th>
 </tr>
@@ -343,14 +347,14 @@ Vector for token [.]
 </tr>
 </tbody>
 </table>
-<p>Wow! It takes 7x less time to calculate the embeddings with the more modern <code>NLContextualEmbedding</code>, even though this one produces not one but many vectors per chunk!</p>
-<p>Up net, we calculate the mean vector for all of our 722 chunks: 17118 ms ~ 17 seconds</p>
+<p>Wow! It takes 7x less time to calculate the embeddings with the more&nbsp;modern <code>NLContextualEmbedding</code>, even though this one produces not one but many vectors per&nbsp;chunk!</p>
+<p>Up net, we calculate the mean vector for all of our 722 chunks: 17118 ms ~ 17&nbsp;seconds</p>
 <table>
 <thead>
 <tr>
 <th>Data set: 722 chunks</th>
-<th>Calc’ vectors</th>
-<th>Calc’ distances</th>
+<th>Calc&#8217; vectors</th>
+<th>Calc&#8217; distances</th>
 <th>Sort array</th>
 <th>ms / Vector</th>
 </tr>
@@ -379,45 +383,45 @@ Vector for token [.]
 </tr>
 </tbody>
 </table>
-<h2 id="calculating-cosine-similarity-the-naive-way">Calculating Cosine similarity the naive way</h2>
+<h2 id="calculating-cosine-similarity-the-naive-way">Calculating Cosine similarity the naive&nbsp;way</h2>
 <p>Now if we have 2 sentences, we calculate their embedding vectors, how do we get their <em>distance</em>? Enters <strong><a href="https://en.wikipedia.org/wiki/Cosine_similarity" rel="noopener noreferrer" target="_blank">cosine similarity</a></strong>.</p>
-<p>Imagine you have two arrows that start at the same point.</p>
+<p>Imagine you have two arrows that start at the same&nbsp;point.</p>
 <ul>
-<li>Each arrow shows a direction and how long it is.</li>
-<li>If the arrows point in exactly the same direction, they are very similar.</li>
-<li>If one arrow points the opposite way, they are completely different.</li>
-<li>If the arrows are side by side at a right angle (like an “L”), they are not similar at all — they don’t point toward each other.</li>
+<li>Each arrow shows a direction and how long it&nbsp;is.</li>
+<li>If the arrows point in exactly the same direction, they are very&nbsp;similar.</li>
+<li>If one arrow points the opposite way, they are completely&nbsp;different.</li>
+<li>If the arrows are side by side at a right angle (like an “L”), they are not similar at all — they don’t point toward each&nbsp;other.</li>
 </ul>
-<p>Cosine similarity is a number that tells us how much two arrows point the same way:</p>
+<p>Cosine similarity is a number that tells us how much two arrows point the same&nbsp;way:</p>
 <ul>
-<li>If they point the same way, cosine similarity = 1 (super similar 🥰)</li>
-<li>If they point at 90°, cosine similarity = 0 (not similar 😐)</li>
-<li>If they point opposite ways, cosine similarity = -1 (totally different 😠)</li>
+<li>If they point the same way, cosine similarity = 1 (super similar&nbsp;🥰)</li>
+<li>If they point at 90°, cosine similarity = 0 (not similar&nbsp;😐)</li>
+<li>If they point opposite ways, cosine similarity = -1 (totally different&nbsp;😠)</li>
 </ul>
 <p><img alt="alt text" src="/embeddings-in-swift-on-apple-silicon/cosine_sim.png"/></p>
 <p>Now we rather want something that expresses a notion of distance. We call this <strong>cosine distance</strong>.</p>
 <p>$$
-\text{Cosine distance} = 1 − \text{cosine similarity} $$</p>
-<p>That means:</p>
+\text{Cosine distance} = 1 − \text{cosine similarity}&nbsp;$$</p>
+<p>That&nbsp;means:</p>
 <ul>
-<li>If two things are exactly the same, cosine similarity = 1 → distance = 0</li>
-<li>If they are completely unrelated, similarity = 0 → distance = 1</li>
-<li>If they are opposite, similarity = -1 → distance = 2</li>
+<li>If two things are exactly the same, cosine similarity = 1 → distance =&nbsp;0</li>
+<li>If they are completely unrelated, similarity = 0 → distance =&nbsp;1</li>
+<li>If they are opposite, similarity = -1 → distance =&nbsp;2</li>
 </ul>
-<p>And now Math refresher: When we have 2 vectors, we can easily calculate their cosine.</p>
-<p>Say you have two vectors:</p>
+<p>And now Math refresher: When we have 2 vectors, we can easily calculate their&nbsp;cosine.</p>
+<p>Say you have two&nbsp;vectors:</p>
 <ul>
-<li>A = [a₁, a₂, …, aₙ]</li>
-<li>B = [b₁, b₂, …, bₙ]</li>
+<li>A = [a₁, a₂, …,&nbsp;aₙ]</li>
+<li>B = [b₁, b₂, …,&nbsp;bₙ]</li>
 </ul>
-<p>The cosine similarity between them is:</p>
+<p>The cosine similarity between them&nbsp;is:</p>
 <p>$$
-\text{cosine} = \frac{A \cdot B}{|A| \times |B|} $$</p>
+\text{cosine} = \frac{A \cdot B}{|A| \times |B|}&nbsp;$$</p>
 <ul>
-<li>where $A \cdot B$ is the dot product $A \cdot B = a₁b₁ + a₂b₂ + … + aₙbₙ$</li>
-<li>and the magnitude is $||A|| = \sqrt{a₁² + a₂² + … + aₙ²}$</li>
+<li>where $A \cdot B$ is the dot product $A \cdot B = a₁b₁ + a₂b₂ + … +&nbsp;aₙbₙ$</li>
+<li>and the magnitude is $||A|| = \sqrt{a₁² + a₂² + … +&nbsp;aₙ²}$</li>
 </ul>
-<p>Putting this into code the naive way:</p>
+<p>Putting this into code the naive&nbsp;way:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">cosineSimilarityNaive</span><span class="p">(</span><span class="kc">_</span> <span class="n">a</span><span class="p">:</span> <span class="p">[</span><span class="nb">Double</span><span class="p">],</span> <span class="kc">_</span> <span class="n">b</span><span class="p">:</span> <span class="p">[</span><span class="nb">Double</span><span class="p">])</span> <span class="p">-&gt;</span> <span class="nb">Double</span><span class="p">?</span> <span class="p">{</span>
     <span class="k">guard</span> <span class="n">a</span><span class="p">.</span><span class="bp">count</span> <span class="p">==</span> <span class="n">b</span><span class="p">.</span><span class="bp">count</span><span class="p">,</span> <span class="o">!</span><span class="n">a</span><span class="p">.</span><span class="bp">isEmpty</span><span class="p">,</span> <span class="o">!</span><span class="n">b</span><span class="p">.</span><span class="bp">isEmpty</span> <span class="k">else</span> <span class="p">{</span>
         <span class="k">return</span> <span class="kc">nil</span> <span class="c1">// vectors must have same size and not be empty</span>
@@ -439,14 +443,14 @@ Vector for token [.]
     <span class="k">return</span> <span class="n">dotproduct</span> <span class="o">/</span> <span class="p">(</span><span class="n">normA</span> <span class="o">*</span> <span class="n">normB</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Now with this in place we can calculate the 722 distance with our naive implementation: This takes us 34306 ms ~ 34 sec</p>
-<p>Now we sort our array by using this distance function: this takes us 717983 ms ~ 717 sec ~ 12 minutes. Still twice as fast as the old <code>NLEmbedding</code> - and we haven’t started tuning yet! 😜</p>
+<p>Now with this in place we can calculate the 722 distance with our naive implementation: This takes us 34306 ms ~ 34&nbsp;sec</p>
+<p>Now we sort our array by using this distance function: this takes us 717983 ms ~ 717 sec ~ 12 minutes. Still twice as fast as the&nbsp;old <code>NLEmbedding</code> - and we haven&#8217;t started tuning yet!&nbsp;😜</p>
 <table>
 <thead>
 <tr>
 <th>Data set: 722 chunks</th>
-<th>Calc’ vectors</th>
-<th>Calc’ distances</th>
+<th>Calc&#8217; vectors</th>
+<th>Calc&#8217; distances</th>
 <th>Sort array</th>
 <th>ms / Vector</th>
 </tr>
@@ -475,27 +479,27 @@ Vector for token [.]
 </tr>
 </tbody>
 </table>
-<p>Now let’s look into some optimization…</p>
-<h2 id="reducing-embedding-vector-calculations">Reducing embedding vector calculations</h2>
-<p>The first thing that jumps into our face is that in our code we calculate the same vectors over and over. We had to do this using <code>NLEmbedding</code>, because it was all packaged and provided by Apple - we probably also benefitted from their internal tuning. Now that we built out our own tooling, we are open to optimize this.</p>
-<p>You maybe noticed that we packaged our content string in <code>Chunk</code> structs, and those structs conform to the <code>Embeddable</code> protocol. This protocol gives us a standard way of accessing the string that should be embedded via the variable <code>content</code>:</p>
+<p>Now let&#8217;s look into some&nbsp;optimization&#8230;</p>
+<h2 id="reducing-embedding-vector-calculations">Reducing embedding vector&nbsp;calculations</h2>
+<p>The first thing that jumps into our face is that in our code we calculate the same vectors over and over. We had to do this&nbsp;using <code>NLEmbedding</code>, because it was all packaged and provided by Apple - we probably also benefitted from their internal tuning. Now that we built out our own tooling, we are open to optimize&nbsp;this.</p>
+<p>You maybe noticed that we packaged our content string&nbsp;in <code>Chunk</code> structs, and those structs conform to&nbsp;the <code>Embeddable</code> protocol. This protocol gives us a standard way of accessing the string that should be embedded via the&nbsp;variable <code>content</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">Embeddable</span><span class="p">:</span> <span class="n">Identifiable</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">content</span><span class="p">:</span> <span class="nb">String</span> <span class="p">{</span> <span class="kr">get</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>You might notice it also extends the <code>Identifiable</code> protocol, and that’s what I will use here: I will build an <code>EmbeddingStore</code> that remembers the embedding to a chunk by using the chunk’s <code>id</code>:</p>
+<p>You might notice it also extends&nbsp;the <code>Identifiable</code> protocol, and that&#8217;s what I will use here: I will build&nbsp;an <code>EmbeddingStore</code> that remembers the embedding to a chunk by using the&nbsp;chunk&#8217;s <code>id</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">actor</span> <span class="n">EmbeddingStore</span> <span class="p">{</span>
         <span class="kd">init</span><span class="p">(</span><span class="n">model</span><span class="p">:</span> <span class="n">NLContextualEmbedding</span><span class="p">)</span> <span class="p">{...}</span>
         <span class="kd">func</span> <span class="nf">loadChunks</span><span class="p">(</span><span class="kc">_</span> <span class="n">newChunks</span><span class="p">:</span> <span class="p">[</span><span class="n">Chunk</span><span class="p">])</span> <span class="k">async</span> <span class="p">{...}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>What it basically does is calculating the embedding vectors for chunks and then using them to get a distance and to sort them all. The only tricky part is the <code>async</code> side: using <code>NLContextualEmbedding</code> is async, so we do it all at the beginning and then use the pre-calculated vectors when sorting - w/o any <code>async</code> burden by that time. We also shift the work around actors a bit… The benefit is impressive:</p>
+<p>What it basically does is calculating the embedding vectors for chunks and then using them to get a distance and to sort them all. The only tricky part is&nbsp;the <code>async</code> side:&nbsp;using <code>NLContextualEmbedding</code> is async, so we do it all at the beginning and then use the pre-calculated vectors when sorting - w/o&nbsp;any <code>async</code> burden by that time. We also shift the work around actors a bit&#8230; The benefit is&nbsp;impressive:</p>
 <table>
 <thead>
 <tr>
 <th>Data set: 722 chunks</th>
-<th>Calc’ vectors</th>
-<th>Calc’ distances</th>
+<th>Calc&#8217; vectors</th>
+<th>Calc&#8217; distances</th>
 <th>Sort array</th>
 <th>ms / Vector</th>
 </tr>
@@ -531,22 +535,22 @@ Vector for token [.]
 </tr>
 </tbody>
 </table>
-<p>That basically means that calculating the cosine similarity by multiplying vectors is super cheap, even the naive way. And sorting them once the distances have been calculated is almost free 😜</p>
-<p>I had in mind some other tuning measures that I will postpone, as the cosine calculation is so cheap. Here is what I thought of initially:</p>
-<p><strong>Tuning by using Matrix calculation</strong>: Apple offers the <a href="https://developer.apple.com/accelerate/" rel="noopener noreferrer" target="_blank">Accelerate Framework</a> that provides very fast vector and matrix operations. In our case we could improve the cosine similarity calculations. Based on <a href="https://developer.apple.com/videos/play/wwdc2019/718/" rel="noopener noreferrer" target="_blank">Apple’s explanations</a> I would expect that we could make it ~3x faster.</p>
-<p><strong>Tuning by using normed vectors</strong>: Currently we calculate the cosine similarity like this:</p>
+<p>That basically means that calculating the cosine similarity by multiplying vectors is super cheap, even the naive way. And sorting them once the distances have been calculated is almost free&nbsp;😜</p>
+<p>I had in mind some other tuning measures that I will postpone, as the cosine calculation is so cheap. Here is what I thought of&nbsp;initially:</p>
+<p><strong>Tuning by using Matrix calculation</strong>: Apple offers the <a href="https://developer.apple.com/accelerate/" rel="noopener noreferrer" target="_blank">Accelerate Framework</a> that provides very fast vector and matrix operations. In our case we could improve the cosine similarity calculations. Based on <a href="https://developer.apple.com/videos/play/wwdc2019/718/" rel="noopener noreferrer" target="_blank">Apple&#8217;s explanations</a> I would expect that we could make it ~3x&nbsp;faster.</p>
+<p><strong>Tuning by using normed vectors</strong>: Currently we calculate the cosine similarity like&nbsp;this:</p>
 <p>$$
-\text{cosine} = \frac{A \cdot B}{|A| \times |B|} $$</p>
-<p>If we would use normed vectors of length 1, we could avoid the division by the product of their length and would end up with</p>
+\text{cosine} = \frac{A \cdot B}{|A| \times |B|}&nbsp;$$</p>
+<p>If we would use normed vectors of length 1, we could avoid the division by the product of their length and would end up&nbsp;with</p>
 <p>$$
-\text{cosine} = {A \cdot B} $$</p>
-<p>Maybe we will revisit once we have larger data sets.</p>
-<h2 id="extending-the-data-set">Extending the data set</h2>
-<p>Now that the experiment runs within reasonable time with the test data set, let’s expand it to our real data set. If we scrape the site www.hackingwithswift.com more extensively and chunk the markdown files we get, we end up with 21‘730 chunks. Let’s play around with this data set and run our last process: Loud them in our <code>EmbeddingStore</code>, which basically means we calculate their vectors by running <code>NLContextualEmbedding.embeddingResult</code> and then calculate the mean vector - still in our naive way. And then we calculate the distance of every of our vectors to the vector of our question and we sort by this distance. Here are the results:</p>
+\text{cosine} = {A \cdot B}&nbsp;$$</p>
+<p>Maybe we will revisit once we have larger data&nbsp;sets.</p>
+<h2 id="extending-the-data-set">Extending the data&nbsp;set</h2>
+<p>Now that the experiment runs within reasonable time with the test data set, let&#8217;s expand it to our real data set. If we scrape the site www.hackingwithswift.com more extensively and chunk the markdown files we get, we end up with 21&#8216;730 chunks. Let&#8217;s play around with this data set and run our last process: Loud them in&nbsp;our <code>EmbeddingStore</code>, which basically means we calculate their vectors by&nbsp;running <code>NLContextualEmbedding.embeddingResult</code> and then calculate the mean vector - still in our naive way. And then we calculate the distance of every of our vectors to the vector of our question and we sort by this distance. Here are the&nbsp;results:</p>
 <table>
 <thead>
 <tr>
-<th>Data set: 21‘730 chunks</th>
+<th>Data set: 21&#8216;730 chunks</th>
 <th></th>
 </tr>
 </thead>
@@ -565,29 +569,29 @@ Vector for token [.]
 </tr>
 </tbody>
 </table>
-<p>Pay attention to the units when reading this table! 😜</p>
-<p>8 minutes to calculate the vectors of our 21’ chunks. These are the actions that come to mind:</p>
+<p>Pay attention to the units when reading this table!&nbsp;😜</p>
+<p>8 minutes to calculate the vectors of our 21&#8217; chunks. These are the actions that come to&nbsp;mind:</p>
 <ul>
-<li>How much of this time is used to create the Embedding vectors? And how much is compiling these vectors to one with our mean vector calculation?</li>
-<li>Since these vectors stay the same for our data set (unless we change the Embedding Model), we should definitely save them.</li>
+<li>How much of this time is used to create the Embedding vectors? And how much is compiling these vectors to one with our mean vector&nbsp;calculation?</li>
+<li>Since these vectors stay the same for our data set (unless we change the Embedding Model), we should definitely save&nbsp;them.</li>
 </ul>
-<p>So if we look into the <code>NLContextualEmbedding.vectorNaive</code> function, we see the following time consumptions:</p>
+<p>So if we look into&nbsp;the <code>NLContextualEmbedding.vectorNaive</code> function, we see the following time&nbsp;consumptions:</p>
 <div class="highlight"><pre><span></span><code>⏱️<span class="w"> </span><span class="o">[</span>Embedding<span class="o">]</span><span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">21730</span><span class="w">  </span><span class="nv">total</span><span class="o">=</span><span class="m">158</span>.623341s<span class="w">  </span><span class="nv">avg</span><span class="o">=</span><span class="m">7</span>.300ms
 ⏱️<span class="w"> </span><span class="o">[</span>MeanVector<span class="o">]</span><span class="w"> </span><span class="nv">count</span><span class="o">=</span><span class="m">21730</span><span class="w">  </span><span class="nv">total</span><span class="o">=</span><span class="m">329</span>.307913s<span class="w">  </span><span class="nv">avg</span><span class="o">=</span><span class="m">15</span>.155ms
 </code></pre></div>
-<p>As we can’t speed up the Embedding creation (if you have an idea, drop me an email!), let’s look at the mean vector calculation: As we described earlier it basically sums up a list of vectors and then divides it by the no of vectors so it get’s the average. Time to unpack the <a href="https://developer.apple.com/accelerate/" rel="noopener noreferrer" target="_blank">Accelerate Framework</a>!</p>
-<h2 id="using-accelerate-framework">Using Accelerate Framework</h2>
-<p>The part of the Accelerate Framework that we are going to use is <a href="https://developer.apple.com/documentation/accelerate/vdsp-library" rel="noopener noreferrer" target="_blank">vDSP</a>. It’s subtitled <em>Perform basic arithmetic operations and common digital signal processing (<span class="caps">DSP</span>) routines on large vectors.</em>, but it contains exactly what we need.</p>
-<p>The function we’ll use is <a href="https://developer.apple.com/documentation/accelerate/vdsp/add(_:_:)-2ftxc" rel="noopener noreferrer" target="_blank"><code>vDSP.add(a, b)</code></a>: <em>Returns the double-precision element-wise sum of two vectors.</em></p>
-<p>So we clculte our mean vector by cycling thru the vectors of the EmbeddingResult and summing them up:</p>
+<p>As we can&#8217;t speed up the Embedding creation (if you have an idea, drop me an email!), let&#8217;s look at the mean vector calculation: As we described earlier it basically sums up a list of vectors and then divides it by the no of vectors so it get&#8217;s the average. Time to unpack the <a href="https://developer.apple.com/accelerate/" rel="noopener noreferrer" target="_blank">Accelerate Framework</a>!</p>
+<h2 id="using-accelerate-framework">Using Accelerate&nbsp;Framework</h2>
+<p>The part of the Accelerate Framework that we are going to use is <a href="https://developer.apple.com/documentation/accelerate/vdsp-library" rel="noopener noreferrer" target="_blank">vDSP</a>. It&#8217;s subtitled <em>Perform basic arithmetic operations and common digital signal processing (<span class="caps">DSP</span>) routines on large vectors.</em>, but it contains exactly what we&nbsp;need.</p>
+<p>The function we&#8217;ll use is <a href="https://developer.apple.com/documentation/accelerate/vdsp/add(_:_:)-2ftxc" rel="noopener noreferrer" target="_blank"><code>vDSP.add(a, b)</code></a>: <em>Returns the double-precision element-wise sum of two&nbsp;vectors.</em></p>
+<p>So we clculte our mean vector by cycling thru the vectors of the EmbeddingResult and summing them&nbsp;up:</p>
 <div class="highlight"><pre><span></span><code><span class="n">sumVector</span> <span class="p">=</span> <span class="n">vDSP</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">sumVector</span><span class="p">!,</span> <span class="n">vector</span><span class="p">)</span>
 </code></pre></div>
-<p>Using this fast vector addition, this is our timing we get:</p>
+<p>Using this fast vector addition, this is our timing we&nbsp;get:</p>
 <table>
 <thead>
 <tr>
-<th>Data set: 21‘730</th>
-<th>Calc Embed’s</th>
+<th>Data set: 21&#8216;730</th>
+<th>Calc Embed&#8217;s</th>
 <th>Calc Mean</th>
 <th>Sorting</th>
 <th>Total</th>
@@ -610,22 +614,22 @@ Vector for token [.]
 </tr>
 </tbody>
 </table>
-<p>So we brought it down by 3 minutes 😜</p>
-<h2 id="up-next">Up next</h2>
-<p>The next steps towards a functioning AskPaul application that I have in mind are</p>
+<p>So we brought it down by 3 minutes&nbsp;😜</p>
+<h2 id="up-next">Up&nbsp;next</h2>
+<p>The next steps towards a functioning AskPaul application that I have in mind&nbsp;are</p>
 <ul>
-<li>Think of how to evaluate the quality of the search, that will most certainly include</li>
-<li>Collecting questions and the relevant places in hackingwithswift that answer that question</li>
-<li>Automate asking the questions and evaluating the returned chunks</li>
-<li>Tune whatever it takes: How we chunk, how big the chunks are, how we search…</li>
-<li>Wrap the vector calculation and search function in a library. Maybe even together with the testing <span class="amp">&amp;</span> tuning part.</li>
-<li>Integrate the chunking <span class="amp">&amp;</span> searching into a <span class="caps">RAG</span> system</li>
-<li>Build the application for Paul 😜</li>
+<li>Think of how to evaluate the quality of the search, that will most certainly&nbsp;include</li>
+<li>Collecting questions and the relevant places in hackingwithswift that answer that&nbsp;question</li>
+<li>Automate asking the questions and evaluating the returned&nbsp;chunks</li>
+<li>Tune whatever it takes: How we chunk, how big the chunks are, how we&nbsp;search&#8230;</li>
+<li>Wrap the vector calculation and search function in a library. Maybe even together with the testing <span class="amp">&amp;</span> tuning&nbsp;part.</li>
+<li>Integrate the chunking <span class="amp">&amp;</span> searching into a <span class="caps">RAG</span>&nbsp;system</li>
+<li>Build the application for Paul&nbsp;😜</li>
 </ul>
 <h2 id="todo">Todo</h2>
 <ul>
-<li>Modify timing to run the experiments around 100x and calc average in order to get reliable data</li>
-<li>Run experiments on physical devices.</li>
+<li>Modify timing to run the experiments around 100x and calc average in order to get reliable&nbsp;data</li>
+<li>Run experiments on physical&nbsp;devices.</li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/thoughts-on-swift-architecture/" />
+    <link rel="alternate" hreflang="de" href="/de/thoughts-on-swift-architecture/" />
+    <link rel="alternate" hreflang="fr" href="/fr/thoughts-on-swift-architecture/" />
+    <link rel="canonical" href="/thoughts-on-swift-architecture/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -46,7 +50,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -65,14 +69,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -99,7 +103,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Thoughts On Swift&nbsp;Architecture
+      Thoughts On Swift Architecture
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">March 24, 2025</span>
@@ -110,7 +114,7 @@ Français
     <div class="toc">
 <ul>
 <li><a href="#question">Question</a><ul>
-<li><a href="#domain-models-data-models-and-mappers">Domain Models, Data Models, and Mappers</a></li>
+<li><a href="#domain-models-data-models-and-mappers">Domain Models, Data Models, and&nbsp;Mappers</a></li>
 <li><a href="#repository">Repository</a></li>
 </ul>
 </li>
@@ -121,9 +125,9 @@ Français
 <p><a href="https://podcasts.apple.com/de/podcast/developer-podcast/id1467065787?i=1000698509743" rel="noopener noreferrer" target="_blank"><img alt="Developer Podcast" src="/thoughts-on-swift-architecture/developer_podcast.jpg"/></a></p>
 <p>This post basically is a question that I added to the <a href="https://discord.com/invite/j57uchzUa9" rel="noopener noreferrer" target="_blank">Discord that goes with the Podcast</a>.</p>
 <h1 id="question">Question</h1>
-<p>I’m a Swift Rookie, and many aspects are still unclear to me. Based on the example you guys used in the podcast, I will try to fill out the gaps in my understanding.</p>
-<h2 id="domain-models-data-models-and-mappers">Domain Models, Data Models, and Mappers</h2>
-<p>The example is a ToDo app and so the main entity is the <strong>Task</strong>. So I would have a Domain model <code>Task</code> that looks like this:</p>
+<p>I&#8217;m a Swift Rookie, and many aspects are still unclear to me. Based on the example you guys used in the podcast, I will try to fill out the gaps in my&nbsp;understanding.</p>
+<h2 id="domain-models-data-models-and-mappers">Domain Models, Data Models, and&nbsp;Mappers</h2>
+<p>The example is a ToDo app and so the main entity is the <strong>Task</strong>. So I would have a Domain&nbsp;model <code>Task</code> that looks like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">struct</span> <span class="nc">Task</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">id</span><span class="p">:</span> <span class="n">UUID</span>
     <span class="kd">let</span> <span class="nv">title</span><span class="p">:</span> <span class="nb">String</span>
@@ -132,7 +136,7 @@ Français
     <span class="kd">let</span> <span class="nv">isCompleted</span><span class="p">:</span> <span class="nb">Bool</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>As I want to store my tasks in CloudKit, I need a Data Model that is compatible with CloudKit. So I need <code>CKRecord</code> objects that represent tasks. According to my understanding, they are built like this:</p>
+<p>As I want to store my tasks in CloudKit, I need a Data Model that is compatible with CloudKit. So I&nbsp;need <code>CKRecord</code> objects that represent tasks. According to my understanding, they are built like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapTaskToCKRecord</span><span class="p">(</span><span class="n">task</span><span class="p">:</span> <span class="n">Task</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="bp">CKRecord</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">record</span> <span class="p">=</span> <span class="bp">CKRecord</span><span class="p">(</span><span class="n">recordType</span><span class="p">:</span> <span class="s">"task"</span><span class="p">)</span>
     <span class="n">record</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="p">=</span> <span class="n">task</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="bp">CKRecordValue</span>
@@ -143,7 +147,7 @@ Français
     <span class="k">return</span> <span class="n">record</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>And I would have the corresponding function to map a <code>CKRecord</code> back to a <code>Task</code>:</p>
+<p>And I would have the corresponding function to map&nbsp;a <code>CKRecord</code> back to&nbsp;a <code>Task</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">func</span> <span class="nf">mapCKRecordToTask</span><span class="p">(</span><span class="n">record</span><span class="p">:</span> <span class="bp">CKRecord</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Task</span> <span class="p">{</span>
     <span class="kd">let</span> <span class="nv">id</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="n">UUID</span>
     <span class="kd">let</span> <span class="nv">title</span> <span class="p">=</span> <span class="n">record</span><span class="p">[</span><span class="s">"title"</span><span class="p">]</span> <span class="k">as</span><span class="p">!</span> <span class="nb">String</span>
@@ -155,11 +159,11 @@ Français
 </code></pre></div>
 <p>Questions:</p>
 <ul>
-<li><strong>Where</strong> do I put the mapping functions? Are they part on the Domain Model or the Data Model? I guess they rather belong to the the Data Model.</li>
-<li><strong>Errors</strong>: How to deal with errors? For example, if the <code>CKRecord</code> does not contain a value for <code>id</code>, I would get a crash. Should I use optionals or throw an error?</li>
+<li><strong>Where</strong> do I put the mapping functions? Are they part on the Domain Model or the Data Model? I guess they rather belong to the the Data&nbsp;Model.</li>
+<li><strong>Errors</strong>: How to deal with errors? For example, if&nbsp;the <code>CKRecord</code> does not contain a value&nbsp;for <code>id</code>, I would get a crash. Should I use optionals or throw an&nbsp;error?</li>
 </ul>
 <h2 id="repository">Repository</h2>
-<p>Then you mention the repository. Based on the earlier discussion on Discord, I would assume the repository only deals with Domain models. So it might look like this:</p>
+<p>Then you mention the repository. Based on the earlier discussion on Discord, I would assume the repository only deals with Domain models. So it might look like&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">protocol</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">getAllTasks</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span>
     <span class="kd">func</span> <span class="nf">getTaskById</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="n">Task</span><span class="p">?</span>
@@ -169,18 +173,18 @@ Français
     <span class="kd">func</span> <span class="nf">deleteTask</span><span class="p">(</span><span class="n">id</span><span class="p">:</span> <span class="n">UUID</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>And based on this protocol I could implement a <code>TaskRepositoryCloudKit</code> that uses the mapping functions to convert between Domain and Data Models and reflects all the <span class="caps">CRUD</span> operations that are made to the (in memory) TaskRepostory to the CloudKit database.</p>
-<p>Next question:</p>
+<p>And based on this protocol I could implement&nbsp;a <code>TaskRepositoryCloudKit</code> that uses the mapping functions to convert between Domain and Data Models and reflects all the <span class="caps">CRUD</span> operations that are made to the (in memory) TaskRepostory to the CloudKit&nbsp;database.</p>
+<p>Next&nbsp;question:</p>
 <ul>
-<li><strong>Repository functions</strong>: Typically I would build functions from a repository that are beyond <span class="caps">CRUD</span>. For example a <code>getTasksDateRange</code> that returns the oldest and most recent due date. Where would I build this? I don’t want to put it in <code>TaskRepositoryCloudKit</code> as it would be the same logic when using a different storage (i.e. load all the tasks in memory, sort them, and return the first and last). As I can’t have functions in a protocol, wher do I put it?</li>
-<li><strong>Naming</strong>: Is the naming I suggested reasonable? Is it how you would do it in Swift? I chose <code>TaskRepositoryCloudKit</code> so it is listed next to the <code>TaskRepository</code> in the Xcode file browser. If I would need other Data Models to interface a system Xyz I would call them <code>TaskRawXyz</code> - is that reasonable?</li>
+<li><strong>Repository functions</strong>: Typically I would build functions from a repository that are beyond <span class="caps">CRUD</span>. For example&nbsp;a <code>getTasksDateRange</code> that returns the oldest and most recent due date. Where would I build this? I don&#8217;t want to put it&nbsp;in <code>TaskRepositoryCloudKit</code> as it would be the same logic when using a different storage (i.e. load all the tasks in memory, sort them, and return the first and last). As I can&#8217;t have functions in a protocol, wher do I put&nbsp;it?</li>
+<li><strong>Naming</strong>: Is the naming I suggested reasonable? Is it how you would do it in Swift? I&nbsp;chose <code>TaskRepositoryCloudKit</code> so it is listed next to&nbsp;the <code>TaskRepository</code> in the Xcode file browser. If I would need other Data Models to interface a system Xyz I would call&nbsp;them <code>TaskRawXyz</code> - is that&nbsp;reasonable?</li>
 </ul>
 <h1 id="answer">Answer</h1>
-<p>I got a great <a href="https://discord.com/channels/1028834407374655518/1028846930182291526/1353860001411760228" rel="noopener noreferrer" target="_blank">answer</a> from <a href="https://pado.name" rel="noopener noreferrer" target="_blank">Cocoatype</a> on discord. And I am very grateful that he took the time to read and type the answer.</p>
-<p>Here is Cocoatype’s answer for reference:</p>
+<p>I got a great <a href="https://discord.com/channels/1028834407374655518/1028846930182291526/1353860001411760228" rel="noopener noreferrer" target="_blank">answer</a> from <a href="https://pado.name" rel="noopener noreferrer" target="_blank">Cocoatype</a> on discord. And I am very grateful that he took the time to read and type the&nbsp;answer.</p>
+<p>Here is Cocoatype&#8217;s answer for&nbsp;reference:</p>
 <blockquote>
 <p><strong>Where</strong> do I put the mapping functions? Are they part on the Domain Model or the Data Model? I guess they rather belong to the the Data Model.
-I would put these in the repository or in a helper type for the repository. For instance, in my app Barc, I have a <code>BarcodeRepository</code> protocol, and a <code>FileBarcodeRepository</code> that uses SwiftData. Here’s a small overview of what that looks like:</p>
+I would put these in the repository or in a helper type for the repository. For instance, in my app Barc, I have&nbsp;a <code>BarcodeRepository</code> protocol, and&nbsp;a <code>FileBarcodeRepository</code> that uses SwiftData. Here&#8217;s a small overview of what that looks&nbsp;like:</p>
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="nc">BarcodeRepository</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nv">codes</span><span class="p">:</span> <span class="p">[</span><span class="n">Code</span><span class="p">]</span> <span class="p">{</span> <span class="kr">get</span> <span class="kr">throws</span> <span class="p">}</span>
@@ -229,13 +233,13 @@ I would put these in the repository or in a helper type for the repository. For 
 <span class="p">}</span>
 </code></pre></div>
 <blockquote>
-<p><strong>Errors</strong>: How to deal with errors? For example, if the CKRecord does not contain a value for id, I would get a crash. Should I use optionals or throw an error?</p>
+<p><strong>Errors</strong>: How to deal with errors? For example, if the CKRecord does not contain a value for id, I would get a crash. Should I use optionals or throw an&nbsp;error?</p>
 </blockquote>
-<p>I personally throw errors and deal with them at the level it’s reasonable to deal with them in. Optionals are fine if something is actually optional, but remember that what you’re trying to do here is avoid having to deal with <span class="caps">API</span> constraints in your view code. So I wouldn’t make something optional just to avoid errors.</p>
+<p>I personally throw errors and deal with them at the level it&#8217;s reasonable to deal with them in. Optionals are fine if something is actually optional, but remember that what you&#8217;re trying to do here is avoid having to deal with <span class="caps">API</span> constraints in your view code. So I wouldn&#8217;t make something optional just to avoid&nbsp;errors.</p>
 <blockquote>
-<p><strong>Repository functions</strong>: Typically I would build functions from a repository that are beyond <span class="caps">CRUD</span>. For example a getTasksDateRange that returns the oldest and most recent due date. Where would I build this? I don’t want to put it in TaskRepositoryCloudKit as it would be the same logic when using a different storage (i.e. load all the tasks in memory, sort them, and return the first and last). As I can’t have functions in a protocol, wher do I put it?</p>
+<p><strong>Repository functions</strong>: Typically I would build functions from a repository that are beyond <span class="caps">CRUD</span>. For example a getTasksDateRange that returns the oldest and most recent due date. Where would I build this? I don&#8217;t want to put it in TaskRepositoryCloudKit as it would be the same logic when using a different storage (i.e. load all the tasks in memory, sort them, and return the first and last). As I can&#8217;t have functions in a protocol, wher do I put&nbsp;it?</p>
 </blockquote>
-<p>If you want to have something across multiple implementations, use a protocol extension. For instance:</p>
+<p>If you want to have something across multiple implementations, use a protocol extension. For&nbsp;instance:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">extension</span> <span class="nc">TaskRepository</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="nf">getTasks</span><span class="p">(</span><span class="n">dateRange</span><span class="p">:</span> <span class="nb">Range</span><span class="p">&lt;</span><span class="n">Date</span><span class="p">&gt;)</span> <span class="p">-&gt;</span> <span class="p">[</span><span class="n">Task</span><span class="p">]</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">getAllTasks</span><span class="p">().</span><span class="bp">filter</span> <span class="p">{</span> <span class="n">task</span> <span class="k">in</span>
@@ -244,11 +248,11 @@ I would put these in the repository or in a helper type for the repository. For 
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Because you know all TaskRepository implementations have a <code>getAllTasks()</code>, you can use it in the extension like that.</p>
+<p>Because you know all TaskRepository implementations have&nbsp;a <code>getAllTasks()</code>, you can use it in the extension like&nbsp;that.</p>
 <blockquote>
-<p><strong>Naming</strong>: Is the naming I suggested reasonable? Is it how you would do it in Swift? I chose TaskRepositoryCloudKit so it is listed next to the TaskRepository in the Xcode file browser. If I would need other Data Models to interface a system Xyz I would call them TaskRawXyz - is that reasonable</p>
+<p><strong>Naming</strong>: Is the naming I suggested reasonable? Is it how you would do it in Swift? I chose TaskRepositoryCloudKit so it is listed next to the TaskRepository in the Xcode file browser. If I would need other Data Models to interface a system Xyz I would call them TaskRawXyz - is that&nbsp;reasonable</p>
 </blockquote>
-<p>I personally put the most specific part first (BarcodeRepository becomes FileBarcodeRepository and PreviewBarcodeRepository and StubBarcodeRepository), but at the end is fine, too. Nothing strange about it either way.</p>
+<p>I personally put the most specific part first (BarcodeRepository becomes FileBarcodeRepository and PreviewBarcodeRepository and StubBarcodeRepository), but at the end is fine, too. Nothing strange about it either&nbsp;way.</p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
         data-repo="tillg/grtnr.com"

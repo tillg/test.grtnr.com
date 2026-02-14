@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/swiftdata-on-icloud/" />
+    <link rel="alternate" hreflang="de" href="/de/swiftdata-on-icloud/" />
+    <link rel="alternate" hreflang="fr" href="/fr/swiftdata-on-icloud/" />
+    <link rel="canonical" href="/swiftdata-on-icloud/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -47,7 +51,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -66,14 +70,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -100,7 +104,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      SwiftData on&nbsp;iCloud
+      SwiftData on iCloud
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">November 2, 2025</span>
@@ -115,57 +119,57 @@ Français
 
 
     <p><strong>Note</strong>: The github repo that goes with this article is <a href="https://github.com/tillg/SwiftDataOniCloud" rel="noopener noreferrer" target="_blank">here</a>.</p>
-<p>As I have been learning Swift <span class="amp">&amp;</span> SwiftUI and started using it, I often struggled when trying to use CloudKit. Too often… This is a minimal setup I used to remind future me of how I set up things and document my learnings.</p>
+<p>As I have been learning Swift <span class="amp">&amp;</span> SwiftUI and started using it, I often struggled when trying to use CloudKit. Too often&#8230; This is a minimal setup I used to remind future me of how I set up things and document my&nbsp;learnings.</p>
 <ul>
-<li><a href="#starting-point">Starting point</a></li>
-<li><a href="#step-by-step">Step by step</a></li>
-<li><a href="#add-capabilities-to-xcode-project">Add Capabilities to Xcode project</a></li>
-<li><a href="#make-model-cloudkit-ready">Make model CloudKit ready</a></li>
-<li><a href="#investigating-testing-playing-around-maybe-understanding">Investigating, Testing, Playing around, maybe understanding…</a></li>
+<li><a href="#starting-point">Starting&nbsp;point</a></li>
+<li><a href="#step-by-step">Step by&nbsp;step</a></li>
+<li><a href="#add-capabilities-to-xcode-project">Add Capabilities to Xcode&nbsp;project</a></li>
+<li><a href="#make-model-cloudkit-ready">Make model CloudKit&nbsp;ready</a></li>
+<li><a href="#investigating-testing-playing-around-maybe-understanding">Investigating, Testing, Playing around, maybe&nbsp;understanding&#8230;</a></li>
 <li><a href="#cloudkit-console">CloudKit Console</a><ul>
-<li><a href="#querying-data">Querying data</a></li>
+<li><a href="#querying-data">Querying&nbsp;data</a></li>
 </ul>
 </li>
-<li><a href="#syncing-in-real-time">Syncing in real time</a></li>
+<li><a href="#syncing-in-real-time">Syncing in real&nbsp;time</a></li>
 <li><a href="#reading">Reading</a></li>
 <li><a href="#apple">Apple</a></li>
-<li><a href="#frequent-errors">Frequent errors</a></li>
-<li><a href="#default-values-for-fields">Default values for fields</a></li>
-<li><a href="#not-signed-in-with-appleid">Not signed in with AppleId</a></li>
-<li><a href="#entitlements-was-modified-during-the-build">Entitlements was modified during the build</a></li>
-<li><a href="#unable-to-initialize-without-an-icloud-account-ckaccountstatusnoaccount">Unable to initialize without an iCloud account (CKAccountStatusNoAccount).</a></li>
+<li><a href="#frequent-errors">Frequent&nbsp;errors</a></li>
+<li><a href="#default-values-for-fields">Default values for&nbsp;fields</a></li>
+<li><a href="#not-signed-in-with-appleid">Not signed in with&nbsp;AppleId</a></li>
+<li><a href="#entitlements-was-modified-during-the-build">Entitlements was modified during the&nbsp;build</a></li>
+<li><a href="#unable-to-initialize-without-an-icloud-account-ckaccountstatusnoaccount">Unable to initialize without an iCloud account&nbsp;(CKAccountStatusNoAccount).</a></li>
 </ul>
-<h2 id="starting-point">Starting point</h2>
-<p>Almost all I know about SiftUI comes from the great tutorial <a href="https://www.hackingwithswift.com/100/swiftui" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> from Paul Hudson. He does a fantastic job explaining SwiftUI, and offers this well-maintained course for free.</p>
-<p>In order not having to start completely from scratch, I use the lesson from the course that introduces SwiftData: On <a href="https://www.hackingwithswift.com/100/swiftui/53" rel="noopener noreferrer" target="_blank">Day 53</a> Paul starts a new project called <em>Bookworm</em> that uses SwiftData to store it’s book data. At the end of <a href="https://www.hackingwithswift.com/100/swiftui/55" rel="noopener noreferrer" target="_blank">Day 55</a> he has built out a cute little application that stores it’s data in SwiftData. In case you are not fluent in SwiftData or don’t remember it, I strongly recommend watching the videos of those 3 days. His App uses SwiftData, but not in the cloud, just locally on device.</p>
-<p>I will use this as the starting point to add iCloud syncing to it. You can find the <em>Bookworm</em> app in <a href="https://github.com/twostraws/HackingWithSwift" rel="noopener noreferrer" target="_blank">Paul Hudson’s Github project</a>: It’s under <a href="https://github.com/twostraws/HackingWithSwift/tree/main/SwiftUI/project11" rel="noopener noreferrer" target="_blank">SwiftUI &gt; project 11</a>.</p>
-<p>If you clone / copy the <em>project 11</em> directory and open it with Xcode you have to set your Team <span class="amp">&amp;</span> Bundle Identifier to run it.</p>
-<p>Now we will try to add iCloud syncing to it.</p>
-<h2 id="step-by-step">Step by step</h2>
-<h3 id="add-capabilities-to-xcode-project">Add Capabilities to Xcode project</h3>
-<p>In order to use CloudKit for syncing, we have to add 2 capabilities:</p>
+<h2 id="starting-point">Starting&nbsp;point</h2>
+<p>Almost all I know about SiftUI comes from the great tutorial <a href="https://www.hackingwithswift.com/100/swiftui" rel="noopener noreferrer" target="_blank">100 Days of SwiftUI</a> from Paul Hudson. He does a fantastic job explaining SwiftUI, and offers this well-maintained course for&nbsp;free.</p>
+<p>In order not having to start completely from scratch, I use the lesson from the course that introduces SwiftData: On <a href="https://www.hackingwithswift.com/100/swiftui/53" rel="noopener noreferrer" target="_blank">Day 53</a> Paul starts a new project called <em>Bookworm</em> that uses SwiftData to store it&#8217;s book data. At the end of <a href="https://www.hackingwithswift.com/100/swiftui/55" rel="noopener noreferrer" target="_blank">Day 55</a> he has built out a cute little application that stores it&#8217;s data in SwiftData. In case you are not fluent in SwiftData or don&#8217;t remember it, I strongly recommend watching the videos of those 3 days. His App uses SwiftData, but not in the cloud, just locally on&nbsp;device.</p>
+<p>I will use this as the starting point to add iCloud syncing to it. You can find the <em>Bookworm</em> app in <a href="https://github.com/twostraws/HackingWithSwift" rel="noopener noreferrer" target="_blank">Paul Hudson&#8217;s Github project</a>: It&#8217;s under <a href="https://github.com/twostraws/HackingWithSwift/tree/main/SwiftUI/project11" rel="noopener noreferrer" target="_blank">SwiftUI &gt; project 11</a>.</p>
+<p>If you clone / copy the <em>project 11</em> directory and open it with Xcode you have to set your Team <span class="amp">&amp;</span> Bundle Identifier to run&nbsp;it.</p>
+<p>Now we will try to add iCloud syncing to&nbsp;it.</p>
+<h2 id="step-by-step">Step by&nbsp;step</h2>
+<h3 id="add-capabilities-to-xcode-project">Add Capabilities to Xcode&nbsp;project</h3>
+<p>In order to use CloudKit for syncing, we have to add 2&nbsp;capabilities:</p>
 <ul>
-<li>CloudKit (duuh)</li>
-<li>Notification: This is needed so the device can get the signals that data changed and needs to be synced with the cloud again.</li>
+<li>CloudKit&nbsp;(duuh)</li>
+<li>Notification: This is needed so the device can get the signals that data changed and needs to be synced with the cloud&nbsp;again.</li>
 </ul>
-<p>If you open you <code>Xcode &gt; Project: MiniSwiftData &gt; Target: MiniSwiftData &gt; Signing &amp; Capabilities</code> this is what you should see:</p>
+<p>If you open&nbsp;you <code>Xcode &gt; Project: MiniSwiftData &gt; Target: MiniSwiftData &gt; Signing &amp; Capabilities</code> this is what you should&nbsp;see:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/signing_wo_capabilities.png"/></p>
-<p>Click on the <code>+ Capability</code> button on the top left and search for iCloud:</p>
+<p>Click on&nbsp;the <code>+ Capability</code> button on the top left and search for&nbsp;iCloud:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/icloud_capability.png"/></p>
-<p>Then in the <code>iCloud</code> section select CloudKit as Service:</p>
+<p>Then in&nbsp;the <code>iCloud</code> section select CloudKit as&nbsp;Service:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/cloudkit_service.png"/></p>
-<p>Then below we need a container. Click on <code>+</code> and enter a name. The usual name would be to the bundle Identifier, in my case that is <code>com.grtnr.Bookworm</code> (I just copy <span class="amp">&amp;</span> paste it from the <em>Bundle Identifier</em> field).</p>
+<p>Then below we need a container. Click&nbsp;on <code>+</code> and enter a name. The usual name would be to the bundle Identifier, in my case that&nbsp;is <code>com.grtnr.Bookworm</code> (I just copy <span class="amp">&amp;</span> paste it from the <em>Bundle Identifier</em>&nbsp;field).</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/create_new_container.png"/></p>
-<p>That leads to this:</p>
+<p>That leads to&nbsp;this:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/new_container.png"/></p>
-<p>It’s red because it has not been created yet, that simply takes some time.</p>
-<p>In order to keep devices synced, iCloud uses the <em>Remote Push Notification</em>, so we have to add this service as well. Click on <code>+ Capability</code> again and search for <em>Back…</em>:</p>
+<p>It&#8217;s red because it has not been created yet, that simply takes some&nbsp;time.</p>
+<p>In order to keep devices synced, iCloud uses the <em>Remote Push Notification</em>, so we have to add this service as well. Click&nbsp;on <code>+ Capability</code> again and search for <em>Back&#8230;</em>:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/background_modes.png"/></p>
 <p>Then in the list of services of the <em>Background Modes</em> section select <em>Remote notificatons</em>:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/remote_notifications.png"/></p>
-<p><strong>Note</strong>: Probably by now the container name has turned from red to black as it has been created in iCloud.</p>
-<h3 id="make-model-cloudkit-ready">Make model CloudKit ready</h3>
-<p>When starting the app now we get an error similar to this:</p>
+<p><strong>Note</strong>: Probably by now the container name has turned from red to black as it has been created in&nbsp;iCloud.</p>
+<h3 id="make-model-cloudkit-ready">Make model CloudKit&nbsp;ready</h3>
+<p>When starting the app now we get an error similar to&nbsp;this:</p>
 <div class="highlight"><pre><span></span><code>CoreData:<span class="w"> </span>error:<span class="w"> </span>Store<span class="w"> </span>failed<span class="w"> </span>to<span class="w"> </span>load.<span class="w">  </span>&lt;NSPersistentStoreDescription:<span class="w"> </span>0x600000c0e670&gt;<span class="w"> </span><span class="o">(</span>type:<span class="w"> </span>SQLite,<span class="w"> </span>url:<span class="w"> </span>file:///Users/tgartner/Library/Developer/CoreSimulator/Devices/1464DFC4-EE76-43DB-B178-C33F1FA97A91/data/Containers/Data/Application/34DEE59B-975D-4784-8A87-DC38A9D9DA37/Library/Application%20Support/default.store<span class="o">)</span><span class="w"> </span>with<span class="w"> </span><span class="nv">error</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>Error<span class="w"> </span><span class="nv">Domain</span><span class="o">=</span>NSCocoaErrorDomain<span class="w"> </span><span class="nv">Code</span><span class="o">=</span><span class="m">134060</span><span class="w"> </span><span class="s2">"A Core Data error occurred."</span><span class="w"> </span><span class="nv">UserInfo</span><span class="o">={</span><span class="nv">NSLocalizedFailureReason</span><span class="o">=</span>CloudKit<span class="w"> </span>integration<span class="w"> </span>requires<span class="w"> </span>that<span class="w"> </span>all<span class="w"> </span>attributes<span class="w"> </span>be<span class="w"> </span>optional,<span class="w"> </span>or<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>default<span class="w"> </span>value<span class="w"> </span>set.<span class="w"> </span>The<span class="w"> </span>following<span class="w"> </span>attributes<span class="w"> </span>are<span class="w"> </span>marked<span class="w"> </span>non-optional<span class="w"> </span>but<span class="w"> </span><span class="k">do</span><span class="w"> </span>not<span class="w"> </span>have<span class="w"> </span>a<span class="w"> </span>default<span class="w"> </span>value:
 Book:<span class="w"> </span>author
 Book:<span class="w"> </span>genre
@@ -176,12 +180,12 @@ Book:<span class="w"> </span>title<span class="o">}</span><span class="w"> </spa
 <span class="o">}</span>
 </code></pre></div>
 <p>The reason is that a model needs to match a couple of restrictions
-When creating models for using them with CloudKist we need to stick to some rules:</p>
+When creating models for using them with CloudKist we need to stick to some&nbsp;rules:</p>
 <ul>
-<li>Properties Default Values: Every property needs default value - unless it’s optional.</li>
-<li>Can’t Use <code>@Unique</code></li>
+<li>Properties Default Values: Every property needs default value - unless it&#8217;s&nbsp;optional.</li>
+<li>Can&#8217;t&nbsp;Use <code>@Unique</code></li>
 </ul>
-<p>So I simply changed the <code>Book.swift</code> file:</p>
+<p>So I simply changed&nbsp;the <code>Book.swift</code> file:</p>
 <div class="highlight"><pre><span></span><code><span class="kd">import</span> <span class="nc">Foundation</span>
 <span class="kd">import</span> <span class="nc">SwiftData</span>
 
@@ -202,70 +206,70 @@ When creating models for using them with CloudKist we need to stick to some rul
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Now I run the app on a Simulator, enter 3 books, run it on my real iPhone - et voilà, the books show up on my iPhone!! 🥰</p>
-<h2 id="investigating-testing-playing-around-maybe-understanding">Investigating, Testing, Playing around, maybe understanding…</h2>
-<h3 id="cloudkit-console">CloudKit Console</h3>
-<p>When investigating what’s happening there is a very helpful tool: The <a href="https://icloud.developer.apple.com" rel="noopener noreferrer" target="_blank">CloudKit Console</a>:</p>
+<p>Now I run the app on a Simulator, enter 3 books, run it on my real iPhone - et voilà, the books show up on my iPhone!!&nbsp;🥰</p>
+<h2 id="investigating-testing-playing-around-maybe-understanding">Investigating, Testing, Playing around, maybe&nbsp;understanding&#8230;</h2>
+<h3 id="cloudkit-console">CloudKit&nbsp;Console</h3>
+<p>When investigating what&#8217;s happening there is a very helpful tool: The <a href="https://icloud.developer.apple.com" rel="noopener noreferrer" target="_blank">CloudKit Console</a>:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/cloudkit_console_overview.png"/></p>
-<p>Select <em>CloudKit Database</em> and then select the Bookworm database:</p>
+<p>Select <em>CloudKit Database</em> and then select the Bookworm&nbsp;database:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/bookworm_db.png"/></p>
-<h4 id="querying-data">Querying data</h4>
-<p>To see what books have been created <span class="amp">&amp;</span> saved, you need to select the proper options <span class="amp">&amp;</span> filters</p>
+<h4 id="querying-data">Querying&nbsp;data</h4>
+<p>To see what books have been created <span class="amp">&amp;</span> saved, you need to select the proper options <span class="amp">&amp;</span>&nbsp;filters</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/bookworm_record_filters.png"/></p>
 <ul>
-<li>Make sure at the top level you selected the Bookworm data base &gt; Development</li>
-<li>Select <strong>Private database</strong>: That means we a per user separation of data</li>
-<li>In the zone drop down, do select the one that is not the _<em>default</em>, in my case that is <strong>com.apple.coredata.cloudkit.zone</strong>. I have no clue (yet) what those zones are about…</li>
-<li>In <em><span class="caps">RECORD</span> <span class="caps">TYPE</span></em> select <strong>CD_Book</strong>, because we want to look at our books</li>
+<li>Make sure at the top level you selected the Bookworm data base &gt;&nbsp;Development</li>
+<li>Select <strong>Private database</strong>: That means we a per user separation of&nbsp;data</li>
+<li>In the zone drop down, do select the one that is not the _<em>default</em>, in my case that is <strong>com.apple.coredata.cloudkit.zone</strong>. I have no clue (yet) what those zones are&nbsp;about&#8230;</li>
+<li>In <em><span class="caps">RECORD</span> <span class="caps">TYPE</span></em> select <strong>CD_Book</strong>, because we want to look at our&nbsp;books</li>
 </ul>
-<p>Hit <em>Query Records</em> and get an error… 😂
+<p>Hit <em>Query Records</em> and get an error&#8230; 😂
 <img alt="alt text" src="/swiftdata-on-icloud/query_error.png"/></p>
-<p>To fix this, select on the menu on the left side: Schema &gt; Record Types and see this:</p>
+<p>To fix this, select on the menu on the left side: Schema &gt; Record Types and see&nbsp;this:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/record_types.png"/></p>
-<p>We see that he was right with his error message: <code>recordName</code>is not marked queryable. So let’s fix that.</p>
-<p>In the left Menu select Schema &gt; Indexes and click on <code>+</code> to create a new index like so:</p>
+<p>We see that he was right with his error&nbsp;message: <code>recordName</code>is not marked queryable. So let&#8217;s fix&nbsp;that.</p>
+<p>In the left Menu select Schema &gt; Indexes and click&nbsp;on <code>+</code> to create a new index like&nbsp;so:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/new_index.png"/></p>
-<p>Return to the Data &gt; Records, set your filters <span class="amp">&amp;</span> switches: Private Database, zone <code>com.apple.coredata.cloudkit.zone</code>, <span class="caps">RECORD</span> <span class="caps">TYPE</span> to CD_Books and hit <strong>Query Records</strong> and Baammm:</p>
+<p>Return to the Data &gt; Records, set your filters <span class="amp">&amp;</span> switches: Private Database,&nbsp;zone <code>com.apple.coredata.cloudkit.zone</code>, <span class="caps">RECORD</span> <span class="caps">TYPE</span> to CD_Books and hit <strong>Query Records</strong> and&nbsp;Baammm:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/query_records.png"/></p>
-<h3 id="syncing-in-real-time">Syncing in real time</h3>
-<p>One of the very coo,l features of CloudKit is the near-real-time-syncing: You modify data on one device, and the changes become visible on the other device very quickly - of course on devices that are logged in with the same AppleId.</p>
-<p>The way that works is that a notification is sent to all devices that are logged in with that AppleId, and then they start a sync.</p>
-<p>Unfortunately Simulators don’t receive those notifications. So in order to test it, you have to make changes on a Simulator and then see them appear on your real device. Of course it also works if you use 2 physical devices.</p>
+<h3 id="syncing-in-real-time">Syncing in real&nbsp;time</h3>
+<p>One of the very coo,l features of CloudKit is the near-real-time-syncing: You modify data on one device, and the changes become visible on the other device very quickly - of course on devices that are logged in with the same&nbsp;AppleId.</p>
+<p>The way that works is that a notification is sent to all devices that are logged in with that AppleId, and then they start a&nbsp;sync.</p>
+<p>Unfortunately Simulators don&#8217;t receive those notifications. So in order to test it, you have to make changes on a Simulator and then see them appear on your real device. Of course it also works if you use 2 physical&nbsp;devices.</p>
 <h2 id="reading">Reading</h2>
-<p>Some valuable documents and explanations I found.</p>
+<p>Some valuable documents and explanations I&nbsp;found.</p>
 <h3 id="apple">Apple</h3>
 <ul>
-<li><a href="https://developer.apple.com/documentation/cloudkit/enabling-cloudkit-in-your-app" rel="noopener noreferrer" target="_blank">Enabling CloudKit in Your App</a>: Explains how to configure your app to store data in iCloud using CloudKit.</li>
+<li><a href="https://developer.apple.com/documentation/cloudkit/enabling-cloudkit-in-your-app" rel="noopener noreferrer" target="_blank">Enabling CloudKit in Your App</a>: Explains how to configure your app to store data in iCloud using&nbsp;CloudKit.</li>
 <li>
-<p><a href="https://developer.apple.com/documentation/cloudkit/managing-icloud-containers-with-cloudkit-database-app#//apple_ref/doc/uid/TP40014987-CH5" rel="noopener noreferrer" target="_blank">Managing iCloud Containers with CloudKit Database App</a>: Explains how to investigate <span class="amp">&amp;</span> see data in your containers via the Apple Web Dev.</p>
+<p><a href="https://developer.apple.com/documentation/cloudkit/managing-icloud-containers-with-cloudkit-database-app#//apple_ref/doc/uid/TP40014987-CH5" rel="noopener noreferrer" target="_blank">Managing iCloud Containers with CloudKit Database App</a>: Explains how to investigate <span class="amp">&amp;</span> see data in your containers via the Apple Web&nbsp;Dev.</p>
 </li>
 <li>
-<p><a href="https://developer.apple.com/documentation/technotes/tn3164-debugging-the-synchronization-of-nspersistentcloudkitcontainer" rel="noopener noreferrer" target="_blank"><span class="caps">TN3164</span>: Debugging the synchronization of NSPersistentCloudKitContainer</a>: While trying to figure out why my App couldn’t connect to it’s container and kept reporting access problems, this is the key sentence from that techNote that saved me:</p>
+<p><a href="https://developer.apple.com/documentation/technotes/tn3164-debugging-the-synchronization-of-nspersistentcloudkitcontainer" rel="noopener noreferrer" target="_blank"><span class="caps">TN3164</span>: Debugging the synchronization of NSPersistentCloudKitContainer</a>: While trying to figure out why my App couldn&#8217;t connect to it&#8217;s container and kept reporting access problems, this is the key sentence from that techNote that saved&nbsp;me:</p>
 </li>
 </ul>
 <blockquote>
-<p>If the portal shows that the association between your CloudKit container and app <span class="caps">ID</span> is correct, but the error still exists, it is most likely because the association isn’t synchronized to the CloudKit server. In that case, consider using a new CloudKit container to continue your development.</p>
+<p>If the portal shows that the association between your CloudKit container and app <span class="caps">ID</span> is correct, but the error still exists, it is most likely because the association isn’t synchronized to the CloudKit server. In that case, consider using a new CloudKit container to continue your&nbsp;development.</p>
 </blockquote>
-<h2 id="frequent-errors">Frequent errors</h2>
-<h3 id="default-values-for-fields">Default values for fields</h3>
-<p>The fields of a model must have standard values so they can be saved in CloudKit. You don’t need it for SwiftData if you just save the data locally on device.</p>
-<h3 id="not-signed-in-with-appleid">Not signed in with AppleId</h3>
-<p>If the device is not logged with an AppleId, it doesn’t sync.</p>
-<h3 id="entitlements-was-modified-during-the-build">Entitlements was modified during the build</h3>
+<h2 id="frequent-errors">Frequent&nbsp;errors</h2>
+<h3 id="default-values-for-fields">Default values for&nbsp;fields</h3>
+<p>The fields of a model must have standard values so they can be saved in CloudKit. You don&#8217;t need it for SwiftData if you just save the data locally on&nbsp;device.</p>
+<h3 id="not-signed-in-with-appleid">Not signed in with&nbsp;AppleId</h3>
+<p>If the device is not logged with an AppleId, it doesn&#8217;t&nbsp;sync.</p>
+<h3 id="entitlements-was-modified-during-the-build">Entitlements was modified during the&nbsp;build</h3>
 <div class="highlight"><pre><span></span><code>Entitlements file "MiniSwiftData.entitlements" was modified during the build, which is not supported. You can disable this error by setting 'CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION' to 'YES', however this may cause the built product's code signature or provisioning profile to contain incorrect entitlements.
 </code></pre></div>
-<p>Of course i didn’t change the entitlement right while Xcode was building. But the way to fix this is pretty easy:</p>
+<p>Of course i didn&#8217;t change the entitlement right while Xcode was building. But the way to fix this is pretty&nbsp;easy:</p>
 <ul>
-<li>In Xcode go to <em>Project &gt; Target &gt; Signing <span class="amp">&amp;</span> Capabilities</em></li>
-<li>Unclick (deselect) <em>Automatically manage signing</em></li>
-<li>Re-select it</li>
+<li>In Xcode go to <em>Project &gt; Target &gt; Signing <span class="amp">&amp;</span>&nbsp;Capabilities</em></li>
+<li>Unclick (deselect) <em>Automatically manage&nbsp;signing</em></li>
+<li>Re-select&nbsp;it</li>
 <li>Select your <em>Team</em></li>
 </ul>
-<p>…that’s it: Xcode now re-builds your entitlement file.</p>
-<h3 id="unable-to-initialize-without-an-icloud-account-ckaccountstatusnoaccount">Unable to initialize without an iCloud account (CKAccountStatusNoAccount).</h3>
-<p>If you are not logged in on your device or Simulator, iCloud sync can’t work.</p>
-<p>I saw this and was surpised, because I <span class="caps">WAS</span> logged into iCloud. <span class="caps">BUT</span> the iCloud access was switched off for the app:</p>
-<p><em>Settings &gt; iCloud &gt; Saved to iCloud | See All</em>. This is what the faulty guy looked like:</p>
+<p>&#8230;that&#8217;s it: Xcode now re-builds your entitlement&nbsp;file.</p>
+<h3 id="unable-to-initialize-without-an-icloud-account-ckaccountstatusnoaccount">Unable to initialize without an iCloud account&nbsp;(CKAccountStatusNoAccount).</h3>
+<p>If you are not logged in on your device or Simulator, iCloud sync can&#8217;t&nbsp;work.</p>
+<p>I saw this and was surpised, because I <span class="caps">WAS</span> logged into iCloud. <span class="caps">BUT</span> the iCloud access was switched off for the&nbsp;app:</p>
+<p><em>Settings &gt; iCloud &gt; Saved to iCloud | See All</em>. This is what the faulty guy looked&nbsp;like:</p>
 <p><img alt="alt text" src="/swiftdata-on-icloud/app_setting_icloud.png"/></p>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

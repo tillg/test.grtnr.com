@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/how-i-code-with-claude/" />
+    <link rel="alternate" hreflang="de" href="/de/how-i-code-with-claude/" />
+    <link rel="alternate" hreflang="fr" href="/fr/how-i-code-with-claude/" />
+    <link rel="canonical" href="/de/how-i-code-with-claude/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -49,17 +53,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/how-i-code-with-claude/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/how-i-code-with-claude/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -111,35 +122,35 @@ Français
       | <a href="/how-i-code-with-claude/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p>Da ich es ein paar Mal vorgestellt habe und da ich noch öfter danach gefragt wurde, hier ein kurzer Überblick darüber, wie ich arbeite, wenn ich mit Claude Code programmiere. Es ist ein einfacher Workflow, nichts Kompliziertes. Er konzentriert sich zuerst auf die Spezifikation und iteriert diese, bevor das eigentliche Programmieren beginnt.</p>
-<p>So funktioniert es:</p>
+    <p>Da ich es ein paar Mal vorgestellt habe und da ich noch öfter danach gefragt wurde, hier ein kurzer Überblick darüber, wie ich arbeite, wenn ich mit Claude Code programmiere. Es ist ein einfacher Workflow, nichts Kompliziertes. Er konzentriert sich zuerst auf die Spezifikation und iteriert diese, bevor das eigentliche Programmieren&nbsp;beginnt.</p>
+<p>So funktioniert&nbsp;es:</p>
 <ul>
-<li>Ich beginne damit, eine kurze Spezifikation niederzuschreiben (z.B. in <code>spec.md</code>). Oft nur eine einzige Textzeile, gefolgt von einer Aufzählungsliste mit meinen Gedanken. Alles als Markdown-Datei.</li>
-<li>Dann führe ich meinen <code>/spec-build-out</code> Befehl aus: <code>/spec-build-out spec.md</code> (Hinweis: Ich arbeite oft im integrierten Terminal in VScode, und dort können Sie die md-Datei per Drag-and-Drop ins Terminal ziehen, und es wird der gesamte Dateiname eingefügt).</li>
-<li>Dies erweitert und verfeinert meine <code>spec.md</code>. Ich lese sie, überarbeite sie und kommentiere sie. Meine Anmerkungen markiere ich mit <code>-&gt;</code>.</li>
-<li>Dann führe ich den <code>/spec-iterate</code> Befehl aus: Dies integriert meine Anmerkungen und bereinigt <code>spec.md</code> erneut.</li>
-<li>Dann kommentiere ich erneut, führe <code>/spec-iterate</code> erneut aus, und so weiter.</li>
-<li>Wenn ich das Gefühl habe, dass alles richtig aussieht, starte ich ein <code>/new</code> Gespräch und führe <code>/spec-ready-or-not spec.md</code> aus.</li>
-<li>Dies fügt alle offenen Probleme, die es gefunden hat, am Ende von <code>spec.md</code> hinzu.</li>
-<li>Dasselbe Spiel: <code>spec.md</code> kommentieren, dann <code>/spec-iterate</code>.</li>
-<li>Irgendwann bin ich zufrieden. Dann committe ich die Spezifikationen und lasse Claude sie implementieren. Manchmal beginne ich zuerst mit einem <code>/new</code>, um mit einem sauberen, frischen Kontext zu starten.</li>
+<li>Ich beginne damit, eine kurze Spezifikation niederzuschreiben (z.B.&nbsp;in <code>spec.md</code>). Oft nur eine einzige Textzeile, gefolgt von einer Aufzählungsliste mit meinen Gedanken. Alles als&nbsp;Markdown-Datei.</li>
+<li>Dann führe ich&nbsp;meinen <code>/spec-build-out</code> Befehl&nbsp;aus: <code>/spec-build-out spec.md</code> (Hinweis: Ich arbeite oft im integrierten Terminal in VScode, und dort können Sie die md-Datei per Drag-and-Drop ins Terminal ziehen, und es wird der gesamte Dateiname&nbsp;eingefügt).</li>
+<li>Dies erweitert und verfeinert&nbsp;meine <code>spec.md</code>. Ich lese sie, überarbeite sie und kommentiere sie. Meine Anmerkungen markiere ich&nbsp;mit <code>-&gt;</code>.</li>
+<li>Dann führe ich&nbsp;den <code>/spec-iterate</code> Befehl aus: Dies integriert meine Anmerkungen und&nbsp;bereinigt <code>spec.md</code> erneut.</li>
+<li>Dann kommentiere ich erneut,&nbsp;führe <code>/spec-iterate</code> erneut aus, und so&nbsp;weiter.</li>
+<li>Wenn ich das Gefühl habe, dass alles richtig aussieht, starte ich&nbsp;ein <code>/new</code> Gespräch und&nbsp;führe <code>/spec-ready-or-not spec.md</code> aus.</li>
+<li>Dies fügt alle offenen Probleme, die es gefunden hat, am Ende&nbsp;von <code>spec.md</code> hinzu.</li>
+<li>Dasselbe&nbsp;Spiel: <code>spec.md</code> kommentieren,&nbsp;dann <code>/spec-iterate</code>.</li>
+<li>Irgendwann bin ich zufrieden. Dann committe ich die Spezifikationen und lasse Claude sie implementieren. Manchmal beginne ich zuerst mit&nbsp;einem <code>/new</code>, um mit einem sauberen, frischen Kontext zu&nbsp;starten.</li>
 </ul>
 <p>Meine <code>/</code>-Befehle:</p>
 <ul>
-<li><a href="spec-build-out.md">/spec-build-out</a></li>
-<li><a href="spec-iterate.md">/spec-iterate</a></li>
-<li><a href="spec-ready-or-not.md">/spec-ready-or-not</a></li>
-<li><a href="spec-finish.md">/spec-finish</a></li>
+<li><a href="/de/how-i-code-with-claude/spec-build-out.md">/spec-build-out</a></li>
+<li><a href="/de/how-i-code-with-claude/spec-iterate.md">/spec-iterate</a></li>
+<li><a href="/de/how-i-code-with-claude/spec-ready-or-not.md">/spec-ready-or-not</a></li>
+<li><a href="/de/how-i-code-with-claude/spec-finish.md">/spec-finish</a></li>
 </ul>
-<h3 id="kommentare-notizen-und-gedanken">Kommentare, Notizen und Gedanken</h3>
-<p>Als ich das Claude <code>/insights</code> ausführte, wurde ich für den <strong>Disziplinierten Spezifikationsgetriebenen Entwicklungszyklus</strong> gelobt 😉</p>
-<p>Ich habe ein wenig damit experimentiert, Claude zu erklären, wie lang die <code>spec.md</code> sein sollte. Ohne jegliche Anleitung wurde sie riesig und enthielt fast den gesamten Code, den es in die Codebasis einfügen wollte. Sobald ich ein <code>Bitte halten Sie das Dokument kurz! Fügen Sie Code-Snippets nur hinzu, wenn sie WIRKLICH entscheidend sind!!</code> hinzufügte, wurde es kürzer - manchmal zu kurz.</p>
-<p><code>/insights</code> schlug auch die folgende Ergänzung zu meiner <code>claude.md</code> vor:</p>
+<h3 id="kommentare-notizen-und-gedanken">Kommentare, Notizen und&nbsp;Gedanken</h3>
+<p>Als ich das&nbsp;Claude <code>/insights</code> ausführte, wurde ich für den <strong>Disziplinierten Spezifikationsgetriebenen Entwicklungszyklus</strong> gelobt&nbsp;😉</p>
+<p>Ich habe ein wenig damit experimentiert, Claude zu erklären, wie lang&nbsp;die <code>spec.md</code> sein sollte. Ohne jegliche Anleitung wurde sie riesig und enthielt fast den gesamten Code, den es in die Codebasis einfügen wollte. Sobald ich&nbsp;ein <code>Bitte halten Sie das Dokument kurz! Fügen Sie Code-Snippets nur hinzu, wenn sie WIRKLICH entscheidend sind!!</code> hinzufügte, wurde es kürzer - manchmal zu&nbsp;kurz.</p>
+<p><code>/insights</code> schlug auch die folgende Ergänzung zu&nbsp;meiner <code>claude.md</code> vor:</p>
 <div class="highlight"><pre><span></span><code><span class="gu">## Spezifikations-Workflow</span>
 
 Beim Iterieren von Spezifikationsdokumenten:
 
-<span class="k">1.</span> Suchen Sie immer nach Benutzeranmerkungen (z.B. '-&gt;' Pfeile, Tags wie [ACCEPTED], [REJECTED]) beim ERSTEN Durchgang — erneutes Nachfragen ist nicht erforderlich.
+<span class="k">1.</span> Suchen Sie immer nach Benutzeranmerkungen (z.B. &#39;-&gt;&#39; Pfeile, Tags wie [ACCEPTED], [REJECTED]) beim ERSTEN Durchgang — erneutes Nachfragen ist nicht erforderlich.
 <span class="k">2.</span> Beim Konsolidieren einer Spezifikation entfernen Sie abgelehnte Optionen vollständig und halten Sie das Dokument prägnant.
 <span class="k">3.</span> Nach der Finalisierung der Spezifikation bestätigen Sie, dass alle offenen Fragen geklärt sind, bevor Sie zur Implementierung übergehen.
 </code></pre></div>

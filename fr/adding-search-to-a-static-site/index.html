@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/adding-search-to-a-static-site/" />
+    <link rel="alternate" hreflang="de" href="/de/adding-search-to-a-static-site/" />
+    <link rel="alternate" hreflang="fr" href="/fr/adding-search-to-a-static-site/" />
+    <link rel="canonical" href="/fr/adding-search-to-a-static-site/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/fr/">Home</a>
 
-  <a class="sidebar-nav-item" href="/fr/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/fr/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/fr/about">About</a>
-  <a class="sidebar-nav-item" href="/fr/impressum">Impressum</a>
+  <a class="sidebar-nav-item" href="/fr/tags">Sujets</a>
+  <a class="sidebar-nav-item" href="/recipes">Recettes</a>
+  <a class="sidebar-nav-item" href="/fr/about">À propos</a>
+  <a class="sidebar-nav-item" href="/fr/impressum">Mentions légales</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/adding-search-to-a-static-site/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/adding-search-to-a-static-site/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -104,15 +115,15 @@ Deutsch
       | <a href="/adding-search-to-a-static-site/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p>J'ai maintenant un site statique généré par jBake. Jusqu'ici tout va bien. Mais qu'est-ce qu'un site sans recherche ? La recherche est indispensable. Alors comment ajouter une fonctionnalité de recherche à un site statique ? Facile : Nous utilisons la fonctionnalité de recherche personnalisée des géants de la recherche ;)</p>
-<p>Voici les étapes que j'ai suivies pour y parvenir :</p>
-<h2 id="creer-le-moteur-de-recherche-personnalise">Créer le moteur de recherche personnalisé</h2>
-<p>Rien de plus simple : Il suffit d'aller sur la <a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">page Google CSE</a> et de le créer. Le processus est explicite : Vous avez besoin d'un nom pour votre moteur de recherche, vous lui indiquez quel contenu doit être rendu disponible. Dans mon cas, cela inclurait tout le contenu de <a href="https://tillgartner.com" rel="noopener noreferrer" target="_blank">tillgartner.com</a> et c'est à peu près tout. Nous reviendrons à la fin sur ce site pour affiner l'apparence et le ressenti des résultats.</p>
-<p><img alt="Administration de Google CSE" src="Custom_Search_-_Basic.jpg"/></p>
-<p>La seule chose dont nous avons besoin ici est le code pour intégrer la recherche. Vous obtenez ce code en cliquant sur le bouton "<strong>Obtenir le code</strong>".</p>
-<h2 id="ajouter-le-champ-de-recherche">Ajouter le champ de recherche</h2>
-<p>Ensuite, nous avons besoin d'une boîte de recherche sur nos pages. Je veux une boîte de recherche en haut à droite de chaque page de l'ensemble du site. Je l'ajoute donc au modèle freemarker qui crée le menu.</p>
-<p>Dans mon cas, le <code>menu.ftl</code> ressemble à ceci :</p>
+    <p>J&#8217;ai maintenant un site statique généré par jBake. Jusqu&#8217;ici tout va bien. Mais qu&#8217;est-ce qu&#8217;un site sans recherche ? La recherche est indispensable. Alors comment ajouter une fonctionnalité de recherche à un site statique ? Facile : Nous utilisons la fonctionnalité de recherche personnalisée des géants de la recherche&nbsp;;)</p>
+<p>Voici les étapes que j&#8217;ai suivies pour y parvenir&nbsp;:</p>
+<h2 id="creer-le-moteur-de-recherche-personnalise">Créer le moteur de recherche&nbsp;personnalisé</h2>
+<p>Rien de plus simple : Il suffit d&#8217;aller sur la <a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">page Google <span class="caps">CSE</span></a> et de le créer. Le processus est explicite : Vous avez besoin d&#8217;un nom pour votre moteur de recherche, vous lui indiquez quel contenu doit être rendu disponible. Dans mon cas, cela inclurait tout le contenu de <a href="https://tillgartner.com" rel="noopener noreferrer" target="_blank">tillgartner.com</a> et c&#8217;est à peu près tout. Nous reviendrons à la fin sur ce site pour affiner l&#8217;apparence et le ressenti des&nbsp;résultats.</p>
+<p><img alt="Administration de Google CSE" src="/adding-search-to-a-static-site/Custom_Search_-_Basic.jpg"/></p>
+<p>La seule chose dont nous avons besoin ici est le code pour intégrer la recherche. Vous obtenez ce code en cliquant sur le bouton &#8220;<strong>Obtenir le code</strong>&#8220;.</p>
+<h2 id="ajouter-le-champ-de-recherche">Ajouter le champ de&nbsp;recherche</h2>
+<p>Ensuite, nous avons besoin d&#8217;une boîte de recherche sur nos pages. Je veux une boîte de recherche en haut à droite de chaque page de l&#8217;ensemble du site. Je l&#8217;ajoute donc au modèle freemarker qui crée le&nbsp;menu.</p>
+<p>Dans mon cas,&nbsp;le <code>menu.ftl</code> ressemble à ceci&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">Barre</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">navigation</span><span class="w"> </span><span class="nx">fixe</span><span class="w"> </span><span class="o">--&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="nx">nav</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar navbar-default navbar-fixed-top"</span><span class="w"> </span><span class="nx">role</span><span class="o">=</span><span class="s2">"navigation"</span><span class="o">&gt;</span>
 <span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"container-fluid"</span><span class="o">&gt;</span>
@@ -147,17 +158,17 @@ Deutsch
 <span class="w">    </span><span class="o">&lt;</span><span class="err">/nav&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"container"</span><span class="o">&gt;</span>
 </code></pre></div>
-<p><em>Note :</em> J'ai corrigé le code sur mon site et dans le code ci-dessus le 29.12.2015. Le code pour le bouton qui apparaît lorsque la largeur de l'écran fait s'effondrer le menu, manquait. Au cas où vous auriez lu ceci plus tôt et vous vous demanderiez pourquoi c'est différent maintenant...</p>
-<p>J'ai trouvé que la partie du menu et comment il s'effondre n'était pas triviale. La meilleure explication que j'ai trouvée était <a href="https://bootstrapbay.com/blog/bootstrap-tutorial-navbar/" rel="noopener noreferrer" target="_blank">cette vidéo</a>.</p>
-<p>C'est le menu standard de Bootstrap. Ce qui est spécial dans notre cas, c'est l'attribut <code>action</code> dans le formulaire qui renvoie à la page de résultats de recherche (appelée <code>search.html</code> dans mon cas).</p>
-<p>Le résultat est une petite boîte de recherche en haut à droite :</p>
-<p><img alt="Boîte de recherche" src="search_box.jpg"/></p>
-<h2 id="page-de-resultats-de-recherche">Page de résultats de recherche</h2>
-<p>Enfin, nous avons besoin de la page de résultats de recherche. Cette page sera appelée (c'est-à-dire liée) depuis le formulaire de recherche que nous venons de créer. Son URL sera quelque chose comme</p>
+<p><em>Note :</em> J&#8217;ai corrigé le code sur mon site et dans le code ci-dessus le 29.12.2015. Le code pour le bouton qui apparaît lorsque la largeur de l&#8217;écran fait s&#8217;effondrer le menu, manquait. Au cas où vous auriez lu ceci plus tôt et vous vous demanderiez pourquoi c&#8217;est différent&nbsp;maintenant&#8230;</p>
+<p>J&#8217;ai trouvé que la partie du menu et comment il s&#8217;effondre n&#8217;était pas triviale. La meilleure explication que j&#8217;ai trouvée était <a href="https://bootstrapbay.com/blog/bootstrap-tutorial-navbar/" rel="noopener noreferrer" target="_blank">cette vidéo</a>.</p>
+<p>C&#8217;est le menu standard de Bootstrap. Ce qui est spécial dans notre cas, c&#8217;est&nbsp;l&#8217;attribut <code>action</code> dans le formulaire qui renvoie à la page de résultats de recherche&nbsp;(appelée <code>search.html</code> dans mon&nbsp;cas).</p>
+<p>Le résultat est une petite boîte de recherche en haut à droite&nbsp;:</p>
+<p><img alt="Boîte de recherche" src="/adding-search-to-a-static-site/search_box.jpg"/></p>
+<h2 id="page-de-resultats-de-recherche">Page de résultats de&nbsp;recherche</h2>
+<p>Enfin, nous avons besoin de la page de résultats de recherche. Cette page sera appelée (c&#8217;est-à-dire liée) depuis le formulaire de recherche que nous venons de créer. Son <span class="caps">URL</span> sera quelque chose&nbsp;comme</p>
 <div class="highlight"><pre><span></span><code>http://tillgartner.com/search.html?q=huhu
 </code></pre></div>
-<p>Dans mon cas, la page de résultats de recherche ne contiendra <strong>que</strong> le résultat de la recherche. Si l'utilisateur souhaite modifier sa recherche, il a toujours la boîte de recherche omniprésente en haut à droite.
-La page de résultats de recherche contiendra le code que nous avons copié lors de la configuration du moteur de recherche personnalisé. Dans mon cas, l'intégralité du fichier Markdown ressemble à ceci :</p>
+<p>Dans mon cas, la page de résultats de recherche ne contiendra <strong>que</strong> le résultat de la recherche. Si l&#8217;utilisateur souhaite modifier sa recherche, il a toujours la boîte de recherche omniprésente en haut à droite.
+La page de résultats de recherche contiendra le code que nous avons copié lors de la configuration du moteur de recherche personnalisé. Dans mon cas, l&#8217;intégralité du fichier Markdown ressemble à ceci&nbsp;:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">title</span><span class="o">=</span><span class="nx">Recherche</span>
 <span class="nx">type</span><span class="o">=</span><span class="nx">page</span>
 <span class="nx">date</span><span class="o">=</span><span class="mf">2015</span><span class="o">-</span><span class="mf">12</span><span class="o">-</span><span class="mf">17</span>
@@ -178,13 +189,13 @@ La page de résultats de recherche contiendra le code que nous avons copié lors
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 <span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">markdown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0"</span><span class="o">&gt;&lt;</span><span class="nx">gcse</span><span class="o">:</span><span class="nx">searchresults</span><span class="o">-</span><span class="nx">only</span><span class="o">&gt;</span><span class="nx">Résultats</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">recherche</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/gcse:searchresults-only&gt;&lt;/div&gt;</span>
 </code></pre></div>
-<p>Il m'a fallu un certain temps pour comprendre comment indiquer à markdown qu'il s'agit de pur HTML et qu'il doit le prendre tel quel sans le transformer ou le citer. La solution était la balise <code>&lt;div markdown="0"&gt;</code>.</p>
+<p>Il m&#8217;a fallu un certain temps pour comprendre comment indiquer à markdown qu&#8217;il s&#8217;agit de pur <span class="caps">HTML</span> et qu&#8217;il doit le prendre tel quel sans le transformer ou le citer. La solution était la&nbsp;balise <code>&lt;div markdown="0"&gt;</code>.</p>
 <h2 id="ressources">Ressources</h2>
-<p>Quelques lectures qui m'ont aidé à trouver mon chemin :</p>
+<p>Quelques lectures qui m&#8217;ont aidé à trouver mon chemin&nbsp;:</p>
 <ul>
-<li><a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Créez votre propre moteur de recherche</a></li>
-<li><a href="http://www.cambiaresearch.com/articles/84/how-to-integrate-a-google-custom-search-popup-in-a-bootstrap-navbar" rel="noopener noreferrer" target="_blank">Comment intégrer une fenêtre de recherche personnalisée Google dans une barre de navigation Bootstrap</a></li>
-<li><a href="https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox" rel="noopener noreferrer" target="_blank">Implémentation de la boîte de recherche, par Google</a></li>
+<li><a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Créez votre propre moteur de&nbsp;recherche</a></li>
+<li><a href="http://www.cambiaresearch.com/articles/84/how-to-integrate-a-google-custom-search-popup-in-a-bootstrap-navbar" rel="noopener noreferrer" target="_blank">Comment intégrer une fenêtre de recherche personnalisée Google dans une barre de navigation&nbsp;Bootstrap</a></li>
+<li><a href="https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox" rel="noopener noreferrer" target="_blank">Implémentation de la boîte de recherche, par&nbsp;Google</a></li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

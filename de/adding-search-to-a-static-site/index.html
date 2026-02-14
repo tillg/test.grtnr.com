@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/adding-search-to-a-static-site/" />
+    <link rel="alternate" hreflang="de" href="/de/adding-search-to-a-static-site/" />
+    <link rel="alternate" hreflang="fr" href="/fr/adding-search-to-a-static-site/" />
+    <link rel="canonical" href="/de/adding-search-to-a-static-site/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/adding-search-to-a-static-site/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/adding-search-to-a-static-site/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -104,15 +115,15 @@ Français
       | <a href="/adding-search-to-a-static-site/" style="color: #0066cc;">Original version</a>
     </div>
 
-    <p>Jetzt habe ich also eine statische Website, die von jBake generiert wird. Bis jetzt, so gut. Aber was ist eine Website ohne Suche? Eine Suche ist ein Muss. Wie fügen wir also einer statischen Website eine Suchfunktion hinzu? Ganz einfach: Wir nutzen die Custom Search-Funktionalität der Suchgiganten ;)</p>
-<p>Dies sind die Schritte, die ich unternommen habe, um dorthin zu gelangen:</p>
-<h2 id="erstellen-der-benutzerdefinierten-suchmaschine">Erstellen der benutzerdefinierten Suchmaschine</h2>
-<p>Nichts leichter als das: Gehen Sie einfach zur <a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Google CSE-Seite</a> und erstellen Sie sie. Der Prozess ist selbsterklärend: Sie benötigen einen Namen für Ihre Suchmaschine und geben an, welche Inhalte verfügbar gemacht werden sollen. In meinem Fall wäre dies alles von <a href="https://tillgartner.com" rel="noopener noreferrer" target="_blank">tillgartner.com</a> und das war's im Wesentlichen. Am Ende kehren wir zu dieser Seite zurück, um das Aussehen und das Gefühl der Ergebnisse zu optimieren.</p>
-<p><img alt="Google CSE-Verwaltung" src="Custom_Search_-_Basic.jpg"/></p>
-<p>Das Einzige, was wir von hier benötigen, ist der Code, um die Suche einzubetten. Sie erhalten diesen Code, indem Sie auf den Button "<strong>Code abrufen</strong>" klicken.</p>
-<h2 id="hinzufugen-des-suchfeldes">Hinzufügen des Suchfeldes</h2>
-<p>Als nächstes benötigen wir ein Suchfeld auf unseren Seiten. Ich möchte ein Suchfeld oben rechts auf jeder Seite der gesamten Website. Also füge ich es zur Freemarker-Vorlage hinzu, die das Menü erstellt.</p>
-<p>In meinem Fall sieht das <code>menu.ftl</code> ungefähr so aus:</p>
+    <p>Jetzt habe ich also eine statische Website, die von jBake generiert wird. Bis jetzt, so gut. Aber was ist eine Website ohne Suche? Eine Suche ist ein Muss. Wie fügen wir also einer statischen Website eine Suchfunktion hinzu? Ganz einfach: Wir nutzen die Custom Search-Funktionalität der Suchgiganten&nbsp;;)</p>
+<p>Dies sind die Schritte, die ich unternommen habe, um dorthin zu&nbsp;gelangen:</p>
+<h2 id="erstellen-der-benutzerdefinierten-suchmaschine">Erstellen der benutzerdefinierten&nbsp;Suchmaschine</h2>
+<p>Nichts leichter als das: Gehen Sie einfach zur <a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Google <span class="caps">CSE</span>-Seite</a> und erstellen Sie sie. Der Prozess ist selbsterklärend: Sie benötigen einen Namen für Ihre Suchmaschine und geben an, welche Inhalte verfügbar gemacht werden sollen. In meinem Fall wäre dies alles von <a href="https://tillgartner.com" rel="noopener noreferrer" target="_blank">tillgartner.com</a> und das war&#8217;s im Wesentlichen. Am Ende kehren wir zu dieser Seite zurück, um das Aussehen und das Gefühl der Ergebnisse zu&nbsp;optimieren.</p>
+<p><img alt="Google CSE-Verwaltung" src="/adding-search-to-a-static-site/Custom_Search_-_Basic.jpg"/></p>
+<p>Das Einzige, was wir von hier benötigen, ist der Code, um die Suche einzubetten. Sie erhalten diesen Code, indem Sie auf den Button &#8220;<strong>Code abrufen</strong>&#8221;&nbsp;klicken.</p>
+<h2 id="hinzufugen-des-suchfeldes">Hinzufügen des&nbsp;Suchfeldes</h2>
+<p>Als nächstes benötigen wir ein Suchfeld auf unseren Seiten. Ich möchte ein Suchfeld oben rechts auf jeder Seite der gesamten Website. Also füge ich es zur Freemarker-Vorlage hinzu, die das Menü&nbsp;erstellt.</p>
+<p>In meinem Fall sieht&nbsp;das <code>menu.ftl</code> ungefähr so&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c">&lt;!--</span><span class="w"> </span><span class="nx">Feste</span><span class="w"> </span><span class="nx">Navigationsleiste</span><span class="w"> </span><span class="o">--&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="nx">nav</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"navbar navbar-default navbar-fixed-top"</span><span class="w"> </span><span class="nx">role</span><span class="o">=</span><span class="s2">"navigation"</span><span class="o">&gt;</span>
 <span class="w">      </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"container-fluid"</span><span class="o">&gt;</span>
@@ -147,17 +158,17 @@ Français
 <span class="w">    </span><span class="o">&lt;</span><span class="err">/nav&gt;</span>
 <span class="w">    </span><span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="kd">class</span><span class="o">=</span><span class="s2">"container"</span><span class="o">&gt;</span>
 </code></pre></div>
-<p><em>Hinweis:</em> Ich habe den Code auf meiner Website und im obigen Code am 29.12.2015 korrigiert. Der Code für den Button, der erscheint, wenn die Breite des Bildschirms das Menü zusammenklappen lässt, fehlte. Nur für den Fall, dass Sie dies früher gelesen haben und sich fragen, warum es jetzt anders ist...</p>
+<p><em>Hinweis:</em> Ich habe den Code auf meiner Website und im obigen Code am 29.12.2015 korrigiert. Der Code für den Button, der erscheint, wenn die Breite des Bildschirms das Menü zusammenklappen lässt, fehlte. Nur für den Fall, dass Sie dies früher gelesen haben und sich fragen, warum es jetzt anders&nbsp;ist&#8230;</p>
 <p>Ich fand, dass der Teil des Menüs und wie es zusammenklappt, nicht trivial war. Die beste Erklärung, die ich fand, war <a href="https://bootstrapbay.com/blog/bootstrap-tutorial-navbar/" rel="noopener noreferrer" target="_blank">dieses Video</a>.</p>
-<p>Es ist das Standard-Bootstrap-Menü-Gewackel. Was in unserem Fall besonders ist, ist das <code>action</code>-Attribut im Formular, das auf die Suchergebnisseite verweist (in meinem Fall <code>search.html</code> genannt).</p>
-<p>Das Ergebnis ist ein kleines, ordentliches Suchfeld in der oberen rechten Ecke:</p>
-<p><img alt="Suchfeld" src="search_box.jpg"/></p>
+<p>Es ist das Standard-Bootstrap-Menü-Gewackel. Was in unserem Fall besonders ist, ist&nbsp;das <code>action</code>-Attribut im Formular, das auf die Suchergebnisseite verweist (in meinem&nbsp;Fall <code>search.html</code> genannt).</p>
+<p>Das Ergebnis ist ein kleines, ordentliches Suchfeld in der oberen rechten&nbsp;Ecke:</p>
+<p><img alt="Suchfeld" src="/adding-search-to-a-static-site/search_box.jpg"/></p>
 <h2 id="suchergebnisseite">Suchergebnisseite</h2>
-<p>Zu guter Letzt benötigen wir die Suchergebnisseite. Diese Seite wird vom Suchformular, das wir gerade erstellt haben, aufgerufen (d.h. verlinkt). Ihre URL wird etwa so aussehen:</p>
+<p>Zu guter Letzt benötigen wir die Suchergebnisseite. Diese Seite wird vom Suchformular, das wir gerade erstellt haben, aufgerufen (d.h. verlinkt). Ihre <span class="caps">URL</span> wird etwa so&nbsp;aussehen:</p>
 <div class="highlight"><pre><span></span><code>http://tillgartner.com/search.html?q=huhu
 </code></pre></div>
 <p>In meinem Fall wird die Suchergebnisseite <strong>nur</strong> das Suchergebnis enthalten. Falls der Benutzer seine Suche ändern möchte, hat er immer noch das allgegenwärtige Suchfeld in der oberen rechten Ecke.
-Die Suchergebnisseite wird den Code enthalten, den wir beim Konfigurieren der benutzerdefinierten Suchmaschine kopiert haben. In meinem Fall sieht die gesamte Markdown-Datei so aus:</p>
+Die Suchergebnisseite wird den Code enthalten, den wir beim Konfigurieren der benutzerdefinierten Suchmaschine kopiert haben. In meinem Fall sieht die gesamte Markdown-Datei so&nbsp;aus:</p>
 <div class="highlight"><pre><span></span><code><span class="nx">title</span><span class="o">=</span><span class="nx">Suche</span>
 <span class="nx">type</span><span class="o">=</span><span class="nx">page</span>
 <span class="nx">date</span><span class="o">=</span><span class="mf">2015</span><span class="o">-</span><span class="mf">12</span><span class="o">-</span><span class="mf">17</span>
@@ -178,13 +189,13 @@ Die Suchergebnisseite wird den Code enthalten, den wir beim Konfigurieren der be
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 <span class="o">&lt;</span><span class="nx">div</span><span class="w"> </span><span class="nx">markdown</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"0"</span><span class="o">&gt;&lt;</span><span class="nx">gcse</span><span class="o">:</span><span class="nx">searchresults</span><span class="o">-</span><span class="nx">only</span><span class="o">&gt;</span><span class="nx">Suchergebnisse</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/gcse:searchresults-only&gt;&lt;/div&gt;</span>
 </code></pre></div>
-<p>Es hat eine Weile gedauert, bis ich herausgefunden habe, wie man Markdown mitteilt, dass dies reines HTML ist und es als solches ohne Transformation oder Zitierung akzeptieren sollte. Die Lösung war das <code>&lt;div markdown="0"&gt;</code>-Tag.</p>
+<p>Es hat eine Weile gedauert, bis ich herausgefunden habe, wie man Markdown mitteilt, dass dies reines <span class="caps">HTML</span> ist und es als solches ohne Transformation oder Zitierung akzeptieren sollte. Die Lösung war&nbsp;das <code>&lt;div markdown="0"&gt;</code>-Tag.</p>
 <h2 id="ressourcen">Ressourcen</h2>
-<p>Einige Lektüren, die mir geholfen haben, meinen Weg zu finden:</p>
+<p>Einige Lektüren, die mir geholfen haben, meinen Weg zu&nbsp;finden:</p>
 <ul>
-<li><a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Erstellen Sie Ihre eigene Suchmaschine</a></li>
-<li><a href="http://www.cambiaresearch.com/articles/84/how-to-integrate-a-google-custom-search-popup-in-a-bootstrap-navbar" rel="noopener noreferrer" target="_blank">Wie man ein Google Custom Search Popup in eine Bootstrap-Navigationsleiste integriert</a></li>
-<li><a href="https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox" rel="noopener noreferrer" target="_blank">Implementierung des Suchfeldes, von Google</a></li>
+<li><a href="http://www.google.com/cse" rel="noopener noreferrer" target="_blank">Erstellen Sie Ihre eigene&nbsp;Suchmaschine</a></li>
+<li><a href="http://www.cambiaresearch.com/articles/84/how-to-integrate-a-google-custom-search-popup-in-a-bootstrap-navbar" rel="noopener noreferrer" target="_blank">Wie man ein Google Custom Search Popup in eine Bootstrap-Navigationsleiste&nbsp;integriert</a></li>
+<li><a href="https://developers.google.com/custom-search/docs/tutorial/implementingsearchbox" rel="noopener noreferrer" target="_blank">Implementierung des Suchfeldes, von&nbsp;Google</a></li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

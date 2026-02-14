@@ -12,6 +12,10 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
+    <link rel="alternate" hreflang="en" href="/cursor-magic/" />
+    <link rel="alternate" hreflang="de" href="/de/cursor-magic/" />
+    <link rel="alternate" hreflang="fr" href="/fr/cursor-magic/" />
+    <link rel="canonical" href="/de/cursor-magic/" />
   <link rel="stylesheet" href="/theme/css/poole.css" />
   <link rel="stylesheet" href="/theme/css/syntax.css" />
   <link rel="stylesheet" href="/theme/css/lanyon.css" />
@@ -48,17 +52,24 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <a class="sidebar-nav-item" href="/de/">Home</a>
 
-  <a class="sidebar-nav-item" href="/de/tags">Topics</a>
-  <a class="sidebar-nav-item" href="/de/recipes">Recipes</a>
-  <a class="sidebar-nav-item" href="/de/about">About</a>
+  <a class="sidebar-nav-item" href="/de/tags">Themen</a>
+  <a class="sidebar-nav-item" href="/recipes">Rezepte</a>
+  <a class="sidebar-nav-item" href="/de/about">Über</a>
   <a class="sidebar-nav-item" href="/de/impressum">Impressum</a>
 
   </nav>
 
   <!-- Language Switcher -->
+  <div class="sidebar-item">
+    <h4>Language / Sprache / Langue</h4>
+    <div class="language-switcher">
+        <a href="/de/cursor-magic/" class="language-link" hreflang="de">Deutsch</a>
+        <a href="/fr/cursor-magic/" class="language-link" hreflang="fr">Français</a>
+    </div>
+  </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
@@ -108,32 +119,32 @@ Français
 <ul>
 <li><a href="#prompt-struktur">Prompt-Struktur</a></li>
 <li><a href="#cursorrules">Cursorrules</a></li>
-<li><a href="#ki-regeln-in-den-cursor-einstellungen">KI-Regeln in den Cursor-Einstellungen</a></li>
-<li><a href="#hilfreiche-kleine-prompts">Hilfreiche kleine Prompts</a></li>
+<li><a href="#ki-regeln-in-den-cursor-einstellungen"><span class="caps">KI</span>-Regeln in den&nbsp;Cursor-Einstellungen</a></li>
+<li><a href="#hilfreiche-kleine-prompts">Hilfreiche kleine&nbsp;Prompts</a></li>
 <li><a href="#groere-prompts">Größere Prompts</a><ul>
-<li><a href="#zusammenfassung-des-aktuellen-stands">Zusammenfassung des aktuellen Stands</a></li>
-<li><a href="#unvoreingenommenes-5050">Unvoreingenommenes 50/50</a></li>
+<li><a href="#zusammenfassung-des-aktuellen-stands">Zusammenfassung des aktuellen&nbsp;Stands</a></li>
+<li><a href="#unvoreingenommenes-5050">Unvoreingenommenes&nbsp;50/50</a></li>
 <li><a href="#ein-absatz-suchanfrage">Ein-Absatz-Suchanfrage</a></li>
 </ul>
 </li>
 <li><a href="#anweisungen">Anweisungen</a></li>
-<li><a href="#andere-werkzeuge">Andere Werkzeuge</a></li>
+<li><a href="#andere-werkzeuge">Andere&nbsp;Werkzeuge</a></li>
 </ul>
 </div>
-<p>Letztes Wochenende entdeckte ich dieses Video von David Ondrej: <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. Der Titel ist nicht besonders ansprechend, aber der Inhalt war für mich sehr hilfreich. Hier sind also meine Notizen, damit ich alle seine Tipps nutzen und die verschiedenen Prompts und Snippets griffbereit haben kann, um sie beim Programmieren zu verwenden.</p>
+<p>Letztes Wochenende entdeckte ich dieses Video von David Ondrej: <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. Der Titel ist nicht besonders ansprechend, aber der Inhalt war für mich sehr hilfreich. Hier sind also meine Notizen, damit ich alle seine Tipps nutzen und die verschiedenen Prompts und Snippets griffbereit haben kann, um sie beim Programmieren zu&nbsp;verwenden.</p>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gYLNxUxVomY?si=xQAMyMvQCsSwWztk" title="YouTube video player" width="560"></iframe>
 <h2 id="prompt-struktur">Prompt-Struktur</h2>
-<p>Die allgemeine Prompt-Struktur, die David vorschlägt:</p>
+<p>Die allgemeine Prompt-Struktur, die David&nbsp;vorschlägt:</p>
 <ol>
-<li>was wir tun</li>
-<li>relevante Dateien markieren</li>
-<li>wie ausführen // was nicht zu tun ist</li>
+<li>was wir&nbsp;tun</li>
+<li>relevante Dateien&nbsp;markieren</li>
+<li>wie ausführen // was nicht zu tun&nbsp;ist</li>
 <li>Kontext-Dump</li>
-<li>Kernanweisung wiederholen</li>
+<li>Kernanweisung&nbsp;wiederholen</li>
 <li>Ausgabeformat</li>
 </ol>
 <h2 id="cursorrules">Cursorrules</h2>
-<p><code>.cursorrules.md</code> ist eine Datei, die Sie im obersten Verzeichnis Ihres Projekts ablegen, um der KI mehr Kontext über Ihr Projekt zu geben. Hier ist die Struktur der Datei, die David vorschlägt:</p>
+<p><code>.cursorrules.md</code> ist eine Datei, die Sie im obersten Verzeichnis Ihres Projekts ablegen, um der <span class="caps">KI</span> mehr Kontext über Ihr Projekt zu geben. Hier ist die Struktur der Datei, die David&nbsp;vorschlägt:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># PROJEKTÜBERSICHT</span>
 
 <span class="gh"># PERSÖNLICHKEIT</span>
@@ -166,10 +177,10 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 
 <span class="k">-</span><span class="w"> </span>Wiederholen Sie die wichtigsten Anweisungen.
 </code></pre></div>
-<p>Er empfiehlt auch dringend, eine <code>.cursorignore</code> zu haben, in der Sie Ihre <code>.env</code>-Dateien auflisten. Dies verhindert, dass Chat und Composer versehentlich in diese Dateien schreiben.</p>
-<h2 id="ki-regeln-in-den-cursor-einstellungen">KI-Regeln in den Cursor-Einstellungen</h2>
-<p>KI-Regeln sind in den Cursor-Einstellungen festzulegen. Sie sollten nichts projektspezifisches enthalten, sondern nur Programmierprinzipien, die Sie immer anwenden möchten. Das ist der Unterschied zu den <code>.cursorrules</code>, die auch projektspezifische Details enthalten.</p>
-<p>Ein Beispiel:</p>
+<p>Er empfiehlt auch dringend,&nbsp;eine <code>.cursorignore</code> zu haben, in der Sie&nbsp;Ihre <code>.env</code>-Dateien auflisten. Dies verhindert, dass Chat und Composer versehentlich in diese Dateien&nbsp;schreiben.</p>
+<h2 id="ki-regeln-in-den-cursor-einstellungen"><span class="caps">KI</span>-Regeln in den&nbsp;Cursor-Einstellungen</h2>
+<p><span class="caps">KI</span>-Regeln sind in den Cursor-Einstellungen festzulegen. Sie sollten nichts projektspezifisches enthalten, sondern nur Programmierprinzipien, die Sie immer anwenden möchten. Das ist der Unterschied zu&nbsp;den <code>.cursorrules</code>, die auch projektspezifische Details&nbsp;enthalten.</p>
+<p>Ein&nbsp;Beispiel:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># Grundlegende Prinzipien</span>
 
 <span class="k">-</span><span class="w"> </span>Schreiben Sie sauberen, einfachen, lesbaren Code
@@ -203,8 +214,8 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 <span class="k">-</span><span class="w"> </span>Dokumentieren Sie alle Änderungen und deren Begründung IN DEN KOMMENTAREN, DIE SIE SCHREIBEN
 <span class="k">-</span><span class="w"> </span>Verwenden Sie beim Schreiben von Kommentaren klare und leicht verständliche Sprache. Schreiben Sie kurze Sätze.
 </code></pre></div>
-<h2 id="hilfreiche-kleine-prompts">Hilfreiche kleine Prompts</h2>
-<p>David bietet eine Liste hilfreicher kleiner Prompts oder Prompt-Snippets an. Ich habe einige davon hier für die Copy&amp;Paste-Nutzung kopiert:</p>
+<h2 id="hilfreiche-kleine-prompts">Hilfreiche kleine&nbsp;Prompts</h2>
+<p>David bietet eine Liste hilfreicher kleiner Prompts oder Prompt-Snippets an. Ich habe einige davon hier für die Copy&amp;Paste-Nutzung&nbsp;kopiert:</p>
 <div class="highlight"><pre><span></span><code>Vorgehen wie ein Senior Developer mit Fokus auf klare Architektur.
 
 Je weniger Codezeilen, desto besser.
@@ -219,9 +230,9 @@ LÖSCHEN SIE KEINE KOMMENTARE
 
 Sie sollten den Überlegungsabsatz mit viel Unsicherheit beginnen und allmählich mehr Vertrauen gewinnen, während Sie mehr über das Thema nachdenken.
 </code></pre></div>
-<h2 id="groere-prompts">Größere Prompts</h2>
-<h3 id="zusammenfassung-des-aktuellen-stands">Zusammenfassung des aktuellen Stands</h3>
-<p>Wird verwendet, um einen Compose-Flow zusammenzufassen und zu einem neuen Compose-Dialog zu wechseln.</p>
+<h2 id="groere-prompts">Größere&nbsp;Prompts</h2>
+<h3 id="zusammenfassung-des-aktuellen-stands">Zusammenfassung des aktuellen&nbsp;Stands</h3>
+<p>Wird verwendet, um einen Compose-Flow zusammenzufassen und zu einem neuen Compose-Dialog zu&nbsp;wechseln.</p>
 <div class="highlight"><pre><span></span><code>Bevor wir fortfahren, brauche ich eine Zusammenfassung des aktuellen Stands des Projekts.
 
 Formatieren Sie dies als 3 prägnante Absätze, in denen Sie beschreiben, was wir gerade getan haben, was nicht funktioniert hat, welche Dateien aktualisiert/erstellt wurden, welche Fehler zu vermeiden sind, welche wichtigen Erkenntnisse/Lektionen wir gelernt haben, welche Probleme/Fehler wir haben,… und alles andere, was ein Programmierer braucht, um produktiv an diesem Projekt zu arbeiten.
@@ -230,7 +241,7 @@ Schreiben Sie in einem konversationellen, aber informativen Ton, ähnlich einer 
 
 Ich erwarte drei prägnante Absätze, geschrieben, als ob Sie einem anderen Programmierer Anweisungen geben würden und dies ALLES wäre, was Sie ihm sagen könnten.
 </code></pre></div>
-<h3 id="unvoreingenommenes-5050">Unvoreingenommenes 50/50</h3>
+<h3 id="unvoreingenommenes-5050">Unvoreingenommenes&nbsp;50/50</h3>
 <div class="highlight"><pre><span></span><code>BEVOR SIE ANTWORTEN, möchte ich, dass Sie zwei detaillierte Absätze schreiben, die jeweils für eine dieser Lösungen argumentieren - ziehen Sie keine voreiligen Schlüsse, ziehen Sie beide Ansätze ernsthaft in Betracht
 
 dann, nachdem Sie fertig sind, sagen Sie mir, ob eine dieser Lösungen offensichtlich besser ist als die andere und warum.
@@ -239,22 +250,22 @@ dann, nachdem Sie fertig sind, sagen Sie mir, ob eine dieser Lösungen offensich
 <div class="highlight"><pre><span></span><code>Lassen Sie uns eine Websuche durchführen. Ihre Aufgabe ist es, eine Ein-Absatz-Suchanfrage zu schreiben, als ob Sie einem menschlichen Forscher sagen würden, was er finden soll, einschließlich des gesamten relevanten Kontexts. Formatieren Sie den Absatz als klare Anweisungen, die einen Forscher anweisen, wonach wir suchen. Fordern Sie Code-Snippets oder technische Details an, wenn relevant
 </code></pre></div>
 <h2 id="anweisungen">Anweisungen</h2>
-<p>David schlägt vor, ein Verzeichnis <code>instructions</code> zu haben, das md-Dateien mit Tipps für die KI enthält. Auf diese Weise können Sie auf diese Dateien vom Composer-Prompt aus verweisen. Er bevorzugt diese Art von Anweisungsdateien gegenüber dem Verweis auf @Docs in Cursor, was anscheinend noch nicht so gut funktioniert.</p>
-<p>Anweisungsdateien, die er erwähnte:</p>
+<p>David schlägt vor, ein&nbsp;Verzeichnis <code>instructions</code> zu haben, das md-Dateien mit Tipps für die <span class="caps">KI</span> enthält. Auf diese Weise können Sie auf diese Dateien vom Composer-Prompt aus verweisen. Er bevorzugt diese Art von Anweisungsdateien gegenüber dem Verweis auf @Docs in Cursor, was anscheinend noch nicht so gut&nbsp;funktioniert.</p>
+<p>Anweisungsdateien, die er&nbsp;erwähnte:</p>
 <ul>
-<li><code>supabase.md</code>: Eine Datei, die die Struktur seiner Datenbank beschreibt, damit Cursor über Tabellen, Felder, Pflichtfelder usw. Bescheid weiß.</li>
-<li><code>roadmap.md</code>: Eine Erklärung der Roadmap Ihres Projekts.</li>
+<li><code>supabase.md</code>: Eine Datei, die die Struktur seiner Datenbank beschreibt, damit Cursor über Tabellen, Felder, Pflichtfelder usw. Bescheid&nbsp;weiß.</li>
+<li><code>roadmap.md</code>: Eine Erklärung der Roadmap Ihres&nbsp;Projekts.</li>
 </ul>
-<h2 id="andere-werkzeuge">Andere Werkzeuge</h2>
-<p>Neben Cursor verwendet David viele andere Werkzeuge. Einige der von ihm erwähnten:</p>
+<h2 id="andere-werkzeuge">Andere&nbsp;Werkzeuge</h2>
+<p>Neben Cursor verwendet David viele andere Werkzeuge. Einige der von ihm&nbsp;erwähnten:</p>
 <ul>
 <li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a></li>
-<li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> für Nebengespräche mit einer fortgeschrittenen KI.</li>
-<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> für intelligente Websuchen.</li>
-<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> um zu sprechen anstatt zu tippen</li>
-<li><a href="https://v0.dev" rel="noopener noreferrer" target="_blank">v0</a> ein Tool, um Web-Apps im Browser zu erstellen, indem man mit einer KI chattet.</li>
+<li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> für Nebengespräche mit einer fortgeschrittenen <span class="caps">KI</span>.</li>
+<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> für intelligente&nbsp;Websuchen.</li>
+<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> um zu sprechen anstatt zu&nbsp;tippen</li>
+<li><a href="https://v0.dev" rel="noopener noreferrer" target="_blank">v0</a> ein Tool, um Web-Apps im Browser zu erstellen, indem man mit einer <span class="caps">KI</span>&nbsp;chattet.</li>
 <li><a href="https://lovable.dev" rel="noopener noreferrer" target="_blank">Lovable</a> zum Erstellen von Backends, insbesondere mit <a href="https://supabase.com" rel="noopener noreferrer" target="_blank">Supabase</a></li>
-<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> zum Erstellen von Websites.</li>
+<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> zum Erstellen von&nbsp;Websites.</li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"

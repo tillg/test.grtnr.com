@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,16 @@
   <meta charset="utf-8" />
 
   <!-- Multilingual SEO tags -->
-  <link rel="stylesheet" href="../theme/css/poole.css" />
-  <link rel="stylesheet" href="../theme/css/syntax.css" />
-  <link rel="stylesheet" href="../theme/css/lanyon.css" />
-  <link rel="stylesheet" href="../theme/css/tag_pills.css" />
+    <link rel="alternate" hreflang="en" href="/cursor-magic/" />
+    <link rel="alternate" hreflang="de" href="/de/cursor-magic/" />
+    <link rel="alternate" hreflang="fr" href="/fr/cursor-magic/" />
+    <link rel="canonical" href="/cursor-magic/" />
+  <link rel="stylesheet" href="/theme/css/poole.css" />
+  <link rel="stylesheet" href="/theme/css/syntax.css" />
+  <link rel="stylesheet" href="/theme/css/lanyon.css" />
+  <link rel="stylesheet" href="/theme/css/tag_pills.css" />
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="../theme/css/styles.css" />
+  <link rel="stylesheet" href="/theme/css/styles.css" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8M7YDCSD4"></script>
@@ -46,7 +50,7 @@ styles, `#sidebar-checkbox` for behavior. -->
 
   <nav class="sidebar-nav">
 
-  <a class="sidebar-nav-item" href="../">Home</a>
+  <a class="sidebar-nav-item" href="/">Home</a>
 
   <a class="sidebar-nav-item" href="/tags">Topics</a>
   <a class="sidebar-nav-item" href="/recipes">Recipes</a>
@@ -65,14 +69,14 @@ styles, `#sidebar-checkbox` for behavior. -->
   </div>
 
   <div class="sidebar-item">
-      Last built 14.02.2026 15:25:04.
+      Last built 14.02.2026 22:21:30.
   </div>
 </div>
   <div class="wrap">
     <div class="masthead">
       <div class="container">
         <h3 class="masthead-title">
-          <a href="../" title="Home">
+          <a href="/" title="Home">
             <span style="color: #C00000;">test</span>.grtnr.com
           </a>         </h3>
         
@@ -99,7 +103,7 @@ Français
 <div class="posts">
 <div class="post">
     <h1 class="post-title">
-      Cursor&nbsp;Magic
+      Cursor Magic
     </h1>
     <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 1rem;">
       <span class="post-date" style="margin-bottom: 0; margin-top: 0;">February 5, 2025</span>
@@ -109,34 +113,34 @@ Français
 
     <div class="toc">
 <ul>
-<li><a href="#prompt-structure">Prompt Structure</a></li>
+<li><a href="#prompt-structure">Prompt&nbsp;Structure</a></li>
 <li><a href="#cursorrules">Cursorrules</a></li>
-<li><a href="#ai-rules-in-cursor-settings"><span class="caps">AI</span> Rules in Cursor Settings</a></li>
-<li><a href="#helpful-small-prompts">Helpful small prompts</a></li>
+<li><a href="#ai-rules-in-cursor-settings"><span class="caps">AI</span> Rules in Cursor&nbsp;Settings</a></li>
+<li><a href="#helpful-small-prompts">Helpful small&nbsp;prompts</a></li>
 <li><a href="#larger-prompts">Larger prompts</a><ul>
-<li><a href="#summary-of-current-state">Summary of current state</a></li>
-<li><a href="#unbiased-5050">Unbiased 50/50</a></li>
-<li><a href="#one-paragraph-search-query">one-paragraph search query</a></li>
+<li><a href="#summary-of-current-state">Summary of current&nbsp;state</a></li>
+<li><a href="#unbiased-5050">Unbiased&nbsp;50/50</a></li>
+<li><a href="#one-paragraph-search-query">one-paragraph search&nbsp;query</a></li>
 </ul>
 </li>
 <li><a href="#instructions">Instructions</a></li>
-<li><a href="#other-tools">Other tools</a></li>
+<li><a href="#other-tools">Other&nbsp;tools</a></li>
 </ul>
 </div>
-<p>Last week end I discovered this video from David Ondrej: <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. The title is not super attractive, but the content was very helpful for me. So here are my notes so I can use all his tips and have the different prompts and snippets at hand to use them when coding.</p>
+<p>Last week end I discovered this video from David Ondrej: <a href="https://youtu.be/gYLNxUxVomY?si=1Q2x2UWgqy1RHvLt" rel="noopener noreferrer" target="_blank">I spent 400+ hours in Cursor, here’s what I learned</a>. The title is not super attractive, but the content was very helpful for me. So here are my notes so I can use all his tips and have the different prompts and snippets at hand to use them when&nbsp;coding.</p>
 <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/gYLNxUxVomY?si=xQAMyMvQCsSwWztk" title="YouTube video player" width="560"></iframe>
-<h2 id="prompt-structure">Prompt Structure</h2>
-<p>The overall prompt structure that Deavid suggests:</p>
+<h2 id="prompt-structure">Prompt&nbsp;Structure</h2>
+<p>The overall prompt structure that Deavid&nbsp;suggests:</p>
 <ol>
-<li>what we are doing</li>
-<li>tag relevant files</li>
-<li>how to execute // what not to do</li>
-<li>context dump</li>
-<li>repeat core instruction</li>
-<li>output format</li>
+<li>what we are&nbsp;doing</li>
+<li>tag relevant&nbsp;files</li>
+<li>how to execute // what not to&nbsp;do</li>
+<li>context&nbsp;dump</li>
+<li>repeat core&nbsp;instruction</li>
+<li>output&nbsp;format</li>
 </ol>
 <h2 id="cursorrules">Cursorrules</h2>
-<p><code>.cursorrules.md</code> is a file you put in your project top level directory that gives the <span class="caps">AI</span> more context about your project. Here is the structure of the file that David suggests:</p>
+<p><code>.cursorrules.md</code> is a file you put in your project top level directory that gives the <span class="caps">AI</span> more context about your project. Here is the structure of the file that David&nbsp;suggests:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># PROJECT OVERVIEW</span>
 
 <span class="gh"># PERSONALITY</span>
@@ -169,10 +173,10 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 
 <span class="k">-</span><span class="w"> </span>Repeat the most important instructions.
 </code></pre></div>
-<p>He also strongly suggests to have a <code>.cursorignore</code> in which you list your <code>.env</code> files. This hinders chat and Composer to write in those files accidentally.</p>
-<h2 id="ai-rules-in-cursor-settings"><span class="caps">AI</span> Rules in Cursor Settings</h2>
-<p><span class="caps">AI</span> Rules are to be set in the cursor settings. They should not contain anything project specific, just coding principles that you would always want to apply. That’s the difference to the <code>.cursorrules</code> that also contain project specific details.</p>
-<p>An example:</p>
+<p>He also strongly suggests to have&nbsp;a <code>.cursorignore</code> in which you list&nbsp;your <code>.env</code> files. This hinders chat and Composer to write in those files&nbsp;accidentally.</p>
+<h2 id="ai-rules-in-cursor-settings"><span class="caps">AI</span> Rules in Cursor&nbsp;Settings</h2>
+<p><span class="caps">AI</span> Rules are to be set in the cursor settings. They should not contain anything project specific, just coding principles that you would always want to apply. That&#8217;s the difference to&nbsp;the <code>.cursorrules</code> that also contain project specific&nbsp;details.</p>
+<p>An&nbsp;example:</p>
 <div class="highlight"><pre><span></span><code><span class="gh"># Fundamental Principles</span>
 
 <span class="k">-</span><span class="w"> </span>Write clean, simple, readable code
@@ -206,8 +210,8 @@ tree -L 4 -a -I 'node*modules | -git|\_pycache*|.DS\_$
 <span class="k">-</span><span class="w"> </span>Document all changes and their reasoning IN THE COMMENTS YOU WRITE
 <span class="k">-</span><span class="w"> </span>when writing comments, use clear and easy-to-understand language. write short sentences.
 </code></pre></div>
-<h2 id="helpful-small-prompts">Helpful small prompts</h2>
-<p>David provides a list of helpful small prompts or prompt snippets. I copied some of them here for copy&amp;paste usage:</p>
+<h2 id="helpful-small-prompts">Helpful small&nbsp;prompts</h2>
+<p>David provides a list of helpful small prompts or prompt snippets. I copied some of them here for copy&amp;paste&nbsp;usage:</p>
 <div class="highlight"><pre><span></span><code>Proceed like a Senior Developer with a focus on clear architecture.
 
 The fewer lines of code the better.
@@ -222,9 +226,9 @@ DO NET DELETE COMMENTS
 
 You should start the reasoning paragraph with lots of uncertainty, and slowly gain confidence as you think about the item more.
 </code></pre></div>
-<h2 id="larger-prompts">Larger prompts</h2>
-<h3 id="summary-of-current-state">Summary of current state</h3>
-<p>Used to summarize a compose flow and move over to a fresh compose dialoge.</p>
+<h2 id="larger-prompts">Larger&nbsp;prompts</h2>
+<h3 id="summary-of-current-state">Summary of current&nbsp;state</h3>
+<p>Used to summarize a compose flow and move over to a fresh compose&nbsp;dialoge.</p>
 <div class="highlight"><pre><span></span><code>Before we proceed, I need you to give me a summary of the current state of the project.
 
 Format this as 3 concise paragraphs, where you describe what we just did, what did not work, which files were updated/created, what mistakes to avoid, any key insights/lessons we’ve learned, what problems/errors we are facing,… and anything else a programmer might need to work productively on this project.
@@ -233,31 +237,31 @@ Write in a conversational yet informative tone, something like README file on Gi
 
 I expect to see three concise paragraphs, written as if you were giving instructions to another programmer and this was ALL you could tell him.
 </code></pre></div>
-<h3 id="unbiased-5050">Unbiased 50/50</h3>
+<h3 id="unbiased-5050">Unbiased&nbsp;50/50</h3>
 <div class="highlight"><pre><span></span><code>BEFORE YOU ANSWER, i want you to write two detailed paragraphs, one arguing for each of these solutions - do not jump to conclusions, seriously consider both approaches
 
 then, after you finish, tell me whether one of these solutions is obviously better than the other, and why.
 </code></pre></div>
-<h3 id="one-paragraph-search-query">one-paragraph search query</h3>
+<h3 id="one-paragraph-search-query">one-paragraph search&nbsp;query</h3>
 <div class="highlight"><pre><span></span><code>let's perform a web search. your task is to write a one-paragraph search query, as if you were telling a human researcher that to find, including all the relevant context. format the paragraph as clear instructions, commanding a researcher to find what we're looking for. ask for code snippets or technical details when relevant
 </code></pre></div>
 <h2 id="instructions">Instructions</h2>
-<p>David suggests to have a directory <code>instructions</code> that contains md files with tips for the <span class="caps">AI</span>. This way you can reference these files from the Composer prompt. He also preferers this kind of instrauction files over refreencing @Docs in cursor, which seems not to work too good yet.</p>
-<p>Instruction files that he mentioned:</p>
+<p>David suggests to have a&nbsp;directory <code>instructions</code> that contains md files with tips for the <span class="caps">AI</span>. This way you can reference these files from the Composer prompt. He also preferers this kind of instrauction files over refreencing @Docs in cursor, which seems not to work too good&nbsp;yet.</p>
+<p>Instruction files that he&nbsp;mentioned:</p>
 <ul>
-<li><code>supabase.md</code>: A file that describes the structure of his database, so cursor knows about tables, fields, mandatoryness etc.</li>
-<li><code>roadmap.md</code>: An explanation of the roadmap of your project.</li>
+<li><code>supabase.md</code>: A file that describes the structure of his database, so cursor knows about tables, fields, mandatoryness&nbsp;etc.</li>
+<li><code>roadmap.md</code>: An explanation of the roadmap of your&nbsp;project.</li>
 </ul>
-<h2 id="other-tools">Other tools</h2>
-<p>Besides Cursor David uses many other tools. Some of what he mentioned:</p>
+<h2 id="other-tools">Other&nbsp;tools</h2>
+<p>Besides Cursor David uses many other tools. Some of what he&nbsp;mentioned:</p>
 <ul>
 <li><a href="https://chatgpt.com" rel="noopener noreferrer" target="_blank">ChatGPT</a></li>
 <li><a href="https://claude.ai" rel="noopener noreferrer" target="_blank">Claude</a> for side discussions with an advanced <span class="caps">AI</span>.</li>
-<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> for smart web searches.</li>
-<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> to speak rather than typing</li>
+<li><a href="https://www.perplexity.ai" rel="noopener noreferrer" target="_blank">Perplexity</a> for smart web&nbsp;searches.</li>
+<li><a href="https://wisprflow.ai" rel="noopener noreferrer" target="_blank">WisprFlow</a> to speak rather than&nbsp;typing</li>
 <li><a href="https://v0.dev" rel="noopener noreferrer" target="_blank">v0</a> a tool to create Web Apps in the browser by chatting withj an <span class="caps">AI</span>.</li>
 <li><a href="https://lovable.dev" rel="noopener noreferrer" target="_blank">Lovable</a> for building backends, especially with <a href="https://supabase.com" rel="noopener noreferrer" target="_blank">Supabase</a></li>
-<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> to build web sites.</li>
+<li><a href="https://bolt.new" rel="noopener noreferrer" target="_blank">Bolt</a> to build web&nbsp;sites.</li>
 </ul>
     <div id="giscus">
       <script src="https://giscus.app/client.js"
